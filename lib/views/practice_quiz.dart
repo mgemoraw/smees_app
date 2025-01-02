@@ -1,0 +1,616 @@
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
+import 'package:smees/home_page.dart';
+import 'package:smees/views/answer_option.dart';
+import 'package:smees/views/result_page.dart';
+
+import '../models/random_index.dart';
+
+var files = {
+  "Automotive Engineering": "AutomotiveEngineering",
+  "Industrial Engineering": "IndustrialEngineering",
+  "Mechanical Engineering": "MechanicalEngineering",
+  "Civil Engineering": "CivilEngineering",
+  'Water Resources and Irrigation Engineering': "wrie",
+  'Hydraulic and Water Resources Engineering': "hwre",
+  "Chemical Engineering": "ChemicalEngineering",
+  "Food Engineering": "FoodEngineering",
+  "Human Nutrition": "HumanNutrition",
+  "Electrical Engineering": "ElectricalEngineering",
+  "Computer Engineering": "ComputerEngineering",
+  "Computer Science": "ComputerScience",
+  "Software Engineering": "SoftwareEngineering",
+};
+
+// test class
+class TestHome extends StatefulWidget {
+  final String department;
+  const TestHome({Key? key, required this.department}) : super(key: key);
+
+  @override
+  State<TestHome> createState() => _TestHomeState();
+}
+
+class _TestHomeState extends State<TestHome> {
+  var department;
+  List _items = [];
+  final _controller = TextEditingController();
+  String pageKey = "home";
+  int pageIndex = 0;
+  // fetch content from json
+  Future<void> readJson(String department) async {
+    final String response =
+        await rootBundle.loadString("assets/$department/$department.json");
+    final data = json.decode(response);
+
+    setState(() {
+      _items = data;
+    });
+  }
+
+  List<DropdownMenuItem<String>> getDepartents() {
+    //
+    List<DropdownMenuItem<String>> departments = [];
+    for (String item in files.keys) {
+      var menuItem = DropdownMenuItem(child: Text(item), value: files[item]);
+      departments.add(menuItem);
+    }
+    return departments;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Column(
+                children: [
+                  Image.asset('assets/images/graduation.png', height: 100),
+                  Text("BiT-ExitE"),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: const Text('Settings'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.feedback),
+              title: const Text('Send Us feedback'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.login),
+              title: const Text('Login'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.info),
+              title: const Text('About Us'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: const Text('Logout'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text('BiT ExitE'),
+        actions: [
+          PopupMenuButton(itemBuilder: (context) {
+            return [
+              PopupMenuItem(
+                child: TextButton(
+                  child: Text("About Us"),
+                  onPressed: () {},
+                ),
+              ),
+              PopupMenuItem(
+                child: IconButton(
+                  icon: const Icon(Icons.settings),
+                  onPressed: () {
+                    // to be added in the future
+                  },
+                ),
+              ),
+            ];
+          }),
+        ],
+      ),
+      body: Column(children: [
+        // user profile card
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Column(
+              children: [
+                ClipOval(
+                  child: Image.asset(
+                    'assets/images/user-1.png',
+                    fit: BoxFit.contain,
+                    width: 120,
+                    height: 120,
+                  ),
+                ),
+                const Text(
+                  'Test User',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            const Column(
+              children: [
+                Text(
+                  "Hello User",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text("Latest Score: 0.0"),
+              ],
+            ),
+          ],
+        ),
+
+        // Choose your field of study section
+        Divider(height: 3, color: Colors.blue),
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Text(
+              "In this page you can select a maximum of 25 questions and practice with answers shown immediately. All Questions are multiple choice and you will be given 1 minute for 1 Question."),
+        ),
+
+        // dropdown option to choose and take quiz
+        DropdownButton(
+            hint: Text("Select your department here"),
+            value: department,
+            items: getDepartents(),
+            onChanged: (value) {
+              setState(() {
+                department = value!;
+                readJson(department);
+                // print(_items);
+              });
+            }),
+        SizedBox(
+          child:
+              Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+            Container(
+              width: 150,
+              child: TextField(
+                controller: _controller,
+                keyboardType: TextInputType.number,
+                decoration:
+                    InputDecoration(hintText: "Type Number of Questions"),
+                onTap: () {
+                  setState(() {
+                    //
+                  });
+                },
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                //readJson();
+                int qnos = validateInput(_controller.text);
+                List<int> indexes = generateIndexes(_items, qnos);
+                var items = [];
+                for (int i in indexes) {
+                  items.add(_items[i]);
+                }
+
+                if (qnos > 0 && _items.isNotEmpty) {
+                  // start quiz
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TakeQuiz(
+                        department: "",
+                        items: items,
+                      ),
+                      // const HomePage(),
+                    ),
+                  );
+                }
+              },
+              child: Text("Start Quiz"),
+            ),
+          ]),
+        ),
+        //
+        // _items.isNotEmpty ? Expanded(
+        //     child: ListView.builder(
+        //       itemCount: _items.length,
+        //       itemBuilder: (context, index){
+        //         return Card(
+        //             key: ValueKey(_items[index]["qid"]),
+        //             margin: const EdgeInsets.all(10),
+        //             color: Colors.amber.shade100,
+        //             child: ListTile(
+        //               leading: Text("${_items[index]['qid']}"),
+        //               title: Text(_items[index]['question']),
+        //               subtitle: Text("Answer: ${_items[index]['answer']}"),
+        //
+        //               //subtitle: Text(_items[index]['answer']),
+        //
+        //             )
+        //         );
+        //       },
+        //     )
+        // ): ElevatedButton(
+        //   onPressed: () {
+        //     readJson();
+        //     // print(_items);
+        //   },
+        //   child: Text("Load Json"),
+        // )
+      ]),
+      bottomNavigationBar: Container(
+          height: 60,
+          decoration: const BoxDecoration(
+            //color: Theme.of(context).primaryColor,
+            color: Colors.white12,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20),
+              topRight: Radius.circular(20),
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              IconButton(
+                enableFeedback: true,
+                tooltip: 'Home',
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 0;
+                    pageKey = 'home';
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Home(
+                          title: "BiT-ExitE",
+                          department: "",
+                        ),
+                      ),
+                    );
+                  });
+                },
+                icon: const Icon(
+                  Icons.home_outlined,
+                  color: Colors.black54,
+                  size: 35,
+                ),
+              ),
+            ],
+          )),
+    );
+  }
+
+  int validateInput(String value) {
+    int qnos = 0;
+    try {
+      qnos = int.parse(value);
+      if (qnos > 25) {
+        return 25;
+      }
+    } catch (e) {
+      // catch error
+    }
+    return qnos;
+  }
+}
+
+class TakeQuiz extends StatefulWidget {
+  final String department;
+  final List items;
+
+  const TakeQuiz({super.key, required this.department, required this.items});
+
+  @override
+  State<TakeQuiz> createState() => _TakeQuizState();
+}
+
+class _TakeQuizState extends State<TakeQuiz> {
+  // varaibles
+  List<Icon> _scoreTracker = [];
+  String bottomContainerText = "";
+  List<Map> userAnswers = [];
+  int _qno = 0;
+  int _qid = 0;
+  int _totalScore = 0;
+  bool answerWasSelected = false;
+  bool endOfQuiz = false;
+  bool correctAnswerSelected = false;
+  String _chosenAnswer = "";
+  Color? _selectedColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColorDark,
+        // backgroundColor: Color.fromRGBO(33, 150, 243, 1),
+        title: Text("Quiz - ${widget.department}"),
+        actions: [
+          // working on search bar
+          PopupMenuButton(itemBuilder: (context) {
+            return [
+              PopupMenuItem(
+                child: TextButton(
+                  child: Text("About Us"),
+                  onPressed: () {},
+                ),
+              ),
+              PopupMenuItem(
+                child: IconButton(
+                  icon: const Icon(Icons.settings),
+                  onPressed: () {},
+                ),
+              ),
+              PopupMenuItem(
+                child: IconButton(
+                  icon: const Icon(Icons.exit_to_app_sharp),
+                  onPressed: () {
+                    // exit logic here
+                  },
+                ),
+              ),
+            ];
+          }),
+        ],
+      ),
+      bottomNavigationBar: Container(
+        height: 60,
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
+        ),
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          ElevatedButton(
+              onPressed: () {
+                // _previous question
+                _previous_quesion();
+              },
+              child: Row(children: [
+                Icon(Icons.arrow_back),
+                Text("Previous"),
+              ])),
+
+          // restart button
+          (_qno >= widget.items.length - 1)
+              ? ElevatedButton(
+                  onPressed: () {
+                    // _previous question
+                    _restartQuiz();
+                  },
+                  child: Text("Restart"),
+                )
+              : Text(""),
+          // forward button
+          ElevatedButton(
+              onPressed: () {
+                // _previous question
+                _nextQuestion();
+              },
+              child: const Row(children: [
+                Icon(Icons.arrow_forward),
+                Text("Next"),
+              ])),
+        ]),
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(children: [
+          // Question
+          Container(
+            alignment: Alignment.topLeft,
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              "${_qno + 1}. ${widget.items[_qno]['question']}",
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+            ),
+          ),
+
+          // option A
+          AnswerOption(
+              value: 'A',
+              answerText: widget.items[_qno]['A'],
+              enabled: !answerWasSelected,
+              answerColor:
+                  (_chosenAnswer == 'A') ? _selectedColor! : Colors.white,
+              answerTap: () {
+                setState(() {
+                  _selectedColor = Colors.blue;
+                  _chosenAnswer = "A";
+                  disableOptions();
+                });
+              }),
+
+          // option B
+          AnswerOption(
+              value: 'B',
+              answerText: widget.items[_qno]['B'],
+              enabled: !answerWasSelected,
+              answerColor:
+                  (_chosenAnswer == 'B') ? _selectedColor! : Colors.white,
+              answerTap: () {
+                setState(() {
+                  _selectedColor = Colors.blue;
+                  _chosenAnswer = "B";
+                  disableOptions();
+                });
+              }),
+
+          AnswerOption(
+              value: 'C',
+              answerText: widget.items[_qno]['C'],
+              enabled: !answerWasSelected,
+              answerColor:
+                  (_chosenAnswer == 'C') ? _selectedColor! : Colors.white,
+              answerTap: () {
+                _selectedColor = Colors.blue;
+                _chosenAnswer = "C";
+                disableOptions();
+              }),
+
+          // option D
+          AnswerOption(
+              value: 'D',
+              answerText: widget.items[_qno]['D'],
+              answerColor:
+                  (_chosenAnswer == 'D') ? _selectedColor! : Colors.white,
+              enabled: !answerWasSelected,
+              answerTap: () {
+                setState(() {
+                  _selectedColor = Colors.blue;
+                  _chosenAnswer = "D";
+                  disableOptions();
+                });
+              }),
+
+          // if option E exists
+          (widget.items[_qno]['E'] != null)
+              ? Container(
+                  color: _chosenAnswer == 'E' ? _selectedColor : Colors.white12,
+                  child: ListTile(
+                    // on tap answer will be submitted
+                    onTap: () {
+                      setState(() {
+                        _chosenAnswer = "E";
+                        disableOptions();
+                      });
+                    },
+                    key: Key('E'),
+                    leading: Text(
+                      'E.',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                    ),
+                    title: Text(
+                      widget.items[_qno]['E'],
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                    ),
+                    enabled: !answerWasSelected,
+                  ),
+                )
+              : Text(""),
+
+          // if option F exists
+          (widget.items[_qno]['F'] != null)
+              ? Container(
+                  color: _chosenAnswer == 'F' ? _selectedColor : Colors.white12,
+                  child: ListTile(
+                    // on tap answer will be submitted
+                    onTap: () {
+                      setState(() {
+                        _chosenAnswer = 'F';
+                        disableOptions();
+                      });
+                    },
+                    key: Key('F'),
+                    leading: Text(
+                      'F.',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                    ),
+                    title: Text(
+                      widget.items[_qno]['F'],
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                    ),
+                    enabled: !answerWasSelected,
+                  ),
+                )
+              : const Text(""),
+
+          // Answer Notification container
+          Container(
+            child: Text(
+              bottomContainerText,
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+            ),
+            //"YOur answer progress"),
+          ),
+        ]),
+      ),
+    );
+  }
+
+  void disableOptions() {
+    setState(() {
+      answerWasSelected = true;
+      validateAnswer();
+    });
+  }
+
+  void validateAnswer() {
+    // answer logic here
+    var correctAnswer = widget.items[_qno]['answer'];
+    setState(() {
+      if (_chosenAnswer == widget.items[_qno]['answer']) {
+        bottomContainerText = "You Answered Right";
+        _totalScore++;
+      } else {
+        bottomContainerText = "Answer is  $correctAnswer";
+      }
+    });
+  }
+
+  void _nextQuestion() {
+    // next question
+    setState(() {
+      if (_qno < widget.items.length - 1) {
+        _qno += 1;
+        answerWasSelected = false;
+        _selectedColor = Colors.white;
+        bottomContainerText = "";
+      } else {
+        Navigator.pop(context);
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ResultPage(score: _totalScore)));
+      }
+    });
+  }
+
+  void _previous_quesion() {
+    setState(() {
+      if (_qno > 0) {
+        //_qno--;
+      }
+    });
+  }
+
+  void _restartQuiz() {
+    setState(() {
+      Navigator.pop(context);
+      Navigator.pushNamed(context, "/quiz");
+    });
+  }
+}
