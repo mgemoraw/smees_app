@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:smees/login_page.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
+import "package:smees/views/learn_zone.dart";
+
+import "package:smees/student_profile.dart";
 
 import 'home_page.dart';
 
@@ -31,6 +34,8 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const Home(title: "BiT-ExitE", department: "",),
         '/quiz': (context) => const TestHome(department: "",),
         "/exam": (context) => const ExamHome(department: ""),
+        "/profile": (context) => const Profile(userId: "bdu20150001"),
+        "/learn": (contest) => const LearnZone(department: ""),
       },
       // home: TestHome(department: "IndustrialEngineering"),
     );

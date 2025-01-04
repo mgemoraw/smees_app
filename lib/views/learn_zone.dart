@@ -1,7 +1,8 @@
 import "package:flutter/material.dart";
 
 class LearnZone extends StatefulWidget {
-  const LearnZone({super.key});
+  final String department;
+  const LearnZone({super.key, required this.department});
 
   @override
   State<LearnZone> createState() => _LearnZoneState();
