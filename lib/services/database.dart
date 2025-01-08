@@ -67,11 +67,12 @@ Future getDepartments() async {
   final url = Uri.parse("http://10.161.70.179:8000/departments/index");
   var response = await http.get(url);
 
-  var deps = [];
-  for (var d in jsonDecode(response.body)) {
-    deps.add(d);
-  }
-  return deps;
+  // var deps = [];
+  // for (var d in jsonDecode(response.body)) {
+  //   deps.add(d);
+  // }
+  // return deps.toString();
+  return response.body;
 }
 
 // Future fetch_users() async {

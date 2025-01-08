@@ -192,8 +192,8 @@ class _LoginState extends State<Login> {
                           username: usernameController.text,
                           password: passwordController.text);
 
-                      var deps = getDepartments();
-                      print(deps);
+                      var dd = getDepartments().toList();
+                      print("deps: ${dd}");
                       print(
                           "Username: ${user.username}, password: ${user.password}");
                       // String message = await loginUser(user);
