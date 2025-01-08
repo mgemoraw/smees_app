@@ -3,10 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
+import 'package:smees/services/database.dart';
 import 'package:smees/views/readme.dart';
-
 
 var files = {
   "Automotive Engineering": "AutomotiveEngineering",
@@ -24,11 +25,11 @@ var files = {
   "Software Engineering": "SoftwareEngineering",
 };
 
-
 // login class
 class Login extends StatefulWidget {
-
-  const Login({super.key, });
+  const Login({
+    super.key,
+  });
 
   @override
   State<Login> createState() => _LoginState();
@@ -38,6 +39,7 @@ class _LoginState extends State<Login> {
   final departmentController = TextEditingController();
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+  bool isLoading = false;
   var department = "";
 
   @override
@@ -56,6 +58,12 @@ class _LoginState extends State<Login> {
       departments.add(menuItem);
     }
     return departments;
+  }
+
+  Future<String?> getToken(String key) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getString(
+        key); // Use appropriate methods like getInt, getBool, etc. based on the data type
   }
 
   @override
@@ -149,7 +157,6 @@ class _LoginState extends State<Login> {
                   //    selectable: false,
                   //   ),
 
-
                   const Text("Please Choose your Field of Study to Continue",
                       style: TextStyle(
                         fontSize: 15,
@@ -157,7 +164,6 @@ class _LoginState extends State<Login> {
                         // color: Colors.white,
                       )),
                   const University(),
-
 
                   TextField(
                     controller: this.usernameController,
@@ -176,13 +182,24 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {
-                      print(departmentController.text);
-                      if (usernameController.text == "user" &&
-                          passwordController.text == "sgetme") {
-                        Navigator.pushNamed(context, "/home");
-          
-                      }
+                    onPressed: () async {
+                      setState(() {
+                        isLoading = true;
+                      });
+                      String message = await loginUser(
+                          usernameController.text.trim(),
+                          passwordController.text.trim());
+                      // Save token to local storage
+
+                      final prefs = await SharedPreferences.getInstance();
+                      String? token = prefs.getString("authToken");
+                      print(message);
+                      print(token);
+                      // print(departmentController.text);
+                      // if (usernameController.text == "user" &&
+                      //     passwordController.text == "sgetme") {
+                      //   Navigator.pushNamed(context, "/home");
+                      // }
                     },
                     child: const Text('Login',
                         style: TextStyle(color: Colors.black, fontSize: 18)),
@@ -226,7 +243,6 @@ class _UniversityState extends State<University> {
     'Industrial Engineering',
   ];
 
-
   String file_path = "CivilEngineering";
   String? department;
 
@@ -240,7 +256,6 @@ class _UniversityState extends State<University> {
       leadingIcon: Icon(Icons.school),
       hintText: 'Select Field of Study',
       initialSelection: 'Civil Engineering',
-
       expandedInsets: const EdgeInsets.all(1.0),
       inputDecorationTheme: InputDecorationTheme(
         border: InputBorder.none,

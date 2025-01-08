@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
     'home': const HomePage(department: "AutomotiveEngineering"),
     'exam': const QuizPage(title: 'Select Your Study Area Here'),
     'userstat': const Statistics(),
-    'profile': const Profile(),
+    'profile': const Profile(userId: "bdu0001"),
     // 'learn': const LearnZone(),
   };
 

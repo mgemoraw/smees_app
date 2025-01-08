@@ -1,0 +1,3 @@
+bool isAuthenticated() {
+  return true;
+}

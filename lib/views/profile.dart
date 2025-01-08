@@ -1,10 +1,9 @@
 
-
 import "package:flutter/material.dart";
 
 class Profile extends StatefulWidget {
   final String userId;
-  const LearnZone({super.key, required this.userId});
+  const Profile({super.key, required this.userId});
 
   @override
   State<Profile> createState() => _ProfileState();

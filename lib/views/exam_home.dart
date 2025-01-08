@@ -45,9 +45,9 @@ class _ExamHomeState extends State<ExamHome> {
   // list of pages in the bottom appbar
   final pages = {
     'home': const HomePage(department: "AutomotiveEngineering"),
-    'exam': const LearnZone(),
+    'exam': const LearnZone(department: "AutomotiveEngineering"),
     'userstat': const Statistics(),
-    'profile': const Profile(),
+    'profile': const Profile(userId: "bdu0001"),
     // 'learn': const LearnZone(),
   };
   List _items = [];

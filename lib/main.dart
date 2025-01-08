@@ -28,11 +28,16 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: Login(),
-      initialRoute: "/home",
+      initialRoute: "/",
       routes: {
         '/': (context) => const Login(),
-        '/home': (context) => const Home(title: "BiT-ExitE", department: "",),
-        '/quiz': (context) => const TestHome(department: "",),
+        '/home': (context) => const Home(
+              title: "BiT-ExitE",
+              department: "",
+            ),
+        '/quiz': (context) => const TestHome(
+              department: "",
+            ),
         "/exam": (context) => const ExamHome(department: ""),
         "/profile": (context) => const Profile(userId: "bdu20150001"),
         "/learn": (contest) => const LearnZone(department: ""),
