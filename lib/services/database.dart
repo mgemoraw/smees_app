@@ -2,30 +2,36 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smees/api/endPoints.dart';
+import 'package:smees/models/user.dart';
 
-Future<String> loginUser(String userId, String password) async {
-  late String? message = null;
-  final url = Uri.parse(
-      'http://localhost:8000/auth/users/login'); // Replace with your endpoint
-  final headers = {"Content-Type": "application/x-www-form-urlencoded"};
+Future<String> loginUser(UserLogin user) async {
+  late String? message = "";
+  // final url = Uri.parse('http://localhost:8000/$loginApi');
+  final url = Uri.parse('http://10.161.70.179:8000/$loginApi');
+  // final headers = {"Content-Type": "application/x-www-form-urlencoded"};
+  final headers = {"Content-Type": "application/json"};
   final body = jsonEncode({
-    "userId": userId,
-    "password": password,
+    'username': user.username,
+    'password': user.password,
   });
 
   try {
-    final response = await http.post(url, headers: headers, body: body);
-
+    final response = await http.post(
+      url,
+      headers: headers,
+      body: body,
+    );
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      print(data);
+
       final token = data['access_token'];
-      print(token);
+      final role = data['role'];
 
       // Save token to local storage
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('access_token', token);
-      await prefs.setString("role", data['role']);
+      await prefs.setString("role", role);
 
       // Navigate to the home screen
       // Navigator.pushReplacement(
@@ -38,7 +44,8 @@ Future<String> loginUser(String userId, String password) async {
       // ScaffoldMessenger.of(context).showSnackBar(
       //   SnackBar(content: Text("Invalid email or password")),
       // );
-      message = "Invalid email or password";
+
+      message = "Error ${response.statusCode}, ${response.body}";
     }
   } catch (e) {
     // ScaffoldMessenger.of(context).showSnackBar(
@@ -55,3 +62,27 @@ Future<String> loginUser(String userId, String password) async {
 
   return message;
 }
+
+Future getDepartments() async {
+  final url = Uri.parse("http://10.161.70.179:8000/departments/index");
+  var response = await http.get(url);
+
+  var deps = [];
+  for (var d in jsonDecode(response.body)) {
+    deps.add(d);
+  }
+  return deps;
+}
+
+// Future fetch_users() async {
+//   final url = Uri.parse("http://localhost:8000/users/index");
+//   // final url = Uri.parse('http://10.161.70.104:8000/users/index');
+//   var response = await http.get(url);
+//   var users = [];
+//   for (var u in jsonDecode(response.body)) {
+//     users.add(User(u['id'], u['name'], u['email'], u['password']));
+//   }
+//   print(response.body);
+//   // print("users: $users");
+//   return users;
+// }

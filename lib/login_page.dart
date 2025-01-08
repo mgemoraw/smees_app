@@ -6,6 +6,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
+import 'package:smees/models/user.dart';
 import 'package:smees/services/database.dart';
 import 'package:smees/views/readme.dart';
 
@@ -166,14 +167,14 @@ class _LoginState extends State<Login> {
                   const University(),
 
                   TextField(
-                    controller: this.usernameController,
+                    controller: usernameController,
                     style: TextStyle(fontSize: 15, color: Colors.black),
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.person_2_outlined),
                         hintText: 'User ID'),
                   ),
                   TextField(
-                    controller: this.passwordController,
+                    controller: passwordController,
                     style: TextStyle(fontSize: 15, color: Colors.black),
                     obscureText: true,
                     decoration: InputDecoration(
@@ -186,15 +187,23 @@ class _LoginState extends State<Login> {
                       setState(() {
                         isLoading = true;
                       });
-                      String message = await loginUser(
-                          usernameController.text.trim(),
-                          passwordController.text.trim());
-                      // Save token to local storage
 
+                      late UserLogin user = UserLogin(
+                          username: usernameController.text,
+                          password: passwordController.text);
+
+                      var deps = getDepartments();
+                      print(deps);
+                      print(
+                          "Username: ${user.username}, password: ${user.password}");
+                      // String message = await loginUser(user);
+
+                      // Save token to local storage
                       final prefs = await SharedPreferences.getInstance();
                       String? token = prefs.getString("authToken");
-                      print(message);
-                      print(token);
+                      // print(message);
+                      print("token: $token");
+
                       // print(departmentController.text);
                       // if (usernameController.text == "user" &&
                       //     passwordController.text == "sgetme") {
