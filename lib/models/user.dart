@@ -13,8 +13,8 @@ class User {
 }
 
 class UserLogin {
-  String? username;
-  String? password;
+  String username;
+  String password;
 
-  UserLogin({this.username, this.password});
+  UserLogin({required this.username, required this.password});
 }

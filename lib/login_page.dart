@@ -192,16 +192,21 @@ class _LoginState extends State<Login> {
                           username: usernameController.text,
                           password: passwordController.text);
 
-                      var dd = getDepartments().toList();
-                      print("deps: ${dd}");
+                      // String dd = await getAllDepartments();
+                      // print("$dd");
                       print(
-                          "Username: ${user.username}, password: ${user.password}");
-                      // String message = await loginUser(user);
-
+                        "Username: ${user.username}, password: ${user.password}",
+                      );
+                      String message = await loginUser(user);
+                      // Show error message
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text("$message")),
+                      );
                       // Save token to local storage
                       final prefs = await SharedPreferences.getInstance();
                       String? token = prefs.getString("authToken");
-                      // print(message);
+
+                      print(message);
                       print("token: $token");
 
                       // print(departmentController.text);
