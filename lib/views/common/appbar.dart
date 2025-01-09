@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:shared_preferences/shared_preferences.dart";
 import "package:smees/models/user.dart";
 import "package:smees/security/logout.dart";
 
@@ -16,17 +17,29 @@ class SmeesAppbar extends StatefulWidget implements PreferredSizeWidget {
 }
 
 class _SmeesAppbarState extends State<SmeesAppbar> {
-  bool userLoggedIn = false;
+  bool isLoggedIn = false;
+  User? user;
+  @override
+  void initState() {
+    super.initState();
+    _checkUserAuthentication();
+  }
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   checkAuthentication();
-  // }
+  Future<void> _checkUserAuthentication() async {
+    final prefs = await SharedPreferences.getInstance();
+    final token = prefs.getString("smees-token");
+    final username = prefs.getString("smees-user");
+    final department = prefs.getString("smees-user-department");
 
-  void checkAuthentication() {
-    setState(() async {
-      userLoggedIn = await isAuthenticated();
+    setState(() {
+      if (token != null) {
+        isLoggedIn = !isLoggedIn;
+        user = User(
+            userId: username,
+            univesity: null,
+            department: department,
+            password: null);
+      }
     });
   }
 
@@ -37,32 +50,59 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
       title: Text(widget.title),
       actions: [
         PopupMenuButton(
-            itemBuilder: (context) => [
-                  PopupMenuItem(
-                    child: TextButton(
-                      child: Text("About Us"),
-                      onPressed: () {},
+            itemBuilder: (context) => isLoggedIn
+                ? [
+                    PopupMenuItem(
+                      child: TextButton(
+                        child: Text("About Us"),
+                        onPressed: () {},
+                      ),
                     ),
-                  ),
-                  PopupMenuItem(
-                    child: IconButton(
-                      icon: const Icon(Icons.settings),
-                      onPressed: () {},
+                    PopupMenuItem(
+                      child: IconButton(
+                        icon: const Icon(Icons.settings),
+                        onPressed: () {},
+                      ),
                     ),
-                  ),
-                  PopupMenuItem(
-                    child: IconButton(
-                      icon: const Icon(Icons.logout),
-                      onPressed: () {
-                        setState(() {
-                          logout();
-                          // Navigator.pop(context);
-                          Navigator.pushNamed(context, "/");
-                        });
-                      },
+                    PopupMenuItem(
+                      child: IconButton(
+                        icon: const Icon(Icons.login),
+                        onPressed: () {
+                          setState(() {
+                            // logout();
+                            Navigator.pop(context);
+                            Navigator.pushNamed(context, "/");
+                          });
+                        },
+                      ),
+                    )
+                  ]
+                : [
+                    PopupMenuItem(
+                      child: TextButton(
+                        child: Text("About Us"),
+                        onPressed: () {},
+                      ),
                     ),
-                  )
-                ]),
+                    PopupMenuItem(
+                      child: IconButton(
+                        icon: const Icon(Icons.settings),
+                        onPressed: () {},
+                      ),
+                    ),
+                    PopupMenuItem(
+                      child: IconButton(
+                        icon: const Icon(Icons.logout),
+                        onPressed: () {
+                          setState(() {
+                            // logout();
+                            Navigator.pop(context);
+                            Navigator.pushNamed(context, "/");
+                          });
+                        },
+                      ),
+                    )
+                  ]),
       ],
     );
   }

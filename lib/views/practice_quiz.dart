@@ -1,11 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:smees/home_page.dart';
 import 'package:smees/views/answer_option.dart';
+import 'package:smees/views/common/appbar.dart';
+import 'package:smees/views/common/drawer.dart';
+import 'package:smees/views/common/status_card.dart';
 import 'package:smees/views/result_page.dart';
 
 import '../models/random_index.dart';
@@ -65,123 +68,23 @@ class _TestHomeState extends State<TestHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Column(
-                children: [
-                  Image.asset('assets/images/graduation.png', height: 100),
-                  Text("BiT-ExitE"),
-                ],
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: const Text('Settings'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.feedback),
-              title: const Text('Send Us feedback'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.login),
-              title: const Text('Login'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.info),
-              title: const Text('About Us'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title: const Text('Logout'),
-              onTap: () {},
-            ),
-          ],
-        ),
-      ),
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('BiT ExitE'),
-        actions: [
-          PopupMenuButton(itemBuilder: (context) {
-            return [
-              PopupMenuItem(
-                child: TextButton(
-                  child: Text("About Us"),
-                  onPressed: () {},
-                ),
-              ),
-              PopupMenuItem(
-                child: IconButton(
-                  icon: const Icon(Icons.settings),
-                  onPressed: () {
-                    // to be added in the future
-                  },
-                ),
-              ),
-            ];
-          }),
-        ],
-      ),
+      drawer: LeftNavigation(),
+      appBar: SmeesAppbar(title: "SMEES-App"),
       body: Column(children: [
         // user profile card
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Column(
-              children: [
-                ClipOval(
-                  child: Image.asset(
-                    'assets/images/user-1.png',
-                    fit: BoxFit.contain,
-                    width: 120,
-                    height: 120,
-                  ),
-                ),
-                const Text(
-                  'Test User',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-            const Column(
-              children: [
-                Text(
-                  "Hello User",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text("Latest Score: 0.0"),
-              ],
-            ),
-          ],
-        ),
+        const UserStatusCard(),
 
         // Choose your field of study section
-        Divider(height: 3, color: Colors.blue),
-        Padding(
-          padding: const EdgeInsets.all(10.0),
+        const Divider(height: 3, color: Colors.blue),
+        const Padding(
+          padding: EdgeInsets.all(10.0),
           child: Text(
-              "In this page you can select a maximum of 25 questions and practice with answers shown immediately. All Questions are multiple choice and you will be given 1 minute for 1 Question."),
+              "In this page you can select a maximum of 100 questions and practice with answers shown immediately. All Questions are multiple choice and you will be given 1 minute for 1 Question."),
         ),
 
         // dropdown option to choose and take quiz
         DropdownButton(
-            hint: Text("Select your department here"),
+            hint: const Text("Select your department here"),
             value: department,
             items: getDepartents(),
             onChanged: (value) {
@@ -194,13 +97,13 @@ class _TestHomeState extends State<TestHome> {
         SizedBox(
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-            Container(
+            SizedBox(
               width: 150,
               child: TextField(
                 controller: _controller,
                 keyboardType: TextInputType.number,
                 decoration:
-                    InputDecoration(hintText: "Type Number of Questions"),
+                    const InputDecoration(hintText: "Type Number of Questions"),
                 onTap: () {
                   setState(() {
                     //
@@ -233,7 +136,7 @@ class _TestHomeState extends State<TestHome> {
                   );
                 }
               },
-              child: Text("Start Quiz"),
+              child: const Text("Start Quiz"),
             ),
           ]),
         ),

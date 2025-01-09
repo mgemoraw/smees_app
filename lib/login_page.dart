@@ -12,7 +12,7 @@ import 'package:smees/security/login.dart';
 import 'package:smees/security/logout.dart';
 import 'package:smees/services/database.dart';
 import 'package:smees/views/common/appbar.dart';
-import 'package:smees/views/common/navigation.dart';
+import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/readme.dart';
 
 var files = {

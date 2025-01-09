@@ -44,7 +44,7 @@ class ExamHome extends StatefulWidget {
 class _ExamHomeState extends State<ExamHome> {
   // list of pages in the bottom appbar
   final pages = {
-    'home': const HomePage(department: "AutomotiveEngineering"),
+    'home': const HomePage(department: "AutomotiveEngineering", username: ""),
     'exam': const LearnZone(department: "AutomotiveEngineering"),
     'userstat': const Statistics(),
     'profile': const Profile(userId: "bdu0001"),

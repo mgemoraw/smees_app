@@ -1,11 +1,18 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/depreciated/department.dart';
 import 'package:smees/depreciated/quiz_page.dart';
 import 'package:smees/login_page.dart';
+import 'package:smees/models/user.dart';
 
 import 'package:smees/student_profile.dart';
 import 'package:smees/student_statistics.dart';
 import 'package:smees/views/common/appbar.dart';
+import 'package:smees/views/common/drawer.dart';
+import 'package:smees/views/common/navigation.dart';
+import 'package:smees/views/learn_zone.dart';
 
 import 'home.dart';
 
@@ -22,169 +29,75 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int pageIndex = 0;
+  int _selectedIndex = 0;
   String pageKey = "home";
-  // String _department = "";
-
-  String get _department => widget.department;
+  String department = "";
+  User? user;
 
   // list of pages in the bottom appbar
-  final pages = {
-    'home': const HomePage(department: "AutomotiveEngineering"),
-    'exam': const QuizPage(title: 'Select Your Study Area Here'),
-    'userstat': const Statistics(),
-    'profile': const Profile(userId: "bdu0001"),
-    // 'learn': const LearnZone(),
-  };
+  // final pages = {
+  //   'home': const HomePage(department: "TEst", username: "None"),
+  //   'exam': const QuizPage(title: 'Select Your Study Area Here'),
+  //   'userstat': const Statistics(),
+  //   'profile': const Profile(userId: "bdu0001"),
+  //   // 'learn': const LearnZone(),
+  // };
+
+  static List<Widget> _pages = <Widget>[
+    const HomePage(department: "", username: ""),
+    // const LearnZone(department: ''),
+    const Statistics(),
+    const Profile(userId: ""),
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _getCurrentUser();
+  }
+
+  Future<void> _getCurrentUser() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final jsonString = prefs.getString("smees-user-data");
+
+    setState(() {
+      if (jsonString != null) {
+        Map<String, dynamic> userData = jsonDecode(jsonString);
+        user = User(
+          userId: userData['username'],
+          department: userData['department'],
+          univesity: userData['university'],
+          password: null,
+        );
+      }
+    });
+  }
+
+  String getCurrentDepartment() {
+    return "Test Department";
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  void _showStatistics() {
+    setState(() {
+      _selectedIndex = 2;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Column(
-                children: [
-                  Image.asset('assets/images/graduation.png', height: 100),
-                  Text("Grand Success"),
-                ],
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: const Text('Settings'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.feedback),
-              title: const Text('Send Us feedback'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.info),
-              title: const Text('About Us'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title: const Text('Logout'),
-              onTap: () {
-                Navigator.pushNamed(context, "/");
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => const Login()),
-                // );
-              },
-            ),
-          ],
-        ),
-      ),
-      appBar: SmeesAppbar(title: "SMEES"),
-      // body: pages[pageIndex],
-      body: pages[pageKey],
-      bottomNavigationBar: Container(
-          height: 60,
-          decoration: const BoxDecoration(
-            // color: Theme.of(context).primaryColor,
-            color: Colors.white10,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20),
-            ),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                enableFeedback: true,
-                tooltip: 'Home',
-                onPressed: () {
-                  setState(() {
-                    pageIndex = 0;
-                    pageKey = 'home';
-                  });
-                },
-                icon: pageIndex == 0
-                    ? const Icon(
-                        Icons.home_outlined,
-                        color: Colors.green,
-                        size: 35,
-                      )
-                    : const Icon(
-                        Icons.home_outlined,
-                        color: Colors.black54,
-                        size: 35,
-                      ),
-              ),
-              IconButton(
-                enableFeedback: false,
-                tooltip: 'Learn Zone',
-                onPressed: () {
-                  setState(() {
-                    pageIndex = 1;
-                    pageKey = 'learn';
-                  });
-                },
-                icon: pageIndex == 1
-                    ? const Icon(
-                        Icons.menu_book_outlined,
-                        color: Colors.green,
-                        size: 35,
-                      )
-                    : const Icon(
-                        Icons.menu_book_outlined,
-                        color: Colors.black54,
-                        size: 35,
-                      ),
-              ),
-              IconButton(
-                  enableFeedback: false,
-                  tooltip: 'Statistics',
-                  onPressed: () {
-                    setState(() {
-                      pageIndex = 2;
-                      pageKey = 'userstat';
-                    });
-                  },
-                  icon: pageIndex == 2
-                      ? const Icon(
-                          Icons.bar_chart,
-                          color: Colors.green,
-                          size: 35,
-                        )
-                      : const Icon(
-                          Icons.bar_chart,
-                          color: Colors.black54,
-                          size: 35,
-                        )),
-              IconButton(
-                enableFeedback: false,
-                tooltip: "Profile",
-                onPressed: () {
-                  setState(() {
-                    pageIndex = 3;
-                    pageKey = 'profile';
-                  });
-                },
-                icon: pageIndex == 3
-                    ? const Icon(
-                        Icons.person_outline,
-                        color: Colors.green,
-                        size: 35,
-                      )
-                    : const Icon(
-                        Icons.person_outline,
-                        color: Colors.black54,
-                        size: 35,
-                      ),
-              ),
-            ],
-          )),
+      drawer: const LeftNavigation(),
+      appBar: SmeesAppbar(title: "SMEES-App"),
+
+      body: _pages.elementAt(_selectedIndex), // _pages[_selectedIndex],
+      bottomNavigationBar:
+          BottomNavBar(currentIndex: _selectedIndex, onTap: _onItemTapped),
     );
   }
 }

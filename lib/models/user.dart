@@ -1,5 +1,6 @@
 class User {
   String? userId;
+  String? username;
   String? password;
   String? univesity;
   String? department;

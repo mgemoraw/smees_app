@@ -7,10 +7,10 @@ import "package:http/http.dart" as http;
 
 Future loginUser(UserLogin user) async {
   late String? message = "";
-  // final url = Uri.parse('http://localhost:8000/$tokenApi');
-  final url = Uri.parse('http://169.254.130.149:8000/$tokenApi');
+  final url = Uri.parse('http://localhost:8000/$tokenApi');
+  // final url = Uri.parse('http://169.254.130.149:8000/$tokenApi');
 
-  final headers = {'Content-Type': 'application/X-WWW-form-urlencoded'};
+  final headers = {'Content-Type': 'application/x-www-form-urlencoded'};
   // final headers = {"Content-Type": "application/json"};
 
   final body = {

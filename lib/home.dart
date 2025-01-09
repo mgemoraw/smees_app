@@ -1,19 +1,53 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:smees/exam_page.dart';
 import 'package:smees/home_page.dart';
+import 'package:smees/models/user.dart';
 import 'package:smees/student_statistics.dart';
+import 'package:smees/views/common/status_card.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
 
 class HomePage extends StatefulWidget {
   final String department;
-  const HomePage({super.key, required this.department});
+  final String username;
+  const HomePage({super.key, required this.department, required this.username});
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  late String username;
+  late double score = 0;
+  late User user;
+  late int _pageIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      _getCurrentUser();
+      _loadScore();
+    });
+  }
+
+  Future<void> _loadScore() async {
+    // late double latestScore = 0;
+    setState(() {
+      score = 6.0;
+    });
+  }
+
+  Future<void> _getCurrentUser() async {
+    setState(() {
+      user = User(
+          userId: "sgetme",
+          password: "test password",
+          univesity: "BDU",
+          department: "Test Department");
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -23,42 +57,7 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
-                    children: [
-                      ClipOval(
-                        child: Image.asset(
-                          'assets/images/user-1.png',
-                          fit: BoxFit.contain,
-                          width: 120,
-                          height: 120,
-                        ),
-                      ),
-                      const Text(
-                        'Test User',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const Column(
-                    children: [
-                      Text(
-                        "Hello User",
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text("Latest Score: 0.0"),
-                    ],
-                  ),
-                ],
-              ),
+              UserStatusCard(),
 
               // additional widgets here
               Divider(
@@ -82,7 +81,9 @@ class _HomePageState extends State<HomePage> {
                     // height: 150,
                   ),
                   onTap: () {
-                    // print("Hello");
+                    setState(() {
+                      _pageIndex = 0;
+                    });
                   },
                 ),
               ),
@@ -163,7 +164,11 @@ class _HomePageState extends State<HomePage> {
                     // height: 150,
                   ),
                   onTap: () {
+                    final parentState =
+                        context.findAncestorStateOfType<_Hometate>();
+                    parentState?._showStatistics();
                     setState(() {
+                      _pageIndex = 2;
                       Home h = const Home(
                           department: "AutomotiveEngineering", title: 'SMEES');
                       h.pageKey = 'userstat';

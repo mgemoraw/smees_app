@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smees/depreciated/department.dart';
 import 'package:smees/login_page.dart';
+import 'package:smees/views/common/appbar.dart';
+import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/take_exam.dart';
 
@@ -16,74 +18,8 @@ class _ExamPageState extends State<ExamPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Column(
-                children: [
-                  Image.asset('images/graduation.png', height: 100),
-                  Text("Grand Success"),
-                ],
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: const Text('Settings'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.feedback),
-              title: const Text('Send Us feedback'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.info),
-              title: const Text('About Us'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title: const Text('Logout'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Login()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(33, 150, 243, 1),
-        title: Text(
-          "Time allowed: 60'",
-        ),
-        actions: [
-          // working on search bar
-          PopupMenuButton(itemBuilder: (context) {
-            return [
-              PopupMenuItem(
-                child: TextButton(
-                  child: Text("About Us"),
-                  onPressed: () {},
-                ),
-              ),
-              PopupMenuItem(
-                child: IconButton(
-                  icon: const Icon(Icons.settings),
-                  onPressed: () {},
-                ),
-              ),
-            ];
-          }),
-        ],
-      ),
+      drawer: LeftNavigation(),
+      appBar: SmeesAppbar(title: "SMEES"),
       body: TakeExam(department: "CivilEngineering", items: []),
     );
   }
