@@ -7,65 +7,6 @@ import 'package:smees/depreciated/department.dart';
 import 'package:smees/models/department.dart';
 import 'package:smees/models/user.dart';
 
-Future loginUser(UserLogin user) async {
-  late String? message = "";
-  final url = Uri.parse('http://localhost:8000/$tokenApi');
-  // final url = Uri.parse('http://localhost:8000/$loginApi');
-
-  final headers = {'Content-Type': 'application/X-WWW-form-urlencoded'};
-  // final headers = {"Content-Type": "application/json"};
-
-  final body = {
-    'username': user.username,
-    'password': user.password,
-  };
-
-  try {
-    final response = await http.post(
-      url,
-      headers: headers,
-      body: body,
-    );
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-
-      final token = data['access_token'];
-      final role = data['role'];
-
-      // Save token to local storage
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('access_token', token);
-      await prefs.setString("role", role);
-
-      // Navigate to the home screen
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => HomeScreen()),
-      // );
-      message = response.body;
-    } else {
-      // Show error message
-      // ScaffoldMessenger.of(context).showSnackBar(
-      //   SnackBar(content: Text("Invalid email or password")),
-      // );
-
-      message = "${response.statusCode}, ${response.body}";
-    }
-  } catch (e) {
-    // ScaffoldMessenger.of(context).showSnackBar(
-    //   SnackBar(content: Text("Error: $e")),
-    // );
-    message = "Error: $e";
-  }
-  // finally {
-  // setState(() {
-  //   isLoading = false;
-  // });
-  // message = "done";
-  // }
-
-  return message;
-}
 
 Future getAllDepartments() async {
   final url = Uri.parse("http://localhost:8000/departments/index?limit=10");

@@ -1,13 +1,16 @@
 // import 'dart:ffi';
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
 import 'package:smees/models/user.dart';
+import 'package:smees/security/login.dart';
 import 'package:smees/services/database.dart';
+import 'package:smees/views/common/navigation.dart';
 import 'package:smees/views/readme.dart';
 
 var files = {
@@ -61,58 +64,11 @@ class _LoginState extends State<Login> {
     return departments;
   }
 
-  Future<String?> getToken(String key) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getString(
-        key); // Use appropriate methods like getInt, getBool, etc. based on the data type
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                ),
-                child: Column(
-                  children: [
-                    Image.asset('assets/images/graduation.png', height: 100),
-                    Text("BiT-ExitE"),
-                  ],
-                ),
-              ),
-              ListTile(
-                leading: Icon(Icons.settings),
-                title: const Text('Settings'),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.feedback),
-                title: const Text('Send Us feedback'),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.login),
-                title: const Text('Login'),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.info),
-                title: const Text('About Us'),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.logout),
-                title: const Text('Logout'),
-                onTap: () {},
-              ),
-            ],
-          ),
-        ),
+        drawer: LeftNavigation,
+          
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: Text('BiT ExitE'),
@@ -192,28 +148,25 @@ class _LoginState extends State<Login> {
                           username: usernameController.text,
                           password: passwordController.text);
 
-                      // String dd = await getAllDepartments();
-                      // print("$dd");
-                      print(
-                        "Username: ${user.username}, password: ${user.password}",
-                      );
-                      String message = await loginUser(user);
-                      // Show error message
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("$message")),
-                      );
+                      await loginUser(user);
+
                       // Save token to local storage
                       final prefs = await SharedPreferences.getInstance();
-                      String? token = prefs.getString("authToken");
-
-                      print(message);
-                      print("token: $token");
+                      final token = prefs.getString("smees-token");
+                      final role = prefs.getString("smees-role");
+                      final username = prefs.getString('smees-user');
 
                       // print(departmentController.text);
-                      // if (usernameController.text == "user" &&
-                      //     passwordController.text == "sgetme") {
-                      //   Navigator.pushNamed(context, "/home");
-                      // }
+                      if (token != null && role == 'student') {
+                        Navigator.pushNamed(context, "/home");
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            backgroundColor: Colors.blue,
+                            content: Text("Invalid email or password"),
+                          ),
+                        );
+                      }
                     },
                     child: const Text('Login',
                         style: TextStyle(color: Colors.black, fontSize: 18)),
