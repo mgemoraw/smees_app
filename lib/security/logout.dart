@@ -6,3 +6,13 @@ void logout() async {
   await prefs.setString("smees-role", "");
   await prefs.setString("smees-user", "");
 }
+
+Future<bool> isAuthenticated() async {
+  final prefs = await SharedPreferences.getInstance();
+  final token = prefs.getString("smees-token");
+
+  if (token == null) {
+    return false;
+  }
+  return true;
+}

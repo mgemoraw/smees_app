@@ -7,7 +7,6 @@ import 'package:smees/depreciated/department.dart';
 import 'package:smees/models/department.dart';
 import 'package:smees/models/user.dart';
 
-
 Future getAllDepartments() async {
   final url = Uri.parse("http://localhost:8000/departments/index?limit=10");
   var message = "";

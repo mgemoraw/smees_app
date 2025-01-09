@@ -5,6 +5,7 @@ import 'package:smees/login_page.dart';
 
 import 'package:smees/student_profile.dart';
 import 'package:smees/student_statistics.dart';
+import 'package:smees/views/common/appbar.dart';
 
 import 'home.dart';
 
@@ -83,30 +84,7 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColorDark,
-        // backgroundColor: Color.fromRGBO(33, 150, 243, 1),
-        title: Text('Grad Success!'),
-        actions: [
-          // working on search bar
-          PopupMenuButton(itemBuilder: (context) {
-            return [
-              PopupMenuItem(
-                child: TextButton(
-                  child: Text("About Us"),
-                  onPressed: () {},
-                ),
-              ),
-              PopupMenuItem(
-                child: IconButton(
-                  icon: const Icon(Icons.settings),
-                  onPressed: () {},
-                ),
-              ),
-            ];
-          }),
-        ],
-      ),
+      appBar: SmeesAppbar(title: "SMEES"),
       // body: pages[pageIndex],
       body: pages[pageKey],
       bottomNavigationBar: Container(

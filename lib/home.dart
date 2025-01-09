@@ -165,8 +165,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     setState(() {
                       Home h = const Home(
-                          department: "AutomotiveEngineering",
-                          title: 'Grad Siccess');
+                          department: "AutomotiveEngineering", title: 'SMEES');
                       h.pageKey = 'userstat';
                     });
                   },

@@ -1,7 +1,5 @@
 import "package:flutter/material.dart";
 
-class LeftNavigation extends Drawer {}
-
 class LeftNavigation extends StatefulWidget {
   const LeftNavigation({super.key});
 

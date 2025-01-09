@@ -9,7 +9,9 @@ import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
 import 'package:smees/models/user.dart';
 import 'package:smees/security/login.dart';
+import 'package:smees/security/logout.dart';
 import 'package:smees/services/database.dart';
+import 'package:smees/views/common/appbar.dart';
 import 'package:smees/views/common/navigation.dart';
 import 'package:smees/views/readme.dart';
 
@@ -67,118 +69,101 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: LeftNavigation,
-          
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Text('BiT ExitE'),
-          actions: [
-            PopupMenuButton(itemBuilder: (context) {
-              return [
-                PopupMenuItem(
-                  child: TextButton(
-                    child: Text("About Us"),
-                    onPressed: () {},
-                  ),
-                ),
-                PopupMenuItem(
-                  child: IconButton(
-                    icon: const Icon(Icons.settings),
-                    onPressed: () {},
-                  ),
-                ),
-              ];
-            }),
-          ],
-        ),
+        // drawer: LeftNavigation(),
+        appBar: AppBar(title: Text("SMEES")),
         // backgroundColor: Colors.redAccent[700],
-        body: SingleChildScrollView(
-          child: Center(
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  const Text(
-                    'Welcome to Your key to exit exam success!',
-                    style: TextStyle(
-                      // color: Colors.white,
-                      fontSize: 15, fontWeight: FontWeight.w400,
+        body: Center(
+          child: SingleChildScrollView(
+            child: Center(
+              child: Container(
+                padding: EdgeInsets.all(50.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    // Text(description),
+                    // Markdown(
+                    //     data: description,
+                    //    selectable: false,
+                    //   ),
+
+                    const Text("Welcome to SMEES Please Login to Continue",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          // color: Colors.white,
+                        )),
+                    SizedBox(
+                      height: 20.0,
                     ),
-                  ),
-
-                  Text(description),
-                  // Markdown(
-                  //     data: description,
-                  //    selectable: false,
-                  //   ),
-
-                  const Text("Please Choose your Field of Study to Continue",
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        // color: Colors.white,
-                      )),
-                  const University(),
-
-                  TextField(
-                    controller: usernameController,
-                    style: TextStyle(fontSize: 15, color: Colors.black),
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.person_2_outlined),
-                        hintText: 'User ID'),
-                  ),
-                  TextField(
-                    controller: passwordController,
-                    style: TextStyle(fontSize: 15, color: Colors.black),
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.password),
-                      hintText: 'Password',
+                    const University(),
+                    SizedBox(
+                      height: 16.0,
                     ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () async {
-                      setState(() {
-                        isLoading = true;
-                      });
+                    TextField(
+                      controller: usernameController,
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      decoration: InputDecoration(
+                          prefixIcon: Icon(Icons.person_2_outlined),
+                          hintText: 'User ID'),
+                    ),
+                    SizedBox(
+                      height: 16.0,
+                    ),
+                    TextField(
+                      controller: passwordController,
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.password),
+                        hintText: 'Password',
+                      ),
+                    ),
+                    SizedBox(
+                      height: 16.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () async {
+                        setState(() {
+                          isLoading = true;
+                        });
 
-                      late UserLogin user = UserLogin(
-                          username: usernameController.text,
-                          password: passwordController.text);
+                        late UserLogin user = UserLogin(
+                            username: usernameController.text,
+                            password: passwordController.text);
 
-                      await loginUser(user);
+                        final message = await loginUser(user);
+                        print(message);
+                        // Save token to local storage
+                        final prefs = await SharedPreferences.getInstance();
+                        final token = prefs.getString("smees-token");
+                        final role = prefs.getString("smees-role");
+                        final username = prefs.getString('smees-user');
 
-                      // Save token to local storage
-                      final prefs = await SharedPreferences.getInstance();
-                      final token = prefs.getString("smees-token");
-                      final role = prefs.getString("smees-role");
-                      final username = prefs.getString('smees-user');
-
-                      // print(departmentController.text);
-                      if (token != null && role == 'student') {
+                        // print(departmentController.text);
+                        if (token != null && role == 'student') {
+                          Navigator.pushNamed(context, "/home");
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              backgroundColor: Colors.blue,
+                              content: Text("Invalid email or password"),
+                            ),
+                          );
+                        }
+                      },
+                      child: const Text('Login',
+                          style: TextStyle(color: Colors.black, fontSize: 18)),
+                    ),
+                    ListTile(
+                      onTap: () {
                         Navigator.pushNamed(context, "/home");
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            backgroundColor: Colors.blue,
-                            content: Text("Invalid email or password"),
-                          ),
-                        );
-                      }
-                    },
-                    child: const Text('Login',
-                        style: TextStyle(color: Colors.black, fontSize: 18)),
-                  ),
-                  ListTile(
-                    onTap: () {
-                      Navigator.pushNamed(context, "/home");
-                    },
-                    title: const Text('Forgot Password?',
-                        style: TextStyle(color: Colors.black, fontSize: 18)),
-                  ),
-                ],
+                      },
+                      title: const Text('Forgot Password?',
+                          style: TextStyle(color: Colors.black, fontSize: 18)),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

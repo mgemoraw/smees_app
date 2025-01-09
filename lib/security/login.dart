@@ -3,8 +3,9 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/api/endPoints.dart';
 import 'package:smees/models/user.dart';
+import "package:http/http.dart" as http;
 
-Future<void> loginUser(UserLogin user) async {
+Future loginUser(UserLogin user) async {
   late String? message = "";
   // final url = Uri.parse('http://localhost:8000/$tokenApi');
   final url = Uri.parse('http://169.254.130.149:8000/$tokenApi');
@@ -18,7 +19,6 @@ Future<void> loginUser(UserLogin user) async {
   };
 
   try {
-    var http;
     final response = await http.post(
       url,
       headers: headers,
@@ -56,5 +56,5 @@ Future<void> loginUser(UserLogin user) async {
   // message = "done";
   // }
 
-  // return message;
+  return message;
 }
