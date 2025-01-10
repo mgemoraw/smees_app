@@ -1,7 +1,9 @@
 class User {
   String? userId;
-  String? username;
   String? password;
+  String? fname;
+  String? mname;
+  String? lname;
   String? univesity;
   String? department;
 
@@ -11,6 +13,8 @@ class User {
     this.univesity,
     this.department,
   });
+
+  // User({this.userId, this.fname, this.mname, this.lname, this.department});
 }
 
 class UserLogin {

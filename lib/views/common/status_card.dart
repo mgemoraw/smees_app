@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:shared_preferences/shared_preferences.dart";
 import "package:smees/models/user.dart";
 
 class UserStatusCard extends StatefulWidget {
@@ -22,9 +23,11 @@ class _UserStatusCardState extends State<UserStatusCard> {
   }
 
   Future<void> _loadScore() async {
-    // late double latestScore = 0;
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    final latestScore = prefs.getDouble("latest-score");
     setState(() {
-      score = 6.0;
+      score = latestScore!;
     });
   }
 
@@ -41,31 +44,24 @@ class _UserStatusCardState extends State<UserStatusCard> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Column(
-          children: [
-            ClipOval(
-              child: Image.asset(
-                'assets/images/user-1.png',
-                fit: BoxFit.contain,
-                width: 120,
-                height: 120,
-              ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ClipOval(
+            child: Image.asset(
+              'assets/images/user-2.png',
+              fit: BoxFit.contain,
+              width: 120,
+              height: 120,
             ),
-            Text(
-              "${user.userId}",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
+          ),
         ),
+        SizedBox(width: 20.0),
         Column(
           children: [
             Text(
-              "Hello ${user.userId}",
+              "Welcome ${user.userId}",
               style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,

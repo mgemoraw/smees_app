@@ -1,12 +1,17 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:smees/home_page.dart';
 import 'package:smees/views/answer_option.dart';
 import 'package:smees/views/common/appbar.dart';
+
 import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/common/status_card.dart';
 import 'package:smees/views/result_page.dart';
@@ -40,10 +45,21 @@ class TestHome extends StatefulWidget {
 
 class _TestHomeState extends State<TestHome> {
   var department;
+  int? departmentId;
   List _items = [];
   final _controller = TextEditingController();
+  double _progress = 0.0;
+  String message = "";
+  TextEditingController yearController = TextEditingController();
   String pageKey = "home";
   int pageIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUserData();
+  }
+
   // fetch content from json
   Future<void> readJson(String department) async {
     final String response =
@@ -59,16 +75,66 @@ class _TestHomeState extends State<TestHome> {
     //
     List<DropdownMenuItem<String>> departments = [];
     for (String item in files.keys) {
-      var menuItem = DropdownMenuItem(child: Text(item), value: files[item]);
+      var menuItem = DropdownMenuItem(value: files[item], child: Text(item));
       departments.add(menuItem);
     }
     return departments;
   }
 
+  Future<void> _loadUserData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? jsonString = prefs.getString("smees-user-data");
+    Map<String, dynamic> userData = jsonDecode(jsonString!);
+
+    String departmentName = userData['department'];
+
+    final url = Uri.parse(
+        "http://localhost:8000/departments/index?name=$departmentName");
+    try {
+      final response = await http.get(url);
+
+      if (response.statusCode == 200) {
+        setState(() {
+          departmentId = int.parse(response.body);
+        });
+      } else {
+        setState(() {
+          message = "Error: somthing bad happend!";
+        });
+      }
+    } catch (e) {
+      setState(() {
+        message = "Errror: $e";
+      });
+    }
+  }
+
+  Future<void> _downloadData(int departmentId, int year) async {
+    final url = Uri.parse(
+        "http://localhost:8000/questions/${departmentId}/index?year=$year");
+    final response = await http.get(url);
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      final directory = await getApplicationDocumentsDirectory();
+      final file = File("${directory.path}/data_$year.json");
+      await file.writeAsString(json.encode(data));
+      setState(() {
+        _progress = 1.0;
+        message = response.body;
+      });
+    } else {
+      setState(() {
+        message = "Failed to load data, please check your connection!";
+      });
+      throw Exception("Failed to load data, Please Check your connection");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: LeftNavigation(),
+      drawer: const LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES-App"),
       body: Column(children: [
         // user profile card
@@ -82,6 +148,8 @@ class _TestHomeState extends State<TestHome> {
               "In this page you can select a maximum of 100 questions and practice with answers shown immediately. All Questions are multiple choice and you will be given 1 minute for 1 Question."),
         ),
 
+        SizedBox(height: 16.0),
+
         // dropdown option to choose and take quiz
         DropdownButton(
             hint: const Text("Select your department here"),
@@ -94,6 +162,30 @@ class _TestHomeState extends State<TestHome> {
                 // print(_items);
               });
             }),
+        // const DownloadQuestionsJson(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: 120,
+              child: TextField(
+                  controller: yearController,
+                  keyboardType: TextInputType.number,
+                  style: const TextStyle(fontSize: 15, color: Colors.black),
+                  decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.analytics),
+                      hintText: 'Exam Year')),
+            ),
+            CircularProgressIndicator(value: _progress),
+            ElevatedButton(
+                onPressed: () {
+                  _downloadData(departmentId!, int.parse(yearController.text));
+                },
+                child: const Icon(Icons.download)),
+            const SizedBox(height: 20),
+          ],
+        ),
         SizedBox(
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
@@ -140,6 +232,9 @@ class _TestHomeState extends State<TestHome> {
             ),
           ]),
         ),
+
+        SizedBox(height: 20.0),
+        Text("$message"),
         //
         // _items.isNotEmpty ? Expanded(
         //     child: ListView.builder(
@@ -236,11 +331,9 @@ class TakeQuiz extends StatefulWidget {
 
 class _TakeQuizState extends State<TakeQuiz> {
   // varaibles
-  List<Icon> _scoreTracker = [];
   String bottomContainerText = "";
   List<Map> userAnswers = [];
   int _qno = 0;
-  int _qid = 0;
   int _totalScore = 0;
   bool answerWasSelected = false;
   bool endOfQuiz = false;

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:smees/api/endPoints.dart';
+import 'package:smees/api/end_points.dart';
 import 'package:smees/models/user.dart';
 import "package:http/http.dart" as http;
 

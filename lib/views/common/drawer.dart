@@ -44,7 +44,7 @@ class _LeftNavigationState extends State<LeftNavigation> {
               ),
               child: Column(
                 children: [
-                  Image.asset('assets/images/atom.png', height: 100),
+                  Image.asset('assets/images/profile.png', height: 100),
                   const Text("SMEES-App"),
                 ],
               ),

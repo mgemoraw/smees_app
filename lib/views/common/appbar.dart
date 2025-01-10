@@ -47,7 +47,10 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.blue,
-      title: Text(widget.title),
+      title: Text(
+        widget.title,
+        style: TextStyle(color: Colors.white),
+      ),
       actions: [
         PopupMenuButton(
             itemBuilder: (context) => isLoggedIn

@@ -164,9 +164,9 @@ class _HomePageState extends State<HomePage> {
                     // height: 150,
                   ),
                   onTap: () {
-                    final parentState =
-                        context.findAncestorStateOfType<_Hometate>();
-                    parentState?._showStatistics();
+                    // final parentState =
+                    //     context.findAncestorStateOfType<_HomeState>();
+                    // parentState?._showStatistics();
                     setState(() {
                       _pageIndex = 2;
                       Home h = const Home(
