@@ -287,7 +287,7 @@ class _TestHomeState extends State<TestHome> {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const Home(
-                          title: "BiT-ExitE",
+                          title: "SMEES-App",
                           department: "",
                         ),
                       ),
