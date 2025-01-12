@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -340,6 +341,34 @@ class _TakeQuizState extends State<TakeQuiz> {
   bool correctAnswerSelected = false;
   String _chosenAnswer = "";
   Color? _selectedColor;
+  Timer? _timer;
+  int _start = 60;
+
+  @override
+  void initState() {
+    super.initState();
+    _startTimer();
+  }
+
+  void _startTimer() {
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      if (_start == 0) {
+        setState(() {
+          timer.cancel();
+        });
+      } else {
+        setState((){
+          _start--;
+        });
+      }
+    }) ;
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -347,7 +376,7 @@ class _TakeQuizState extends State<TakeQuiz> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColorDark,
         // backgroundColor: Color.fromRGBO(33, 150, 243, 1),
-        title: Text("Quiz - ${widget.department}"),
+        title: Text("Quiz - ${widget.department} Time: $_start seconds"),
         actions: [
           // working on search bar
           PopupMenuButton(itemBuilder: (context) {

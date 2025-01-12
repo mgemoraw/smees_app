@@ -70,7 +70,11 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
         // drawer: LeftNavigation(),
-        appBar: AppBar(title: Text("SMEES")),
+        appBar: AppBar(
+          title: const Text("SMEES"),
+          
+          
+          ),
         // backgroundColor: Colors.redAccent[700],
         body: Center(
           child: SingleChildScrollView(
@@ -80,6 +84,7 @@ class _LoginState extends State<Login> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
+                  
                   children: <Widget>[
                     // Text(description),
                     // Markdown(

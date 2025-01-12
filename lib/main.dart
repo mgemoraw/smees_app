@@ -27,12 +27,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      //home: Login(),
-      initialRoute: "/",
+      // onGenerateRoute: ,
+      initialRoute: true ? "/" : "/login",
       routes: {
-        '/': (context) => const Login(),
-        '/home': (context) => const Home(
-              title: "BiT-ExitE",
+        '/login': (context) => const Login(),
+        '/': (context) => const Home(
+              title: "SMEES",
               department: "",
             ),
         '/quiz': (context) => const TestHome(
@@ -45,4 +45,5 @@ class MyApp extends StatelessWidget {
       // home: TestHome(department: "IndustrialEngineering"),
     );
   }
+
 }
