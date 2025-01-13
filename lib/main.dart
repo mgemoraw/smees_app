@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:smees/login_page.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
 import "package:smees/views/learn_zone.dart";
-
 import "package:smees/student_profile.dart";
-
 import 'home_page.dart';
 
-void main() {
+Future<void> main() async {
+  try {
+    await dotenv.load(fileName: '.env');
+  } catch (err) {
+    print(err);
+  }
   runApp(const MyApp());
 }
 
@@ -45,5 +48,4 @@ class MyApp extends StatelessWidget {
       // home: TestHome(department: "IndustrialEngineering"),
     );
   }
-
 }

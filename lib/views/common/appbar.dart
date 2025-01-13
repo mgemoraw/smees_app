@@ -74,7 +74,7 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
                           setState(() {
                             // logout();
                             Navigator.pop(context);
-                            Navigator.pushNamed(context, "/");
+                            Navigator.pushNamed(context, "/login");
                           });
                         },
                       ),
@@ -100,7 +100,7 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
                           setState(() {
                             // logout();
                             Navigator.pop(context);
-                            Navigator.pushNamed(context, "/");
+                            Navigator.pushNamed(context, "/login");
                           });
                         },
                       ),

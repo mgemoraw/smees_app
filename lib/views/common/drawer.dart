@@ -116,7 +116,7 @@ class _LoginLogoutState extends State<LoginLogout> {
               title: const Text('Login'),
               onTap: () {
                 setState(() {
-                  Navigator.pushNamed(context, "/");
+                  Navigator.pushNamed(context, "/login");
                 });
               },
             )
@@ -126,7 +126,7 @@ class _LoginLogoutState extends State<LoginLogout> {
               onTap: () {
                 logout();
                 setState(() {
-                  Navigator.pushNamed(context, "/");
+                  Navigator.pushNamed(context, "/login");
                 });
               },
             ),

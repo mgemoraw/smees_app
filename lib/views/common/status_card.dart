@@ -25,9 +25,12 @@ class _UserStatusCardState extends State<UserStatusCard> {
   Future<void> _loadScore() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    final latestScore = prefs.getDouble("latest-score");
+    final latestScore = prefs.getDouble("smees-score");
     setState(() {
-      score = latestScore!;
+      if (latestScore != null){
+        score = latestScore;
+
+      }
     });
   }
 
