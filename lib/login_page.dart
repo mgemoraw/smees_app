@@ -51,6 +51,7 @@ class _LoginState extends State<Login> {
   String? userDepartment;
   bool isLoading = false;
   var department = "";
+  bool _isObscure = true;
 
   @override
   void dispose() {
@@ -96,7 +97,9 @@ class _LoginState extends State<Login> {
     return Scaffold(
         // drawer: LeftNavigation(),
         appBar: AppBar(
+          leading: Icon(Icons.school),
           title: const Text("SMEES"),
+          backgroundColor: Colors.blue,
         ),
         // backgroundColor: Colors.redAccent[700],
         body: Center(
@@ -131,44 +134,62 @@ class _LoginState extends State<Login> {
                           hintText: 'User ID'),
                     ),
                     const SizedBox(height: 16.0),
+
                     TextField(
                       controller: passwordController,
-                      style: const TextStyle(fontSize: 15, color: Colors.black),
-                      obscureText: true,
-                      decoration: const InputDecoration(
-                        prefixIcon: Icon(Icons.password),
-                        hintText: 'Password',
-                      ),
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      obscureText: _isObscure,
+                      decoration: InputDecoration(
+                          prefixIcon: Icon(Icons.password),
+                          hintText: 'Password',
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _isObscure = !_isObscure;
+                                });
+                              },
+                              icon: Icon(_isObscure
+                                  ? Icons.visibility
+                                  : Icons.visibility_off))),
                     ),
                     const SizedBox(height: 16.0),
-                    ElevatedButton(
-                      onPressed: () async {
-                        setState(() {
-                          isLoading = true;
-                        });
+                    SizedBox(
+                      width: double.infinity,
+                      height: 40,
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          setState(() {
+                            isLoading = true;
+                          });
 
-                        late UserLogin user = UserLogin(
-                            username: usernameController.text,
-                            password: passwordController.text);
+                          late UserLogin user = UserLogin(
+                              username: usernameController.text,
+                              password: passwordController.text);
 
-                        final message = await loginUser(user);
-                        print(message);
-                        // Save token to local storage
+                          final message = await loginUser(user);
+                          print(message);
+                          // Save token to local storage
 
-                        // print(departmentController.text);
-                        if (token != null && role != null) {
-                          Navigator.pushNamed(context, "/");
-                        } else {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              backgroundColor: Colors.blue,
-                              content: Text("Invalid email or password"),
-                            ),
-                          );
-                        }
-                      },
-                      child: const Text('Login',
-                          style: TextStyle(color: Colors.black, fontSize: 18)),
+                          // print(departmentController.text);
+                          if (token != null && role != null) {
+                            Navigator.pushNamed(context, "/");
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                backgroundColor: Colors.purple,
+                                content: Text("Invalid email or password"),
+                              ),
+                            );
+                          }
+                        },
+                        child: const Text(
+                          'Login',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
                     ),
                     ListTile(
                       onTap: () {
@@ -196,7 +217,7 @@ class University extends StatefulWidget {
 class _UniversityState extends State<University> {
   var items = [
     'Civil Engineering',
-    'Water Resources and Irrigation Engineering',
+    'Water Resources fluand Irrigation Engineering',
     'Hydraulic and Water Resources Engineering',
     'Computer Science',
     'Software Engineering',

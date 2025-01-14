@@ -98,7 +98,7 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
                         icon: const Icon(Icons.logout),
                         onPressed: () {
                           setState(() {
-                            // logout();
+                            logout();
                             Navigator.pop(context);
                             Navigator.pushNamed(context, "/login");
                           });

@@ -4,6 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:smees/login_page.dart';
 import 'package:smees/security/auth.dart';
 import 'package:smees/security/logout.dart';
+import 'package:smees/student_statistics.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
 import "package:smees/views/learn_zone.dart";
@@ -34,14 +35,33 @@ class MyApp extends StatelessWidget {
       title: 'Grand Success',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color.fromARGB(255, 142, 129, 157),
+        primaryColor: Colors.blue[900],
+        primarySwatch: Colors.blue, // (255, 142, 129, 157),
+
+        scaffoldBackgroundColor: Colors.blue[50],
+        textTheme: TextTheme(
+          headlineLarge: TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue[900],
+          ),
+          bodyLarge: TextStyle(fontSize: 16, color: Colors.blue[700]),
+        ),
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.blue[300],
+          textTheme: ButtonTextTheme.primary,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+        )),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       // onGenerateRoute: ,
       // home: AuthWrapper(),
 
-      initialRoute: "/",
+      initialRoute: "/login",
       routes: {
         '/login': (context) => const Login(),
         '/': (context) => const Home(
@@ -54,6 +74,7 @@ class MyApp extends StatelessWidget {
         "/exam": (context) => const ExamHome(department: ""),
         "/profile": (context) => const Profile(userId: "bdu20150001"),
         "/learn": (contest) => const LearnZone(department: ""),
+        "/stats": (context) => const Statistics(),
       },
     );
   }
