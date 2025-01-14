@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smees/api/end_points.dart';
 
 import 'package:smees/home_page.dart';
 import 'package:smees/views/answer_option.dart';
@@ -46,7 +47,8 @@ class TestHome extends StatefulWidget {
 
 class _TestHomeState extends State<TestHome> {
   var department;
-  int? departmentId;
+  int departmentId = 0;
+  String? token;
   List _items = [];
   final _controller = TextEditingController();
   double _progress = 0.0;
@@ -84,7 +86,7 @@ class _TestHomeState extends State<TestHome> {
 
   Future<void> _loadUserData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? jsonString = prefs.getString("smees-user-data");
+    String? jsonString = prefs.getString("smees-user");
     Map<String, dynamic> userData = jsonDecode(jsonString!);
 
     String departmentName = userData['department'];
@@ -96,7 +98,9 @@ class _TestHomeState extends State<TestHome> {
 
       if (response.statusCode == 200) {
         setState(() {
+          token = userData['token'];
           departmentId = int.parse(response.body);
+          // departmentId = userData['departmentId'];
         });
       } else {
         setState(() {
@@ -111,9 +115,12 @@ class _TestHomeState extends State<TestHome> {
   }
 
   Future<void> _downloadData(int departmentId, int year) async {
-    final url = Uri.parse(
-        "http://localhost:8000/questions/${departmentId}/index?year=$year");
-    final response = await http.get(url);
+    final url =
+        Uri.parse("$API_BASE_URL/questions/${departmentId}/index?year=$year");
+    final response = await http.get(url, headers: {
+      "Authentication": "Bearer $token",
+      "Content-Type": 'application/x-www-form-urlencoded',
+    });
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
@@ -122,7 +129,9 @@ class _TestHomeState extends State<TestHome> {
       await file.writeAsString(json.encode(data));
       setState(() {
         _progress = 1.0;
-        message = response.body;
+        message = "File Saved to ${directory.path}/data_$year.json";
+        // print(response.body);
+        print("File Saved to ${directory.path}/data_$year.json");
       });
     } else {
       setState(() {
@@ -181,7 +190,7 @@ class _TestHomeState extends State<TestHome> {
             CircularProgressIndicator(value: _progress),
             ElevatedButton(
                 onPressed: () {
-                  _downloadData(departmentId!, int.parse(yearController.text));
+                  _downloadData(1, int.parse(yearController.text));
                 },
                 child: const Icon(Icons.download)),
             const SizedBox(height: 20),
@@ -357,11 +366,11 @@ class _TakeQuizState extends State<TakeQuiz> {
           timer.cancel();
         });
       } else {
-        setState((){
+        setState(() {
           _start--;
         });
       }
-    }) ;
+    });
   }
 
   @override

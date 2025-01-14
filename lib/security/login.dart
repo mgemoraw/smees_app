@@ -1,11 +1,13 @@
 import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:smees/api/end_points.dart';
 import 'package:smees/models/user.dart';
 import "package:http/http.dart" as http;
 import 'package:smees/services/database.dart';
 
+var apiUrl = dotenv.env["API_BASE_URL"];
 Future loginUser(UserLogin user) async {
   late String? message = "";
   final url = Uri.parse('$apiUrl/$tokenApi');
@@ -31,12 +33,14 @@ Future loginUser(UserLogin user) async {
       final token = data['access_token'];
       final role = data['role'];
       final username = data['username'];
+      final departmentId = data['department_id'];
       final department = data['department'];
 
       String smeesUser = jsonEncode({
         'username': username,
         'token': token,
         'role': role,
+        'departmentId': departmentId,
         'department': department,
       });
 
@@ -44,7 +48,7 @@ Future loginUser(UserLogin user) async {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('smees-user', smeesUser);
 
-      // message = response.body;
+      message = response.body;
     } else {
       // Show error message
       // ScaffoldMessenger.of(context).showSnackBar(

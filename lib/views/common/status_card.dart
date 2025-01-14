@@ -29,7 +29,6 @@ class _UserStatusCardState extends State<UserStatusCard> {
     setState(() {
       if (latestScore != null){
         score = latestScore;
-
       }
     });
   }

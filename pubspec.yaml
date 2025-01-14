@@ -48,6 +48,8 @@ dependencies:
   percent_indicator: ^4.2.4
   auto_route: ^9.3.0+1
   flutter_dotenv: ^5.2.1
+  flutter_config: ^2.0.2
+  provider: ^6.1.2
 
 
 dev_dependencies:
@@ -97,6 +99,7 @@ flutter:
       - assets/ComputerEngineering/
       - assets/ComputerScience/
       - assets/SoftwareEngineering/
+      - .env
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

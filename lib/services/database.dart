@@ -2,13 +2,14 @@ import 'dart:convert';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/api/end_points.dart';
 
 import 'package:smees/models/department.dart';
 import 'package:smees/models/user.dart';
 
-var apiUrl = dotenv.env['API_KEY'];
-var BASE_URL = dotenv.env['BASE_URL'];
+var apiUrl = dotenv.env["API_BASE_URL"];
+// var apiKey = dotenv.env['API_KEY'];
 
 Future getAllDepartments({int limit = 0}) async {
   final url = Uri.parse("$apiUrl/$getDepartmentsApi?$limit");
@@ -31,8 +32,43 @@ Future getAllDepartments({int limit = 0}) async {
   return message;
 }
 
+Future<Map<String, dynamic>> loadUserData() async {
+  // get user department
+  final prefs = await SharedPreferences.getInstance();
+  final jsonString = prefs.getString("smees-user");
+
+  if (jsonString != null) {
+    Map<String, dynamic> userData = jsonDecode(jsonString!);
+    return userData;
+  }
+  return {};
+}
+
 Future fetchQuizQuestions({int year = 2024, int limit = 100}) async {
-  //
+  // get user department
+  final userData = await loadUserData();
+  int departmentId = userData['departmentId'];
+  if (userData.isEmpty) {
+    return [];
+  }
+  final url = Uri.parse("$apiUrl/questions$departmentId/index?$limit");
+  Map<String, String> headers = {
+    'Authorization': "Bearer ${userData['token']}",
+    'Content-Type': 'application/x-www-form-urlencoded',
+  };
+
+  try {
+    final response = await http.get(
+      url,
+      headers: headers,
+    );
+
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    }
+  } catch (err) {
+    return {"Error": err};
+  }
 }
 
 Future fetchUsers() async {

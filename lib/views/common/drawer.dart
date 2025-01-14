@@ -97,13 +97,8 @@ class _LoginLogoutState extends State<LoginLogout> {
   }
 
   Future<void> _checkUserAuthentication() async {
-    final prefs = await SharedPreferences.getInstance();
-    final token = prefs.getString("smees-token");
-
-    setState(() {
-      if (token != null) {
-        isLoggedIn = true;
-      }
+    setState(() async {
+      isLoggedIn = await isAuthenticated();
     });
   }
 

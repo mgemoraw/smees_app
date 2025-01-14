@@ -45,6 +45,10 @@ class _LoginState extends State<Login> {
   final departmentController = TextEditingController();
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+  String? token;
+  String? username;
+  String? role;
+  String? userDepartment;
   bool isLoading = false;
   var department = "";
 
@@ -54,6 +58,27 @@ class _LoginState extends State<Login> {
     departmentController.dispose();
     usernameController.dispose();
     passwordController.dispose();
+  }
+
+  @override
+  initState() {
+    super.initState();
+    _loadUserData();
+  }
+
+  Future<void> _loadUserData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? jsonString = prefs.getString('smees-user');
+    if (jsonString != null) {
+      Map<String, dynamic> userData = jsonDecode(jsonString);
+      setState(() {
+        // print(jsonString);
+        username = userData['username'];
+        token = userData['token'];
+        role = userData['role'];
+        userDepartment = userData['department'];
+      });
+    }
   }
 
   List<DropdownMenuItem<String>> getDepartments() {
@@ -72,19 +97,16 @@ class _LoginState extends State<Login> {
         // drawer: LeftNavigation(),
         appBar: AppBar(
           title: const Text("SMEES"),
-          
-          
-          ),
+        ),
         // backgroundColor: Colors.redAccent[700],
         body: Center(
           child: SingleChildScrollView(
             child: Center(
               child: Container(
-                padding: EdgeInsets.all(50.0),
+                padding: const EdgeInsets.all(50.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  
                   children: <Widget>[
                     // Text(description),
                     // Markdown(
@@ -98,35 +120,27 @@ class _LoginState extends State<Login> {
                           fontWeight: FontWeight.bold,
                           // color: Colors.white,
                         )),
-                    SizedBox(
-                      height: 20.0,
-                    ),
+                    const SizedBox(height: 20.0),
                     const University(),
-                    SizedBox(
-                      height: 16.0,
-                    ),
+                    const SizedBox(height: 16.0),
                     TextField(
                       controller: usernameController,
-                      style: TextStyle(fontSize: 15, color: Colors.black),
-                      decoration: InputDecoration(
+                      style: const TextStyle(fontSize: 15, color: Colors.black),
+                      decoration: const InputDecoration(
                           prefixIcon: Icon(Icons.person_2_outlined),
                           hintText: 'User ID'),
                     ),
-                    SizedBox(
-                      height: 16.0,
-                    ),
+                    const SizedBox(height: 16.0),
                     TextField(
                       controller: passwordController,
-                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      style: const TextStyle(fontSize: 15, color: Colors.black),
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.password),
                         hintText: 'Password',
                       ),
                     ),
-                    SizedBox(
-                      height: 16.0,
-                    ),
+                    const SizedBox(height: 16.0),
                     ElevatedButton(
                       onPressed: () async {
                         setState(() {
@@ -140,14 +154,10 @@ class _LoginState extends State<Login> {
                         final message = await loginUser(user);
                         print(message);
                         // Save token to local storage
-                        final prefs = await SharedPreferences.getInstance();
-                        final token = prefs.getString("smees-token");
-                        final role = prefs.getString("smees-role");
-                        final username = prefs.getString('smees-user');
 
                         // print(departmentController.text);
-                        if (token != null && role == 'student') {
-                          Navigator.pushNamed(context, "/home");
+                        if (token != null && role != null) {
+                          Navigator.pushNamed(context, "/");
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
@@ -162,7 +172,7 @@ class _LoginState extends State<Login> {
                     ),
                     ListTile(
                       onTap: () {
-                        Navigator.pushNamed(context, "/home");
+                        Navigator.pushNamed(context, "/");
                       },
                       title: const Text('Forgot Password?',
                           style: TextStyle(color: Colors.black, fontSize: 18)),
