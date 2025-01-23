@@ -17,22 +17,24 @@ class TakeExam extends StatefulWidget {
 
 class _TakeExamState extends State<TakeExam> {
   // varaibles
-  List<Icon> _scoreTracker = [];
   String bottomContainerText = "";
   Map userAnswers = {};
   int _qno = 0;
-  int _qid = 0;
   int _totalScore = 0;
   bool answerWasSelected = false;
   bool endOfQuiz = false;
   bool correctAnswerSelected = false;
-  String _chosenAnswer = "";
+  String? _chosenAnswer;
   Color? _selectedColor;
   final Color _bgColor = Colors.white;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.done), //Icons.plus),
+      ),
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColorDark,
         // backgroundColor: Color.fromRGBO(33, 150, 243, 1),
@@ -113,6 +115,34 @@ class _TakeExamState extends State<TakeExam> {
         child: Column(children: [
           // Question
           Container(
+            height: 40,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: widget.items.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextButton(
+                      onPressed: () {
+                        setState(() {
+                          // go to question number index+1
+                          _qno = index;
+                          _chosenAnswer = userAnswers[index];
+                        });
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor:
+                            userAnswers[index] == null ? null : Colors.green,
+                      ),
+                      child: Text(
+                        "${index + 1}",
+                      ),
+                    ),
+                  );
+                }),
+          ),
+
+          Container(
             alignment: Alignment.topLeft,
             padding: const EdgeInsets.all(10.0),
             child: Text(
@@ -129,8 +159,8 @@ class _TakeExamState extends State<TakeExam> {
                 setState(() {
                   _selectedColor = Colors.blue;
                   _chosenAnswer = "A";
-                  _writeAnswer(_chosenAnswer);
-                  disableOptions();
+                  _writeAnswer(_chosenAnswer!);
+                  // disableOptions();
                 });
               },
               key: const Key('A'),
@@ -157,8 +187,8 @@ class _TakeExamState extends State<TakeExam> {
                 setState(() {
                   _selectedColor = Colors.blue;
                   _chosenAnswer = 'B';
-                  _writeAnswer(_chosenAnswer);
-                  disableOptions();
+                  _writeAnswer(_chosenAnswer!);
+                  // disableOptions();
                 });
               },
               key: const Key('B'),
@@ -180,10 +210,12 @@ class _TakeExamState extends State<TakeExam> {
             color: _chosenAnswer == 'C' ? _selectedColor : _bgColor,
             child: ListTile(
               onTap: () {
-                _selectedColor = Colors.blue;
-                _chosenAnswer = 'C';
-                _writeAnswer(_chosenAnswer);
-                disableOptions();
+                setState(() {
+                  _selectedColor = Colors.blue;
+                  _chosenAnswer = 'C';
+                  _writeAnswer(_chosenAnswer!);
+                  // disableOptions();
+                });
               },
               key: const Key('C'),
               leading: const Text(
@@ -207,7 +239,7 @@ class _TakeExamState extends State<TakeExam> {
               onTap: () {
                 setState(() {
                   _chosenAnswer = 'D';
-                  _writeAnswer(_chosenAnswer);
+                  _writeAnswer(_chosenAnswer!);
                   _selectedColor = Colors.blue;
                   disableOptions();
 
@@ -238,9 +270,9 @@ class _TakeExamState extends State<TakeExam> {
                     onTap: () {
                       setState(() {
                         _chosenAnswer = "E";
-                        _writeAnswer(_chosenAnswer);
+                        _writeAnswer(_chosenAnswer!);
                         _selectedColor = Colors.blue;
-                        disableOptions();
+                        // disableOptions();
                       });
                     },
                     key: const Key('E'),
@@ -268,9 +300,9 @@ class _TakeExamState extends State<TakeExam> {
                     onTap: () {
                       setState(() {
                         _chosenAnswer = 'F';
-                        _writeAnswer(_chosenAnswer);
+                        _writeAnswer(_chosenAnswer!);
                         _selectedColor = Colors.blue;
-                        disableOptions();
+                        // disableOptions();
                       });
                     },
                     key: Key('F'),
@@ -321,6 +353,16 @@ class _TakeExamState extends State<TakeExam> {
     });
   }
 
+  void _showUserAnswer(qno) {
+    setState(() {
+      if (userAnswers[qno] != null) {
+        _chosenAnswer = userAnswers[qno];
+      } else {
+        _chosenAnswer = null;
+      }
+    });
+  }
+
   void _nextQuestion() {
     // next question
     setState(() {
@@ -333,6 +375,7 @@ class _TakeExamState extends State<TakeExam> {
           _selectedColor = Colors.white;
           bottomContainerText = "";
         }
+
 //
       } else {
         Navigator.pop(context);
@@ -359,9 +402,7 @@ class _TakeExamState extends State<TakeExam> {
   }
 
   void _writeAnswer(String value) {
-    // var correctAnswer = widget.items[_qno]['answer'];
     userAnswers[_qno] = value;
-    // userAnswers[_qno].add(correctAnswer);
   }
 
   void _checkPreviousAnswer() {
