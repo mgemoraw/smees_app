@@ -27,7 +27,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
 
     final latestScore = prefs.getDouble("smees-score");
     setState(() {
-      if (latestScore != null){
+      if (latestScore != null) {
         score = latestScore;
       }
     });
@@ -45,34 +45,37 @@ class _UserStatusCardState extends State<UserStatusCard> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ClipOval(
-            child: Image.asset(
-              'assets/images/user-2.png',
-              fit: BoxFit.contain,
-              width: 120,
-              height: 120,
-            ),
-          ),
-        ),
-        SizedBox(width: 20.0),
-        Column(
-          children: [
-            Text(
-              "Welcome ${user.userId}",
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipOval(
+              child: Image.asset(
+                'assets/images/user-2.png',
+                fit: BoxFit.contain,
+                width: 120,
+                height: 120,
               ),
             ),
-            Text("Latest Score: $score"),
-          ],
-        ),
-      ],
+          ),
+          const SizedBox(width: 20.0),
+          Column(
+            children: [
+              Text(
+                "Welcome ${user.userId}",
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text("Latest Score: $score"),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

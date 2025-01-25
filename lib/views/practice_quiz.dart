@@ -142,7 +142,7 @@ class _TestHomeState extends State<TestHome> {
               "In this page you can select a maximum of 100 questions and practice with answers shown immediately. All Questions are multiple choice and you will be given 1 minute for 1 Question."),
         ),
 
-        SizedBox(height: 16.0),
+        const SizedBox(height: 16.0),
 
         // dropdown option to choose and take quiz
         DropdownButton(

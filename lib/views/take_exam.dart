@@ -1,3 +1,5 @@
+import "dart:async";
+
 import "package:flutter/material.dart";
 import "package:smees/views/answer_option.dart";
 import "package:smees/views/result_page.dart";
@@ -26,19 +28,85 @@ class _TakeExamState extends State<TakeExam> {
   bool correctAnswerSelected = false;
   String? _chosenAnswer;
   Color? _selectedColor;
+  Color? selectedColor = Colors.green[100];
   final Color _bgColor = Colors.white;
+  Timer? _timer;
+  Duration _remainingTime = Duration(hours: 0, minutes: 0, seconds: 0);
+
+  @override
+  void initState() {
+    super.initState();
+    _setExamTime();
+  }
+
+  void _setExamTime() {
+    setState(() {
+      _remainingTime = Duration(seconds: widget.items.length * 60);
+    });
+
+    _startTimer();
+  }
+
+  void _startTimer() {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_remainingTime.inSeconds > 0) {
+        setState(() {
+          _remainingTime = _remainingTime - const Duration(seconds: 1);
+        });
+      } else {
+        setState(() {
+          timer.cancel();
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  String _formatTime(Duration duration) {
+    int hours = duration.inHours;
+    int minutes = duration.inMinutes % 60;
+    int seconds = duration.inSeconds % 60;
+
+    // Return time in hh:mm:ss format
+    return '${_twoDigits(hours)}:${_twoDigits(minutes)}:${_twoDigits(seconds)}';
+  }
+
+  String _twoDigits(int n) {
+    if (n >= 10) {
+      return '$n';
+    }
+    return '0$n';
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.done), //Icons.plus),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: FloatingActionButton(
+          onPressed: () {},
+          isExtended: true,
+          child: const Text(
+            "Submit", // Display the formatted time
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+            ),
+          ), //Icons.plus),
+        ),
       ),
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColorDark,
         // backgroundColor: Color.fromRGBO(33, 150, 243, 1),
-        title: Text("Quiz - ${widget.department}"),
+        title: Text(
+          "Exam Time - ${_formatTime(_remainingTime)} - ${widget.department} ",
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
         actions: [
           // working on search bar
           PopupMenuButton(itemBuilder: (context) {
@@ -105,8 +173,8 @@ class _TakeExamState extends State<TakeExam> {
                 _nextQuestion();
               },
               child: const Row(children: [
-                Icon(Icons.arrow_forward),
                 Text("Next"),
+                Icon(Icons.arrow_forward),
               ])),
         ]),
       ),
@@ -157,7 +225,7 @@ class _TakeExamState extends State<TakeExam> {
             child: ListTile(
               onTap: () {
                 setState(() {
-                  _selectedColor = Colors.blue;
+                  _selectedColor = selectedColor;
                   _chosenAnswer = "A";
                   _writeAnswer(_chosenAnswer!);
                   // disableOptions();
@@ -185,7 +253,7 @@ class _TakeExamState extends State<TakeExam> {
             child: ListTile(
               onTap: () {
                 setState(() {
-                  _selectedColor = Colors.blue;
+                  _selectedColor = selectedColor;
                   _chosenAnswer = 'B';
                   _writeAnswer(_chosenAnswer!);
                   // disableOptions();
@@ -211,7 +279,7 @@ class _TakeExamState extends State<TakeExam> {
             child: ListTile(
               onTap: () {
                 setState(() {
-                  _selectedColor = Colors.blue;
+                  _selectedColor = selectedColor;
                   _chosenAnswer = 'C';
                   _writeAnswer(_chosenAnswer!);
                   // disableOptions();
@@ -240,7 +308,7 @@ class _TakeExamState extends State<TakeExam> {
                 setState(() {
                   _chosenAnswer = 'D';
                   _writeAnswer(_chosenAnswer!);
-                  _selectedColor = Colors.blue;
+                  _selectedColor = selectedColor;
                   disableOptions();
 
                   //print(_chosenAnswer);
@@ -271,7 +339,7 @@ class _TakeExamState extends State<TakeExam> {
                       setState(() {
                         _chosenAnswer = "E";
                         _writeAnswer(_chosenAnswer!);
-                        _selectedColor = Colors.blue;
+                        _selectedColor = selectedColor;
                         // disableOptions();
                       });
                     },
@@ -301,7 +369,7 @@ class _TakeExamState extends State<TakeExam> {
                       setState(() {
                         _chosenAnswer = 'F';
                         _writeAnswer(_chosenAnswer!);
-                        _selectedColor = Colors.blue;
+                        _selectedColor = selectedColor;
                         // disableOptions();
                       });
                     },
