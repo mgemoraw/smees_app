@@ -1,102 +1,4102 @@
 [
-{"question": "Scholars strongly argue that planning sometimes “reduces creativity”. When/how?","A": "When numerous people are engaged in the planning","B": "When the planning follow a bottom-up approach","C": "When the planning is done by a top management only","D": "When the planning follow a top-down approach","answer": "C","image": "","course": "","module": ""},
-{"question": "In planning nutrition projects, diagnosing extent and causes of nutrition problems is usually done by_____?","A": "Political commitment","B": "Nutrition surveillance","C": "Nutrition assessment","D": "Project planning","answer": "C","image": "","course": "","module": ""},
-{"question": "In collecting data for problem identification and diagnosis, the data is advised to be disaggregated, because.","A": "Aggregated data is costly","B": "Disaggregated data is cheap","C": "Aggregated data reflect reality","D": "Disaggregated data reflect reality","answer": "D","image": "","course": "","module": ""},
-{"question": "Program planning requires us to select appropriate actions from available options. Which one of the following cannot be a weighting criterion then?","A": "Interest of donors","B": "Feasibility and effectiveness","C": "Capital demand","D": "Time and cost","answer": "A","image": "","course": "","module": ""},
-{"question": "It involves the use community health indices that reflect community nutritional status/ needs and their influences.","A": "Anthropometric assessments","B": "Indirect nutritional assessment methods","C": "Direct nutritional assessment methods","D": "Clinical evaluations","answer": "B","image": "","course": "","module": ""},
-{"question": "One of the following is not true about cross-sectional surveys.","A": "Can identify geographic areas and/or population sub-groups at risk of chronic malnutrition","B": "Can identify geographic areas and/or population sub-groups at risk of acute malnutrition","C": "Used to establish baseline nutritional status of a population","D": "Used to formulate policies","answer": "B","image": "","course": "","module": ""},
-{"question": "It involves obtaining information on the nutritional condition of the target community using qualitative methods and doesn’t involve recording anthropometric data.","A": "Rapid Assessment","B": "Follow up Survey","C": "Baseline Survey","D": "Rapid appraisal of the nutrition situation","answer": "D","image": "","course": "","module": ""},
-{"question": "It is used to assess the impact of the project on the nutritional condition of a community.","A": "Rapid appraisal of the nutrition situation","B": "Follow up Survey","C": "Rapid Assessment","D": "Baseline Survey","answer": "B","image": "","course": "","module": ""},
-{"question": "While selecting dietary assessment tools, all of the following are true except.","A": "For respondents unable to self-report: use hospital records, dietitians or nurses","B": "Food lists & nutrients composition databases that reflect the foods consumed by the population should be used","C": "For population groups, use interviewers of different ethnic background to avoid bias","D": "For the elderly, assess any special considerations (memory, special diet etc)","answer": "C","image": "","course": "","module": ""},
-{"question": "Which of the following is used to measure food consumption at national level?","A": "Food account method","B": "Dietary history","C": "Food balance sheet","D": "Household Food Record Method","answer": "C","image": "","course": "","module": ""},
-{"question": "It involves keeping records of all foods consumed at each meal by weight, and measured before division into individual servings by members of the household, or field workers.","A": "Household food record method","B": "Telephone surveys","C": "Food account method","D": "Household 24-hrs recall method","answer": "A","image": "","course": "","module": ""},
-{"question": "It is used to estimate actual food & nutrient intakes of individuals/ population groups during the previous 24-hours period.","A": "Weighed food records","B": "Food frequency questionnaires","C": "Twenty-four hour recall methods","D": "Food Diary","answer": "C","image": "","course": "","module": ""},
-{"question": "One of the following is considered as the most precise method for assessing food intakes of individuals.","A": "Food frequency questionnaires","B": "Dietary History","C": "Twenty-four hour recall methods","D": "Weighed food records","answer": "D","image": "","course": "","module": ""},
-{"question": "One of the following is true about assessing the food intakes in young children.","A": "There is special dietary assessment methods designed specifically for young children","B": "Currently available dietary survey methods, constructed for use in adult populations, are also appropriate for collecting data from pediatric populations","C": "Twenty-four-hour recalls can directly be used in children less than 5 years","D": "Food frequency questionnaires are not recommended to be used for children","answer": "B","image": "","course": "","module": ""},
-{"question": "Which of the following is not among the important consideration during food frequency questionnaires?","A": "Avoid open-ended questions; preformatted lists best","B": "Use well-defined foods & food categories","C": "Non-consecutive days should be selected","D": "All of the above","answer": "C","image": "","course": "","module": ""},
-{"question": "Among the following alternatives which one is used as indicator of chronic malnutrition?","A": "Weight for height <-2SD","B": "Height for Age >1SD","C": "Height for Age <-2 SD","D": "Weight for age >2SD","answer": "C","image": "","course": "","module": ""},
-{"question": "Among the following which one is miss matched?","A": "Low weight for height----Wasting","B": "Low length for age----Wasting","C": "Low height for age----Stunting","D": "Low weight for age----Underweight","answer": "B","image": "","course": "","module": ""},
-{"question": "Nutrition sensitive intervention is also known by the name.","A": "Nutrition sensitizing","B": "Nutrition integration","C": "Nutrition linking","D": "Nutrition targeted","answer": "B","image": "","course": "","module": ""},
-{"question": "Among the following responses, one is given at National and International level to nutritional stress.","A": "Nutritional surveillance and program monitoring","B": "Food aid","C": "Conflict resolution","D": "National food & nutrition policies","answer": "B","image": "","course": "","module": ""},
-{"question": "Intervention through WASH can only be expected to influence nutritional outcomes if.","A": "They  significantly reduce the level of pathogens in the environment","B": "Improving the transmission from host to Environment","C": "Break the transmission from the environment to the host","D": "A and C","answer": "D","image": "","course": "","module": ""},
-{"question": "Which one is not classified under nutrition specific intervention?","A": "Maternal micronutrient supplementation","B": "Supporting Exclusive Breast feeding","C": "Micronutrient supplement","D": "All","answer": "B","image": "","course": "","module": ""},
-{"question": "All indicates the benefits of school-based food and nutrition intervention except.","A": "Improved child growth","B": "Lower school attendance","C": "Improved school performance and cognitive scores","D": "Lower drop-out rates","answer": "D","image": "","course": "","module": ""},
-{"question": "One indicates the short- term impact of malnutrition.","A": "Increased the risk of mortality","B": "Low Birth weight","C": "Impaired Mental development","D": "Stunted children","answer": "A","image": "","course": "","module": ""},
-{"question": "Which one is not correct about nutrition sensitive intervention?","A": "They are interventions that influence the underlying determinants of nutrition","B": "Its primary objective is not nutrition, but that which have potential to improve food and nutrition security of beneficiaries","C": "Incorporate explicit nutrition goals and actions with a clearly defined plan","D": "Improve nutritional outcomes and impact by addressing many of the underlying and basic causes of malnutrition","answer": "B","image": "","course": "","module": ""},
-{"question": "One is not indicates the negative consequence of climate change on nutrition.","A": "Reduce production","B": "Decreasing post-harvest losses","C": "Increasing food insecurity","D": "Decrease the availability of food","answer": "B","image": "","course": "","module": ""},
-{"question": "Which of the following is NOT an example of a characteristic of an effective nutrition counsellor?","A": "Excellent physique","B": "Self-awareness","C": "Knowledge","D": "Gender/ Culture Awareness","answer": "A","image": "","course": "","module": ""},
-{"question": "Which of these factors DO NOT have an effect on communication?","A": "Kinesthetic factors","B": "Visual code","C": "Neurological fragmentation","D": "Voice loudness","answer": "C","image": "","course": "","module": ""},
-{"question": "Which of these barriers to listening describes the client who aggressively defends their food behaviors?","A": "Intense emotion","B": "Defensiveness","C": "Selective listening","D": "Failure to accept emotional behaviors","answer": "B","image": "","course": "","module": ""},
-{"question": "It is generalized descriptions used to analyze or explain something.","A": "Algorithms","B": "Model","C": "Frames","D": "Contemplation","answer": "A","image": "","course": "","module": ""},
-{"question": "When should the nutrition educational approach be tailored to address the needs of the target population, availability of resources, and any guidelines of the organization sponsoring the intervention?","A": "Before the needs assessment","B": "After the needs assessment","C": "Immediately before the evaluation","D": "After designing a theory-based intervention","answer": "B","image": "","course": "","module": ""},
-{"question": "Identify a specific goal.","A": "Increase vegetables","B": "Increase calcium intake","C": "Eat two servings of vegetables for lunch and again at dinner","D": "Eat more fruits","answer": "C","image": "","course": "","module": ""},
-{"question": "What is the best way to help a client who is trying to eat healthy for the first time?","A": "Inform them about the various food exchanges","B": "Introduce them to the food pyramid and My Plate","C": "Plan detailed menus","D": "Inform them about the DASH diet","answer": "B","image": "","course": "","module": ""},
-{"question": "All of the following are examples of high risk situations related to relapsing from behavior change except.","A": "Negative self-talk","B": "Cognitive Restructuring","C": "Lack of social support","D": "Lack of Coping Skills","answer": "B","image": "","course": "","module": ""},
-{"question": "Which is the best option to counseling relapse prevention of a behavior change?","A": "Join clubs or organization","B": "Urge management techniques","C": "Social support","D": "All of the above","answer": "D","image": "","course": "","module": ""},
-{"question": "What is Empathy?","A": "Feeling comfortably with the client","B": "Client feels annoyed by counselor","C": "Ability to listen carefully what other people say","D": "True understanding of another's prospective","answer": "D","image": "","course": "","module": ""},
-{"question": "Which of the following types of Nutrition Education questions serves to aid in exploring areas not previously addressed?","A": "Factual questions","B": "Exploratory questions","C": "Justifying questions","D": "Explanatory questions","answer": "B","image": "","course": "","module": ""},
-{"question": "What is nutrition counseling?","A": "A strategy that is fact- and direction-based and may not take into consideration the individual needs and wants of the patient","B": "The evaluation of nutrition and health needs and the use of client-centered education strategies to meet these needs and help clients make sustainable lifestyle changes","C": "A strategy that incorporates open-ended questions, reflective listening, summarization, and asking permission in order to provide information and tools to patients on an individualized level","D": "Discussing cultural practices of the patient and incorporating these into the nutrition care plan","answer": "D","image": "","course": "","module": ""},
-{"question": "Reflects the households’ use of the food to which they have access and individuals’ ability to absorb and metabolize the nutrients.","A": "Food availability","B": "Food access","C": "Food utilization","D": "Food distribution","answer": "C","image": "","course": "","module": ""},
-{"question": "One of the following is not among the United Nations specialized Agencies and offices.","A": "World Food Program (WFP)","B": "United Nations Higher Commission for Refugees (UNHCR)","C": "The International Committee of the Red Cross (ICRC)","D": "World Health Organization (WHO)","answer": "C","image": "","course": "","module": ""},
-{"question": "One of the following is true bout International Humanitarian Law?","A": "Applied only to armed conflict","B": "It covers internal tensions or disturbances such as isolated acts of violence","C": "The law is not applied to all groups equally i.e. applied strongly on the group who started the fighting","D": "The law can be applied before the conflict has begun","answer": "A","image": "","course": "","module": ""},
-{"question": "One of the following is true about initial investigation.","A": "It relies primarily on primary data","B": "It’s used to generate a household economic profile of the population","C": "It provides a detailed information & understanding of the food security situation,","D": "It undertaken following a sudden disaster or the receipt of a report of a new crisis","answer": "D","image": "","course": "","module": ""},
-{"question": "Among the following which one requires careful planning, preparation as well as considerable resources?","A": "Rapid assessment","B": "Initial investigation","C": "In-depth assessment","D": "None","answer": "B","image": "","course": "","module": ""},
-{"question": "Who are the target group for the rapid nutrition surveys?","A": "Children less than 6 months","B": "Children age 6 to 59 months","C": "Adolescent girls","D": "All","answer": "B","image": "","course": "","module": ""},
-{"question": "Communities should prepare for Emergencies, because;","A": "It would be difficult to pool resources at the community level","B": "The positive effects of preparedness programmes can’t be best measured at the community level","C": "Excessive or inappropriate external assistance destroys their self-reliance and increase dependency","D": "Those who first respond to an emergency come from international organizations","answer": "C","image": "","course": "","module": ""},
-{"question": "Who is considered as the forefront to assist whenever food security crisis happens?","A": "WFP","B": "UNICEF","C": "WHO","D": "FAO","answer": "A","image": "","course": "","module": ""},
-{"question": "It is the dominant form of response in emergencies.","A": "Food donation","B": "Food for Asset creation","C": "Food for work","D": "Safety net","answer": "A","image": "","course": "","module": ""},
-{"question": "When general food distribution should be established?","A": "When there is usual decline in food availability or affordability","B": "When coping mechanisms are, or will be sufficient","C": "When there is a high prevalence of malnutrition","D": "None of the above","answer": "C","image": "","course": "","module": ""},
-{"question": "One of the following is true about General food Distribution.","A": "Target those in need of nutritional rehabilitation","B": "Aimed to cover the immediate basic food needs of a population in order to eliminate the need for survival strategies","C": "Implemented when the supplementary foods being provided is not adequate, leading to an increase in malnutrition","D": "Aims at treatment of moderate acute malnutrition (MAM)","answer": "B","image": "","course": "","module": ""},
-{"question": "All of the following nutrition interventions in emergencies are included in food responses except.","A": "General food distribution","B": "Livelihood support/ intervention","C": "Selective feeding programs","D": "Supplementary feeding programs","answer": "B","image": "","course": "","module": ""},
-{"question": "Among the approaches of distribution of general food ration, which one result in creation of assets such as roads, schools or irrigation systems, and learning new skills by the community members.","A": "Free distribution","B": "School feeding programs","C": "Food for work","D": "All of the above","answer": "C","image": "","course": "","module": ""},
-{"question": "Among the following statements, which one is correct?","A": "The admission and discharge criteria for Blanket Supplementary Feeding Programs rely on Anthropometric indicators","B": "The admission and discharge criteria for Blanket Supplementary Feeding Programs don’t rely on Anthropometric indicators","C": "The admission and discharge criteria for Targeted Supplementary Feeding Program don’t rely on Anthropometric indicators","D": "All children between 6 to 59 months or two or three years of age are targets for Targeted Supplementary Feeding Programs","answer": "B","image": "","course": "","module": ""},
-{"question": "Among the ways used to address Moderate Acute Malnutrition which one should be considered as a short term measure?","A": "Improving a general food ration; Food security;","B": "Improving access to health care; sanitation and potable water","C": "Implementing supplementary feeding programs","D": "All of the above","answer": "C","image": "","course": "","module": ""},
-{"question": "It is the process of providing or obtaining the food necessary for health and growth.","A": "Health","B": "Nutrition","C": "Sanitation","D": "Security","answer": "B","image": "","course": "","module": ""},
-{"question": "It is one of the food-based strategies for preventing micronutrient malnutrition.","A": "Blanket food","B": "Complementary feeding","C": "Therapeutic feeding","D": "Food fortification","answer": "B","image": "","course": "","module": ""},
-{"question": "Which one of the following is not correct about anthropometric measurement?","A": "MUAC of <12.5cm is cut point for SAM in Ethiopia","B": "MUAC is used for 12-59 months only","C": "MUAC can be used for pregnant","D": "BMI < 16 kg/m2 is indicator of severe chronic energy deficiency in children","answer": "A","image": "","course": "","module": ""},
-{"question": "Which one of the following is correct about Weight-for-height (WFH)?","A": "A measure of stunting","B": "Can indicate past malnutrition","C": "A measure of wasting when low","D": "Less useful measure of growth over time","answer": "C","image": "","course": "","module": ""},
-{"question": "It is one of the food-based strategies for preventing micronutrient malnutrition.","A": "Blanket food","B": "Complementary feeding","C": "Therapeutic feeding","D": "Food fortification","answer": "D","image": "","course": "","module": ""},
-{"question": "Among of general food distribution which feeding program is target on nutritionally vulnerable groups?","A": "Supplementary feeding program","B": "Therapeutic feeding programs","C": "Food fortification program","D": "Complementary feeding program","answer": "A","image": "","course": "","module": ""},
-{"question": "Those are the main factors that have exacerbated the problem of food production, distribution and access.","A": "Drought and Conflict","B": "Market and Price","C": "Land and Rainfall","D": "Trader and Marketing","answer": "A","image": "","course": "","module": ""},
-{"question": "What is food security?","A": "It relates to efforts to prevent terrorists from poisoning food supplies","B": "It is about ensuring everyone's access to food","C": "Its component elements include availability, utilisation, and stability, as well as access","D": "Food security focuses primarily on ending micronutrient malnutrition","answer": "C","image": "","course": "","module": ""},
-{"question": "How will climate change affect future food security?","A": "It will have negative impacts in most developing countries because of the increased frequency of droughts, storms and floods","B": "The impact will be positive, because drier weather will mean less habitat for malaria mosquitoes, so fewer workers will be sick at harvest time","C": "The impact will be positive because there will be more carbon dioxide available for plant photosynthesis","D": "There currently is no scientific consensus as to whether climate change is occurring or whether it will over the next 50 years","answer": "A","image": "","course": "","module": ""},
-{"question": "Which of the following is a not factor have led to the recent momentum to speeding up the rate of eliminating malnutrition?","A": "Millennium Development Goals","B": "Focus on the first 1000 days","C": "Data on effective interventions","D": "National Population Growth rate","answer": "D","image": "","course": "","module": ""},
-{"question": "The objectives of a rapid nutrition assessment include which of the following?","A": "To identify trends in nutrition status","B": "To verify the existence or threat of a nutrition emergency","C": "To establish the prevalence of malnutrition","D": "All","answer": "B","image": "","course": "","module": ""},
-{"question": "Which nutrition index and/or measurement would you suggest for use in the rapid assessment?","A": "Weight for height percentage of the median","B": "MUAC","C": "BMI","D": "BMI for age","answer": "B","image": "","course": "","module": ""},
-{"question": "Which is a specialized consultative health care?","A": "Primary care","B": "Secondary care","C": "Urgent care","D": "Tertiary care","answer": "A","image": "","course": "","module": ""},
-{"question": "What is the new strategy, a unique concept of WHO, to provide universal coverage of rehabilitation to all segments of society?","A": "Occupational rehabilitation","B": "Medical rehabilitation","C": "Community based rehabilitation","D": "Institutional based rehabilitation","answer": "C","image": "","course": "","module": ""},
-{"question": "What is the best quality of a good counselor?","A": "Good listener","B": "Good teacher","C": "Good speaker","D": "Good advocate","answer": "A","image": "","course": "","module": ""},
-{"question": "What is the cause of physiological anemia in pregnancy?","A": "Poor iron intake","B": "Vomiting","C": "Blood loss","D": "Heamodilution","answer": "D","image": "","course": "","module": ""},
-{"question": "The level of prevention in which the emergence of risk factors of a chronic disease in a population is prevented.","A": "Primary prevention","B": "Primordial prevention","C": "Secondary prevention","D": "Tertiary prevention","answer": "C","image": "","course": "","module": ""},
-{"question": "Normal serum sodium level is.","A": "125-135 meq/l","B": "135-140 meq/l","C": "135-145 meq/l","D": "145-150 meq/l","answer": "A","image": "","course": "","module": ""},
-{"question": "The very important variable for assessing nutrition of under 5 children is/are.","A": "Weight","B": "Height","C": "Age","D": "All of above","answer": "D","image": "","course": "","module": ""},
-{"question": "A baby is called low birth weight if he /she measures less than.","A": "2.5 kg","B": "1.5 kg","C": "3.5 kg","D": "2.2 kg","answer": "A","image": "","course": "","module": ""},
-{"question": "Which of the following study determine prevalence of diseases?","A": "Longitudinal study","B": "Case control study","C": "Cohort study","D": "Cross sectional study","answer": "D","image": "","course": "","module": ""},
-{"question": "Iodine surveillance in community is done by.","A": "Testing iodine secretion in urine","B": "Measuring iodine from packets","C": "Analysis of goiter prevalence","D": "Data collection","answer": "B","image": "","course": "","module": ""},
-{"question": "One who is trained by sport nutrition can actively participate in one of the following activities.","A": "Nutrition education","B": "Counseling","C": "Fitness assessments","D": "All","answer": "D","image": "","course": "","module": ""},
-{"question": "Which of the following is TRUE about aerobic metabolism?","A": "It is less efficient at making ATP than anaerobic metabolism","B": "It can only use glucose to make ATP","C": "It is used to make ATP in the presence of oxygen","D": "It is faster at making ATP than anaerobic metabolism","answer": "C","image": "","course": "","module": ""},
-{"question": "Which of the following statements is TRUE concerning dietary fat intake for athletes?","A": "Athletes perform well on low-fat diets","B": "Athletes need more dietary fat than the general population","C": "Athletes should consume less dietary fat than the general population","D": "Athletes should get between 20 to 35% of their calories from fats","answer": "B","image": "","course": "","module": ""},
-{"question": "Which of the following is NOT a reason for why athletes desire a high level of 'glycogen'?","A": "It helps them exercise for longer periods of time","B": "It reduces the risk of sodium imbalance","C": "It boosts performance in high-intensity endurance competitions","D": "It provides an easy source of glucose","answer": "B","image": "","course": "","module": ""},
-{"question": "Which of the following is NOT a way that vitamins and minerals support physical activity?","A": "Some vitamins and minerals help regulate fluid balance in the body","B": "Some vitamins and minerals contain calories that can be used directly for energy","C": "Some vitamins and minerals play a role in converting food molecules into the form of energy the body uses","D": "Some vitamins and minerals help make hemoglobin needed to carry oxygen to the muscles","answer": "B","image": "","course": "","module": ""},
-{"question": "An illness occurs when a person gets sick by eating food that has been contaminated with microorganism or toxin is often called.","A": "Food contamination","B": "Food hygiene","C": "Food spoilage","D": "Food poisoning","answer": "D","image": "","course": "","module": ""},
-{"question": "Which one of the following contribute to food being unsafe and causing food illness?","A": "Inadequate control of temperature during cooking, cooling and storage","B": "Poor personnel hygiene","C": "Cross-contamination of raw and processed products","D": "All","answer": "D","image": "","course": "","module": ""},
-{"question": "Which one is the cause of Guillain-Barré syndrome that affects the nerves of the body?","A": "Clostridium Botulinum","B": "Salmonella","C": "Pseudomonas","D": "Campylobacter","answer": "B","image": "","course": "","module": ""},
-{"question": "Which one are the main objectives of surveillance in food hygiene assessment.","A": "Outbreak detection","B": "Monitoring trends in endemic disease","C": "Evaluating interventions, and","D": "All","answer": "D","image": "","course": "","module": ""},
-{"question": "Foodborne intoxications arise from the ingestion of preformed toxins by microorganisms and resulting in food poisoning which one is different.","A": "Staphylococcal","B": "Botulinum","C": "Bacillus cereus","D": "Vibrio","answer": "D","image": "","course": "","module": ""},
-{"question": "What areas does nutritional epidemiology concentrate on?","A": "The role of nutritional factors in causing disease in a population","B": "How changes in food intake in the population can promote good health","C": "Both of the options given are correct","D": "None of the above","answer": "C","image": "","course": "","module": ""},
-{"question": "All of the following are true of odds ratio, except.","A": "It is an estimate of relative risk","B": "It is the only measures of risk that can be obtained directly form a case-control study","C": "It tends to be biased towards 1 (neither risk nor protection at high rates of disease","D": "It is the ratio of incidence in exposed divided by incidence in none exposed","answer": "D","image": "","course": "","module": ""},
-{"question": "A longitudinal or prospective study is also referred to as.","A": "Ecological Study","B": "Cross-Sectional Study","C": "Cohort Study","D": "Observational Study","answer": "C","image": "","course": "","module": ""},
-{"question": "Which of the following are highly prevalent global nutrition problems?","A": "Vitamin A deficiency","B": "Undernutrition","C": "Obesity","D": "All of the above","answer": "D","image": "","course": "","module": ""},
-{"question": "Which group of the global population is most affected by anaemia?","A": "Preschool children","B": "Pregnant women","C": "Non pregnant women","D": "Men","answer": "A","image": "","course": "","module": ""},
-{"question": "Globally, the prevalence of obesity in adult men and women is?","A": "11 % of men; 15% of women","B": "6% of men; 12% of women","C": "26% of men; 32% of women","D": "40% of men ; 50% of Women","answer": "A","image": "","course": "","module": ""},
-{"question": "When selecting from the fruit group.","A": "Only fresh fruits can be considered","B": "Fresh, canned, frozen, dried and 100% fruit juice count","C": "Frozen fruits should not be eaten more than twice a month","D": "Don’t be concerned about washing fresh fruit unless it looks dirty","answer": "A","image": "","course": "","module": ""},
-{"question": "Vegetables are great sources of which types of carbohydrates?","A": "Starches","B": "Sugar","C": "Fiber","D": "Cellulose","answer": "C","image": "","course": "","module": ""},
-{"question": "Which of the following facts is true about honey?","A": "It never spoils","B": "It has the same nutritional profiles as sugar","C": "It is especially good for children under 1 year old","D": "It is forbidden for old age","answer": "A","image": "","course": "","module": ""},
-{"question": "In addition to sunlight, which food is a good source of vitamin D, an important nutrient for teeth and bone health?","A": "Fruits","B": "Bread","C": "Red meat","D": "All","answer": "C","image": "","course": "","module": ""},
-{"question": "Which part of an egg is richer in protein and contains very few calories?","A": "Egg yolk","B": "Egg white","C": "Egg shell","D": "All","answer": "B","image": "","course": "","module": ""},
-{"question": "One of the following is true about healthy diet.","A": "Saturated fat foods","B": "Refined carbohydrate","C": "Unrefined carbohydrate","D": "All","answer": "A","image": "","course": "","module": ""},
-{"question": "One is the cause of nutrition related problem in the 21th centuries in developing country.","A": "Motorized transport","B": "Labor saving device","C": "Increased leisure time","D": "All","answer": "D","image": "","course": "","module": ""},
-{"question": "Which of the following problems are related to NCDs contributing by change with dietary and life style change?","A": "Obesity","B": "Wasting","C": "Stunting","D": "All","answer": "A","image": "","course": "","module": ""},
-{"question": "Which one are modifiable risk factors for chronic non communicable disease.","A": "Age","B": "Physical inactivity","C": "Sex","D": "Genetic susceptibility","answer": "B","image": "","course": "","module": ""},
-{"question": "One of the following is true about nutrition and chronic disease.","A": "Nutrition is widely accepted tool for chronic disease prevention","B": "Nutrition is used as management and treatment of chronic disease","C": "Weight management is important for preventing nutrition related chronic disease","D": "All","answer": "D","image": "","course": "","module": ""}
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Scholars strongly argue that planning sometimes \u201creduces creativity\u201d. When/how?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "When numerous people are engaged in the planning"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "When the planning follow a bottom-up approach"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "When the planning is done by a top management only"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "When the planning follow a top-down approach"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "In planning nutrition projects, diagnosing extent and causes of nutrition problems is usually done by_____?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Political commitment"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Nutrition surveillance"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Nutrition assessment"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Project planning"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "In collecting data for problem identification and diagnosis, the data is advised to be disaggregated, because.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Aggregated data is costly"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Disaggregated data is cheap"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Aggregated data reflect reality"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Disaggregated data reflect reality"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Program planning requires us to select appropriate actions from available options. Which one of the following cannot be a weighting criterion then?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Interest of donors"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Feasibility and effectiveness"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Capital demand"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Time and cost"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It involves the use community health indices that reflect community nutritional status/ needs and their influences.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Anthropometric assessments"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Indirect nutritional assessment methods"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Direct nutritional assessment methods"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Clinical evaluations"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is not true about cross-sectional surveys.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Can identify geographic areas and/or population sub-groups at risk of chronic malnutrition"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Can identify geographic areas and/or population sub-groups at risk of acute malnutrition"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Used to establish baseline nutritional status of a population"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Used to formulate policies"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It involves obtaining information on the nutritional condition of the target community using qualitative methods and doesn\u2019t involve recording anthropometric data.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Rapid Assessment"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Follow up Survey"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Baseline Survey"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Rapid appraisal of the nutrition situation"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It is used to assess the impact of the project on the nutritional condition of a community.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Rapid appraisal of the nutrition situation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Follow up Survey"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Rapid Assessment"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Baseline Survey"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "While selecting dietary assessment tools, all of the following are true except.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "For respondents unable to self-report: use hospital records, dietitians or nurses"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Food lists & nutrients composition databases that reflect the foods consumed by the population should be used"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "For population groups, use interviewers of different ethnic background to avoid bias"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "For the elderly, assess any special considerations (memory, special diet etc)"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following is used to measure food consumption at national level?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Food account method"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Dietary history"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Food balance sheet"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Household Food Record Method"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It involves keeping records of all foods consumed at each meal by weight, and measured before division into individual servings by members of the household, or field workers.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Household food record method"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Telephone surveys"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Food account method"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Household 24-hrs recall method"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It is used to estimate actual food & nutrient intakes of individuals/ population groups during the previous 24-hours period.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Weighed food records"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Food frequency questionnaires"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Twenty-four hour recall methods"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Food Diary"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is considered as the most precise method for assessing food intakes of individuals.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Food frequency questionnaires"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Dietary History"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Twenty-four hour recall methods"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Weighed food records"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is true about assessing the food intakes in young children.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "There is special dietary assessment methods designed specifically for young children"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Currently available dietary survey methods, constructed for use in adult populations, are also appropriate for collecting data from pediatric populations"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Twenty-four-hour recalls can directly be used in children less than 5 years"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Food frequency questionnaires are not recommended to be used for children"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following is not among the important consideration during food frequency questionnaires?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Avoid open-ended questions; preformatted lists best"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Use well-defined foods & food categories"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Non-consecutive days should be selected"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Among the following alternatives which one is used as indicator of chronic malnutrition?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Weight for height <-2SD"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Height for Age >1SD"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Height for Age <-2 SD"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Weight for age >2SD"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Among the following which one is miss matched?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Low weight for height----Wasting"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Low length for age----Wasting"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Low height for age----Stunting"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Low weight for age----Underweight"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Nutrition sensitive intervention is also known by the name.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Nutrition sensitizing"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Nutrition integration"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Nutrition linking"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Nutrition targeted"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Among the following responses, one is given at National and International level to nutritional stress.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Nutritional surveillance and program monitoring"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Food aid"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Conflict resolution"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "National food & nutrition policies"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Intervention through WASH can only be expected to influence nutritional outcomes if.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "They  significantly reduce the level of pathogens in the environment"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Improving the transmission from host to Environment"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Break the transmission from the environment to the host"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "A and C"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which one is not classified under nutrition specific intervention?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Maternal micronutrient supplementation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Supporting Exclusive Breast feeding"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Micronutrient supplement"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "All indicates the benefits of school-based food and nutrition intervention except.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Improved child growth"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Lower school attendance"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Improved school performance and cognitive scores"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Lower drop-out rates"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One indicates the short- term impact of malnutrition.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Increased the risk of mortality"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Low Birth weight"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Impaired Mental development"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Stunted children"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which one is not correct about nutrition sensitive intervention?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "They are interventions that influence the underlying determinants of nutrition"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Its primary objective is not nutrition, but that which have potential to improve food and nutrition security of beneficiaries"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Incorporate explicit nutrition goals and actions with a clearly defined plan"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Improve nutritional outcomes and impact by addressing many of the underlying and basic causes of malnutrition"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One is not indicates the negative consequence of climate change on nutrition.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Reduce production"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Decreasing post-harvest losses"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Increasing food insecurity"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Decrease the availability of food"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following is NOT an example of a characteristic of an effective nutrition counsellor?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Excellent physique"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Self-awareness"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Knowledge"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Gender/ Culture Awareness"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of these factors DO NOT have an effect on communication?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Kinesthetic factors"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Visual code"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Neurological fragmentation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Voice loudness"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of these barriers to listening describes the client who aggressively defends their food behaviors?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Intense emotion"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Defensiveness"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Selective listening"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Failure to accept emotional behaviors"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It is generalized descriptions used to analyze or explain something.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Algorithms"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Model"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Frames"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Contemplation"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "When should the nutrition educational approach be tailored to address the needs of the target population, availability of resources, and any guidelines of the organization sponsoring the intervention?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Before the needs assessment"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "After the needs assessment"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Immediately before the evaluation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "After designing a theory-based intervention"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Identify a specific goal.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Increase vegetables"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Increase calcium intake"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Eat two servings of vegetables for lunch and again at dinner"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Eat more fruits"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "What is the best way to help a client who is trying to eat healthy for the first time?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Inform them about the various food exchanges"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Introduce them to the food pyramid and My Plate"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Plan detailed menus"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Inform them about the DASH diet"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "All of the following are examples of high risk situations related to relapsing from behavior change except.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Negative self-talk"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Cognitive Restructuring"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Lack of social support"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Lack of Coping Skills"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which is the best option to counseling relapse prevention of a behavior change?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Join clubs or organization"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Urge management techniques"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Social support"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "What is Empathy?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Feeling comfortably with the client"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Client feels annoyed by counselor"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Ability to listen carefully what other people say"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "True understanding of another's prospective"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following types of Nutrition Education questions serves to aid in exploring areas not previously addressed?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Factual questions"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Exploratory questions"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Justifying questions"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Explanatory questions"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "What is nutrition counseling?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "A strategy that is fact- and direction-based and may not take into consideration the individual needs and wants of the patient"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The evaluation of nutrition and health needs and the use of client-centered education strategies to meet these needs and help clients make sustainable lifestyle changes"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "A strategy that incorporates open-ended questions, reflective listening, summarization, and asking permission in order to provide information and tools to patients on an individualized level"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Discussing cultural practices of the patient and incorporating these into the nutrition care plan"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Reflects the households\u2019 use of the food to which they have access and individuals\u2019 ability to absorb and metabolize the nutrients.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Food availability"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Food access"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Food utilization"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Food distribution"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is not among the United Nations specialized Agencies and offices.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "World Food Program (WFP)"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "United Nations Higher Commission for Refugees (UNHCR)"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The International Committee of the Red Cross (ICRC)"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "World Health Organization (WHO)"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is true bout International Humanitarian Law?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Applied only to armed conflict"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It covers internal tensions or disturbances such as isolated acts of violence"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The law is not applied to all groups equally i.e. applied strongly on the group who started the fighting"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "The law can be applied before the conflict has begun"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is true about initial investigation.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It relies primarily on primary data"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It\u2019s used to generate a household economic profile of the population"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "It provides a detailed information & understanding of the food security situation,"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "It undertaken following a sudden disaster or the receipt of a report of a new crisis"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Among the following which one requires careful planning, preparation as well as considerable resources?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Rapid assessment"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Initial investigation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "In-depth assessment"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Who are the target group for the rapid nutrition surveys?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Children less than 6 months"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Children age 6 to 59 months"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Adolescent girls"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Communities should prepare for Emergencies, because;",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It would be difficult to pool resources at the community level"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The positive effects of preparedness programmes can\u2019t be best measured at the community level"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Excessive or inappropriate external assistance destroys their self-reliance and increase dependency"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Those who first respond to an emergency come from international organizations"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Who is considered as the forefront to assist whenever food security crisis happens?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "WFP"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "UNICEF"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "WHO"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "FAO"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It is the dominant form of response in emergencies.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Food donation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Food for Asset creation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Food for work"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Safety net"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "When general food distribution should be established?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "When there is usual decline in food availability or affordability"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "When coping mechanisms are, or will be sufficient"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "When there is a high prevalence of malnutrition"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is true about General food Distribution.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Target those in need of nutritional rehabilitation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Aimed to cover the immediate basic food needs of a population in order to eliminate the need for survival strategies"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Implemented when the supplementary foods being provided is not adequate, leading to an increase in malnutrition"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Aims at treatment of moderate acute malnutrition (MAM)"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "All of the following nutrition interventions in emergencies are included in food responses except.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "General food distribution"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Livelihood support/ intervention"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Selective feeding programs"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Supplementary feeding programs"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Among the approaches of distribution of general food ration, which one result in creation of assets such as roads, schools or irrigation systems, and learning new skills by the community members.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Free distribution"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "School feeding programs"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Food for work"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Among the following statements, which one is correct?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The admission and discharge criteria for Blanket Supplementary Feeding Programs rely on Anthropometric indicators"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The admission and discharge criteria for Blanket Supplementary Feeding Programs don\u2019t rely on Anthropometric indicators"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The admission and discharge criteria for Targeted Supplementary Feeding Program don\u2019t rely on Anthropometric indicators"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All children between 6 to 59 months or two or three years of age are targets for Targeted Supplementary Feeding Programs"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Among the ways used to address Moderate Acute Malnutrition which one should be considered as a short term measure?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Improving a general food ration; Food security;"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Improving access to health care; sanitation and potable water"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Implementing supplementary feeding programs"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It is the process of providing or obtaining the food necessary for health and growth.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Health"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Nutrition"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Sanitation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Security"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It is one of the food-based strategies for preventing micronutrient malnutrition.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Blanket food"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Complementary feeding"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Therapeutic feeding"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Food fortification"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which one of the following is not correct about anthropometric measurement?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "MUAC of <12.5cm is cut point for SAM in Ethiopia"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "MUAC is used for 12-59 months only"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "MUAC can be used for pregnant"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "BMI < 16 kg/m2 is indicator of severe chronic energy deficiency in children"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which one of the following is correct about Weight-for-height (WFH)?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "A measure of stunting"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Can indicate past malnutrition"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "A measure of wasting when low"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Less useful measure of growth over time"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "It is one of the food-based strategies for preventing micronutrient malnutrition.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Blanket food"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Complementary feeding"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Therapeutic feeding"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Food fortification"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Among of general food distribution which feeding program is target on nutritionally vulnerable groups?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Supplementary feeding program"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Therapeutic feeding programs"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Food fortification program"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Complementary feeding program"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Those are the main factors that have exacerbated the problem of food production, distribution and access.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Drought and Conflict"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Market and Price"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Land and Rainfall"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Trader and Marketing"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "What is food security?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It relates to efforts to prevent terrorists from poisoning food supplies"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It is about ensuring everyone's access to food"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Its component elements include availability, utilisation, and stability, as well as access"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Food security focuses primarily on ending micronutrient malnutrition"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "How will climate change affect future food security?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It will have negative impacts in most developing countries because of the increased frequency of droughts, storms and floods"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The impact will be positive, because drier weather will mean less habitat for malaria mosquitoes, so fewer workers will be sick at harvest time"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The impact will be positive because there will be more carbon dioxide available for plant photosynthesis"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "There currently is no scientific consensus as to whether climate change is occurring or whether it will over the next 50 years"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following is a not factor have led to the recent momentum to speeding up the rate of eliminating malnutrition?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Millennium Development Goals"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Focus on the first 1000 days"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Data on effective interventions"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "National Population Growth rate"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "The objectives of a rapid nutrition assessment include which of the following?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "To identify trends in nutrition status"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "To verify the existence or threat of a nutrition emergency"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "To establish the prevalence of malnutrition"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which nutrition index and/or measurement would you suggest for use in the rapid assessment?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Weight for height percentage of the median"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "MUAC"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "BMI"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "BMI for age"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which is a specialized consultative health care?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Primary care"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Secondary care"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Urgent care"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Tertiary care"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "What is the new strategy, a unique concept of WHO, to provide universal coverage of rehabilitation to all segments of society?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Occupational rehabilitation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Medical rehabilitation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Community based rehabilitation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Institutional based rehabilitation"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "What is the best quality of a good counselor?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Good listener"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Good teacher"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Good speaker"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Good advocate"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "What is the cause of physiological anemia in pregnancy?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Poor iron intake"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Vomiting"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Blood loss"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Heamodilution"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "The level of prevention in which the emergence of risk factors of a chronic disease in a population is prevented.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Primary prevention"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Primordial prevention"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Secondary prevention"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Tertiary prevention"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Normal serum sodium level is.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "125-135 meq/l"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "135-140 meq/l"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "135-145 meq/l"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "145-150 meq/l"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "The very important variable for assessing nutrition of under 5 children is/are.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Weight"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Height"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Age"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "A baby is called low birth weight if he /she measures less than.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "2.5 kg"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "1.5 kg"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "3.5 kg"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "2.2 kg"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following study determine prevalence of diseases?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Longitudinal study"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Case control study"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Cohort study"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Cross sectional study"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Iodine surveillance in community is done by.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Testing iodine secretion in urine"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Measuring iodine from packets"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Analysis of goiter prevalence"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Data collection"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One who is trained by sport nutrition can actively participate in one of the following activities.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Nutrition education"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Counseling"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Fitness assessments"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following is TRUE about aerobic metabolism?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It is less efficient at making ATP than anaerobic metabolism"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It can only use glucose to make ATP"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "It is used to make ATP in the presence of oxygen"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "It is faster at making ATP than anaerobic metabolism"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following statements is TRUE concerning dietary fat intake for athletes?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Athletes perform well on low-fat diets"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Athletes need more dietary fat than the general population"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Athletes should consume less dietary fat than the general population"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Athletes should get between 20 to 35% of their calories from fats"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following is NOT a reason for why athletes desire a high level of 'glycogen'?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It helps them exercise for longer periods of time"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It reduces the risk of sodium imbalance"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "It boosts performance in high-intensity endurance competitions"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "It provides an easy source of glucose"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following is NOT a way that vitamins and minerals support physical activity?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Some vitamins and minerals help regulate fluid balance in the body"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Some vitamins and minerals contain calories that can be used directly for energy"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Some vitamins and minerals play a role in converting food molecules into the form of energy the body uses"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Some vitamins and minerals help make hemoglobin needed to carry oxygen to the muscles"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "An illness occurs when a person gets sick by eating food that has been contaminated with microorganism or toxin is often called.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Food contamination"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Food hygiene"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Food spoilage"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Food poisoning"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which one of the following contribute to food being unsafe and causing food illness?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Inadequate control of temperature during cooking, cooling and storage"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Poor personnel hygiene"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Cross-contamination of raw and processed products"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which one is the cause of Guillain-Barr\u00e9 syndrome that affects the nerves of the body?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Clostridium Botulinum"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Salmonella"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Pseudomonas"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Campylobacter"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which one are the main objectives of surveillance in food hygiene assessment.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Outbreak detection"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Monitoring trends in endemic disease"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Evaluating interventions, and"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Foodborne intoxications arise from the ingestion of preformed toxins by microorganisms and resulting in food poisoning which one is different.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Staphylococcal"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Botulinum"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Bacillus cereus"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Vibrio"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "What areas does nutritional epidemiology concentrate on?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The role of nutritional factors in causing disease in a population"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "How changes in food intake in the population can promote good health"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Both of the options given are correct"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "All of the following are true of odds ratio, except.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It is an estimate of relative risk"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It is the only measures of risk that can be obtained directly form a case-control study"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "It tends to be biased towards 1 (neither risk nor protection at high rates of disease"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "It is the ratio of incidence in exposed divided by incidence in none exposed"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "A longitudinal or prospective study is also referred to as.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Ecological Study"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Cross-Sectional Study"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Cohort Study"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Observational Study"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following are highly prevalent global nutrition problems?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Vitamin A deficiency"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Undernutrition"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Obesity"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which group of the global population is most affected by anaemia?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Preschool children"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Pregnant women"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Non pregnant women"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Men"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Globally, the prevalence of obesity in adult men and women is?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "11 % of men; 15% of women"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "6% of men; 12% of women"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "26% of men; 32% of women"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "40% of men ; 50% of Women"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "When selecting from the fruit group.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Only fresh fruits can be considered"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Fresh, canned, frozen, dried and 100% fruit juice count"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Frozen fruits should not be eaten more than twice a month"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Don\u2019t be concerned about washing fresh fruit unless it looks dirty"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Vegetables are great sources of which types of carbohydrates?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Starches"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Sugar"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Fiber"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Cellulose"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following facts is true about honey?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It never spoils"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It has the same nutritional profiles as sugar"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "It is especially good for children under 1 year old"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "It is forbidden for old age"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "In addition to sunlight, which food is a good source of vitamin D, an important nutrient for teeth and bone health?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Fruits"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Bread"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Red meat"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which part of an egg is richer in protein and contains very few calories?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Egg yolk"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Egg white"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Egg shell"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is true about healthy diet.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Saturated fat foods"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Refined carbohydrate"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Unrefined carbohydrate"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One is the cause of nutrition related problem in the 21th centuries in developing country.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Motorized transport"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Labor saving device"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Increased leisure time"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which of the following problems are related to NCDs contributing by change with dietary and life style change?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Obesity"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Wasting"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Stunting"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "Which one are modifiable risk factors for chronic non communicable disease.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Age"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Physical inactivity"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Sex"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Genetic susceptibility"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 8,
+        "course_code": null,
+        "department_name": "Human Nutrition",
+        "course_name": "",
+        "content": "One of the following is true about nutrition and chronic disease.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Nutrition is widely accepted tool for chronic disease prevention"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Nutrition is used as management and treatment of chronic disease"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Weight management is important for preventing nutrition related chronic disease"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    }
 ]

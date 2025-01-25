@@ -61,3 +61,174 @@ class _QuizPageState extends State<QuizPage> {
     );
   }
 }
+
+// quetion answer options
+// // option A
+// Container(
+//   color: _chosenAnswer == 'A' ? _selectedColor : _bgColor,
+//   child: ListTile(
+//     onTap: () {
+//       setState(() {
+//         _selectedColor = selectedColor;
+//         _chosenAnswer = "A";
+//         _writeAnswer(_chosenAnswer!);
+//         // disableOptions();
+//       });
+//     },
+//     key: const Key('A'),
+//     leading: const Text(
+//       'A.',
+//       style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//     ),
+//     title: Text(
+//       widget.items[_qno]['options'][0]['content'],
+//       style:
+//           const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//     ),
+//     selectedTileColor: _selectedColor,
+//     //textColor: Colors.blue,
+//     enabled: !answerWasSelected,
+//   ),
+// ),
+
+// //option B
+// Container(
+//   color: _chosenAnswer == 'B' ? _selectedColor : _bgColor,
+//   child: ListTile(
+//     onTap: () {
+//       setState(() {
+//         _selectedColor = selectedColor;
+//         _chosenAnswer = 'B';
+//         _writeAnswer(_chosenAnswer!);
+//         // disableOptions();
+//       });
+//     },
+//     key: const Key('B'),
+//     leading: const Text(
+//       'B.',
+//       style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//     ),
+//     title: Text(
+//       widget.items[_qno]['options'][1]['content'],
+//       style:
+//           const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//     ),
+//     enabled: !answerWasSelected,
+//   ),
+// ),
+
+// //option C
+// Container(
+//   color: _chosenAnswer == 'C' ? _selectedColor : _bgColor,
+//   child: ListTile(
+//     onTap: () {
+//       setState(() {
+//         _selectedColor = selectedColor;
+//         _chosenAnswer = 'C';
+//         _writeAnswer(_chosenAnswer!);
+//         // disableOptions();
+//       });
+//     },
+//     key: const Key('C'),
+//     leading: const Text(
+//       'C.',
+//       style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//     ),
+//     title: Text(
+//       widget.items[_qno]['options'][2]['content'],
+//       style:
+//           const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//     ),
+//     enabled: !answerWasSelected,
+//   ),
+// ),
+
+// //option D
+// Container(
+//   color: _chosenAnswer == 'D' ? _selectedColor : _bgColor,
+//   child: ListTile(
+//     // on tap answer will be submitted
+//     onTap: () {
+//       setState(() {
+//         _chosenAnswer = 'D';
+//         _writeAnswer(_chosenAnswer!);
+//         _selectedColor = selectedColor;
+//         disableOptions();
+
+//         //print(_chosenAnswer);
+//       });
+//     },
+//     key: const Key('D'),
+//     leading: const Text(
+//       'D.',
+//       style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//     ),
+//     title: Text(
+//       widget.items[_qno]['options'][3]['content'],
+//       style:
+//           const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//     ),
+//     selectedColor: Colors.amber,
+//     enabled: !answerWasSelected,
+//   ),
+// ),
+
+// // if option E exists
+// (widget.items[_qno]['options'][4]['content'] != null)
+//     ? Container(
+//         color: _chosenAnswer == 'E' ? _selectedColor : _bgColor,
+//         child: ListTile(
+//           // on tap answer will be submitted
+//           onTap: () {
+//             setState(() {
+//               _chosenAnswer = "E";
+//               _writeAnswer(_chosenAnswer!);
+//               _selectedColor = selectedColor;
+//               // disableOptions();
+//             });
+//           },
+//           key: const Key('E'),
+//           leading: const Text(
+//             'E.',
+//             style:
+//                 TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//           ),
+//           title: Text(
+//             widget.items[_qno]['options'][4]['content'],
+//             style: const TextStyle(
+//                 fontWeight: FontWeight.w500, fontSize: 18),
+//           ),
+//           enabled: !answerWasSelected,
+//         ),
+//       )
+//     : Text(""),
+
+// // if option F exists
+// (widget.items[_qno]['options'][5]['content'] != null)
+//     ? Container(
+//         color: _chosenAnswer == 'F' ? _selectedColor : _bgColor,
+//         child: ListTile(
+//           // on tap answer will be submitted
+//           onTap: () {
+//             setState(() {
+//               _chosenAnswer = 'F';
+//               _writeAnswer(_chosenAnswer!);
+//               _selectedColor = selectedColor;
+//               // disableOptions();
+//             });
+//           },
+//           key: Key('F'),
+//           leading: const Text(
+//             'F.',
+//             style:
+//                 TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+//           ),
+//           title: Text(
+//             widget.items[_qno]['options'][5]['content'],
+//             style: const TextStyle(
+//                 fontWeight: FontWeight.w500, fontSize: 18),
+//           ),
+//           enabled: !answerWasSelected,
+//         ),
+//       )
+//     : const Text(""),

@@ -204,24 +204,27 @@ class _ExamHomeState extends State<ExamHome> {
           ),
 
           // dropdown option to choose and take Exam
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                DropdownButton(
-                  value: department,
-                  hint: const Text("Selct your Field of Study Here"),
-                  items: getDepartents(),
-                  onChanged: (value) {
-                    //
-                    setState(() {
-                      department = value;
-                      readJson(department);
-                    });
-                  },
-                ),
-              ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  DropdownButton(
+                    value: department,
+                    hint: const Text("Selct your Field of Study Here"),
+                    items: getDepartents(),
+                    onChanged: (value) {
+                      //
+                      setState(() {
+                        department = value;
+                        readJson(department);
+                      });
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
           ElevatedButton(

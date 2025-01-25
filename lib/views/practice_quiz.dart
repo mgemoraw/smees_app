@@ -48,6 +48,7 @@ class TestHome extends StatefulWidget {
 
 class _TestHomeState extends State<TestHome> {
   var department;
+  String? departmentName;
   int departmentId = 0;
   List _data = [];
   String? token;
@@ -58,6 +59,7 @@ class _TestHomeState extends State<TestHome> {
   TextEditingController yearController = TextEditingController();
   String pageKey = "home";
   int pageIndex = 0;
+  bool offlineMode = true;
 
   @override
   void initState() {
@@ -139,56 +141,88 @@ class _TestHomeState extends State<TestHome> {
         const Padding(
           padding: EdgeInsets.all(10.0),
           child: Text(
-              "In this page you can select a maximum of 100 questions and practice with answers shown immediately. All Questions are multiple choice and you will be given 1 minute for 1 Question."),
+              "In this page you can select a maximum of 100 questions and practice with answers shown immediately. All Questions are multiple choice and you will be given 1 minute for 1 Question. Enjoy!",
+              style: TextStyle(fontSize: 15)),
         ),
 
-        const SizedBox(height: 16.0),
+        // const SizedBox(height: 16.0),
 
-        // dropdown option to choose and take quiz
-        DropdownButton(
-            hint: const Text("Select your department here"),
-            value: department,
-            items: getDepartents(),
-            onChanged: (value) {
-              setState(() {
-                department = value!;
-                readJson(department);
-                // _downloadData(departmentId, int.parse(yearController.text));
-                // print(_items);
-              });
-            }),
         // const DownloadQuestionsJson(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-              width: 120,
-              child: TextField(
-                  controller: yearController,
-                  keyboardType: TextInputType.number,
-                  style: const TextStyle(fontSize: 15, color: Colors.black),
-                  decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.analytics),
-                      hintText: 'Exam Year')),
+        Padding(
+          padding: EdgeInsets.all(10.0),
+          child: ListTile(
+            title: const Text(
+                "Switch Off Offline Mode if you need latest question from online store",
+                style: TextStyle(fontSize: 15)),
+            trailing: Switch(
+              value: offlineMode,
+              onChanged: (value) {
+                setState(() {
+                  // toggle offline mode off
+                  offlineMode = !offlineMode;
+                });
+              },
+              activeColor: Colors.blue,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  setState(() async {
-                    await _downloadData(
-                        departmentId, int.parse(yearController.text));
-                    print(message);
-                  });
-                },
-                child: const Icon(Icons.download)),
-            const SizedBox(height: 20),
-          ],
+          ),
         ),
-        LinearProgressIndicator(
-          value: _progress,
-          color: Colors.green,
-          minHeight: 10,
-        ),
+
+        // if offline mode is true, load questions from offline data source
+        !offlineMode
+            ? Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: 120,
+                        child: TextField(
+                            controller: yearController,
+                            keyboardType: TextInputType.number,
+                            style: const TextStyle(
+                                fontSize: 15, color: Colors.black),
+                            decoration: const InputDecoration(
+                                prefixIcon: Icon(Icons.analytics),
+                                hintText: 'Exam Year')),
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() async {
+                              await _downloadData(
+                                  departmentId, int.parse(yearController.text));
+                              print(message);
+                            });
+                          },
+                          child: const Icon(Icons.download)),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
+                  LinearProgressIndicator(
+                    value: _progress,
+                    color: Colors.green,
+                    minHeight: 10,
+                  ),
+                ],
+              )
+            :
+            // dropdown option to choose and take quiz
+            SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: DropdownButton(
+                    hint: const Text("Select your department here"),
+                    value: department,
+                    items: getDepartents(),
+                    onChanged: (value) {
+                      setState(() {
+                        department = value!;
+                        readJson(department);
+                        // _downloadData(departmentId, int.parse(yearController.text));
+                        // print(_items);
+                      });
+                    }),
+              ),
+
         SizedBox(
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [

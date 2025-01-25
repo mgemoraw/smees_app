@@ -182,7 +182,6 @@ class _TakeExamState extends State<TakeExam> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(children: [
-
           // Question index tracker
           Container(
             height: 40,
@@ -216,184 +215,59 @@ class _TakeExamState extends State<TakeExam> {
             alignment: Alignment.topLeft,
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              "${_qno + 1}. ${widget.items[_qno]['question']}",
-              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+              "${_qno + 1}. ${widget.items[_qno]['content']}",
+              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
             ),
           ),
 
-          
-          // option A
-          Container(
-            color: _chosenAnswer == 'A' ? _selectedColor : _bgColor,
-            child: ListTile(
-              onTap: () {
-                setState(() {
-                  _selectedColor = selectedColor;
-                  _chosenAnswer = "A";
-                  _writeAnswer(_chosenAnswer!);
-                  // disableOptions();
-                });
-              },
-              key: const Key('A'),
-              leading: const Text(
-                'A.',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              title: Text(
-                widget.items[_qno]['A'],
-                style:
-                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              selectedTileColor: _selectedColor,
-              //textColor: Colors.blue,
-              enabled: !answerWasSelected,
-            ),
-          ),
-
-          //option B
-          Container(
-            color: _chosenAnswer == 'B' ? _selectedColor : _bgColor,
-            child: ListTile(
-              onTap: () {
-                setState(() {
-                  _selectedColor = selectedColor;
-                  _chosenAnswer = 'B';
-                  _writeAnswer(_chosenAnswer!);
-                  // disableOptions();
-                });
-              },
-              key: const Key('B'),
-              leading: const Text(
-                'B.',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              title: Text(
-                widget.items[_qno]['B'],
-                style:
-                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              enabled: !answerWasSelected,
-            ),
-          ),
-
-          //option C
-          Container(
-            color: _chosenAnswer == 'C' ? _selectedColor : _bgColor,
-            child: ListTile(
-              onTap: () {
-                setState(() {
-                  _selectedColor = selectedColor;
-                  _chosenAnswer = 'C';
-                  _writeAnswer(_chosenAnswer!);
-                  // disableOptions();
-                });
-              },
-              key: const Key('C'),
-              leading: const Text(
-                'C.',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              title: Text(
-                widget.items[_qno]['C'],
-                style:
-                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              enabled: !answerWasSelected,
-            ),
-          ),
-
-          //option D
-          Container(
-            color: _chosenAnswer == 'D' ? _selectedColor : _bgColor,
-            child: ListTile(
-              // on tap answer will be submitted
-              onTap: () {
-                setState(() {
-                  _chosenAnswer = 'D';
-                  _writeAnswer(_chosenAnswer!);
-                  _selectedColor = selectedColor;
-                  disableOptions();
-
-                  //print(_chosenAnswer);
-                });
-              },
-              key: const Key('D'),
-              leading: const Text(
-                'D.',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              title: Text(
-                widget.items[_qno]['D'],
-                style:
-                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              ),
-              selectedColor: Colors.amber,
-              enabled: !answerWasSelected,
-            ),
-          ),
-
-          // if option E exists
-          (widget.items[_qno]['E'] != null)
-              ? Container(
-                  color: _chosenAnswer == 'E' ? _selectedColor : _bgColor,
+          // answer options
+          ListView.builder(
+            shrinkWrap: true,
+            itemCount: widget.items[_qno]['options'].length,
+            itemBuilder: (context, index) {
+              String? option = widget.items[_qno]['options'][index]['content'];
+              if (option != null) {
+                return Container(
+                  padding: const EdgeInsets.all(5.0),
+                  margin: const EdgeInsets.symmetric(
+                      vertical: 5.0, horizontal: 10.0),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: _chosenAnswer ==
+                            widget.items[_qno]['options'][index]['label']
+                        ? _selectedColor
+                        : _bgColor,
+                  ),
                   child: ListTile(
-                    // on tap answer will be submitted
                     onTap: () {
                       setState(() {
-                        _chosenAnswer = "E";
-                        _writeAnswer(_chosenAnswer!);
                         _selectedColor = selectedColor;
-                        // disableOptions();
+                        _chosenAnswer =
+                            widget.items[_qno]['options'][index]['label'];
+                        _writeAnswer(_chosenAnswer!);
                       });
                     },
-                    key: const Key('E'),
-                    leading: const Text(
-                      'E.',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
-                    title: Text(
-                      widget.items[_qno]['E'],
+                    leading: Text(
+                      widget.items[_qno]['options'][index]['label'],
                       style: const TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 18),
+                          fontWeight: FontWeight.w500, fontSize: 15),
                     ),
+                    title: Text(widget.items[_qno]['options'][index]['content'],
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 15)),
+                    selectedTileColor: _selectedColor,
+                    //textColor: Colors.blue,
                     enabled: !answerWasSelected,
                   ),
-                )
-              : Text(""),
-
-          // if option F exists
-          (widget.items[_qno]['F'] != null)
-              ? Container(
-                  color: _chosenAnswer == 'F' ? _selectedColor : _bgColor,
-                  child: ListTile(
-                    // on tap answer will be submitted
-                    onTap: () {
-                      setState(() {
-                        _chosenAnswer = 'F';
-                        _writeAnswer(_chosenAnswer!);
-                        _selectedColor = selectedColor;
-                        // disableOptions();
-                      });
-                    },
-                    key: Key('F'),
-                    leading: const Text(
-                      'F.',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
-                    title: Text(
-                      widget.items[_qno]['F'],
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
-                    enabled: !answerWasSelected,
-                  ),
-                )
-              : const Text(""),
+                );
+              }
+            },
+          ),
 
           // Answer Notification container
           Container(
+            color: Colors.white,
             child: Text(
               bottomContainerText,
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w500),

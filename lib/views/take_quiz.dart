@@ -148,125 +148,151 @@ class _TakeQuizState extends State<TakeQuiz> {
             ),
           ),
 
-          
-          // option A
-          AnswerOption(
-              value: 'A',
-              answerText: jsonDecode(widget.items[_qno]['options'])['A'],
-              enabled: !answerWasSelected,
-              answerColor:
-                  (_chosenAnswer == 'A') ? _selectedColor! : Colors.white,
-              answerTap: () {
-                setState(() {
-                  _selectedColor = Colors.blue;
-                  _chosenAnswer = "A";
-                  disableOptions();
-                  // _nextQuestion();
-                });
-              }),
+          ListView.builder(
+            shrinkWrap: true,
+            itemCount: widget.items[_qno]['options'].length,
+            itemBuilder: (context, index) {
+              if (widget.items[_qno]['options'][index]['content'] != null) {
+                return AnswerOption(
+                  enabled: !answerWasSelected,
+                  value: widget.items[_qno]['options'][index]['label'],
+                  answerText: widget.items[_qno]['options'][index]['content'],
+                  answerColor: (_chosenAnswer ==
+                          widget.items[_qno]['options'][index]['label'])
+                      ? _selectedColor!
+                      : Colors.white,
+                  answerTap: () {
+                    //
+                    setState(() {
+                      _selectedColor = Colors.blue;
+                      _chosenAnswer =
+                          widget.items[_qno]['options'][index]['label'];
+                      disableOptions();
+                      // _nextQuestion();
+                    });
+                  },
+                );
+              }
+            },
+          ),
+          // // option A
+          // AnswerOption(
+          //     value: 'A',
+          //     answerText: jsonDecode(widget.items[_qno]['options'])['A'],
+          //     enabled: !answerWasSelected,
+          //     answerColor:
+          //         (_chosenAnswer == 'A') ? _selectedColor! : Colors.white,
+          //     answerTap: () {
+          //       setState(() {
+          //         _selectedColor = Colors.blue;
+          //         _chosenAnswer = "A";
+          //         disableOptions();
+          //         // _nextQuestion();
+          //       });
+          //     }),
 
-          // option B
-          AnswerOption(
-              value: 'B',
-              answerText: jsonDecode(widget.items[_qno]['options'])['B'],
-              enabled: !answerWasSelected,
-              answerColor:
-                  (_chosenAnswer == 'B') ? _selectedColor! : Colors.white,
-              answerTap: () {
-                setState(() {
-                  _selectedColor = Colors.blue;
-                  _chosenAnswer = "B";
-                  disableOptions();
-                  // _nextQuestion();
-                });
-              }),
+          // // option B
+          // AnswerOption(
+          //     value: 'B',
+          //     answerText: jsonDecode(widget.items[_qno]['options'])['B'],
+          //     enabled: !answerWasSelected,
+          //     answerColor:
+          //         (_chosenAnswer == 'B') ? _selectedColor! : Colors.white,
+          //     answerTap: () {
+          //       setState(() {
+          //         _selectedColor = Colors.blue;
+          //         _chosenAnswer = "B";
+          //         disableOptions();
+          //         // _nextQuestion();
+          //       });
+          //     }),
 
-          AnswerOption(
-              value: 'C',
-              answerText: jsonDecode(widget.items[_qno]['options'])['C'],
-              enabled: !answerWasSelected,
-              answerColor:
-                  (_chosenAnswer == 'C') ? _selectedColor! : Colors.white,
-              answerTap: () {
-                _selectedColor = Colors.blue;
-                _chosenAnswer = "C";
-                disableOptions();
-                // _nextQuestion();
-              }),
+          // AnswerOption(
+          //     value: 'C',
+          //     answerText: jsonDecode(widget.items[_qno]['options'])['C'],
+          //     enabled: !answerWasSelected,
+          //     answerColor:
+          //         (_chosenAnswer == 'C') ? _selectedColor! : Colors.white,
+          //     answerTap: () {
+          //       _selectedColor = Colors.blue;
+          //       _chosenAnswer = "C";
+          //       disableOptions();
+          //       // _nextQuestion();
+          //     }),
 
-          // option D
-          AnswerOption(
-              value: 'D',
-              answerText: jsonDecode(widget.items[_qno]['options'])['D'],
-              answerColor:
-                  (_chosenAnswer == 'D') ? _selectedColor! : Colors.white,
-              enabled: !answerWasSelected,
-              answerTap: () {
-                setState(() {
-                  _selectedColor = Colors.blue;
-                  _chosenAnswer = "D";
-                  disableOptions();
-                  // _nextQuestion();
-                });
-              }),
+          // // option D
+          // AnswerOption(
+          //     value: 'D',
+          //     answerText: jsonDecode(widget.items[_qno]['options'])['D'],
+          //     answerColor:
+          //         (_chosenAnswer == 'D') ? _selectedColor! : Colors.white,
+          //     enabled: !answerWasSelected,
+          //     answerTap: () {
+          //       setState(() {
+          //         _selectedColor = Colors.blue;
+          //         _chosenAnswer = "D";
+          //         disableOptions();
+          //         // _nextQuestion();
+          //       });
+          //     }),
 
-          // if option E exists
-          (jsonDecode(widget.items[_qno]['options'])['E'] != null)
-              ? Container(
-                  color: _chosenAnswer == 'E' ? _selectedColor : Colors.white12,
-                  child: ListTile(
-                    // on tap answer will be submitted
-                    onTap: () {
-                      setState(() {
-                        _chosenAnswer = "E";
-                        disableOptions();
-                        // _nextQuestion();
-                      });
-                    },
-                    key: Key('E'),
-                    leading: const Text(
-                      'E.',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
-                    title: Text(
-                      jsonDecode(widget.items[_qno]['options'])['E'],
-                      style:
-                          const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
-                    enabled: !answerWasSelected,
-                  ),
-                )
-              : Text(""),
+          // // if option E exists
+          // (jsonDecode(widget.items[_qno]['options'])['E'] != null)
+          //     ? Container(
+          //         color: _chosenAnswer == 'E' ? _selectedColor : Colors.white12,
+          //         child: ListTile(
+          //           // on tap answer will be submitted
+          //           onTap: () {
+          //             setState(() {
+          //               _chosenAnswer = "E";
+          //               disableOptions();
+          //               // _nextQuestion();
+          //             });
+          //           },
+          //           key: Key('E'),
+          //           leading: const Text(
+          //             'E.',
+          //             style:
+          //                 TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+          //           ),
+          //           title: Text(
+          //             jsonDecode(widget.items[_qno]['options'])['E'],
+          //             style: const TextStyle(
+          //                 fontWeight: FontWeight.w500, fontSize: 18),
+          //           ),
+          //           enabled: !answerWasSelected,
+          //         ),
+          //       )
+          //     : Text(""),
 
-          // if option F exists
-          (jsonDecode(widget.items[_qno]['options'])['F'] != null)
-              ? Container(
-                  color: _chosenAnswer == 'F' ? _selectedColor : Colors.white12,
-                  child: ListTile(
-                    // on tap answer will be submitted
-                    onTap: () {
-                      setState(() {
-                        _chosenAnswer = 'F';
-                        disableOptions();
-                        // _nextQuestion();
-                      });
-                    },
-                    key: Key('F'),
-                    leading: Text(
-                      'F.',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
-                    title: Text(
-                      jsonDecode(widget.items[_qno]['options'])['F'],
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                    ),
-                    enabled: !answerWasSelected,
-                  ),
-                )
-              : const Text(""),
+          // // if option F exists
+          // (jsonDecode(widget.items[_qno]['options'])['F'] != null)
+          //     ? Container(
+          //         color: _chosenAnswer == 'F' ? _selectedColor : Colors.white12,
+          //         child: ListTile(
+          //           // on tap answer will be submitted
+          //           onTap: () {
+          //             setState(() {
+          //               _chosenAnswer = 'F';
+          //               disableOptions();
+          //               // _nextQuestion();
+          //             });
+          //           },
+          //           key: Key('F'),
+          //           leading: Text(
+          //             'F.',
+          //             style:
+          //                 TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+          //           ),
+          //           title: Text(
+          //             jsonDecode(widget.items[_qno]['options'])['F'],
+          //             style:
+          //                 TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+          //           ),
+          //           enabled: !answerWasSelected,
+          //         ),
+          //       )
+          //     : const Text(""),
 
           // Answer Notification container
           Container(
