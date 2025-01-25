@@ -1,4 +1,5 @@
 import "dart:async";
+import "dart:convert";
 
 import "package:flutter/material.dart";
 import "package:smees/views/answer_option.dart";
@@ -181,7 +182,8 @@ class _TakeExamState extends State<TakeExam> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(children: [
-          // Question
+
+          // Question index tracker
           Container(
             height: 40,
             child: ListView.builder(
@@ -219,6 +221,7 @@ class _TakeExamState extends State<TakeExam> {
             ),
           ),
 
+          
           // option A
           Container(
             color: _chosenAnswer == 'A' ? _selectedColor : _bgColor,

@@ -144,10 +144,11 @@ class _TakeQuizState extends State<TakeQuiz> {
             padding: const EdgeInsets.all(10.0),
             child: Text(
               "${_qno + 1}. ${widget.items[_qno]['content']}",
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
             ),
           ),
 
+          
           // option A
           AnswerOption(
               value: 'A',
@@ -223,7 +224,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                       });
                     },
                     key: Key('E'),
-                    leading: Text(
+                    leading: const Text(
                       'E.',
                       style:
                           TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
@@ -231,7 +232,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                     title: Text(
                       jsonDecode(widget.items[_qno]['options'])['E'],
                       style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                          const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
                     ),
                     enabled: !answerWasSelected,
                   ),
