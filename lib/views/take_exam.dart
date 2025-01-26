@@ -5,6 +5,8 @@ import "package:flutter/material.dart";
 import "package:smees/views/answer_option.dart";
 import "package:smees/views/result_page.dart";
 
+import "../api/end_points.dart";
+
 class TakeExam extends StatefulWidget {
   final String department;
   final List items;
@@ -241,7 +243,7 @@ class _TakeExamState extends State<TakeExam> {
                   ),
                   child: ListTile(
                     onTap: () {
-                      setState(() {
+                      setState(() async {
                         _selectedColor = selectedColor;
                         _chosenAnswer =
                             widget.items[_qno]['options'][index]['label'];
@@ -346,8 +348,28 @@ class _TakeExamState extends State<TakeExam> {
     });
   }
 
+
+  Future <void> writeAnswerOnDatabase(String answerLabel, qid) async {
+    
+  late String? message = "";
+  final url = Uri.parse('$API_BASE_URL/$tokenApi');
+
+
+  final headers = {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    };
+  // final headers = {"Content-Type": "application/json"};
+
+  final body = {
+    'username': "",
+    'password': "",
+  };
+
+  }
+
   void _writeAnswer(String value) {
     userAnswers[_qno] = value;
+
   }
 
   void _checkPreviousAnswer() {
