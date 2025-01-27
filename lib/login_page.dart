@@ -158,25 +158,29 @@ class _LoginState extends State<Login> {
                       height: 40,
                       child: ElevatedButton(
                         onPressed: () async {
-                          setState(() {
-                            isLoading = true;
-                          });
 
                           late UserLogin user = UserLogin(
                               username: usernameController.text,
                               password: passwordController.text);
 
                           final message = await loginUser(user);
-                          print(message);
-                          // Save token to local storage
 
+                          setState(() {
+                            isLoading = true;
+                            if (message != null) {
+                              token = jsonDecode(message)['access_token'];
+                              username = jsonDecode(message)['username'];
+                              role = jsonDecode(message)['role'];
+                            }
+                          });
+                          
                           // print(departmentController.text);
                           if (token != null && role != null) {
                             Navigator.pushNamed(context, "/");
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
-                                backgroundColor: Colors.purple,
+                                backgroundColor: Colors.deepOrange,
                                 content: Text("Invalid email or password"),
                               ),
                             );

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AnswerOption extends StatelessWidget {
   final String answerText;
   final String value;
-  final Color answerColor;
+  final Color? answerColor;
   final void Function() answerTap;
   final bool enabled ;
   const AnswerOption(
@@ -21,20 +21,20 @@ class AnswerOption extends StatelessWidget {
       padding: EdgeInsets.all(5.0),
       margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
       width: double.infinity,
+
       decoration: BoxDecoration(
         color: answerColor,
         border: Border.all(
-          color: Colors.blue,
         ),
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: ListTile(
         enabled: enabled,
         onTap: answerTap,
-        leading: Text("$value.", style: TextStyle(fontSize: 18),),
+        leading: Text("$value.", style: TextStyle(fontSize: 15),),
         title: Text(answerText,
         style: TextStyle(
-          fontSize: 18.0,
+          fontSize: 15.0,
         ),
       ),
     ));

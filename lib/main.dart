@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-// import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 import 'package:smees/login_page.dart';
 import 'package:smees/security/auth.dart';
 import 'package:smees/security/logout.dart';
@@ -10,6 +10,8 @@ import 'package:smees/views/practice_quiz.dart';
 import "package:smees/views/learn_zone.dart";
 import "package:smees/student_profile.dart";
 import 'package:smees/security/auth.dart';
+import 'package:smees/views/settings.dart';
+import 'package:smees/views/user_provider.dart';
 import 'home_page.dart';
 
 Future<void> main() async {
@@ -20,9 +22,27 @@ Future<void> main() async {
   }
   WidgetsFlutterBinding.ensureInitialized();
 
-  // runApp(ChangeNotifierProvider(
-  //     create: (context) => AuthProvider(), child: const MyApp()));
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => AuthProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => UserProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => UseModeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ThemeProvider(),
+        ),
+        
+      ],
+      child: const MyApp(),
+    ),
+  );
+  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -31,36 +51,41 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final useModeProvider = Provider.of<UseModeProvider>(context);
     return MaterialApp(
       title: 'Grand Success',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.blue[900],
-        primarySwatch: Colors.blue, // (255, 142, 129, 157),
-
-        scaffoldBackgroundColor: Colors.blue[50],
-        textTheme: TextTheme(
-          headlineLarge: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-            color: Colors.blue[900],
-          ),
-          bodyLarge: TextStyle(fontSize: 16, color: Colors.blue[700]),
-        ),
-        buttonTheme: ButtonThemeData(
-          buttonColor: Colors.blue[300],
-          textTheme: ButtonTextTheme.primary,
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
-        )),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light(),
+      themeMode: themeProvider.isDark ? ThemeMode.dark : ThemeMode.light,
+      // theme: ThemeData(
+      //   primaryColor: Colors.blue[900],
+      //   primarySwatch: Colors.blue, // (255, 142, 129, 157),
+    
+      //   scaffoldBackgroundColor: Colors.blue[50],
+      //   textTheme: TextTheme(
+      //     headlineLarge: TextStyle(
+      //       fontSize: 32,
+      //       fontWeight: FontWeight.bold,
+      //       color: Colors.blue[900],
+      //     ),
+      //     bodyLarge: TextStyle(fontSize: 16, color: Colors.blue[700]),
+      //   ),
+      //   buttonTheme: ButtonThemeData(
+      //     buttonColor: Colors.blue[300],
+      //     textTheme: ButtonTextTheme.primary,
+      //   ),
+      //   elevatedButtonTheme: ElevatedButtonThemeData(
+      //       style: ElevatedButton.styleFrom(
+      //     backgroundColor: Colors.white,
+      //   )),
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
       // onGenerateRoute: ,
       // home: AuthWrapper(),
-
+    
       initialRoute: "/login",
       routes: {
         '/login': (context) => const Login(),
@@ -75,6 +100,7 @@ class MyApp extends StatelessWidget {
         "/profile": (context) => const Profile(userId: "bdu20150001"),
         "/learn": (contest) => const LearnZone(department: ""),
         "/stats": (context) => const Statistics(),
+        "/settings": (context) => const SmeesSettings(),
       },
     );
   }

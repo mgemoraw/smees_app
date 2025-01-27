@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/api/end_points.dart';
 
@@ -18,6 +19,7 @@ import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/common/status_card.dart';
 import 'package:smees/views/result_page.dart';
 import 'package:smees/views/take_quiz.dart';
+import 'package:smees/views/user_provider.dart';
 
 import '../models/random_index.dart';
 
@@ -59,7 +61,6 @@ class _TestHomeState extends State<TestHome> {
   TextEditingController yearController = TextEditingController();
   String pageKey = "home";
   int pageIndex = 0;
-  bool offlineMode = true;
 
   @override
   void initState() {
@@ -129,6 +130,8 @@ class _TestHomeState extends State<TestHome> {
 
   @override
   Widget build(BuildContext context) {
+    final useModeProvider = Provider.of<UseModeProvider>(context);
+    
     return Scaffold(
       drawer: const LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES-App"),
@@ -146,29 +149,11 @@ class _TestHomeState extends State<TestHome> {
         ),
 
         // const SizedBox(height: 16.0),
-
-        // const DownloadQuestionsJson(),
-        Padding(
-          padding: EdgeInsets.all(10.0),
-          child: ListTile(
-            title: const Text(
-                "Switch Off Offline Mode if you need latest question from online store",
-                style: TextStyle(fontSize: 15)),
-            trailing: Switch(
-              value: offlineMode,
-              onChanged: (value) {
-                setState(() {
-                  // toggle offline mode off
-                  offlineMode = !offlineMode;
-                });
-              },
-              activeColor: Colors.blue,
-            ),
-          ),
-        ),
+ 
 
         // if offline mode is true, load questions from offline data source
-        !offlineMode
+        // useModeProvider.offlineMode
+        context.watch<UseModeProvider>().offlineMode
             ? Column(
                 children: [
                   Row(
@@ -302,9 +287,9 @@ class _TestHomeState extends State<TestHome> {
                           department: "",
                         ),
                       ),
-                    );
+                    );  
                   });
-                },
+                }, 
                 icon: const Icon(
                   Icons.home_outlined,
                   color: Colors.black54,

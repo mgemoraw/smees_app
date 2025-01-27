@@ -160,7 +160,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                   answerColor: (_chosenAnswer ==
                           widget.items[_qno]['options'][index]['label'])
                       ? _selectedColor!
-                      : Colors.white,
+                      : null,
                   answerTap: () {
                     //
                     setState(() {

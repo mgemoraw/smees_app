@@ -10,6 +10,8 @@ import 'package:smees/home_page.dart';
 import 'package:smees/student_profile.dart';
 import 'package:smees/student_statistics.dart';
 import 'package:smees/views/answer_option.dart';
+import 'package:smees/views/common/appbar.dart';
+import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/learn_zone.dart';
 import 'package:smees/views/take_exam.dart';
 
@@ -79,81 +81,8 @@ class _ExamHomeState extends State<ExamHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Column(
-                children: [
-                  Image.asset('assets/images/graduation.png', height: 100),
-                  const Text("BiT-ExitE"),
-                ],
-              ),
-            ),
-            ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('Settings'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const Icon(Icons.feedback),
-              title: const Text('Send Us feedback'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const Icon(Icons.login),
-              title: const Text('Login'),
-              onTap: () {
-                setState(() {
-                  // Navigator.pushNamed(context, "/");
-                });
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.info),
-              title: const Text('About Us'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const Icon(Icons.logout),
-              title: const Text('Logout'),
-              onTap: () {
-                setState(() {
-                  Navigator.pushNamed(context, "/");
-                });
-              },
-            ),
-          ],
-        ),
-      ),
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: const Text('BiT ExitE'),
-        actions: [
-          PopupMenuButton(itemBuilder: (context) {
-            return [
-              PopupMenuItem(
-                child: TextButton(
-                  child: const Text("About Us"),
-                  onPressed: () {},
-                ),
-              ),
-              PopupMenuItem(
-                child: IconButton(
-                  icon: const Icon(Icons.settings),
-                  onPressed: () {
-                    // to be added in the future
-                  },
-                ),
-              ),
-            ];
-          }),
-        ],
-      ),
+      drawer: LeftNavigation(),
+      appBar: SmeesAppbar(title: "SMEES"),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(children: [

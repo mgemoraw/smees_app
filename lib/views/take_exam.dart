@@ -31,8 +31,8 @@ class _TakeExamState extends State<TakeExam> {
   bool correctAnswerSelected = false;
   String? _chosenAnswer;
   Color? _selectedColor;
-  Color? selectedColor = Colors.green[100];
-  final Color _bgColor = Colors.white;
+  Color? selectedColor = Colors.blue;
+  final Color? _bgColor = null;
   Timer? _timer;
   Duration _remainingTime = Duration(hours: 0, minutes: 0, seconds: 0);
 
@@ -243,7 +243,7 @@ class _TakeExamState extends State<TakeExam> {
                   ),
                   child: ListTile(
                     onTap: () {
-                      setState(() async {
+                      setState(() {
                         _selectedColor = selectedColor;
                         _chosenAnswer =
                             widget.items[_qno]['options'][index]['label'];

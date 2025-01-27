@@ -1,7 +1,9 @@
 import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 import "package:shared_preferences/shared_preferences.dart";
 import "package:smees/models/user.dart";
 import "package:smees/security/logout.dart";
+import "package:smees/views/user_provider.dart";
 
 class SmeesAppbar extends StatefulWidget implements PreferredSizeWidget {
   final String title;
@@ -45,6 +47,7 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
 
   @override
   Widget build(BuildContext context) {
+
     return AppBar(
       backgroundColor: Colors.blue,
       title: Text(
@@ -90,7 +93,9 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
                     PopupMenuItem(
                       child: IconButton(
                         icon: const Icon(Icons.settings),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, "/settings");
+                        },
                       ),
                     ),
                     PopupMenuItem(

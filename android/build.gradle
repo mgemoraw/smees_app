@@ -1,5 +1,5 @@
 android {
-    namespace 'come.example.smees'
+    namespace 'come.bit.smees'
 
 }
 allprojects {
