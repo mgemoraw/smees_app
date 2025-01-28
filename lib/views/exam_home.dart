@@ -216,7 +216,7 @@ class _ExamHomeState extends State<ExamHome> {
 
                   /* go back to home */
                   Navigator.pop(context);
-                  Navigator.pushNamed(context, "/home");
+                  Navigator.pushNamed(context, "/");
                   // Navigator.push(
                   //   context,
                   //   MaterialPageRoute(

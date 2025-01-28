@@ -6,6 +6,7 @@ import 'package:smees/api/end_points.dart';
 import 'package:smees/models/user.dart';
 import "package:http/http.dart" as http;
 import 'package:smees/services/database.dart';
+import 'package:smees/views/user_provider.dart';
 
 var apiUrl = dotenv.env["API_BASE_URL"];
 Future loginUser(UserLogin user) async {

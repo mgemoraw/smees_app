@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
@@ -11,9 +12,11 @@ import 'package:smees/models/user.dart';
 import 'package:smees/security/login.dart';
 import 'package:smees/security/logout.dart';
 import 'package:smees/services/database.dart';
+import 'package:smees/user_profile.dart';
 import 'package:smees/views/common/appbar.dart';
 import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/readme.dart';
+import 'package:smees/views/user_provider.dart';
 
 var files = {
   "Automotive Engineering": "AutomotiveEngineering",
@@ -94,6 +97,8 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
+    final userProvider = Provider.of<UserProvider>(context);
+
     return Scaffold(
         // drawer: LeftNavigation(),
         appBar: AppBar(
@@ -158,22 +163,34 @@ class _LoginState extends State<Login> {
                       height: 40,
                       child: ElevatedButton(
                         onPressed: () async {
-
-                          late UserLogin user = UserLogin(
+                          late UserLogin userLogin = UserLogin(
                               username: usernameController.text,
                               password: passwordController.text);
 
-                          final message = await loginUser(user);
+                          final message = await loginUser(userLogin);
 
+                          // instantiate provier
                           setState(() {
                             isLoading = true;
                             if (message != null) {
-                              token = jsonDecode(message)['access_token'];
-                              username = jsonDecode(message)['username'];
-                              role = jsonDecode(message)['role'];
+                              final userData = jsonDecode(message);
+                              token = userData['access_token'];
+                              username = userData['username'];
+                              role = userData['role'];
+                              User user = User(
+                                  username: username,
+                                  password: token,
+                                  email: null,
+                                  fname: null,
+                                  mname: null,
+                                  univesity: "Bahir Dar University",
+                                  department: userData['department']);
+
+                              // set global user state
+                              userProvider.changeUser(newUser: user);
                             }
                           });
-                          
+
                           // print(departmentController.text);
                           if (token != null && role != null) {
                             Navigator.pushNamed(context, "/");

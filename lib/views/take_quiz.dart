@@ -3,10 +3,12 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:provider/provider.dart';
 
 import 'package:smees/views/answer_option.dart';
 
 import 'package:smees/views/result_page.dart';
+import 'package:smees/views/user_provider.dart';
 
 class TakeQuiz extends StatefulWidget {
   final String department;
@@ -60,6 +62,8 @@ class _TakeQuizState extends State<TakeQuiz> {
 
   @override
   Widget build(BuildContext context) {
+    final useModeProvider = Provider.of<UseModeProvider>(context);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColorDark,
@@ -109,8 +113,8 @@ class _TakeQuizState extends State<TakeQuiz> {
                 _previous_quesion();
               },
               child: Row(children: [
-                Icon(Icons.arrow_back),
-                Text("Previous"),
+                const Icon(Icons.arrow_back),
+                const Text("Previous"),
               ])),
 
           // restart button
@@ -150,23 +154,27 @@ class _TakeQuizState extends State<TakeQuiz> {
 
           ListView.builder(
             shrinkWrap: true,
-            itemCount: widget.items[_qno]['options'].length,
+            itemCount: useModeProvider.offlineMode
+                ? jsonDecode(widget.items[_qno]['options']).length
+                : widget.items[_qno]['options'].length,
             itemBuilder: (context, index) {
-              if (widget.items[_qno]['options'][index]['content'] != null) {
+              final options = useModeProvider.offlineMode
+                  ? jsonDecode(widget.items[_qno]['options'])
+                  : widget.items[_qno]['options'];
+              // if (widget.items[_qno]['options'][index]['content'] != null) {
+              if (options[index]['content'] != null) {
                 return AnswerOption(
                   enabled: !answerWasSelected,
-                  value: widget.items[_qno]['options'][index]['label'],
-                  answerText: widget.items[_qno]['options'][index]['content'],
-                  answerColor: (_chosenAnswer ==
-                          widget.items[_qno]['options'][index]['label'])
+                  value: options[index]['label'],
+                  answerText: options[index]['content'],
+                  answerColor: (_chosenAnswer == options[index]['label'])
                       ? _selectedColor!
                       : null,
                   answerTap: () {
                     //
                     setState(() {
                       _selectedColor = Colors.blue;
-                      _chosenAnswer =
-                          widget.items[_qno]['options'][index]['label'];
+                      _chosenAnswer = options[index]['label'];
                       disableOptions();
                       // _nextQuestion();
                     });
@@ -300,7 +308,6 @@ class _TakeQuizState extends State<TakeQuiz> {
               bottomContainerText,
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
             ),
-            //"YOur answer progress"),
           ),
         ]),
       ),

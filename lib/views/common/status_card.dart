@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 import "package:shared_preferences/shared_preferences.dart";
 import "package:smees/models/user.dart";
+import "package:smees/views/user_provider.dart";
 
 class UserStatusCard extends StatefulWidget {
   const UserStatusCard({super.key});
@@ -46,6 +48,8 @@ class _UserStatusCardState extends State<UserStatusCard> {
 
   @override
   Widget build(BuildContext context) {
+    final userProvider = Provider.of<UserProvider>(context);
+
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -66,7 +70,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
           Column(
             children: [
               Text(
-                "Welcome ${user.username}",
+                "Welcome ${userProvider.user!.username}",
                 style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,

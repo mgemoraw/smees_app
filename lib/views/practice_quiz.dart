@@ -131,7 +131,7 @@ class _TestHomeState extends State<TestHome> {
   @override
   Widget build(BuildContext context) {
     final useModeProvider = Provider.of<UseModeProvider>(context);
-    
+
     return Scaffold(
       drawer: const LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES-App"),
@@ -149,7 +149,6 @@ class _TestHomeState extends State<TestHome> {
         ),
 
         // const SizedBox(height: 16.0),
- 
 
         // if offline mode is true, load questions from offline data source
         // useModeProvider.offlineMode
@@ -161,7 +160,7 @@ class _TestHomeState extends State<TestHome> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(
-                        width: 120,
+                        width: 250,
                         child: TextField(
                             controller: yearController,
                             keyboardType: TextInputType.number,
@@ -176,7 +175,7 @@ class _TestHomeState extends State<TestHome> {
                             setState(() async {
                               await _downloadData(
                                   departmentId, int.parse(yearController.text));
-                              print(message);
+                              // print(message);
                             });
                           },
                           child: const Icon(Icons.download)),
@@ -287,9 +286,9 @@ class _TestHomeState extends State<TestHome> {
                           department: "",
                         ),
                       ),
-                    );  
+                    );
                   });
-                }, 
+                },
                 icon: const Icon(
                   Icons.home_outlined,
                   color: Colors.black54,
@@ -299,7 +298,7 @@ class _TestHomeState extends State<TestHome> {
               IconButton(
                 onPressed: () {
                   setState(() {
-                    Navigator.pushNamed(context, "/stats");
+                    // Navigator.pushNamed(context, "/stats");
                   });
                 },
                 icon: const Icon(Icons.bar_chart),
@@ -307,7 +306,7 @@ class _TestHomeState extends State<TestHome> {
               IconButton(
                 onPressed: () {
                   setState(() {
-                    Navigator.pushNamed(context, "/profile");
+                    // Navigator.pushNamed(context, "/profile");
                   });
                 },
                 icon: const Icon(Icons.group),
