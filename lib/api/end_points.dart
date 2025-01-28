@@ -6,4 +6,6 @@ const tokenApi = "auth/token";
 const questionsApi = "questions/index";
 const getDepartmentsApi = "departments/index";
 const usersGetAllApi = "users/index";
-const studentAnswersApi = "result/";
+const studentAnswersApi = "tests/student-response";
+const examStartApi = "tests/exam/start";
+const testsGetAllApi = "tests/index";

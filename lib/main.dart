@@ -5,11 +5,11 @@ import 'package:smees/login_page.dart';
 import 'package:smees/security/auth.dart';
 import 'package:smees/security/logout.dart';
 import 'package:smees/student_statistics.dart';
+import 'package:smees/views/common/smees_feedback.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
 import "package:smees/views/learn_zone.dart";
 import "package:smees/student_profile.dart";
-import 'package:smees/security/auth.dart';
 import 'package:smees/views/settings.dart';
 import 'package:smees/views/user_provider.dart';
 import 'home_page.dart';
@@ -37,7 +37,6 @@ Future<void> main() async {
         ChangeNotifierProvider(
           create: (context) => ThemeProvider(),
         ),
-        
       ],
       child: const MyApp(),
     ),
@@ -52,7 +51,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    final useModeProvider = Provider.of<UseModeProvider>(context);
+
     return MaterialApp(
       title: 'Grand Success',
       debugShowCheckedModeBanner: false,
@@ -62,7 +61,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(
       //   primaryColor: Colors.blue[900],
       //   primarySwatch: Colors.blue, // (255, 142, 129, 157),
-    
+
       //   scaffoldBackgroundColor: Colors.blue[50],
       //   textTheme: TextTheme(
       //     headlineLarge: TextStyle(
@@ -85,7 +84,7 @@ class MyApp extends StatelessWidget {
       // ),
       // onGenerateRoute: ,
       // home: AuthWrapper(),
-    
+
       initialRoute: "/login",
       routes: {
         '/login': (context) => const Login(),
@@ -101,6 +100,7 @@ class MyApp extends StatelessWidget {
         "/learn": (contest) => const LearnZone(department: ""),
         "/stats": (context) => const Statistics(),
         "/settings": (context) => const SmeesSettings(),
+        "/feedback": (context) => const SmeesFeedback(),
       },
     );
   }
