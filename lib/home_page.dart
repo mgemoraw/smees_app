@@ -7,7 +7,7 @@ import 'package:smees/depreciated/quiz_page.dart';
 import 'package:smees/login_page.dart';
 import 'package:smees/models/user.dart';
 
-import 'package:smees/student_profile.dart';
+import 'package:smees/user_profile.dart';
 import 'package:smees/student_statistics.dart';
 import 'package:smees/views/common/appbar.dart';
 import 'package:smees/views/common/drawer.dart';
@@ -47,7 +47,7 @@ class _HomeState extends State<Home> {
     const HomePage(department: "", username: ""),
     // const LearnZone(department: ''),
     const Statistics(),
-    const Profile(userId: ""),
+    const UserProfile(),
   ];
 
   @override
@@ -64,7 +64,7 @@ class _HomeState extends State<Home> {
       if (jsonString != null) {
         Map<String, dynamic> userData = jsonDecode(jsonString);
         user = User(
-          userId: userData['username'],
+          username: userData['username'],
           department: userData['department'],
           univesity: userData['university'],
           password: null,

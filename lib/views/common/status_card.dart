@@ -36,8 +36,9 @@ class _UserStatusCardState extends State<UserStatusCard> {
   Future<void> _getCurrentUser() async {
     setState(() {
       user = User(
-          userId: "sgetme",
-          password: "test password",
+          username: "sgetme",
+          password: null,
+          email: null,
           univesity: "BDU",
           department: "Test Department");
     });
@@ -65,7 +66,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
           Column(
             children: [
               Text(
-                "Welcome ${user.userId}",
+                "Welcome ${user.username}",
                 style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,

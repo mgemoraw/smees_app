@@ -7,7 +7,7 @@ class Statistics extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xffC4DFCB),
+      //color: const Color(0xffC4DFCB),
       child: const Center(
           child: Column(
         children: [

@@ -7,7 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:smees/exam_page.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
-import 'package:smees/student_profile.dart';
+import 'package:smees/user_profile.dart';
 import 'package:smees/student_statistics.dart';
 import 'package:smees/views/answer_option.dart';
 import 'package:smees/views/common/appbar.dart';
@@ -49,7 +49,7 @@ class _ExamHomeState extends State<ExamHome> {
     'home': const HomePage(department: "AutomotiveEngineering", username: ""),
     'exam': const LearnZone(department: "AutomotiveEngineering"),
     'userstat': const Statistics(),
-    'profile': const Profile(userId: "bdu0001"),
+    'profile': const UserProfile(),
     // 'learn': const LearnZone(),
   };
   List _items = [];

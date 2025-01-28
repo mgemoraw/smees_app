@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
 
     setState(() {
       user = User(
-          userId: "sgetme",
+          username: "sgetme",
           password: "test password",
           univesity: "BDU",
           department: "Test Department");

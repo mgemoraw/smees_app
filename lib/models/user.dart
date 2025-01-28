@@ -1,15 +1,20 @@
 class User {
-  String? userId;
+  String? username;
   String? password;
   String? fname;
   String? mname;
   String? lname;
+  String? email;
   String? univesity;
   String? department;
 
   User({
-    this.userId,
+    this.username,
     this.password,
+    this.fname,
+    this.mname,
+    this.lname,
+    this.email,
     this.univesity,
     this.department,
   });

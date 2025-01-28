@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smees/models/user.dart';
 
 
 class AuthProvider extends ChangeNotifier {
@@ -16,16 +17,16 @@ class AuthProvider extends ChangeNotifier {
   }
 }
 class UserProvider extends ChangeNotifier {
-  String departmentName;
+  User? user;
 
-  UserProvider({this.departmentName = "Guest Department"});
+  UserProvider({this.user = null});
 
   // bool get offlineMode => null;
 
-  void changeDepartmentName({
-    required String newDepartmentName,
+  void changeUser({
+    required User newUser,
   }) async {
-    departmentName = newDepartmentName;
+    user = newUser;
     notifyListeners();
   }
 }

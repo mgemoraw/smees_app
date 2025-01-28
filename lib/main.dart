@@ -9,7 +9,7 @@ import 'package:smees/views/common/smees_feedback.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
 import "package:smees/views/learn_zone.dart";
-import "package:smees/student_profile.dart";
+import "package:smees/user_profile.dart";
 import 'package:smees/views/settings.dart';
 import 'package:smees/views/user_provider.dart';
 import 'home_page.dart';
@@ -96,7 +96,7 @@ class MyApp extends StatelessWidget {
               department: "",
             ),
         "/exam": (context) => const ExamHome(department: ""),
-        "/profile": (context) => const Profile(userId: "bdu20150001"),
+        "/profile": (context) => const UserProfile(),
         "/learn": (contest) => const LearnZone(department: ""),
         "/stats": (context) => const Statistics(),
         "/settings": (context) => const SmeesSettings(),

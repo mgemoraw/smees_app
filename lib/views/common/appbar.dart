@@ -37,10 +37,10 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
       if (token != null) {
         isLoggedIn = !isLoggedIn;
         user = User(
-            userId: username,
+            username: username,
             univesity: null,
             department: department,
-            password: null);
+            );
       }
     });
   }
