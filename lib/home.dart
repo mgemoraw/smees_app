@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/exam_page.dart';
 import 'package:smees/home_page.dart';
@@ -8,6 +9,7 @@ import 'package:smees/student_statistics.dart';
 import 'package:smees/views/common/status_card.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
+import 'package:smees/views/user_provider.dart';
 
 class HomePage extends StatefulWidget {
   final String department;
@@ -60,6 +62,7 @@ class _HomePageState extends State<HomePage> {
   }
   @override
   Widget build(BuildContext context) {
+    final navProvider = Provider.of<NavigationProvider>(context);
     return WillPopScope(
       onWillPop: () async {
         if (isUserLoggedIn()) {
@@ -100,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     onTap: () {
                       setState(() {
-                        _pageIndex = 0;
+                        navProvider.setIndex(1);
                       });
                     },
                   ),
@@ -122,6 +125,7 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {
                       // print("Hello");
                       setState(() {
+                        // navProvider.setIndex(4);
                         Navigator.pushNamed(context, "/quiz");
                         // Navigator.push(
                         //   context,
@@ -152,6 +156,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     onTap: () {
                       setState(() {
+                        // navProvider.setIndex(4);
                         Navigator.pushNamed(context, "/exam");
                         // Navigator.push(
                         //   context,
@@ -186,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                       //     context.findAncestorStateOfType<_HomeState>();
                       // parentState?._showStatistics();
                       setState(() {
-                        _pageIndex = 2;
+                        navProvider.setIndex(2);
                         Home h = const Home(
                             department: "AutomotiveEngineering", title: 'SMEES');
                         h.pageKey = 'userstat';

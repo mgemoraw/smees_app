@@ -39,7 +39,7 @@ class _LeftNavigationState extends State<LeftNavigation> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-
+    final useModeProvider = Provider.of<UseModeProvider>(context);
     return Container(
       child: Drawer(
         shadowColor: bgColor,
@@ -62,19 +62,27 @@ class _LeftNavigationState extends State<LeftNavigation> {
               title: Text("Settings"),
               children: [
                 ListTile(
-                leading: isOnline ? const Icon(Icons.online_prediction) : const Icon(Icons.network_locked),
+                leading: !useModeProvider.offlineMode ? const Icon(Icons.online_prediction) : const Icon(Icons.network_locked),
                 title: const Text('Network Mode'),
                 onTap: () {
                   // Navigator.pushNamed(context, "/settings");
                   },
 
-                trailing: Switch(value: context.watch<UseModeProvider>().offlineMode, onChanged: (value) {
+                trailing: Switch(value: !useModeProvider.offlineMode, onChanged: (value) {
                   setState(() {
                     // change offlineMode state
                     context.read<UseModeProvider>().changeUseMode();
+                              
                   });
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      backgroundColor: Colors.blue,
+                      
+                      content: useModeProvider.offlineMode ? Text("Offline Mode") : Text("Online Mode"),
+                    )
+                  );
                 }),
-                subtitle: Text(!context.watch<UseModeProvider>().offlineMode ? "Offline": "Online"),
+                subtitle: Text(useModeProvider.offlineMode ? "Offline": "Online"),
 
                 ),
                 ListTile(

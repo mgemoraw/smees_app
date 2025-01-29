@@ -32,7 +32,7 @@ class UserProvider extends ChangeNotifier {
 }
 
 class UseModeProvider extends ChangeNotifier {
-  bool _offlineMode = false;
+  bool _offlineMode = true;
 
   bool get offlineMode => _offlineMode;
 
@@ -55,3 +55,12 @@ class ThemeProvider extends ChangeNotifier {
   }
 }
 
+class NavigationProvider with ChangeNotifier {
+  int _selectedIndex = 0;
+  int get selectedIndex => _selectedIndex;
+
+  void setIndex(int index) {
+    _selectedIndex = index;
+    notifyListeners();
+  }
+}

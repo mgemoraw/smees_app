@@ -50,37 +50,64 @@ class _UserStatusCardState extends State<UserStatusCard> {
   Widget build(BuildContext context) {
     final userProvider = Provider.of<UserProvider>(context);
 
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ClipOval(
-              child: Image.asset(
-                'assets/images/user-2.png',
-                fit: BoxFit.contain,
-                width: 120,
-                height: 120,
-              ),
-            ),
+    return ListTile(
+      leading: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ClipOval(
+          child: Image.asset(
+            'assets/images/user-2.png',
+            fit: BoxFit.contain,
+            // width: 120,
+            // height: 120,
           ),
-          const SizedBox(width: 20.0),
-          Column(
-            children: [
-              Text(
-                "Welcome ${userProvider.user!.username}",
-                style: const TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text("Latest Score: $score"),
-            ],
-          ),
-        ],
+        ),
       ),
+      title: Text(
+        "Welcome ${userProvider.user!.username}",
+        style: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      subtitle: Text("Latest Score: $score"),
+      trailing: context.watch<UseModeProvider>().offlineMode ? Icon(Icons.circle) : Icon(Icons.circle, color: Colors.green,),
     );
+
+    // return SingleChildScrollView(
+    //   scrollDirection: Axis.horizontal,
+    //   child: Row(
+    //     mainAxisAlignment: MainAxisAlignment.start,
+    //     children: [
+    //       Padding(
+    //         padding: const EdgeInsets.all(8.0),
+    //         child: ClipOval(
+    //           child: Image.asset(
+    //             'assets/images/user-2.png',
+    //             fit: BoxFit.contain,
+    //             width: 120,
+    //             height: 120,
+    //           ),
+    //         ),
+    //       ),
+    //       const SizedBox(width: 20.0),
+    //       Column(
+    //         children: [
+    //           Text(
+    //             "Welcome ${userProvider.user!.username}",
+    //             style: const TextStyle(
+    //               fontSize: 22,
+    //               fontWeight: FontWeight.bold,
+    //             ),
+    //           ),
+    //           ListTile(
+    //             title: 
+    //           ),
+    //           Text("Latest Score: $score"),
+    //           Text("Offline"),
+    //         ],
+    //       ),
+    //     ],
+    //   ),
+    // );
   }
 }

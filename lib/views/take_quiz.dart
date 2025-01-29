@@ -154,13 +154,13 @@ class _TakeQuizState extends State<TakeQuiz> {
 
           ListView.builder(
             shrinkWrap: true,
-            itemCount: useModeProvider.offlineMode
+            itemCount: !useModeProvider.offlineMode
                 ? jsonDecode(widget.items[_qno]['options']).length
-                : widget.items[_qno]['options'].length,
+                : (widget.items[_qno]['options']).length,
             itemBuilder: (context, index) {
-              final options = useModeProvider.offlineMode
+              final options = !useModeProvider.offlineMode
                   ? jsonDecode(widget.items[_qno]['options'])
-                  : widget.items[_qno]['options'];
+                  : (widget.items[_qno]['options']);
               // if (widget.items[_qno]['options'][index]['content'] != null) {
               if (options[index]['content'] != null) {
                 return AnswerOption(

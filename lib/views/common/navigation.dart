@@ -124,6 +124,7 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
       currentIndex: currentIndex,
       onTap: onTap,
       items: const [
@@ -134,6 +135,14 @@ class BottomNavBar extends StatelessWidget {
           ),
           icon: Icon(Icons.home),
           label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          activeIcon: Icon(
+            Icons.menu_book_outlined,
+            color: Colors.green,
+          ),
+          icon: Icon(Icons.menu_book_outlined),
+          label: 'Learn',
         ),
         BottomNavigationBarItem(
           activeIcon: Icon(

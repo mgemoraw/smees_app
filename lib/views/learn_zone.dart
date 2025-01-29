@@ -13,12 +13,8 @@ class LearnZone extends StatefulWidget {
 class _LearnZoneState extends State<LearnZone> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: SmeesAppbar(title: "SMEES-App"),
-      bottomNavigationBar: BottomNavBar(
-        currentIndex: 0,
-        onTap: (int) {},
-      ),
+    return Container(
+      child: Text("Learn Zone"),
     );
   }
 }

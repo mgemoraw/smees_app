@@ -37,6 +37,9 @@ Future<void> main() async {
         ChangeNotifierProvider(
           create: (context) => ThemeProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (context) => NavigationProvider(),
+        ),
       ],
       child: const MyApp(),
     ),
@@ -60,8 +63,7 @@ class MyApp extends StatelessWidget {
       themeMode: themeProvider.isDark ? ThemeMode.dark : ThemeMode.light,
       // theme: ThemeData(
       //   primaryColor: Colors.blue[900],
-      //   primarySwatch: Colors.blue, // (255, 142, 129, 157),
-
+      //   primarySwatch: Colors.blue, // (255, 142, 129, 157)
       //   scaffoldBackgroundColor: Colors.blue[50],
       //   textTheme: TextTheme(
       //     headlineLarge: TextStyle(

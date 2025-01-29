@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/depreciated/department.dart';
 import 'package:smees/depreciated/quiz_page.dart';
@@ -12,7 +13,10 @@ import 'package:smees/student_statistics.dart';
 import 'package:smees/views/common/appbar.dart';
 import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/common/navigation.dart';
+import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/learn_zone.dart';
+import 'package:smees/views/practice_quiz.dart';
+import 'package:smees/views/user_provider.dart';
 
 import 'home.dart';
 
@@ -43,11 +47,13 @@ class _HomeState extends State<Home> {
   //   // 'learn': const LearnZone(),
   // };
 
-  static List<Widget> _pages = <Widget>[
+  static final List<Widget> _pages = <Widget>[
     const HomePage(department: "", username: ""),
-    // const LearnZone(department: ''),
+    const LearnZone(department: ''),
     const Statistics(),
     const UserProfile(),
+    const TestHome(department: ""),
+    const ExamHome(department: ""),
   ];
 
   @override
@@ -91,13 +97,20 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    final navProvider = Provider.of<NavigationProvider>(context);
     return Scaffold(
       drawer: const LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES-App"),
 
-      body: _pages.elementAt(_selectedIndex), // _pages[_selectedIndex],
+      body: _pages.elementAt(navProvider.selectedIndex), // _pages[_selectedIndex],
       bottomNavigationBar:
-          BottomNavBar(currentIndex: _selectedIndex, onTap: _onItemTapped),
+          BottomNavBar(
+            currentIndex: navProvider.selectedIndex, 
+            onTap: (index){
+              setState((){
+                navProvider.setIndex(index);
+              });
+            }),
     );
   }
 }

@@ -66,10 +66,13 @@ class _TestHomeState extends State<TestHome> {
   void initState() {
     super.initState();
     _loadUserData();
+    // readJson();
   }
+
 
   // fetch content from json
   Future<void> readJson(String department) async {
+    department = department.replaceAll(" ", "");
     final String response =
         await rootBundle.loadString("assets/$department/$department.json");
     final data = json.decode(response);
@@ -131,6 +134,7 @@ class _TestHomeState extends State<TestHome> {
   @override
   Widget build(BuildContext context) {
     final useModeProvider = Provider.of<UseModeProvider>(context);
+    final user = Provider.of<UserProvider>(context).user;
 
     return Scaffold(
       drawer: const LeftNavigation(),
@@ -152,7 +156,7 @@ class _TestHomeState extends State<TestHome> {
 
         // if offline mode is true, load questions from offline data source
         // useModeProvider.offlineMode
-        context.watch<UseModeProvider>().offlineMode
+        !context.watch<UseModeProvider>().offlineMode
             ? Column(
                 children: [
                   Row(
@@ -190,22 +194,25 @@ class _TestHomeState extends State<TestHome> {
                 ],
               )
             :
-            // dropdown option to choose and take quiz
-            SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: DropdownButton(
-                    hint: const Text("Select your department here"),
-                    value: department,
-                    items: getDepartents(),
-                    onChanged: (value) {
-                      setState(() {
-                        department = value!;
-                        readJson(department);
-                        // _downloadData(departmentId, int.parse(yearController.text));
-                        // print(_items);
-                      });
-                    }),
-              ),
+            // // dropdown option to choose and take quiz
+            // SingleChildScrollView(
+            //     scrollDirection: Axis.horizontal,
+            //     child: DropdownButton(
+            //         hint: const Text("Select your department here"),
+            //         value: department,
+            //         items: getDepartents(),
+            //         onChanged: (value) {
+            //           setState(() {
+            //             department = value!;
+
+            //             // department = context.watch<UserProvider>().user!.department;
+                        
+            //             readJson(department);
+            //             // _downloadData(departmentId, int.parse(yearController.text));
+            //             // print(_items);
+            //           });
+            //         }),
+            //   ),
 
         SizedBox(
           child:
@@ -217,38 +224,56 @@ class _TestHomeState extends State<TestHome> {
                 keyboardType: TextInputType.number,
                 decoration:
                     const InputDecoration(hintText: "Type Number of Questions"),
-                onTap: () {
+                onChanged: (value) {
                   setState(() {
                     //
+                    department = user!.department;
+                    readJson(department);
                   });
-                },
+                }, 
               ),
             ),
             ElevatedButton(
               onPressed: () {
-                //readJson();
-                int qnos = validateInput(_controller.text);
-                List<int> indexes = generateIndexes(_items, qnos);
-                var items = [];
+                
+                try {
+                  //
+                  int qnos = validateInput(_controller.text);
+                  List<int> indexes = generateIndexes(_items, qnos);
+                  var items = [];
 
-                for (int i in indexes) {
-                  // items.add(_items[i]);
-                  items.add(_items[i]);
-                }
+                  for (int i in indexes) {
+                    // items.add(_items[i]);
+                    items.add(_items[i]);
+                  }
 
-                if (qnos > 0 && _items.isNotEmpty) {
-                  // start quiz
-                  Navigator.pop(context);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => TakeQuiz(
-                        department: "",
-                        items: items,
+                  if (qnos > 0 && _items.isNotEmpty) {
+                    // start quiz
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TakeQuiz(
+                          department: "",
+                          items: items,
+                        ),
                       ),
-                    ),
+                    );
+                  }
+                } catch(e) {
+                  ScaffoldMessenger.of(context).showMaterialBanner(
+                    MaterialBanner(
+                      content: Text("Error: No content found!"), 
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: (){
+                            ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
+                        }, child: Icon(Icons.close)),
+                      ]
+                    )
                   );
                 }
+                
               },
               child: const Text("Start Quiz"),
             ),
