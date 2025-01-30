@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
+import 'package:smees/models/database.dart';
 
 import 'package:smees/views/answer_option.dart';
 
@@ -33,6 +34,7 @@ class _TakeQuizState extends State<TakeQuiz> {
   Color? _selectedColor;
   Timer? _timer;
   int _start = 60;
+  DateTime testStarted = DateTime.now();
 
   @override
   void initState() {
@@ -63,6 +65,7 @@ class _TakeQuizState extends State<TakeQuiz> {
   @override
   Widget build(BuildContext context) {
     final useModeProvider = Provider.of<UseModeProvider>(context);
+    final user = Provider.of<UserProvider>(context).user;
 
     return Scaffold(
       appBar: AppBar(
@@ -112,9 +115,9 @@ class _TakeQuizState extends State<TakeQuiz> {
                 // _previous question
                 _previous_quesion();
               },
-              child: Row(children: [
-                const Icon(Icons.arrow_back),
-                const Text("Previous"),
+              child: const Row(children: [
+                 Icon(Icons.arrow_back),
+                 Text("Previous"),
               ])),
 
           // restart button
@@ -128,7 +131,27 @@ class _TakeQuizState extends State<TakeQuiz> {
                 )
               : Text(""),
           // forward button
-          ElevatedButton(
+          (_qno >= widget.items.length - 1) 
+          ? ElevatedButton(
+            onPressed: () {
+              // write score to database
+              final resultData = {
+                'userId': user.username,
+                'testStarted': testStarted.toIso8601String(),
+                'testEnded': DateTime.now().toIso8601String(),
+                'questions': widget.items.length,
+                'score': _totalScore,
+              };
+              _writeResults(resultData);
+              
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(score: _totalScore)));
+            }, 
+          child: Text("Result"))
+          : ElevatedButton(
               onPressed: () {
                 // _previous question
                 _nextQuestion();
@@ -183,125 +206,7 @@ class _TakeQuizState extends State<TakeQuiz> {
               }
             },
           ),
-          // // option A
-          // AnswerOption(
-          //     value: 'A',
-          //     answerText: jsonDecode(widget.items[_qno]['options'])['A'],
-          //     enabled: !answerWasSelected,
-          //     answerColor:
-          //         (_chosenAnswer == 'A') ? _selectedColor! : Colors.white,
-          //     answerTap: () {
-          //       setState(() {
-          //         _selectedColor = Colors.blue;
-          //         _chosenAnswer = "A";
-          //         disableOptions();
-          //         // _nextQuestion();
-          //       });
-          //     }),
-
-          // // option B
-          // AnswerOption(
-          //     value: 'B',
-          //     answerText: jsonDecode(widget.items[_qno]['options'])['B'],
-          //     enabled: !answerWasSelected,
-          //     answerColor:
-          //         (_chosenAnswer == 'B') ? _selectedColor! : Colors.white,
-          //     answerTap: () {
-          //       setState(() {
-          //         _selectedColor = Colors.blue;
-          //         _chosenAnswer = "B";
-          //         disableOptions();
-          //         // _nextQuestion();
-          //       });
-          //     }),
-
-          // AnswerOption(
-          //     value: 'C',
-          //     answerText: jsonDecode(widget.items[_qno]['options'])['C'],
-          //     enabled: !answerWasSelected,
-          //     answerColor:
-          //         (_chosenAnswer == 'C') ? _selectedColor! : Colors.white,
-          //     answerTap: () {
-          //       _selectedColor = Colors.blue;
-          //       _chosenAnswer = "C";
-          //       disableOptions();
-          //       // _nextQuestion();
-          //     }),
-
-          // // option D
-          // AnswerOption(
-          //     value: 'D',
-          //     answerText: jsonDecode(widget.items[_qno]['options'])['D'],
-          //     answerColor:
-          //         (_chosenAnswer == 'D') ? _selectedColor! : Colors.white,
-          //     enabled: !answerWasSelected,
-          //     answerTap: () {
-          //       setState(() {
-          //         _selectedColor = Colors.blue;
-          //         _chosenAnswer = "D";
-          //         disableOptions();
-          //         // _nextQuestion();
-          //       });
-          //     }),
-
-          // // if option E exists
-          // (jsonDecode(widget.items[_qno]['options'])['E'] != null)
-          //     ? Container(
-          //         color: _chosenAnswer == 'E' ? _selectedColor : Colors.white12,
-          //         child: ListTile(
-          //           // on tap answer will be submitted
-          //           onTap: () {
-          //             setState(() {
-          //               _chosenAnswer = "E";
-          //               disableOptions();
-          //               // _nextQuestion();
-          //             });
-          //           },
-          //           key: Key('E'),
-          //           leading: const Text(
-          //             'E.',
-          //             style:
-          //                 TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-          //           ),
-          //           title: Text(
-          //             jsonDecode(widget.items[_qno]['options'])['E'],
-          //             style: const TextStyle(
-          //                 fontWeight: FontWeight.w500, fontSize: 18),
-          //           ),
-          //           enabled: !answerWasSelected,
-          //         ),
-          //       )
-          //     : Text(""),
-
-          // // if option F exists
-          // (jsonDecode(widget.items[_qno]['options'])['F'] != null)
-          //     ? Container(
-          //         color: _chosenAnswer == 'F' ? _selectedColor : Colors.white12,
-          //         child: ListTile(
-          //           // on tap answer will be submitted
-          //           onTap: () {
-          //             setState(() {
-          //               _chosenAnswer = 'F';
-          //               disableOptions();
-          //               // _nextQuestion();
-          //             });
-          //           },
-          //           key: Key('F'),
-          //           leading: Text(
-          //             'F.',
-          //             style:
-          //                 TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-          //           ),
-          //           title: Text(
-          //             jsonDecode(widget.items[_qno]['options'])['F'],
-          //             style:
-          //                 TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-          //           ),
-          //           enabled: !answerWasSelected,
-          //         ),
-          //       )
-          //     : const Text(""),
-
+          
           // Answer Notification container
           Container(
             child: Text(
@@ -343,11 +248,7 @@ class _TakeQuizState extends State<TakeQuiz> {
         _selectedColor = Colors.white;
         bottomContainerText = "";
       } else {
-        Navigator.pop(context);
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => ResultPage(score: _totalScore)));
+       // 
       }
     });
   }
@@ -366,4 +267,14 @@ class _TakeQuizState extends State<TakeQuiz> {
       Navigator.pushNamed(context, "/quiz");
     });
   }
+
+  Future<void> _writeResults(Map<String,dynamic> data) async {
+
+    try {
+      await SmeesHelper().addTest(data);
+    } catch (err) {
+      print("Writing data failed $err");
+    }
+
+}
 }

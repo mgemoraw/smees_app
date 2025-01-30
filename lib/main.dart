@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import 'package:smees/login_page.dart';
+import 'package:smees/models/database.dart';
 import 'package:smees/security/auth.dart';
 import 'package:smees/security/logout.dart';
 import 'package:smees/student_statistics.dart';
@@ -12,16 +13,23 @@ import "package:smees/views/learn_zone.dart";
 import "package:smees/user_profile.dart";
 import 'package:smees/views/settings.dart';
 import 'package:smees/views/user_provider.dart';
+// import 'package:sqflite/sqflite.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'home_page.dart';
 
 Future<void> main() async {
   try {
     await dotenv.load(fileName: ".env");
+    
+    
   } catch (err) {
     print(err.toString());
   }
   WidgetsFlutterBinding.ensureInitialized();
-
+  sqfliteFfiInit();
+  databaseFactory = databaseFactoryFfi;
+  await SmeesHelper().database;
+  
   runApp(
     MultiProvider(
       providers: [

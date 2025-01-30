@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/depreciated/department.dart';
 import 'package:smees/depreciated/quiz_page.dart';
 import 'package:smees/login_page.dart';
+import 'package:smees/models/database.dart';
 import 'package:smees/models/user.dart';
 
 import 'package:smees/user_profile.dart';
@@ -60,8 +61,12 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
     _getCurrentUser();
+    _initializeDatabse();
   }
 
+  Future<void> _initializeDatabse() async {
+    await SmeesHelper().database;
+  }
   Future<void> _getCurrentUser() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     final jsonString = prefs.getString("smees-user-data");

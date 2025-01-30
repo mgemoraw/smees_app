@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
+import 'package:smees/models/database.dart';
 import 'package:smees/models/user.dart';
 import 'package:smees/security/login.dart';
 import 'package:smees/security/logout.dart';
@@ -163,6 +164,9 @@ class _LoginState extends State<Login> {
                       height: 40,
                       child: ElevatedButton(
                         onPressed: () async {
+                          setState(() {
+                            isLoading = true;
+                          });
                           late UserLogin userLogin = UserLogin(
                               username: usernameController.text,
                               password: passwordController.text);
@@ -171,7 +175,6 @@ class _LoginState extends State<Login> {
 
                           // instantiate provier
                           setState(() {
-                            isLoading = true;
                             if (message != null) {
                               final userData = jsonDecode(message);
                               token = userData['access_token'];
@@ -188,11 +191,16 @@ class _LoginState extends State<Login> {
 
                               // set global user state
                               userProvider.setUser(newUser: user);
+                              // insert user data to local db
+                              SmeesHelper().addUser(user.toMap());
                             }
                           });
 
+                          setState((){
+                            isLoading = false;
+                          });
                           // print(departmentController.text);
-                          if (token != null && role != null) {
+                          if (token != null && role != 'null') {
                             Navigator.pushNamed(context, "/");
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
@@ -203,7 +211,9 @@ class _LoginState extends State<Login> {
                             );
                           }
                         },
-                        child: const Text(
+                        child: isLoading
+                        ? const CircularProgressIndicator()
+                        : const Text(
                           'Login',
                           style: TextStyle(
                             color: Colors.black,
@@ -225,6 +235,20 @@ class _LoginState extends State<Login> {
             ),
           ),
         ));
+  }
+
+  void _loginUser() {
+    try {
+      setState(() {
+        isLoading = true;
+      });
+
+    }catch(err) {
+      setState((){
+        isLoading = false;
+      });
+    }
+
   }
 }
 
