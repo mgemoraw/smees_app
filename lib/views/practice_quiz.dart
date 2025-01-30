@@ -69,7 +69,6 @@ class _TestHomeState extends State<TestHome> {
     // readJson();
   }
 
-
   // fetch content from json
   Future<void> readJson(String department) async {
     department = department.replaceAll(" ", "");
@@ -135,7 +134,7 @@ class _TestHomeState extends State<TestHome> {
   Widget build(BuildContext context) {
     final useModeProvider = Provider.of<UseModeProvider>(context);
     final user = Provider.of<UserProvider>(context).user;
-
+    
     return Scaffold(
       drawer: const LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES-App"),
@@ -193,26 +192,26 @@ class _TestHomeState extends State<TestHome> {
                   ),
                 ],
               )
-            :
-            // // dropdown option to choose and take quiz
-            // SingleChildScrollView(
-            //     scrollDirection: Axis.horizontal,
-            //     child: DropdownButton(
-            //         hint: const Text("Select your department here"),
-            //         value: department,
-            //         items: getDepartents(),
-            //         onChanged: (value) {
-            //           setState(() {
-            //             department = value!;
+            : Text(""),
+        // // dropdown option to choose and take quiz
+        // SingleChildScrollView(
+        //     scrollDirection: Axis.horizontal,
+        //     child: DropdownButton(
+        //         hint: const Text("Select your department here"),
+        //         value: department,
+        //         items: getDepartents(),
+        //         onChanged: (value) {
+        //           setState(() {
+        //             department = value!;
 
-            //             // department = context.watch<UserProvider>().user!.department;
-                        
-            //             readJson(department);
-            //             // _downloadData(departmentId, int.parse(yearController.text));
-            //             // print(_items);
-            //           });
-            //         }),
-            //   ),
+        //             // department = context.watch<UserProvider>().user!.department;
+
+        //             readJson(department);
+        //             // _downloadData(departmentId, int.parse(yearController.text));
+        //             // print(_items);
+        //           });
+        //         }),
+        //   ),
 
         SizedBox(
           child:
@@ -227,15 +226,16 @@ class _TestHomeState extends State<TestHome> {
                 onChanged: (value) {
                   setState(() {
                     //
-                    department = user!.department;
-                    readJson(department);
+                    department = user.department;
+                    if (useModeProvider.offlineMode) {
+                      readJson(department);
+                    }
                   });
-                }, 
+                },
               ),
             ),
             ElevatedButton(
               onPressed: () {
-                
                 try {
                   //
                   int qnos = validateInput(_controller.text);
@@ -260,20 +260,19 @@ class _TestHomeState extends State<TestHome> {
                       ),
                     );
                   }
-                } catch(e) {
+                } catch (e) {
                   ScaffoldMessenger.of(context).showMaterialBanner(
-                    MaterialBanner(
-                      content: Text("Error: No content found!"), 
-                      actions: <Widget>[
+                      MaterialBanner(
+                          content: Text("Error: No content found!"),
+                          actions: <Widget>[
                         TextButton(
-                          onPressed: (){
-                            ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
-                        }, child: Icon(Icons.close)),
-                      ]
-                    )
-                  );
+                            onPressed: () {
+                              ScaffoldMessenger.of(context)
+                                  .hideCurrentMaterialBanner();
+                            },
+                            child: Icon(Icons.close)),
+                      ]));
                 }
-                
               },
               child: const Text("Start Quiz"),
             ),

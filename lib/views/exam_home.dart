@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 import 'package:smees/exam_page.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
@@ -14,6 +15,7 @@ import 'package:smees/views/common/appbar.dart';
 import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/learn_zone.dart';
 import 'package:smees/views/take_exam.dart';
+import 'package:smees/views/user_provider.dart';
 
 import '../models/random_index.dart';
 
@@ -53,19 +55,34 @@ class _ExamHomeState extends State<ExamHome> {
     // 'learn': const LearnZone(),
   };
   List _items = [];
-  var department;
+  String? _department;
   String pageKey = "home";
   int pageIndex = 0;
+  late String? _message = "";
+  bool isLoading = false;
+
   // fetch content from json
   Future<void> readJson(String path) async {
-    String filePath = "assets/$path/$path.json";
+    path = path.replaceAll(" ", "");
+    try {
+      String filePath = "assets/$path/$path.json";
 
-    final String response = await rootBundle.loadString(filePath);
-    final data = await json.decode(response);
+      final String response = await rootBundle.loadString(filePath);
+      final data = await json.decode(response);
 
-    setState(() {
-      _items = data;
-    });
+      setState(() {
+        _items = data;
+        _message = "Data Loaded!";
+      });
+    } catch (err) {
+      setState(() {
+        _message = "Error: $err";
+      });
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
+    }
   }
 
   List<DropdownMenuItem<String>> getDepartents() {
@@ -80,6 +97,8 @@ class _ExamHomeState extends State<ExamHome> {
 
   @override
   Widget build(BuildContext context) {
+    final useModeProvider = Provider.of<UseModeProvider>(context);
+    final user = Provider.of<UserProvider>(context).user;
     return Scaffold(
       drawer: LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES"),
@@ -140,57 +159,71 @@ class _ExamHomeState extends State<ExamHome> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  DropdownButton(
-                    value: department,
-                    hint: const Text("Selct your Field of Study Here"),
-                    items: getDepartents(),
-                    onChanged: (value) {
-                      //
-                      setState(() {
-                        department = value;
-                        readJson(department);
-                      });
-                    },
-                  ),
+                  // DropdownButton(
+                  //   value: department,
+                  //   hint: const Text("Selct your Field of Study Here"),
+                  //   items: getDepartents(),
+                  //   onChanged: (value) {
+                  //     //
+                  //     setState(() {
+                  //       department = value;
+                  //       readJson(department);
+                  //     });
+                  //   },
+                  // ),
                 ],
               ),
             ),
           ),
-          ElevatedButton(
-            onPressed: () {
-              // readJson(department);
-
-              int qnos = (_items.length >= 100) ? 100 : _items.length;
-
-              List<int> indexes = [];
-              var items = [];
-
-              if (_items.length > 100) {
-                indexes = generateIndexes(_items, qnos);
-                for (int i in indexes) {
-                  items.add(_items[i]);
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () async {
+                // set loading
+                setState(() {
+                  isLoading = true;
+                });
+                if (useModeProvider.offlineMode) {
+                  await readJson(user.department!);
                 }
-              } else {
-                items = _items;
-              }
 
-              if (qnos > 0 && _items.isNotEmpty) {
-                // start quiz
+                int qnos = (_items.length >= 100) ? 100 : _items.length;
 
-                // Navigator.pushNamed(context, "/exam");
-                Navigator.pop(context); // pop the exam page first
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TakeExam(
-                      department: department,
-                      items: items,
+                List<int> indexes = [];
+                var items = [];
+
+                if (_items.length > 100) {
+                  indexes = generateIndexes(_items, qnos);
+                  for (int i in indexes) {
+                    items.add(_items[i]);
+                  }
+                } else {
+                  items = _items;
+                }
+
+                if (qnos > 0 && _items.isNotEmpty) {
+                  // start quiz
+
+                  // Navigator.pushNamed(context, "/exam");
+                  Navigator.pop(context); // pop the exam page first
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TakeExam(
+                        department: user.department!,
+                        items: items,
+                      ),
                     ),
-                  ),
-                );
-              }
-            },
-            child: Text("Start Exam"),
+                  );
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("$_message")),
+                  );
+                }
+              },
+              child:
+                  isLoading ? CircularProgressIndicator() : Text("Start Exam"),
+            ),
           ),
         ]),
       ),

@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 import "package:shared_preferences/shared_preferences.dart";
+import "package:smees/login_page.dart";
 import "package:smees/models/user.dart";
 import "package:smees/security/logout.dart";
 import "package:smees/views/user_provider.dart";
@@ -99,16 +100,17 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
                     ),
                     PopupMenuItem(
                       child: IconButton(
-                        icon: const Icon(Icons.logout),
                         onPressed: () {
-                          setState(() {
-                            logout();
-                            Navigator.pop(context);
-                            Navigator.pushNamed(context, "/login");
-                          });
+                          logout();
+                          Navigator.pushNamed(context, "/");
+                          // Navigator.of(context).pushAndRemoveUntil(
+                          //   MaterialPageRoute(builder: (context) => Login()),
+                          //   (Route<dynamic>route=>false),
+                          // );
                         },
+                        icon: Icon(Icons.logout),
                       ),
-                    )
+                    ),
                   ]),
       ],
     );

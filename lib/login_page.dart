@@ -3,9 +3,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smees/api/end_points.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
 import 'package:smees/models/database.dart';
@@ -18,6 +20,7 @@ import 'package:smees/views/common/appbar.dart';
 import 'package:smees/views/common/drawer.dart';
 import 'package:smees/views/readme.dart';
 import 'package:smees/views/user_provider.dart';
+import "package:http/http.dart" as http;
 
 var files = {
   "Automotive Engineering": "AutomotiveEngineering",
@@ -49,13 +52,15 @@ class _LoginState extends State<Login> {
   final departmentController = TextEditingController();
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
-  String? token;
-  String? username;
-  String? role;
+  String? _token;
+  String? _username;
+  String? _role;
   String? userDepartment;
   bool isLoading = false;
   var department = "";
   bool _isObscure = true;
+  User? _user;
+  late String? _message = "";
 
   @override
   void dispose() {
@@ -68,7 +73,7 @@ class _LoginState extends State<Login> {
   @override
   initState() {
     super.initState();
-    _loadUserData();
+    // _loadUserData();
   }
 
   Future<void> _loadUserData() async {
@@ -78,9 +83,9 @@ class _LoginState extends State<Login> {
       Map<String, dynamic> userData = jsonDecode(jsonString);
       setState(() {
         // print(jsonString);
-        username = userData['username'];
-        token = userData['token'];
-        role = userData['role'];
+        _username = userData['username'];
+        _token = userData['token'];
+        _role = userData['role'];
         userDepartment = userData['department'];
       });
     }
@@ -135,8 +140,11 @@ class _LoginState extends State<Login> {
                     TextField(
                       controller: usernameController,
                       style: const TextStyle(fontSize: 15, color: Colors.black),
-                      decoration: const InputDecoration(
-                          prefixIcon: Icon(Icons.person_2_outlined),
+                      decoration: InputDecoration(
+                          error: usernameController.text.isEmpty
+                              ? Text("Username Required")
+                              : null,
+                          prefixIcon: const Icon(Icons.person_2_outlined),
                           hintText: 'User ID'),
                     ),
                     const SizedBox(height: 16.0),
@@ -146,6 +154,9 @@ class _LoginState extends State<Login> {
                       style: TextStyle(fontSize: 15, color: Colors.black),
                       obscureText: _isObscure,
                       decoration: InputDecoration(
+                          error: passwordController.text.isEmpty
+                              ? Text("Password can't be Empty")
+                              : null,
                           prefixIcon: Icon(Icons.password),
                           hintText: 'Password',
                           suffixIcon: IconButton(
@@ -164,62 +175,47 @@ class _LoginState extends State<Login> {
                       height: 40,
                       child: ElevatedButton(
                         onPressed: () async {
-                          setState(() {
-                            isLoading = true;
-                          });
-                          late UserLogin userLogin = UserLogin(
-                              username: usernameController.text,
-                              password: passwordController.text);
+                          if (usernameController.text.isEmpty ||
+                              passwordController.text.isEmpty) {
+                            return null;
+                          } else {
+                            //
+                          }
+                          // final message = await loginUser(userLogin);
+                          await _loginUser(
+                            usernameController.text,
+                            passwordController.text,
+                          );
 
-                          final message = await loginUser(userLogin);
-
-                          // instantiate provier
-                          setState(() {
-                            if (message != null) {
-                              final userData = jsonDecode(message);
-                              token = userData['access_token'];
-                              username = userData['username'];
-                              role = userData['role'];
-                              User user = User(
-                                  username: username,
-                                  password: token,
-                                  email: null,
-                                  fname: null,
-                                  mname: null,
-                                  university: "Bahir Dar University",
-                                  department: userData['department']);
-
+                          if (_user != null) {
+                            setState(() {
                               // set global user state
-                              userProvider.setUser(newUser: user);
+                              userProvider.setUser(newUser: _user!);
                               // insert user data to local db
-                              SmeesHelper().addUser(user.toMap());
-                            }
-                          });
+                              SmeesHelper().addUser(_user!.toMap());
+                            });
+                          }
 
-                          setState((){
-                            isLoading = false;
-                          });
-                          // print(departmentController.text);
-                          if (token != null && role != 'null') {
+                          if (_token != null && _role != 'null') {
                             Navigator.pushNamed(context, "/");
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
+                              SnackBar(
                                 backgroundColor: Colors.deepOrange,
-                                content: Text("Invalid email or password"),
+                                content: Text("$_message"),
                               ),
                             );
                           }
                         },
                         child: isLoading
-                        ? const CircularProgressIndicator()
-                        : const Text(
-                          'Login',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                          ),
-                        ),
+                            ? const CircularProgressIndicator()
+                            : const Text(
+                                'Login',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
                       ),
                     ),
                     ListTile(
@@ -237,18 +233,82 @@ class _LoginState extends State<Login> {
         ));
   }
 
-  void _loginUser() {
-    try {
-      setState(() {
-        isLoading = true;
-      });
+  Future<void> _loginUser(String username, String password) async {
+    var apiUrl = dotenv.env["API_BASE_URL"];
 
-    }catch(err) {
-      setState((){
+    late String? message = "";
+    final url = Uri.parse('$apiUrl/$tokenApi');
+    // final url = Uri.parse('$apiUrl/$loginApi');
+
+    final headers = {'Content-Type': 'application/x-www-form-urlencoded'};
+    // final headers = {"Content-Type": "application/json"};
+
+    final body = {
+      'username': username,
+      'password': password,
+    };
+    setState(() {
+      isLoading = true;
+    });
+    try {
+      final response = await http.post(
+        url,
+        headers: headers,
+        body: body,
+      );
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+
+        final token = data['access_token'];
+        final role = data['role'];
+        // final username = data['username'];
+        final departmentId = data['department_id'];
+        final department = data['department'];
+
+        String smeesUser = jsonEncode({
+          'username': username,
+          'token': token,
+          'role': role,
+          'departmentId': departmentId,
+          'department': department,
+        });
+
+        // Save token to local storage
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('smees-user', smeesUser);
+
+        // message = response.body;
+
+        setState(() {
+          _token = token;
+          _role = role;
+          _message = null;
+
+          _user = User(
+            username: username,
+            password: token,
+            email: null,
+            fname: null,
+            mname: null,
+            university: "Bahir Dar University",
+            department: department,
+          );
+        });
+      } else {
+        message = response.body;
+        setState(() {
+          _message = "Invalid Username or Password";
+        });
+      }
+    } on http.ClientException catch (_, err) {
+      setState(() {
+        _message = "Network Error! Please Check your Internet Connection";
+      });
+    } finally {
+      setState(() {
         isLoading = false;
       });
     }
-
   }
 }
 
