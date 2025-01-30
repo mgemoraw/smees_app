@@ -33,10 +33,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
   String pageKey = "home";
   String department = "";
   User? user;
+  int _selectedIndex = 0;
 
   // list of pages in the bottom appbar
   // final pages = {
@@ -72,7 +72,7 @@ class _HomeState extends State<Home> {
         user = User(
           username: userData['username'],
           department: userData['department'],
-          univesity: userData['university'],
+          university: userData['university'],
           password: null,
         );
       }
@@ -102,15 +102,15 @@ class _HomeState extends State<Home> {
       drawer: const LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES-App"),
 
-      body: _pages.elementAt(navProvider.selectedIndex), // _pages[_selectedIndex],
-      bottomNavigationBar:
-          BottomNavBar(
-            currentIndex: navProvider.selectedIndex, 
-            onTap: (index){
-              setState((){
-                navProvider.setIndex(index);
-              });
-            }),
+      body: _pages
+          .elementAt(navProvider.selectedIndex), // _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavBar(
+          currentIndex: navProvider.selectedIndex,
+          onTap: (index) {
+            setState(() {
+              navProvider.setIndex(index);
+            });
+          }),
     );
   }
 }

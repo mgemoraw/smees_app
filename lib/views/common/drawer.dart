@@ -3,6 +3,9 @@ import "package:provider/provider.dart";
 import "package:shared_preferences/shared_preferences.dart";
 import "package:smees/security/logout.dart";
 import "package:smees/views/user_provider.dart";
+import 'package:smees/api/end_points.dart';
+
+// setting app version
 
 class LeftNavigation extends StatefulWidget {
   const LeftNavigation({super.key});
@@ -17,8 +20,14 @@ class _LeftNavigationState extends State<LeftNavigation> {
   bool isDark = false;
   Color bgColor = const Color.fromARGB(31, 24, 1, 1);
   static const developers = [
-    {"name": "Mengistu Getie", "email": "mengistu.getie@bdu.edu.et",},
-    {"name": "Tadele Yigrem", "email": "tadele.yigrem@bdu.edu.et",}
+    {
+      "name": "Mengistu Getie",
+      "email": "mengistu.getie@bdu.edu.et",
+    },
+    {
+      "name": "Tadele Yigrem",
+      "email": "tadele.yigrem@bdu.edu.et",
+    }
   ];
   @override
   void initState() {
@@ -40,6 +49,7 @@ class _LeftNavigationState extends State<LeftNavigation> {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final useModeProvider = Provider.of<UseModeProvider>(context);
+
     return Container(
       child: Drawer(
         shadowColor: bgColor,
@@ -53,7 +63,7 @@ class _LeftNavigationState extends State<LeftNavigation> {
               child: Column(
                 children: [
                   Image.asset('assets/images/profile.png', height: 100),
-                  const Text("SMEES-App"),
+                  Text("SMEES-App- $SMEES_APP_VERSION"),
                 ],
               ),
             ),
@@ -62,79 +72,82 @@ class _LeftNavigationState extends State<LeftNavigation> {
               title: Text("Settings"),
               children: [
                 ListTile(
-                leading: !useModeProvider.offlineMode ? const Icon(Icons.online_prediction) : const Icon(Icons.network_locked),
-                title: const Text('Network Mode'),
-                onTap: () {
-                  // Navigator.pushNamed(context, "/settings");
+                  leading: !useModeProvider.offlineMode
+                      ? const Icon(Icons.online_prediction)
+                      : const Icon(Icons.network_locked),
+                  title: const Text('Network Mode'),
+                  onTap: () {
+                    // Navigator.pushNamed(context, "/settings");
                   },
-
-                trailing: Switch(value: !useModeProvider.offlineMode, onChanged: (value) {
-                  setState(() {
-                    // change offlineMode state
-                    context.read<UseModeProvider>().changeUseMode();
-                              
-                  });
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      backgroundColor: Colors.blue,
-                      
-                      content: useModeProvider.offlineMode ? Text("Offline Mode") : Text("Online Mode"),
-                    )
-                  );
-                }),
-                subtitle: Text(useModeProvider.offlineMode ? "Offline": "Online"),
-
+                  trailing: Switch(
+                      value: !useModeProvider.offlineMode,
+                      onChanged: (value) {
+                        setState(() {
+                          // change offlineMode state
+                          context.read<UseModeProvider>().changeUseMode();
+                        });
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          backgroundColor: Colors.blue,
+                          content: useModeProvider.offlineMode
+                              ? Text("Offline Mode")
+                              : Text("Online Mode"),
+                        ));
+                      }),
+                  subtitle:
+                      Text(useModeProvider.offlineMode ? "Offline" : "Online"),
                 ),
                 ListTile(
-                  leading: themeProvider.isDark ? const Icon(Icons.dark_mode) : const Icon(Icons.light_mode),
+                  leading: themeProvider.isDark
+                      ? const Icon(Icons.dark_mode)
+                      : const Icon(Icons.light_mode),
                   title: const Text("Theme"),
                   trailing: Switch(
-                    value: themeProvider.isDark, 
-                    onChanged: (value){
-                  setState((){
-                    themeProvider.changeTheme();
-                  });
-                }),
-                subtitle: Text(themeProvider.isDark ? "Dark" : "Light"),
+                      value: themeProvider.isDark,
+                      onChanged: (value) {
+                        setState(() {
+                          themeProvider.changeTheme();
+                        });
+                      }),
+                  subtitle: Text(themeProvider.isDark ? "Dark" : "Light"),
                 ),
               ],
             ),
-            
-            
             ExpansionTile(
-              title: Text("About App"),
-              leading: Icon(Icons.info),
-              children:[
-                ListTile(
-                // leading: Icon(Icons.info),
-                
-                onTap: () {},
-                title: Column(
-                  children: [
-                    ListTile(title: RichText(
-                      softWrap: true,
-                      text: const TextSpan(
-                        text: "This app is developed by Mengistu Getie & Tadele Yigrem in Collaboration with Bahir Dar Institute of Technology as TT project to support BiT Students practice and gain knowledge from model exam questions. Mr. Tadele Yigrem has a great contribution starting from initiating the project up to data collection and processing. Bahir Dar Institute of Technology, BiT has given its ultimate support and finance which helped us in covering data collection, testing and deployment related costs. please contact us for support and feedbacks",
-                        style: TextStyle(color: Colors.blue),),
-                      ),
-                      subtitle: TextButton(onPressed: (){
-                        // contact mail
-                        print("contact mail send");
-                      }, child: Text("Contact Us")),
+                title: Text("About App"),
+                leading: Icon(Icons.info),
+                children: [
+                  ListTile(
+                    // leading: Icon(Icons.info),
+
+                    onTap: () {},
+                    title: Column(
+                      children: [
+                        ListTile(
+                          title: RichText(
+                            softWrap: true,
+                            text: const TextSpan(
+                              text:
+                                  "This app is developed by Mengistu Getie & Tadele Yigrem in Collaboration with Bahir Dar Institute of Technology as TT project to support BiT Students practice and gain knowledge from model exam questions. Mr. Tadele Yigrem has a great contribution starting from initiating the project up to data collection and processing. Bahir Dar Institute of Technology, BiT has given its ultimate support and finance which helped us in covering data collection, testing and deployment related costs. please contact us for support and feedbacks",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                          ),
+                          subtitle: TextButton(
+                              onPressed: () {
+                                // contact mail
+                                print("contact mail send");
+                              },
+                              child: Text("Contact Us")),
+                        ),
+                      ],
                     ),
-                    
-                  ],
-                ),
-              ),
-              ListTile(
-              leading: Icon(Icons.feedback),
-              title: const Text('Send Us feedback'),
-              onTap: () {},
-            ),
-              ] 
-            ),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.feedback),
+                    title: const Text('Send Us feedback'),
+                    onTap: () {},
+                  ),
+                ]),
             const LoginLogout(),
-            
           ],
         ),
       ),

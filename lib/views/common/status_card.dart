@@ -41,7 +41,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
           username: "sgetme",
           password: null,
           email: null,
-          univesity: "BDU",
+          university: "BDU",
           department: "Test Department");
     });
   }
@@ -49,6 +49,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
   @override
   Widget build(BuildContext context) {
     final userProvider = Provider.of<UserProvider>(context);
+    user = userProvider.user;
 
     return ListTile(
       leading: Padding(
@@ -63,14 +64,19 @@ class _UserStatusCardState extends State<UserStatusCard> {
         ),
       ),
       title: Text(
-        "Welcome ${userProvider.user!.username}",
+        "Welcome ${user.username}",
         style: const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
       ),
       subtitle: Text("Latest Score: $score"),
-      trailing: context.watch<UseModeProvider>().offlineMode ? Icon(Icons.circle) : Icon(Icons.circle, color: Colors.green,),
+      trailing: context.watch<UseModeProvider>().offlineMode
+          ? const Icon(Icons.circle)
+          : const Icon(
+              Icons.circle,
+              color: Colors.green,
+            ),
     );
 
     // return SingleChildScrollView(
@@ -100,7 +106,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
     //             ),
     //           ),
     //           ListTile(
-    //             title: 
+    //             title:
     //           ),
     //           Text("Latest Score: $score"),
     //           Text("Offline"),

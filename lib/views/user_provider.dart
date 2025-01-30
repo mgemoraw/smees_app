@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smees/models/user.dart';
 
-
 class AuthProvider extends ChangeNotifier {
   bool _isAuthenticated = false;
   bool get isAuthenticated => _isAuthenticated;
@@ -16,17 +15,28 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
-class UserProvider extends ChangeNotifier {
-  User? user;
 
-  UserProvider({this.user = null});
+class UserProvider extends ChangeNotifier {
+  User _user = User(
+    username: null,
+    email: null,
+    password: null,
+    fname: null,
+    mname: null,
+    lname: null,
+    department: null,
+  );
+
+  User get user => _user;
+
+  // UserProvider({this.user});
 
   // bool get offlineMode => null;
 
-  void changeUser({
+  void setUser({
     required User newUser,
   }) async {
-    user = newUser;
+    _user = newUser;
     notifyListeners();
   }
 }

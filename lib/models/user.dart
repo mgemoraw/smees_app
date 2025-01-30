@@ -5,7 +5,7 @@ class User {
   String? mname;
   String? lname;
   String? email;
-  String? univesity;
+  String? university;
   String? department;
 
   User({
@@ -15,7 +15,7 @@ class User {
     this.mname,
     this.lname,
     this.email,
-    this.univesity,
+    this.university,
     this.department,
   });
 

@@ -183,11 +183,11 @@ class _LoginState extends State<Login> {
                                   email: null,
                                   fname: null,
                                   mname: null,
-                                  univesity: "Bahir Dar University",
+                                  university: "Bahir Dar University",
                                   department: userData['department']);
 
                               // set global user state
-                              userProvider.changeUser(newUser: user);
+                              userProvider.setUser(newUser: user);
                             }
                           });
 

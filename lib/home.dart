@@ -24,7 +24,6 @@ class _HomePageState extends State<HomePage> {
   late String username;
   late double score = 0;
   late User user;
-  late int _pageIndex = 0;
   String? userToken;
   @override
   void initState() {
@@ -43,15 +42,13 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _getCurrentUser() async {
-
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    
 
     setState(() {
       user = User(
           username: "sgetme",
           password: "test password",
-          univesity: "BDU",
+          university: "BDU",
           department: "Test Department");
       userToken = prefs.getString("smees-token");
     });
@@ -60,6 +57,7 @@ class _HomePageState extends State<HomePage> {
   bool isUserLoggedIn() {
     return null != userToken;
   }
+
   @override
   Widget build(BuildContext context) {
     final navProvider = Provider.of<NavigationProvider>(context);
@@ -79,36 +77,14 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const UserStatusCard(),
-      
+
                 // additional widgets here
                 Divider(
                   height: 3,
                   color: Colors.blue[900],
                 ),
-      
+
                 // additional widgets below
-                Card(
-                  child: ListTile(
-                    title: const Text(
-                      "Learn Zone",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: const Text("Learn things where you failed more"),
-                    trailing: const Icon(Icons.menu_book),
-                    leading: Image.asset(
-                      'assets/images/theory.png',
-                      fit: BoxFit.contain,
-                      // width: 150,
-                      // height: 150,
-                    ),
-                    onTap: () {
-                      setState(() {
-                        navProvider.setIndex(1);
-                      });
-                    },
-                  ),
-                ),
-      
                 Card(
                   child: ListTile(
                     title: const Text(
@@ -171,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                 ),
-      
+
                 Card(
                   child: ListTile(
                     title: const Text(
@@ -193,8 +169,30 @@ class _HomePageState extends State<HomePage> {
                       setState(() {
                         navProvider.setIndex(2);
                         Home h = const Home(
-                            department: "AutomotiveEngineering", title: 'SMEES');
+                            department: "AutomotiveEngineering",
+                            title: 'SMEES');
                         h.pageKey = 'userstat';
+                      });
+                    },
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    title: const Text(
+                      "Learn Zone",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: const Text("Learn things where you failed more"),
+                    trailing: const Icon(Icons.menu_book),
+                    leading: Image.asset(
+                      'assets/images/theory.png',
+                      fit: BoxFit.contain,
+                      // width: 150,
+                      // height: 150,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        navProvider.setIndex(1);
                       });
                     },
                   ),

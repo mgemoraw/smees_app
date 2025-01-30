@@ -6,15 +6,11 @@ class Statistics extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      //color: const Color(0xffC4DFCB),
-      child: const Center(
-          child: Column(
-        children: [
-          UserStatusCard(),
-          UserStatistics(),
-        ],
-      )),
+    return ListView(
+      children: const [
+        UserStatusCard(),
+        UserStatistics(),
+      ],
     );
   }
 }
@@ -29,13 +25,84 @@ class UserStatistics extends StatefulWidget {
 class _UserStatisticsState extends State<UserStatistics> {
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: GridTile(
-        child: Text(
-          "Your Score board",
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-        ),  
-      ),
+    return Column(
+      children: [
+        ExpansionTile(
+          title: const Text("Exam Statistics",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+          children: [
+            const ListTile(
+              leading: Text(
+                "No.",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+              title: Text(
+                "Date Taken \t Time Elapsed",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+              trailing: Text(
+                "Score",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+              subtitle: Text(
+                "Description text",
+              ),
+            ),
+            ListView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: Text("${index + 1}"),
+                  title: Text("08-04-2024 \t 1:30:45"),
+                  trailing: Text("80%"),
+                  subtitle: Text("1:30:45"),
+                );
+              },
+            ),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text(
+            "Test Statistics",
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          ),
+          children: [
+            const ListTile(
+              leading: Text(
+                "No.",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+              title: Text(
+                "Date Taken \t Time Elapsed",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+              trailing: Text(
+                "Score",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+              subtitle: Text(
+                "Description text",
+              ),
+            ),
+            ListView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: Text("${index + 1}"),
+                  title: Text("08-04-2024 \t 1:30:45"),
+                  trailing: Text("80%"),
+                  subtitle: Text("1:30:45"),
+                  hoverColor: Colors.blue,
+                );
+              },
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

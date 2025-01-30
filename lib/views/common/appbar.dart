@@ -37,17 +37,16 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
       if (token != null) {
         isLoggedIn = !isLoggedIn;
         user = User(
-            username: username,
-            univesity: null,
-            department: department,
-            );
+          username: username,
+          university: null,
+          department: department,
+        );
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-
     return AppBar(
       backgroundColor: Colors.blue,
       title: Text(
