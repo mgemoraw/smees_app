@@ -204,7 +204,7 @@ class SQLHelper {
           CREATE TABLE users(
             id, INTEGER PRIMARY KEY AUTOINCREMENT, 
             userId TEXT, 
-            username TEXT,
+            fullName TEXT,
             department TEXT,
             university TEXT,
           )

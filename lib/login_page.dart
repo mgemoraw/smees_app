@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/api/end_points.dart';
@@ -180,23 +181,22 @@ class _LoginState extends State<Login> {
                             return null;
                           } else {
                             //
-                          }
-                          // final message = await loginUser(userLogin);
-                          await _loginUser(
-                            usernameController.text,
-                            passwordController.text,
-                          );
+                            // final message = await loginUser(userLogin);
+                            await _loginUser(
+                              usernameController.text,
+                              passwordController.text,
+                            );
 
-                          if (_user != null) {
+                            if (_user != null) {
                             setState(() {
                               // set global user state
                               userProvider.setUser(newUser: _user!);
-                              // insert user data to local db
-                              SmeesHelper().addUser(_user!.toMap());
+                              
                             });
                           }
 
-                          if (_token != null && _role != 'null') {
+                          // navigate to home page
+                           if (_token != null && _role != 'null') {
                             Navigator.pushNamed(context, "/");
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
@@ -206,6 +206,8 @@ class _LoginState extends State<Login> {
                               ),
                             );
                           }
+                          }
+                         
                         },
                         child: isLoading
                             ? const CircularProgressIndicator()
@@ -274,6 +276,9 @@ class _LoginState extends State<Login> {
         });
 
         // Save token to local storage
+        final storage = FlutterSecureStorage();
+        await storage.write(key:"smees_token", value: token);
+
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('smees-user', smeesUser);
 
@@ -294,6 +299,14 @@ class _LoginState extends State<Login> {
             department: department,
           );
         });
+        // insert user data to local db
+        await SmeesHelper().addUser({
+          'userId': username,
+          'username':username,
+          'university': "Bahir Dar University",
+          "department": department,
+        });
+        
       } else {
         message = response.body;
         setState(() {

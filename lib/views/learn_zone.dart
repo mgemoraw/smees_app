@@ -13,8 +13,8 @@ class LearnZone extends StatefulWidget {
 class _LearnZoneState extends State<LearnZone> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Learn Zone"),
+    return SingleChildScrollView(
+      child: Center(child: Text("Learn Zone")),
     );
   }
 }
