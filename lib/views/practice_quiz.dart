@@ -134,7 +134,7 @@ class _TestHomeState extends State<TestHome> {
   Widget build(BuildContext context) {
     final useModeProvider = Provider.of<UseModeProvider>(context);
     final user = Provider.of<UserProvider>(context).user;
-    
+
     return Scaffold(
       drawer: const LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES-App"),
@@ -228,7 +228,7 @@ class _TestHomeState extends State<TestHome> {
                     //
                     department = user.department;
                     if (useModeProvider.offlineMode) {
-                      readJson(department);
+                      readJson(files[department]!);
                     }
                   });
                 },
