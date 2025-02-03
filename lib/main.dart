@@ -111,6 +111,7 @@ class MyApp extends StatelessWidget {
         "/stats": (context) => const Statistics(),
         "/settings": (context) => const SmeesSettings(),
         "/feedback": (context) => const SmeesFeedback(),
+        
       },
     );
   }
