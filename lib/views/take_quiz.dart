@@ -2,9 +2,12 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
+import 'package:smees/api/end_points.dart';
 import 'package:smees/models/database.dart';
+import 'package:smees/models/test_model.dart';
 
 import 'package:smees/views/answer_option.dart';
 
@@ -35,6 +38,8 @@ class _TakeQuizState extends State<TakeQuiz> {
   Timer? _timer;
   int _start = 60;
   DateTime testStarted = DateTime.now();
+  String _message = "";
+  bool isLoading = false;
 
   @override
   void initState() {
@@ -116,8 +121,8 @@ class _TakeQuizState extends State<TakeQuiz> {
                 _previous_quesion();
               },
               child: const Row(children: [
-                 Icon(Icons.arrow_back),
-                 Text("Previous"),
+                Icon(Icons.arrow_back),
+                Text("Previous"),
               ])),
 
           // restart button
@@ -131,35 +136,41 @@ class _TakeQuizState extends State<TakeQuiz> {
                 )
               : Text(""),
           // forward button
-          (_qno >= widget.items.length - 1) 
-          ? ElevatedButton(
-            onPressed: () {
-              // write score to database
-              final resultData = {
-                'userId': user.username,
-                'testStarted': testStarted.toIso8601String(),
-                'testEnded': DateTime.now().toIso8601String(),
-                'questions': widget.items.length,
-                'score': _totalScore,
-              };
-              _writeResults(resultData);
-              
-              Navigator.pop(context);
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ResultPage(score: _totalScore)));
-            }, 
-          child: Text("Result"))
-          : ElevatedButton(
-              onPressed: () {
-                // _previous question
-                _nextQuestion();
-              },
-              child: const Row(children: [
-                Icon(Icons.arrow_forward),
-                Text("Next"),
-              ])),
+          (_qno >= widget.items.length - 1)
+              ? ElevatedButton(
+                  onPressed: () async {
+                    // write score to database
+                    final resultData = {
+                      'userId': user.username,
+                      'testStarted': testStarted.toIso8601String(),
+                      'testEnded': DateTime.now().toIso8601String(),
+                      'questions': widget.items.length,
+                      'score': _totalScore,
+                    };
+
+                    if (useModeProvider.offlineMode) {
+                      await _writeResults(resultData);
+                    } else {
+                      // await _sendResults(Test());
+                    }
+
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                ResultPage(score: _totalScore)));
+                  },
+                  child: Text("Result"))
+              : ElevatedButton(
+                  onPressed: () {
+                    // _previous question
+                    _nextQuestion();
+                  },
+                  child: const Row(children: [
+                    Icon(Icons.arrow_forward),
+                    Text("Next"),
+                  ])),
         ]),
       ),
       body: SingleChildScrollView(
@@ -206,7 +217,7 @@ class _TakeQuizState extends State<TakeQuiz> {
               }
             },
           ),
-          
+
           // Answer Notification container
           Container(
             child: Text(
@@ -248,7 +259,7 @@ class _TakeQuizState extends State<TakeQuiz> {
         _selectedColor = Colors.white;
         bottomContainerText = "";
       } else {
-       // 
+        //
       }
     });
   }
@@ -268,13 +279,47 @@ class _TakeQuizState extends State<TakeQuiz> {
     });
   }
 
-  Future<void> _writeResults(Map<String,dynamic> data) async {
-
+  Future<void> _writeResults(Map<String, dynamic> data) async {
     try {
       await SmeesHelper().addTest(data);
     } catch (err) {
       print("Writing data failed $err");
     }
+  }
 
-}
+  Future<void> _sendResults(Test test) async {
+    final url = Uri.parse('$API_BASE_URL/$testSubmitApi');
+    const storage = FlutterSecureStorage();
+    final token = storage.read(key: "smees-token");
+    final headers = {
+      'Authentication': "Bearer $token",
+      'ContentType': 'application/json',
+    };
+    final body = test.toMap();
+
+    try {
+      //
+      final response = await http.post(
+        url,
+        body: body,
+        headers: headers,
+      );
+
+      if (response.statusCode == 200) {
+        setState(() {
+          _message = "success";
+        });
+      }
+    } catch (err) {
+      //
+      print("Sending data failed $err");
+      setState(() {
+        _message = "$err";
+      });
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
 }

@@ -10,9 +10,12 @@ const tokenApi = "auth/token";
 const questionsApi = "questions/index";
 const getDepartmentsApi = "departments/index";
 const usersGetAllApi = "users/index";
-const studentAnswersApi = "tests/student-response";
-const examStartApi = "tests/exam/start";
-const testsGetAllApi = "tests/index";
 
+// change password
 const changePasswordApi = "/auth/password/update";
 
+// take test and exam api
+const testsGetAllApi = "tests/index";
+const testStartApi = "tests/start-test";
+const testSubmitApi = "tests/submit-test";
+const studentAnswersApi = "tests/student-response";
