@@ -1,7 +1,4 @@
-android {
-    namespace 'come.bit.smees'
 
-}
 allprojects {
     repositories {
         google()
@@ -20,3 +17,4 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+

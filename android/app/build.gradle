@@ -25,6 +25,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace = "com.example.smees"
+    namespace 'com.example.flutter_config'
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
