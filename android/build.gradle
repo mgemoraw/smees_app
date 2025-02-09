@@ -1,7 +1,4 @@
-android {
-    namespace 'come.bit.smees'
 
-}
 allprojects {
     repositories {
         google()
