@@ -25,13 +25,24 @@ if (flutterVersionName == null) {
 
 android {
     namespace = "com.example.smees"
-    namespace 'com.example.flutter_config'
-    compileSdk = flutter.compileSdkVersion
+    // namespace 'com.example.flutter_config'
+    compileSdk = 34 //= flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"  // Make sure this is set to 1.8 to match the Java target version
+    }
+
+    // Optional: Set JVM Toolchain for more control
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)  // Make sure to use Java 21 toolchain
+        }
     }
 
     defaultConfig {

@@ -28,7 +28,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   sqfliteFfiInit();
   databaseFactory = databaseFactoryFfi;
-  await SmeesHelper().database;
+  // await SmeesHelper().database;
   
   runApp(
     MultiProvider(
