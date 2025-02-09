@@ -49,14 +49,14 @@ Future<void> main() async {
           create: (context) => NavigationProvider(),
         ),
       ],
-      child: const MyApp(),
+      child: const SmeesApp(),
     ),
   );
   // runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SmeesApp extends StatelessWidget {
+  const SmeesApp({super.key});
 
   // This widget is the root of your application.
   @override

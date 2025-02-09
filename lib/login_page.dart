@@ -197,6 +197,7 @@ class _LoginState extends State<Login> {
 
                           // navigate to home page
                            if (_token != null && _role != 'null') {
+                            print("user role: _role\ntoken: $_token");
                             Navigator.pushNamed(context, "/");
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
