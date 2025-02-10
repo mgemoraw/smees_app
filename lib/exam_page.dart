@@ -20,7 +20,7 @@ class _ExamPageState extends State<ExamPage> {
     return Scaffold(
       drawer: LeftNavigation(),
       appBar: SmeesAppbar(title: "SMEES"),
-      body: TakeExam(department: "CivilEngineering", items: []),
+      body: TakeExam(department: "CivilEngineering", items: [], examId: 0),
     );
   }
 }

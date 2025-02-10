@@ -31,11 +31,13 @@ class SmeesHelper {
 
   static Future<Database> _initDatabase() async {
     String path;
+    
     if (Platform.isWindows){
       path = await getDocumentsPath();
     }else {
       path = join(await getDatabasesPath(), "smees.db");
     }
+    
     return await openDatabase(
       path,
       version: 1,

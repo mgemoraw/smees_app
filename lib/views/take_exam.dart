@@ -2,6 +2,7 @@ import "dart:async";
 import "dart:convert";
 
 import "package:flutter/material.dart";
+import "package:flutter_secure_storage/flutter_secure_storage.dart";
 import "package:smees/views/answer_option.dart";
 import "package:smees/views/result_page.dart";
 
@@ -10,10 +11,12 @@ import "../api/end_points.dart";
 class TakeExam extends StatefulWidget {
   final String department;
   final List items;
+  final int examId;
   const TakeExam({
     super.key,
     required this.department,
     required this.items,
+    required this.examId,
   });
 
   @override
@@ -349,14 +352,18 @@ class _TakeExamState extends State<TakeExam> {
   }
 
 
-  Future <void> writeAnswerOnDatabase(String answerLabel, qid) async {
+  Future <void> writeAnswerToDatabase(String answerLabel, qid) async {
     
   late String? message = "";
-  final url = Uri.parse('$API_BASE_URL/$tokenApi');
+  final url = Uri.parse('$API_BASE_URL/$testSubmitApi');
+
+  final storage = FlutterSecureStorage();
+  final token = await storage.read(key:"smees_token");
 
 
   final headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
+    'Authentication': 'Bearer $token'
     };
   // final headers = {"Content-Type": "application/json"};
 

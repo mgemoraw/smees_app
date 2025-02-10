@@ -13,22 +13,17 @@ import "package:smees/views/learn_zone.dart";
 import "package:smees/user_profile.dart";
 import 'package:smees/views/settings.dart';
 import 'package:smees/views/user_provider.dart';
-// import 'package:sqflite/sqflite.dart';
+import 'package:smees/services/working_directories.dart';
+import 'package:smees/services/storage_permission.dart';
+import 'package:smees/views/accounts/account_reset.dart';
+import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'home_page.dart';
 
 Future<void> main() async {
-  try {
-    await dotenv.load(fileName: ".env");
-    
-    
-  } catch (err) {
-    print(err.toString());
-  }
   WidgetsFlutterBinding.ensureInitialized();
-  sqfliteFfiInit();
-  databaseFactory = databaseFactoryFfi;
-  // await SmeesHelper().database;
+  await requestStoragePermission(); // Ask for storage permission
+  await safeInitialize();
   
   runApp(
     MultiProvider(
@@ -111,9 +106,33 @@ class SmeesApp extends StatelessWidget {
         "/stats": (context) => const Statistics(),
         "/settings": (context) => const SmeesSettings(),
         "/feedback": (context) => const SmeesFeedback(),
+        "/user-reset":(context) => const AccountReset(),
         
       },
     );
+  }
+}
+
+
+Future<void> initializeDatabase() async {
+  try {
+    // sqfliteFfiInit();
+    // databaseFactory = databaseFactoryFfi;
+    await SmeesHelper().database;
+    print("Database initialized successfully!");
+  } catch (e) {
+    print("Database Initialization Error: ${e.toString()}");
+  }
+}
+
+Future<void> safeInitialize() async {
+  try {
+    await dotenv.load(fileName: ".env");  
+    await createWorkingDirectory();
+    await initializeDatabase();
+  } catch (e, stacktrace) {
+    debugPrint("Initialization Error: $e");
+    debugPrint(stacktrace.toString()); // Shows where the error occurred
   }
 }
 
@@ -129,3 +148,5 @@ class SmeesApp extends StatelessWidget {
 //         : Login();
 //   }
 // }
+
+

@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:provider/provider.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/exam_page.dart';
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
@@ -17,6 +20,7 @@ import 'package:smees/views/learn_zone.dart';
 import 'package:smees/views/take_exam.dart';
 import 'package:smees/views/user_provider.dart';
 
+import '../api/end_points.dart';
 import '../models/random_index.dart';
 
 var files = {
@@ -60,6 +64,8 @@ class _ExamHomeState extends State<ExamHome> {
   int pageIndex = 0;
   late String? _message = "";
   bool isLoading = false;
+  int examId = 0;
+  String message = "";
 
   // fetch content from json
   Future<void> readJson(String path) async {
@@ -78,6 +84,63 @@ class _ExamHomeState extends State<ExamHome> {
       setState(() {
         _message = "Error: $err";
       });
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
+
+  // automatically downloads exam questions when online
+  Future <void> _downloadQuestions() async {
+
+    final preferences = await SharedPreferences.getInstance();
+    final userData =  preferences.getString('smeesUser');
+    int departmentId = jsonDecode(userData!)['departmentId'];
+
+    // final year = year;
+    final url = Uri.parse("$API_BASE_URL/${testStartApi}/${departmentId}");
+
+    final storage =  FlutterSecureStorage();
+    final token = await storage.read(key: 'smees-token');
+
+    final headers  = {
+      'Authentication': 'Bearer $token',
+    };
+    final body = {};
+
+    try {
+       final response = await http.get(
+         url,
+         headers: headers,
+       );
+
+       if (response.statusCode == 200) {
+         final data = jsonDecode(response.body);
+         // final directory = await getApplicationDocumentsDirectory();
+         // final file = File("${directory.path}/data_$year.json");
+         // await file.writeAsString(json.encode(data));
+         setState(() {
+           // _progress = 1.0;
+           // _items = data;
+           examId = int.parse(data['test_id']);
+           _items = data['questions'];
+           message = "success";
+
+           return;
+         });
+       } else {
+         setState(() {
+           message = "Failed to load data, please check your connection!";
+         });
+       }
+    } catch(err) {
+      //
+      setState((){
+        message = "Error: ${err.toString()}";
+      });
+
+      print("data not found");
     } finally {
       setState(() {
         isLoading = false;
@@ -185,6 +248,8 @@ class _ExamHomeState extends State<ExamHome> {
                 });
                 if (useModeProvider.offlineMode) {
                   await readJson(user.department!);
+                } else if(!useModeProvider.offlineMode) {
+                  await _downloadQuestions();
                 }
 
                 int qnos = (_items.length >= 100) ? 100 : _items.length;
@@ -212,6 +277,7 @@ class _ExamHomeState extends State<ExamHome> {
                       builder: (context) => TakeExam(
                         department: user.department!,
                         items: items,
+                        examId: examId,
                       ),
                     ),
                   );
