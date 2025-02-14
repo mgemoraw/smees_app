@@ -116,9 +116,9 @@ class SmeesApp extends StatelessWidget {
 
 Future<void> initializeDatabase() async {
   try {
-    // sqfliteFfiInit();
-    // databaseFactory = databaseFactoryFfi;
-    await SmeesHelper().database;
+    sqfliteFfiInit();
+    databaseFactory = databaseFactoryFfi;
+    // await SmeesHelper().database;
     print("Database initialized successfully!");
   } catch (e) {
     print("Database Initialization Error: ${e.toString()}");
