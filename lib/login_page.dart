@@ -106,134 +106,138 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     final userProvider = Provider.of<UserProvider>(context);
 
-    return Scaffold(
-        // drawer: LeftNavigation(),
-        appBar: AppBar(
-          leading: Icon(Icons.school),
-          title: const Text("SMEES"),
-          backgroundColor: Colors.blue,
-        ),
-        // backgroundColor: Colors.redAccent[700],
-        body: Center(
-          child: SingleChildScrollView(
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(50.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    // Text(description),
-                    // Markdown(
-                    //     data: description,
-                    //    selectable: false,
-                    //   ),
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+          // drawer: LeftNavigation(),
+          appBar: AppBar(
+            leading: Icon(Icons.school),
+            title: const Text("SMEES"),
+            backgroundColor: Colors.blue,
+          ),
+          // backgroundColor: Colors.redAccent[700],
+          body: Center(
+            child: SingleChildScrollView(
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      // Text(description),
+                      // Markdown(
+                      //     data: description,
+                      //    selectable: false,
+                      //   ),
 
-                    const Text("Welcome to SMEES Please Login to Continue",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          // color: Colors.white,
-                        )),
-                    const SizedBox(height: 20.0),
-                    const University(),
-                    const SizedBox(height: 16.0),
-                    TextField(
-                      controller: usernameController,
-                      style: const TextStyle(fontSize: 15, color: Colors.black),
-                      decoration: InputDecoration(
-                          error: usernameController.text.isEmpty
-                              ? Text("Username Required")
-                              : null,
-                          prefixIcon: const Icon(Icons.person_2_outlined),
-                          hintText: 'User ID'),
-                    ),
-                    const SizedBox(height: 16.0),
-
-                    TextField(
-                      controller: passwordController,
-                      style: TextStyle(fontSize: 15, color: Colors.black),
-                      obscureText: _isObscure,
-                      decoration: InputDecoration(
-                          error: passwordController.text.isEmpty
-                              ? Text("Password can't be Empty")
-                              : null,
-                          prefixIcon: Icon(Icons.password),
-                          hintText: 'Password',
-                          suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  _isObscure = !_isObscure;
-                                });
-                              },
-                              icon: Icon(_isObscure
-                                  ? Icons.visibility
-                                  : Icons.visibility_off))),
-                    ),
-                    const SizedBox(height: 16.0),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 40,
-                      child: ElevatedButton(
-                        onPressed: () async {
-                          if (usernameController.text.isEmpty ||
-                              passwordController.text.isEmpty) {
-                            return null;
-                          } else {
-                            //
-                            // final message = await loginUser(userLogin);
-                            await _loginUser(
-                              usernameController.text,
-                              passwordController.text,
-                            );
-
-                            if (_user != null) {
-                            setState(() {
-                              // set global user state
-                              userProvider.setUser(newUser: _user!);
-                              
-                            });
-                          }
-
-                          // navigate to home page
-                           if (_token != null && _role != 'null') {
-                            print("user role: _role\ntoken: $_token");
-                            Navigator.pushNamed(context, "/");
-                          } else {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                backgroundColor: Colors.deepOrange,
-                                content: Text("$_message"),
-                              ),
-                            );
-                          }
-                          }
-                         
-                        },
-                        child: isLoading
-                            ? const CircularProgressIndicator()
-                            : const Text(
-                                'Login',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                ),
-                              ),
+                      const Text("Welcome to SMEES Please Login to Continue",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            // color: Colors.white,
+                          )),
+                      const SizedBox(height: 20.0),
+                      const University(),
+                      const SizedBox(height: 16.0),
+                      TextField(
+                        controller: usernameController,
+                        style: const TextStyle(fontSize: 15, color: Colors.black),
+                        decoration: InputDecoration(
+                            error: usernameController.text.isEmpty
+                                ? Text("Username Required")
+                                : null,
+                            prefixIcon: const Icon(Icons.person_2_outlined),
+                            hintText: 'User ID'),
                       ),
-                    ),
-                    ListTile(
-                      onTap: () {
-                        Navigator.pushNamed(context, "/");
-                      },
-                      title: const Text('Forgot Password?',
-                          style: TextStyle(color: Colors.black, fontSize: 18)),
-                    ),
-                  ],
+                      const SizedBox(height: 16.0),
+
+                      TextField(
+                        controller: passwordController,
+                        style: TextStyle(fontSize: 15, color: Colors.black),
+                        obscureText: _isObscure,
+                        decoration: InputDecoration(
+                            error: passwordController.text.isEmpty
+                                ? Text("Password can't be Empty")
+                                : null,
+                            prefixIcon: Icon(Icons.password),
+                            hintText: 'Password',
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    _isObscure = !_isObscure;
+                                  });
+                                },
+                                icon: Icon(_isObscure
+                                    ? Icons.visibility
+                                    : Icons.visibility_off))),
+                      ),
+                      const SizedBox(height: 16.0),
+                      SizedBox(
+                        width: double.infinity,
+                        height: 40,
+                        child: ElevatedButton(
+                          onPressed: () async {
+                            if (usernameController.text.isEmpty ||
+                                passwordController.text.isEmpty) {
+                              return null;
+                            } else {
+                              //
+                              // final message = await loginUser(userLogin);
+                              await _loginUser(
+                                usernameController.text,
+                                passwordController.text,
+                              );
+
+                              if (_user != null) {
+                              setState(() {
+                                // set global user state
+                                userProvider.setUser(newUser: _user!);
+                                
+                              });
+                            }
+
+                            // navigate to home page
+                            if (_token != null && _role != 'null') {
+                              print("user role: _role\ntoken: $_token");
+                              Navigator.pushNamed(context, "/");
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  backgroundColor: Colors.deepOrange,
+                                  content: Text("$_message"),
+                                ),
+                              );
+                            }
+                            }
+                          
+                          },
+                          child: isLoading
+                              ? const CircularProgressIndicator()
+                              : const Text(
+                                  'Login',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                        ),
+                      ),
+                      ListTile(
+                        onTap: () {
+                          Navigator.pushNamed(context, "/");
+                        },
+                        title: const Text('Forgot Password?',
+                            style: TextStyle(color: Colors.black, fontSize: 18)),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
-        ));
+        ),
+    );
   }
 
   Future<void> _loginUser(String username, String password) async {
