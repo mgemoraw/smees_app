@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
@@ -116,7 +117,7 @@ class SmeesApp extends StatelessWidget {
 
 Future<void> initializeDatabase() async {
   try {
-    if (Platform.isWindows()){
+    if (Platform.isWindows){
       sqfliteFfiInit();
       databaseFactory = databaseFactoryFfi;
     } else {
