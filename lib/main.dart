@@ -116,7 +116,7 @@ class SmeesApp extends StatelessWidget {
 
 Future<void> initializeDatabase() async {
   try {
-    if (Platform.iswindows){
+    if (Platform.isWindows()){
       sqfliteFfiInit();
       databaseFactory = databaseFactoryFfi;
     } else {
