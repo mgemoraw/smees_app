@@ -27,13 +27,13 @@ class TakeQuiz extends StatefulWidget {
 class _TakeQuizState extends State<TakeQuiz> {
   // varaibles
   String bottomContainerText = "";
-  List<Map> userAnswers = [];
+  Map userAnswers = {};
   int _qno = 0;
   int _totalScore = 0;
   bool answerWasSelected = false;
   bool endOfQuiz = false;
   bool correctAnswerSelected = false;
-  String _chosenAnswer = "";
+  String? _chosenAnswer;
   Color? _selectedColor;
   Timer? _timer;
   int _start = 60;
@@ -209,6 +209,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                     setState(() {
                       _selectedColor = Colors.blue;
                       _chosenAnswer = options[index]['label'];
+                      _writeAnswer(_chosenAnswer!);
                       disableOptions();
                       // _nextQuestion();
                     });
@@ -230,10 +231,16 @@ class _TakeQuizState extends State<TakeQuiz> {
     );
   }
 
+  void _writeAnswer(String value) {
+    userAnswers[_qno] = value;
+  }
+
   void disableOptions() {
     setState(() {
-      answerWasSelected = true;
-      validateAnswer();
+      if (userAnswers[_qno] != null){
+        answerWasSelected = true;
+        validateAnswer();
+      }
     });
   }
 
@@ -244,8 +251,27 @@ class _TakeQuizState extends State<TakeQuiz> {
       if (_chosenAnswer == widget.items[_qno]['answer']) {
         bottomContainerText = "You Answered Right";
         _totalScore++;
+        userAnswers[_qno] = _chosenAnswer;
       } else {
         bottomContainerText = "Answer is  $correctAnswer";
+      }
+    });
+  }
+  void _checkPreviousAnswer() {
+    // logic here
+    setState(() {
+      _chosenAnswer = userAnswers[_qno];
+      _selectedColor = Colors.blue;
+      disableOptions();
+    });
+  }
+
+  void _showUserAnswer(qno) {
+    setState(() {
+      if (userAnswers[qno] != null) {
+        _chosenAnswer = userAnswers[qno];
+      } else {
+        _chosenAnswer = null;
       }
     });
   }
@@ -255,11 +281,14 @@ class _TakeQuizState extends State<TakeQuiz> {
     setState(() {
       if (_qno < widget.items.length - 1) {
         _qno += 1;
-        answerWasSelected = false;
-        _selectedColor = Colors.white;
-        bottomContainerText = "";
-      } else {
-        //
+        if (_previousAnswer()) {
+          _checkPreviousAnswer();
+        } else {
+          answerWasSelected = false;
+          _selectedColor = Colors.white;
+          bottomContainerText = "";
+        }
+        
       }
     });
   }
@@ -268,6 +297,14 @@ class _TakeQuizState extends State<TakeQuiz> {
     setState(() {
       if (_qno > 0) {
         _qno--;
+        if (_previousAnswer()) {
+          _checkPreviousAnswer();
+        } else {
+          // _selectedColor = Colors.white;
+          answerWasSelected = false;
+          _selectedColor = Colors.white;
+          bottomContainerText = "";
+        }
       }
     });
   }
@@ -277,6 +314,13 @@ class _TakeQuizState extends State<TakeQuiz> {
       Navigator.pop(context);
       Navigator.pushNamed(context, "/quiz");
     });
+  }
+
+  bool _previousAnswer() {
+    if (userAnswers[_qno] != null) {
+      return true;
+    }
+    return false;
   }
 
   Future<void> _writeResults(Map<String, dynamic> data) async {

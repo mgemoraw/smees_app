@@ -52,8 +52,8 @@ class ExamHome extends StatefulWidget {
 class _ExamHomeState extends State<ExamHome> {
   // list of pages in the bottom appbar
   final pages = {
-    'home': const HomePage(department: "AutomotiveEngineering", username: ""),
-    'exam': const LearnZone(department: "AutomotiveEngineering"),
+    'home': const HomePage(department: "", username: ""),
+    'exam': const LearnZone(department: ""),
     'userstat': const Statistics(),
     'profile': const UserProfile(),
     // 'learn': const LearnZone(),
@@ -68,8 +68,9 @@ class _ExamHomeState extends State<ExamHome> {
   String message = "";
 
   // fetch content from json
-  Future<void> readJson(String path) async {
-    path = path.replaceAll(" ", "");
+  Future<void> readJson(String dep) async {
+    // path = path.replaceAll(" ", "");
+    String? path = files[dep];
     try {
       String filePath = "assets/$path/$path.json";
 

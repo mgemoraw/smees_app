@@ -351,29 +351,6 @@ class _TakeExamState extends State<TakeExam> {
     });
   }
 
-
-  Future <void> writeAnswerToDatabase(String answerLabel, qid) async {
-    
-  late String? message = "";
-  final url = Uri.parse('$API_BASE_URL/$testSubmitApi');
-
-  final storage = FlutterSecureStorage();
-  final token = await storage.read(key:"smees_token");
-
-
-  final headers = {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Authentication': 'Bearer $token'
-    };
-  // final headers = {"Content-Type": "application/json"};
-
-  final body = {
-    'username': "",
-    'password': "",
-  };
-
-  }
-
   void _writeAnswer(String value) {
     userAnswers[_qno] = value;
 
@@ -398,4 +375,29 @@ class _TakeExamState extends State<TakeExam> {
     }
     return false;
   }
+
+
+  Future <void> writeAnswerToDatabase(String answerLabel, qid) async {
+    
+  late String? message = "";
+  final url = Uri.parse('$API_BASE_URL/$testSubmitApi');
+
+  final storage = FlutterSecureStorage();
+  final token = await storage.read(key:"smees_token");
+
+
+  final headers = {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Authentication': 'Bearer $token'
+    };
+  // final headers = {"Content-Type": "application/json"};
+
+  final body = {
+    'username': "",
+    'password': "",
+  };
+
+  }
+
+  
 }
