@@ -35,7 +35,11 @@ class _TakeQuizState extends State<TakeQuiz> {
   bool correctAnswerSelected = false;
   String? _chosenAnswer;
   Color? _selectedColor;
+  Color? selectedColor = Colors.blue;
+  final Color? _bgColor = null;
   Timer? _timer;
+  Duration _remainingTime = Duration(hours: 0, minutes: 0, seconds: 0);
+
   int _start = 60;
   DateTime testStarted = DateTime.now();
   String _message = "";
@@ -44,18 +48,27 @@ class _TakeQuizState extends State<TakeQuiz> {
   @override
   void initState() {
     super.initState();
-    _startTimer();
+    // _startTimer();
+    _setExamTime();
+
   }
 
+  void _setExamTime() {
+    setState(() {
+      _remainingTime = Duration(seconds: widget.items.length * 60);
+    });
+
+    _startTimer();
+  }
   void _startTimer() {
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
-      if (_start == 0) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_remainingTime.inSeconds > 0) {
         setState(() {
-          timer.cancel();
+          _remainingTime = _remainingTime - const Duration(seconds: 1);
         });
       } else {
         setState(() {
-          _start--;
+          timer.cancel();
         });
       }
     });
@@ -151,7 +164,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                     if (useModeProvider.offlineMode) {
                       await _writeResults(resultData);
                     } else {
-                      // await _sendResults(Test());
+                      // await _sendResults(resultData);
                     }
 
                     Navigator.pop(context);
@@ -207,8 +220,13 @@ class _TakeQuizState extends State<TakeQuiz> {
                   answerTap: () {
                     //
                     setState(() {
-                      _selectedColor = Colors.blue;
                       _chosenAnswer = options[index]['label'];
+                      // _selectedColor = Colors.blue;
+                      if (_chosenAnswer == widget.items[_qno]['answer']){
+                        _selectedColor = Colors.green[400];
+                      } else {
+                        _selectedColor = Colors.red[400];
+                      }
                       _writeAnswer(_chosenAnswer!);
                       disableOptions();
                       // _nextQuestion();
@@ -232,7 +250,24 @@ class _TakeQuizState extends State<TakeQuiz> {
   }
 
   void _writeAnswer(String value) {
-    userAnswers[_qno] = value;
+    //
+    if (userAnswers[_qno] == null){
+      userAnswers[_qno] = value;
+    }
+
+    // print(userAnswers);
+  }
+
+  int _calculateScore(){
+    int score = 0;
+    if (userAnswers.isNotEmpty){
+      for(int i = 0; i < userAnswers.length; i++) {
+        if (userAnswers[i] == widget.items[i]['answer']){
+          score++;
+        }
+      }
+    }
+    return score;
   }
 
   void disableOptions() {
@@ -246,22 +281,31 @@ class _TakeQuizState extends State<TakeQuiz> {
 
   void validateAnswer() {
     // answer logic here
+   
     var correctAnswer = widget.items[_qno]['answer'];
+    
     setState(() {
-      if (_chosenAnswer == widget.items[_qno]['answer']) {
-        bottomContainerText = "You Answered Right";
-        _totalScore++;
-        userAnswers[_qno] = _chosenAnswer;
-      } else {
-        bottomContainerText = "Answer is  $correctAnswer";
-      }
+      
+        if (_chosenAnswer == widget.items[_qno]['answer']) {
+          bottomContainerText = "You Answered Right";
+        // userAnswers[_qno] = _chosenAnswer;
+
+        } else {
+          bottomContainerText = "Answer is  $correctAnswer";
+        }
+      
     });
   }
   void _checkPreviousAnswer() {
     // logic here
     setState(() {
       _chosenAnswer = userAnswers[_qno];
-      _selectedColor = Colors.blue;
+      if (_chosenAnswer == widget.items[_qno]['answer']){
+        _selectedColor = Colors.green[400];
+      } else {
+        _selectedColor = Colors.red[400];
+      }
+      // _selectedColor = Colors.blue;
       disableOptions();
     });
   }
@@ -308,6 +352,13 @@ class _TakeQuizState extends State<TakeQuiz> {
       }
     });
   }
+  bool _previousAnswer() {
+    if (userAnswers[_qno] != null)  {
+      return true;
+    }
+    return false;
+  }
+
 
   void _restartQuiz() {
     setState(() {
@@ -316,13 +367,7 @@ class _TakeQuizState extends State<TakeQuiz> {
     });
   }
 
-  bool _previousAnswer() {
-    if (userAnswers[_qno] != null) {
-      return true;
-    }
-    return false;
-  }
-
+  
   Future<void> _writeResults(Map<String, dynamic> data) async {
     try {
       await SmeesHelper().addTest(data);

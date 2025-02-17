@@ -162,27 +162,27 @@ class _TestHomeState extends State<TestHome> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        width: 250,
-                        child: TextField(
-                            controller: yearController,
-                            keyboardType: TextInputType.number,
-                            style: const TextStyle(
-                                fontSize: 15, color: Colors.black),
-                            decoration: const InputDecoration(
-                                prefixIcon: Icon(Icons.analytics),
-                                hintText: 'Exam Year')),
-                      ),
-                      ElevatedButton(
-                          onPressed: () {
-                            setState(() async {
-                              await _downloadData(
-                                  departmentId, int.parse(yearController.text));
-                              // print(message);
-                            });
-                          },
-                          child: const Icon(Icons.download)),
-                      const SizedBox(height: 20),
+                      // SizedBox(
+                      //   width: 250,
+                      //   child: TextField(
+                      //       controller: yearController,
+                      //       keyboardType: TextInputType.number,
+                      //       style: const TextStyle(
+                      //           fontSize: 15, color: Colors.black),
+                      //       decoration: const InputDecoration(
+                      //           prefixIcon: Icon(Icons.analytics),
+                      //           hintText: 'Exam Year')),
+                      // ),
+                      // ElevatedButton(
+                      //     onPressed: () {
+                      //       setState(() async {
+                      //         await _downloadData(
+                      //             departmentId, int.parse(yearController.text));
+                      //         // print(message);
+                      //       });
+                      //     },
+                      //     child: const Icon(Icons.download)),
+                      // const SizedBox(height: 20),
                     ],
                   ),
                   LinearProgressIndicator(
@@ -228,7 +228,11 @@ class _TestHomeState extends State<TestHome> {
                     //
                     department = user.department;
                     if (useModeProvider.offlineMode) {
+                      // fetch offline data when offline
                       readJson(files[department]!);
+                    } else {
+                      // download data when online
+                      _downloadData(departmentId, 2022);
                     }
                   });
                 },

@@ -171,8 +171,9 @@ class _LoginLogoutState extends State<LoginLogout> {
   }
 
   Future<void> _checkUserAuthentication() async {
-    setState(() async {
-      isLoggedIn = await isAuthenticated();
+    bool loggedIn = await isAuthenticated();
+    setState(() {
+      isLoggedIn = loggedIn;
     });
   }
 
