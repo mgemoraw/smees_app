@@ -4,6 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 String SMEES_APP_VERSION = "1.0.1";
 
 final API_BASE_URL = dotenv.env["API_BASE_URL"];
+const registerApi = 'auth/users/register';
 const loginApi = "auth/users/login";
 const userUpdateApi = "auth/users/update";
 const tokenApi = "auth/token";

@@ -20,6 +20,7 @@ import 'package:smees/views/user_provider.dart';
 import 'package:smees/services/working_directories.dart';
 import 'package:smees/services/storage_permission.dart';
 import 'package:smees/views/accounts/account_reset.dart';
+import 'package:smees/views/accounts/account_create.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'home_page.dart';
@@ -113,6 +114,7 @@ class SmeesApp extends StatelessWidget {
         "/settings": (context) => const SmeesSettings(),
         "/feedback": (context) => const SmeesFeedback(),
         "/reset": (context) => const AccountReset(),
+        "/register": (context) => const AccountCreate(),
       },
     );
   }
@@ -134,6 +136,7 @@ Future<void> initializeDatabase() async {
     } else if (Platform.isWindows) {
       sqfliteFfiInit();
       databaseFactory = databaseFactoryFfi;
+      await Firebase.initializeApp();
     } else {
       await SmeesHelper().database;
       await Firebase.initializeApp();
@@ -167,3 +170,4 @@ Future<void> safeInitialize() async {
 //         : Login();
 //   }
 // }
+ 
