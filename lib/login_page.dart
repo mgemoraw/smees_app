@@ -138,7 +138,7 @@ class _LoginState extends State<Login> {
                             // color: Colors.white,
                           )),
                       const SizedBox(height: 20.0),
-                      const University(),
+                      // const University(),
                       const SizedBox(height: 16.0),
                       TextField(
                         controller: usernameController,
@@ -199,7 +199,7 @@ class _LoginState extends State<Login> {
 
                             // navigate to home page
                             if (_token != null && _role != 'null') {
-                              print("user role: _role\ntoken: $_token");
+                              print("user role: $_role \ntoken: $_token");
                               Navigator.pushNamed(context, "/");
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -225,7 +225,7 @@ class _LoginState extends State<Login> {
                       ),
                       ListTile(
                         onTap: () {
-                          Navigator.pushNamed(context, "/");
+                          Navigator.pushNamed(context, "/reset");
                         },
                         title: const Text('Forgot Password?',
                             style: TextStyle(color: Colors.black, fontSize: 18)),

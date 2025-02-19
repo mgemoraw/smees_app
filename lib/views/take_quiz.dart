@@ -152,6 +152,12 @@ class _TakeQuizState extends State<TakeQuiz> {
           (_qno >= widget.items.length - 1)
               ? ElevatedButton(
                   onPressed: () async {
+
+                    setState((){
+                      _totalScore = _calculateScore();
+                    });
+
+
                     // write score to database
                     final resultData = {
                       'userId': user.username,
@@ -160,6 +166,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                       'questions': widget.items.length,
                       'score': _totalScore,
                     };
+                    
 
                     if (useModeProvider.offlineMode) {
                       await _writeResults(resultData);

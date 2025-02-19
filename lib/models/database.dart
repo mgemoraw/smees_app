@@ -177,6 +177,33 @@ class SmeesHelper {
     return await db.query('exams');
   }
 
+  Future<double> getLatestScore(String userId) async {
+    double score = 0.0;
+    double dbScore = 0;
+    int questions = 0;
+    final db = await database;
+
+    try{
+      List<Map<String, dynamic>>  result = await  db.query(
+        'tests',
+        where: 'userId= ?',
+        orderBy: 'testStarted DESC',
+        whereArgs: [userId],
+      );
+
+      if (result.isNotEmpty) {
+        questions = result[0]['questions'];
+        dbScore = result[0]['score'];
+        score  =  dbScore / questions * 100 ;
+      }
+      // print("Score: $dbScore");
+      return score;
+    } catch (err) {
+      // print("Database Error: $err");
+    }
+    return 0.0;
+  }
+
 }
 
 

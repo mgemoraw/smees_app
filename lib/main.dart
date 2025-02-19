@@ -1,11 +1,14 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:smees/login_page.dart';
 import 'package:smees/models/database.dart';
 import 'package:smees/security/auth.dart';
 import 'package:smees/security/logout.dart';
+import 'package:smees/services/auth_screen.dart';
 import 'package:smees/student_statistics.dart';
 import 'package:smees/views/common/smees_feedback.dart';
 import 'package:smees/views/exam_home.dart';
@@ -23,9 +26,10 @@ import 'home_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await requestStoragePermission(); // Ask for storage permission
   await safeInitialize();
-  
+
   runApp(
     MultiProvider(
       providers: [
@@ -94,6 +98,7 @@ class SmeesApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         '/login': (context) => const Login(),
+        // '/login': (context) => AuthScreen(),
         '/': (context) => const Home(
               title: "SMEES",
               department: "",
@@ -107,21 +112,31 @@ class SmeesApp extends StatelessWidget {
         "/stats": (context) => const Statistics(),
         "/settings": (context) => const SmeesSettings(),
         "/feedback": (context) => const SmeesFeedback(),
-        "/user-reset":(context) => const AccountReset(),
-        
+        "/reset": (context) => const AccountReset(),
       },
     );
   }
 }
 
-
 Future<void> initializeDatabase() async {
   try {
-    if (Platform.isWindows){
+    if (kIsWeb) {
+      print("running on web");
+      await Firebase.initializeApp(
+          options: FirebaseOptions(
+              apiKey: "AIzaSyATx5-RdiT1Qw54-Do-pMm4I6faChgVgjw",
+              authDomain: "smees-fa0cb.firebaseapp.com",
+              projectId: "smees-fa0cb",
+              storageBucket: "smees-fa0cb.firebasestorage.app",
+              messagingSenderId: "292538494392",
+              appId: "1:292538494392:web:cae5aad3a743e3b5b8334d",
+              measurementId: "G-L0RK3FW8ND"));
+    } else if (Platform.isWindows) {
       sqfliteFfiInit();
       databaseFactory = databaseFactoryFfi;
     } else {
       await SmeesHelper().database;
+      await Firebase.initializeApp();
     }
     print("Database initialized successfully!");
   } catch (e) {
@@ -131,7 +146,7 @@ Future<void> initializeDatabase() async {
 
 Future<void> safeInitialize() async {
   try {
-    await dotenv.load(fileName: ".env");  
+    await dotenv.load(fileName: ".env");
     await createWorkingDirectory();
     await initializeDatabase();
   } catch (e, stacktrace) {
@@ -152,5 +167,3 @@ Future<void> safeInitialize() async {
 //         : Login();
 //   }
 // }
-
-

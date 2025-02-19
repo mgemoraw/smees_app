@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "292538494392",
+    "project_id": "smees-fa0cb",
+    "storage_bucket": "smees-fa0cb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292538494392:android:29a7a5a2490802d9b8334d",
+        "android_client_info": {
+          "package_name": "com.bit.smees"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl5bN0v3EJFpegUV5daQUin3lQ4NeyoVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292538494392:android:f76641a6ee8b0752b8334d",
+        "android_client_info": {
+          "package_name": "com.example.smees"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl5bN0v3EJFpegUV5daQUin3lQ4NeyoVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

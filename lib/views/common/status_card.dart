@@ -1,6 +1,9 @@
+import "dart:convert";
+
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 import "package:shared_preferences/shared_preferences.dart";
+import "package:smees/models/database.dart";
 import "package:smees/models/user.dart";
 import "package:smees/views/user_provider.dart";
 
@@ -25,24 +28,29 @@ class _UserStatusCardState extends State<UserStatusCard> {
   }
 
   Future<void> _loadScore() async {
+    // to avoid late initialization error to user data
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    final latestScore = prefs.getDouble("smees-score");
+    // final latestScore = prefs.getDouble("smees-score");
+    final helper =   SmeesHelper();
+    final latestScore = await  helper.getLatestScore(user.username!);
+
     setState(() {
-      if (latestScore != null) {
-        score = latestScore;
-      }
+      score = latestScore ;
     });
   }
 
   Future<void> _getCurrentUser() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final userData = jsonDecode(prefs.getString('smees-user')!);
     setState(() {
       user = User(
-          username: "sgetme",
-          password: null,
-          email: null,
-          university: "BDU",
-          department: "Test Department");
+          username: userData['username'] ,
+          password: userData['token'],
+          email: userData['email'],
+          university: userData['university'],
+          department: userData['department'],
+        );
     });
   }
 
@@ -70,12 +78,13 @@ class _UserStatusCardState extends State<UserStatusCard> {
           fontWeight: FontWeight.bold,
         ),
       ),
-      subtitle: Text("Latest Score: $score"),
+      subtitle: Text("Latest Score: ${score.toStringAsFixed(2)}%"),
       trailing: context.watch<UseModeProvider>().offlineMode
-          ? const Icon(Icons.circle)
+          ? const Icon(Icons.circle, semanticLabel: 'Online',)
           : const Icon(
               Icons.circle,
               color: Colors.green,
+              semanticLabel: 'Offline',
             ),
     );
 
