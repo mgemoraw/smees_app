@@ -103,7 +103,8 @@ class _AccountCreateState extends State<AccountCreate> {
     String? department = departmentController.text.trim();
     String? password1 = password1Controller.text.trim();
     String? password2 = password2Controller.text.trim();
-    if (username.isEmpty || password1.isEmpty || password2.isEmpty || department.isempty || password1.isEmpty || password2.isEmpty){
+    if (username.isEmpty || password1.isEmpty || password2.isEmpty ||
+        department.isEmpty || password1.isEmpty || password2.isEmpty){
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           backgroundColor: Colors.deepOrange,
@@ -122,17 +123,17 @@ class _AccountCreateState extends State<AccountCreate> {
 
       // handle registration
       try {
-        final url = Uri.parse('${API_BASE_URL}$registerApi')
+        final url = Uri.parse('${API_BASE_URL}$registerApi');
       } catch (err) {
         setState(() {
           message = err.toString();
-        })
+        });
       } 
     }
   }
 
 
-  void backToLogin() async {
+  void backToLogin()  {
     //
     Navigator.pop(context);
 
