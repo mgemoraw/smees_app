@@ -1,0 +1,2 @@
+C:/Users/Hayat/Desktop/bit_smees/smees/android/app/.cxx/RelWithDebInfo/64p543vn/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/Hayat/Desktop/bit_smees/smees/android/app/.cxx/RelWithDebInfo/64p543vn/x86_64/CMakeFiles/rebuild_cache.dir
