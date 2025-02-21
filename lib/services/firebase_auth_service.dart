@@ -15,6 +15,7 @@ class AuthService {
       String email, String password, String username, String department,
       {role = "student"}) async {
     try {
+
       UserCredential userCredential =
           await _auth.createUserWithEmailAndPassword(
         email: email,
@@ -46,11 +47,14 @@ class AuthService {
   // login user
   Future<UserModel?> login(String email, String password) async {
     try {
+      await _auth.signOut();
+      print("email: $email, password: $password");
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
       User? user = userCredential.user;
+      print(user!.email);
       if (user != null) {
         // Fetch user details from firstore
         DocumentSnapshot userDoc =
@@ -88,7 +92,9 @@ class AuthService {
   }
 
   Future <UserModel?> loginUser(String username, String password) async {
+
     try {
+      // print("Auth: {$_auth.currentUser}");
       QuerySnapshot query = await _db.collection('users')
           .where('username', isEqualTo:username)
           .limit(1)
@@ -137,7 +143,7 @@ class AuthService {
       print("User logged in Successfully");
     } catch (error) {
       //
-      print("Error $error");
+      print("Not Authenticated $error");
     }
     return null;
   }

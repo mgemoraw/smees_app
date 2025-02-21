@@ -349,7 +349,7 @@ class University extends StatefulWidget {
 class _UniversityState extends State<University> {
   var items = [
     'Civil Engineering',
-    'Water Resources fluand Irrigation Engineering',
+    'Water Resources and Irrigation Engineering',
     'Hydraulic and Water Resources Engineering',
     'Computer Science',
     'Software Engineering',

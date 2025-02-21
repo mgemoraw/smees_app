@@ -7,6 +7,8 @@ import 'package:smees/models/firestore_user_model.dart';
 import 'package:smees/models/user.dart';
 import 'package:smees/views/user_provider.dart';
 import 'firebase_auth_service.dart';
+import 'package:smees/constants.dart';
+
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -17,34 +19,52 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController password1Controller = TextEditingController();
+  final TextEditingController password2Controller = TextEditingController();
+  final TextEditingController fnameController = TextEditingController();
+  final TextEditingController mnameController = TextEditingController();
+  final TextEditingController lnameController = TextEditingController();
+  final TextEditingController universityController = TextEditingController();
+  final TextEditingController idController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController departmentController = TextEditingController();
-  
+  var department = "";
   User _user = User();
-
+  String emptyError = "";
   bool isLogin = true;
   bool _isObscure = true;
   final AuthService authService = AuthService();
 
+  List<DropdownMenuItem<String>> getDepartments() {
+    //
+    List<DropdownMenuItem<String>> departments = [];
+    for (String key in files.keys) {
+      var menuItem = DropdownMenuItem(value: files[key], child: Text(key));
+      departments.add(menuItem);
+    }
+    return departments;
+  }
   Future<void> handleAuth() async {
     String email = emailController.text.trim();
-    String password = passwordController.text.trim();
+    String password1 = password1Controller.text.trim();
     String username = usernameController.text.trim();
     String department = departmentController.text.trim();
 
 
     if (isLogin){
-      if (username.isEmpty||password.isEmpty){
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text("$username $password"),
-          ),
-        );
+      if (username.isEmpty||password1.isEmpty){
+        setState(() {
+          emptyError = "This field is required";
+        });
+
+        return;
       }
+      setState(() {
+        emptyError = "";
+      });
       // Login
       try {
-        var user = await authService.loginUser(username, password);
+        var user = await authService.login(username, password1);
         if (user != null && user.role == 'student') {
           
           setState(() {
@@ -75,7 +95,7 @@ class _AuthScreenState extends State<AuthScreen> {
       }
       // Register
       var user =
-      await authService.register(email, password, username, department);
+      await authService.register(email, password1, username, department);
       if (user != null) {
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(content: Text("Register Sucess")));
@@ -92,64 +112,155 @@ class _AuthScreenState extends State<AuthScreen> {
     return PopScope(
         canPop: false,
         child: Scaffold(
-      appBar: AppBar(title: Text(isLogin ? "SMEES Login" : "SMEES Register")),
-      body: Center(child:Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Text("Welcome To SMEES, Please Login to continue"),
+      appBar: AppBar(
+            leading: Icon(Icons.school),
+      title: const Text("SMEES"),
+      backgroundColor: Colors.blue,
+    ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(isLogin ? "Welcome To SMEES, Please Login to continue" :
+                "Create Free SMEES Account",
+                  style:
+                TextStyle(fontSize: 24,color: Colors.blue[900], fontWeight:
+                FontWeight.bold),),
+                  SizedBox(height: 16.0),
+                  if (!isLogin) Column(
+                    children: [
+                      TextField(
+                        controller: fnameController,
+                        decoration: InputDecoration(labelText: "First Name"),
+                      ),
+                      TextField(
+                        controller: mnameController,
+                        decoration: InputDecoration(labelText: "Father Name"),
+                        style: TextStyle(fontSize:15),
+                      ),
+                      TextField(
+                        controller: lnameController,
+                        decoration: InputDecoration(labelText: "G.F Name"),
+                        style: TextStyle(fontSize:15),
+                      ),
+                      TextField(
+                        controller: emailController,
+                        decoration: InputDecoration(labelText: "Student ID"),
+                        style: TextStyle(fontSize:15),
 
-              TextField(
-                controller: usernameController,
-                decoration: InputDecoration(labelText: "Email"),
-              ),
-            TextField(
-              controller: passwordController,
-              style: TextStyle(fontSize: 15, color: Colors.black),
-              obscureText: _isObscure,
-              decoration: InputDecoration(
-                  error: passwordController.text.isEmpty
-                      ? Text("Password can't be Empty")
-                      : null,
-                  prefixIcon: Icon(Icons.password),
-                  hintText: 'Password',
-                  suffixIcon: IconButton(
-                      onPressed: () {
+                      ),
+                      // department dropdown option to choose
+                     DepartmentOptions(),
+
+                      TextField(
+                        controller: universityController,
+                        decoration: InputDecoration(labelText: "University"),
+                        style: TextStyle(fontSize:15),
+
+                      ),
+                    ],
+                  ),
+
+                  // login fields
+                Column(
+                  children: [
+                    TextField(
+                      controller: usernameController,
+                      decoration: InputDecoration(
+                          labelText: "Your University ID",
+                        error: usernameController.text.isEmpty ? Text
+                          ("Required") : null,
+                      ),
+                      style: TextStyle(fontSize:15),
+                    ),
+                    SizedBox(height: 30),
+                    TextField(
+                      controller: password1Controller,
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      obscureText: _isObscure,
+                      decoration: InputDecoration(
+                          error: password1Controller.text.isEmpty ? Text
+                            ("Required") : null,
+                          // prefixIcon: Icon(Icons.password),
+                          hintText: 'Password',
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _isObscure = !_isObscure;
+                                });
+                              },
+                              icon: Icon(_isObscure
+                                  ? Icons.visibility
+                                  : Icons.visibility_off))),
+                    ),
+                  ],
+                ),
+
+                SizedBox(height: 20),
+                if(!isLogin)  Column(
+                  children:[
+                    TextField(
+                      controller: password2Controller,
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      obscureText: _isObscure,
+                      decoration: InputDecoration(
+                          error: password1Controller.text.isEmpty
+                              ? Text("Password can't be Empty")
+                              : null,
+                          prefixIcon: Icon(Icons.password),
+                          hintText: 'Password',
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _isObscure = !_isObscure;
+                                });
+                              },
+                              icon: Icon(_isObscure
+                                  ? Icons.visibility
+                                  : Icons.visibility_off))),
+                    ),
+                  ]
+                ),
+                SizedBox(height: 30),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: ()  async {
+                      await handleAuth();
+                      if (_user.username != null && _user.department != null) {
+                        print(_user!.department);
                         setState(() {
-                          _isObscure = !_isObscure;
+                          userProvider.setUser(newUser: _user);
                         });
-                      },
-                      icon: Icon(_isObscure
-                          ? Icons.visibility
-                          : Icons.visibility_off))),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: ()  async {
-                await handleAuth();
-                if (_user != null) {
-                  print(_user!.department);
-                  setState(() {
-                    userProvider.setUser(newUser: _user);
-                  });
-                  // Navigator.pushNamed(context, "/");
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
-                  );
-                }
-              },
-              child: Text(isLogin ? "Login" : "Register"),
-            ),
-            TextButton(
-              onPressed: () => setState(() => isLogin = !isLogin),
-              child: Text(
-                  isLogin ? "Create an Account" : "Already have an account?"),
-            )
-          ],
-        ),
+                        // Navigator.pushNamed(context, "/");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
+                        );
+                      }
+                    },
+                    child: Text(isLogin ? "Login" : "Register", style:
+                    TextStyle(fontSize: 15)),
+                  ),
+                ),
+                SizedBox(height: 30),
 
-      ),),
+                TextButton(
+                  onPressed: () => setState(() => isLogin = !isLogin),
+                  child: Text(
+                      isLogin ? "Create an Account" : "Already have an "
+                          "account ?", style: TextStyle(fontSize: 15,
+                      fontWeight: FontWeight.bold ),),
+                )
+              ],
+            ),
+
+          ),
+        ),
+      ),
     ),
     );
   }
