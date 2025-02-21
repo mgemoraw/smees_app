@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/models/firestore_user_model.dart';
 
 class AuthService {
@@ -79,6 +83,61 @@ class AuthService {
         return UserModel.fromMap(
             userDoc.data() as Map<String, dynamic>, user.uid);
       }
+    }
+    return null;
+  }
+
+  Future <UserModel?> loginUser(String username, String password) async {
+    try {
+      QuerySnapshot query = await _db.collection('users')
+          .where('username', isEqualTo:username)
+          .limit(1)
+          .get();
+
+      if (query.docs.isEmpty) {
+        print(query.docs.first['email']);
+        return null;
+      }
+
+      String email = query.docs.first['email'];
+      // Fetch the 'createdAt' field from the document as a Timestamp
+      Timestamp createdAtTimestamp = query.docs.first['createdAt'];
+
+      // Convert the Timestamp to DateTime
+      DateTime createdAt = createdAtTimestamp.toDate();
+      UserModel user = UserModel(
+        uid: query.docs.first.id,
+        username: query.docs.first['username'],
+        email: query.docs.first['email'],
+        role: query.docs.first['role'],
+        department: query.docs.first['department'],
+        createdAt: createdAt,
+      );
+
+      final storage = FlutterSecureStorage();
+      await storage.write(key:"smees_token", value: query.docs.first.id);
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('smees-user', jsonEncode(user.toMap()));
+
+
+      print("########### user data ###############");
+      print(user.toMap());
+
+      // UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+      //   email: email,
+      //   password: password,
+      // );
+      // // Successfully signed in
+      // User? loggedUser = userCredential.user;
+
+
+      if (user != null) {
+        return user;
+      }
+      print("User logged in Successfully");
+    } catch (error) {
+      //
+      print("Error $error");
     }
     return null;
   }

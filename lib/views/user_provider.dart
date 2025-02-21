@@ -25,6 +25,7 @@ class UserProvider extends ChangeNotifier {
     mname: null,
     lname: null,
     department: null,
+    createdAt: null,
   );
 
   User get user => _user;

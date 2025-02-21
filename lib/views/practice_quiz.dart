@@ -12,6 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/api/end_points.dart';
 
 import 'package:smees/home_page.dart';
+import 'package:smees/models/user.dart';
 import 'package:smees/views/answer_option.dart';
 import 'package:smees/views/common/appbar.dart';
 
@@ -61,6 +62,7 @@ class _TestHomeState extends State<TestHome> {
   TextEditingController yearController = TextEditingController();
   String pageKey = "home";
   int pageIndex = 0;
+  late User user;
 
   @override
   void initState() {
@@ -97,9 +99,17 @@ class _TestHomeState extends State<TestHome> {
     final userData = jsonDecode(jsonString!);
 
     setState(() {
-      departmentId = userData['departmentId'];
+      // departmentId = userData['departmentId'];
       token = userData['token'];
+      user = User(
+        username: userData['username'] ,
+        password: userData['token'],
+        email: userData['email'],
+        university: userData['university'],
+        department: userData['department'],
+      );
     });
+    ;
   }
 
   Future<void> _downloadData(int departmentId, int year) async {
@@ -133,7 +143,7 @@ class _TestHomeState extends State<TestHome> {
   @override
   Widget build(BuildContext context) {
     final useModeProvider = Provider.of<UseModeProvider>(context);
-    final user = Provider.of<UserProvider>(context).user;
+    // final userProvider = Provider.of<UserProvider>(context);
 
     return Scaffold(
       drawer: const LeftNavigation(),
@@ -227,13 +237,18 @@ class _TestHomeState extends State<TestHome> {
                   setState(() {
                     //
                     department = user.department;
-                    if (useModeProvider.offlineMode) {
-                      // fetch offline data when offline
-                      readJson(files[department]!);
+                    if (department != null) {
+                      if (useModeProvider.offlineMode) {
+                        // fetch offline data when offline
+                        readJson(files[department]!);
+                      } else {
+                        // download data when online
+                        _downloadData(departmentId, 2022);
+                      }
                     } else {
-                      // download data when online
-                      _downloadData(departmentId, 2022);
+                      print("Department: $department");
                     }
+
                   });
                 },
               ),

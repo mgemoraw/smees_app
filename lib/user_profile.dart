@@ -6,6 +6,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:smees/api/end_points.dart';
 import 'package:smees/models/user.dart';
@@ -27,7 +28,30 @@ class _UserProfileState extends State<UserProfile> {
   TextEditingController password2Controller = TextEditingController();
   late String? _message = null;
   late bool isLoading = false;
+  User? user = User();
 
+  @override
+  void initState(){
+    super.initState();
+    setState(() {
+      _getCurrentUser();
+
+    });
+  }
+
+  Future<void> _getCurrentUser() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final userData = jsonDecode(prefs.getString('smees-user')!);
+    setState(() {
+      user = User(
+        username: userData['username'] ,
+        password: userData['token'],
+        email: userData['email'],
+        university: userData['university'],
+        department: userData['department'],
+      );
+    });
+  }
   Future <void> _updatePassword(Map<String, dynamic> password) async {
     final storage = FlutterSecureStorage();
     String? token = await storage.read(key:"smees_token");
@@ -174,7 +198,7 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     
-    final user = Provider.of<UserProvider>(context).user;
+    // final userProvider = Provider.of<UserProvider>(context);
     
     return Center(
       
@@ -195,12 +219,12 @@ class _UserProfileState extends State<UserProfile> {
             children: [
               
               ListTile(
-                title: Text("Username: ${user.username}"),
-                subtitle: Text("Department: ${user.department}"),
+                title: Text("Username: ${user!.username}"),
+                subtitle: Text("Department: ${user!.department}"),
                 trailing: TextButton(child: Text("Edit Info"), onPressed: (){},),
               ),
               ListTile(
-                title: Text("Email: ${user.email}"),
+                title: Text("Email: ${user!.email}"),
                 subtitle: TextButton(child: Text("Change Password"), onPressed: (){
                   _updatePasswordDialog(context);
                 },),

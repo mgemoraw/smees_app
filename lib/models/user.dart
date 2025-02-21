@@ -9,7 +9,7 @@ class User {
   String? email;
   String? university;
   String? department;
-
+  DateTime? createdAt;
   User({
     this.username,
     this.password,
@@ -19,6 +19,7 @@ class User {
     this.email,
     this.university,
     this.department,
+    this.createdAt,
   });
 
 // convert a user object to a map object
