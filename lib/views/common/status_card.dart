@@ -17,7 +17,7 @@ class UserStatusCard extends StatefulWidget {
 class _UserStatusCardState extends State<UserStatusCard> {
   late String username;
   late double score = 0;
-  late User user;
+  User? user = User();
   @override
   void initState() {
     super.initState();
@@ -33,7 +33,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
 
     // final latestScore = prefs.getDouble("smees-score");
     final helper =   SmeesHelper();
-    final latestScore = await  helper.getLatestScore(user.username!);
+    final latestScore = await  helper.getLatestScore(user!.username!);
 
     setState(() {
       score = latestScore ;
@@ -57,7 +57,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
   @override
   Widget build(BuildContext context) {
     final userProvider = Provider.of<UserProvider>(context);
-    user = userProvider.user;
+    // user = userProvider.user;
 
     return ListTile(
       leading: Padding(
@@ -72,7 +72,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
         ),
       ),
       title: Text(
-        "Welcome ${user.username}",
+        "Welcome ${user!.username}",
         style: const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,

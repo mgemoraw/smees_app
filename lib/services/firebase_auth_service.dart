@@ -11,9 +11,7 @@ class AuthService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
   // Register user
-  Future<UserModel?> register(
-      String email, String password, String username, String department,
-      {role = "student"}) async {
+  Future<UserModel?> register(String email, String password, UserModel data) async {
     try {
 
       UserCredential userCredential =
@@ -27,10 +25,11 @@ class AuthService {
       if (user != null) {
         UserModel newUser = UserModel(
           uid: user.uid,
-          username: username,
+          username: data.username,
           email: email,
-          department: department,
-          role: role,
+          department: data.department,
+          university: data.university,
+          role: 'student',
           createdAt: DateTime.now(),
         );
 
@@ -57,13 +56,28 @@ class AuthService {
       await userCredential.user?.getIdToken(true);
 
       User? user = userCredential.user;
-      print(user!.email);
+
       if (user != null) {
+        print("############ user data #################");
+
+
         // Fetch user details from firstore
         DocumentSnapshot userDoc =
             await _db.collection('users').doc(user.uid).get();
 
         if (userDoc.exists) {
+          Map<String, dynamic> userData = userDoc.data() as Map<String, dynamic>;
+
+          // this codes are added to change timestamp into datetime string
+          // DateTime createdAt =userData['createdAt'].toDate();
+          // userData['createdAt'] = createdAt.toString();
+
+          final storage = FlutterSecureStorage();
+          await storage.write(key:"smees_token", value: user.uid);
+          final prefs = await SharedPreferences.getInstance();
+          await prefs.setString('smees-user', jsonEncode(userData));
+          // print(userData);
+          return UserModel.fromMap(userData, user.uid) ;
           return UserModel.fromMap(
               userDoc.data() as Map<String, dynamic>, user.uid);
         }

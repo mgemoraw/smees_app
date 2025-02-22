@@ -28,12 +28,13 @@ class _AuthScreenState extends State<AuthScreen> {
   final TextEditingController idController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController departmentController = TextEditingController();
-  var department = "";
+  String department = "null";
   User _user = User();
   String emptyError = "";
   bool isLogin = true;
   bool _isObscure = true;
   final AuthService authService = AuthService();
+  bool isLoading = false;
 
   @override
   void dispose(){
@@ -44,7 +45,6 @@ class _AuthScreenState extends State<AuthScreen> {
     emailController.dispose();
     password1Controller.dispose();
     password2Controller.dispose();
-    departmentController.dispose();
     universityController.dispose();
     super.dispose();
   }
@@ -60,12 +60,16 @@ class _AuthScreenState extends State<AuthScreen> {
   void handleAuth() async {
     String email = emailController.text.trim();
     String password1 = password1Controller.text.trim();
+    String password2 = password2Controller.text.trim();
     String username = usernameController.text.trim();
-    String department = departmentController.text.trim();
+
     String university = universityController.text.trim();
     String fname = fnameController.text.trim();
     String mname = mnameController.text.trim();
     String lname = lnameController.text.trim();
+    String password = "";
+    UserModel? data;
+
 
     if (isLogin){
       if (email.isEmpty||password1.isEmpty){
@@ -80,12 +84,16 @@ class _AuthScreenState extends State<AuthScreen> {
       });
       // Login
       try {
+        setState(() {
+          isLoading = true;
+        });
         var user = await authService.login(email, password1);
-        if (user != null && user.role == 'student') {
-          
+        if (user != null){ // && user.role == 'student') {
+
           setState(() {
             // set global user state
             _user = User.fromMap(user.toMap());
+
           });
           // Navigator.pushReplacementNamed(context, "/");
           Navigator.push(
@@ -93,30 +101,62 @@ class _AuthScreenState extends State<AuthScreen> {
             MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
           );
         } else {
+
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text("Login Error: Access denied "),backgroundColor: Colors.redAccent,));
         }
       } catch(err){
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(content: Text("Login Error: ${err.toString()}")));
+      } finally {
+        setState(() {
+          isLoading = false;
+        });
       }
     } else{
       //
-      if (email.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text("Plese fill all fields"),
-          ),
+      if (username.isNotEmpty || email.isNotEmpty || password1.isNotEmpty || password2.isNotEmpty || department.isNotEmpty||university.isNotEmpty) {
+        if (password1 != password2){
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text("Passwords do not match"),
+            ),
+          );
+          return ;
+        } else {
+          password = password1;
+        }
+
+        data = UserModel(
+          uid: "",
+          username: username,
+          email: email,
+          department: department,
+          createdAt: DateTime.now(),
+          role: 'student',
         );
       }
+
       // Register
-      var user =
-      await authService.register(email, password1, username, department);
-      if (user != null) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("Register Sucess")));
+      try {
+        setState(() {
+          isLoading = true;
+        });
+        var user =
+        await authService.register(email, password, data!);
+        if (user != null) {
+          ScaffoldMessenger.of(context)
+              .showSnackBar(SnackBar(content: Text("Register Sucess")));
+        }
+        return;
+      }catch (err){
+        //
+      } finally {
+        setState(() {
+          isLoading = false;
+        });
       }
-      return;
+
     }
 
   }
@@ -148,35 +188,66 @@ class _AuthScreenState extends State<AuthScreen> {
                   SizedBox(height: 16.0),
                   if (!isLogin) Column(
                     children: [
-                      TextField(
-                        controller: fnameController,
-                        decoration: InputDecoration(labelText: "First Name"),
-                      ),
-                      TextField(
-                        controller: mnameController,
-                        decoration: InputDecoration(labelText: "Father Name"),
-                        style: TextStyle(fontSize:15),
-                      ),
-                      TextField(
-                        controller: lnameController,
-                        decoration: InputDecoration(labelText: "G.F Name"),
-                        style: TextStyle(fontSize:15),
-                      ),
+                      // TextField(
+                      //   controller: fnameController,
+                      //   decoration: InputDecoration(
+                      //       labelText: "First Name",
+                      //       error: fnameController.text.isEmpty ? Text("Required") : null,
+                      //   ),
+                      //
+                      // ),
+                      // TextField(
+                      //   controller: mnameController,
+                      //   decoration: InputDecoration(
+                      //       labelText: "Father Name",
+                      //     error: mnameController.text.isEmpty ? Text("Required") : null,
+                      //   ),
+                      //   style: TextStyle(fontSize:15),
+                      // ),
+                      // TextField(
+                      //   controller: lnameController,
+                      //   decoration: InputDecoration(
+                      //     labelText: "G.F Name",
+                      //     error: lnameController.text.isEmpty ? Text("Required") : null,
+                      //   ),
+                      //   style: TextStyle(fontSize:15),
+                      // ),
                       TextField(
                         controller: usernameController,
-                        decoration: InputDecoration(labelText: "Student ID"),
+                        decoration: InputDecoration(
+                            labelText: "Student ID",
+                          error: usernameController.text.isEmpty ? Text("Required") : null,
+                        ),
                         style: TextStyle(fontSize:15),
 
                       ),
-                      // department dropdown option to choose
-                     DepartmentOptions(),
-
+                      // university
                       TextField(
                         controller: universityController,
-                        decoration: InputDecoration(labelText: "University"),
+                        decoration: InputDecoration(
+                          labelText: "University",
+                          error: universityController.text.isEmpty ? Text
+                            ("Required") : null,
+                        ),
                         style: TextStyle(fontSize:15),
-
                       ),
+                      // department dropdown option to choose
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: DropdownButton(
+                          hint: Text("Choose you field of study"),
+                            padding: EdgeInsets.all(16.0),
+                            items: getDepartments(),
+                            value: department!='null'? department : "Choose Field of Study",
+                            onChanged: (value){
+                              setState(() {
+                                department = value!;
+                              });
+                            },
+                        ),
+                      ),
+
+
                     ],
                   ),
 
@@ -259,19 +330,30 @@ class _AuthScreenState extends State<AuthScreen> {
                     //     );
                     //   }
                     // },
-                    child: Text(isLogin ? "Login" : "Register", style:
-                    TextStyle(fontSize: 15)),
+
+                    child: isLoading ? const CircularProgressIndicator()
+                        : Text(isLogin ? "Login" : "Register", style:
+                    TextStyle(fontSize: 15, color: Colors.blue[900], fontWeight: FontWeight.bold)),
                   ),
                 ),
                 SizedBox(height: 30),
 
-                TextButton(
-                  onPressed: () => setState(() => isLogin = !isLogin),
-                  child: Text(
-                      isLogin ? "Create an Account" : "Already have an "
-                          "account ?", style: TextStyle(fontSize: 15,
-                      fontWeight: FontWeight.bold ),),
-                )
+                ListTile(
+                  title: Text(
+                    isLogin ? "Create an Account" : "Already have an "
+                        "account?",
+                    style: TextStyle(fontSize: 15,
+                        fontWeight: FontWeight.bold ),),
+                  trailing: TextButton(
+                    child:Text(isLogin ? "Sign Up" : "Log In",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.blue[900],
+                            fontWeight: FontWeight.bold)),
+                    onPressed:  () => setState(() => isLogin = !isLogin),
+                ),
+                ),
+
               ],
             ),
 

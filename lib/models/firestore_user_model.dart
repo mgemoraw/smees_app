@@ -3,6 +3,7 @@ class UserModel {
   String username;
   String email;
   String department;
+  String? university;
   String role;
   DateTime createdAt;
   UserModel({
@@ -12,6 +13,8 @@ class UserModel {
     required this.department,
     required this.role,
     required this.createdAt,
+    this.university,
+
   });
 
   // Convert UserModel to a Map (for Firestore)
@@ -34,6 +37,7 @@ class UserModel {
       email: map['email'],
       role: map['role'],
       department: map['department'],
+      university: null,
       createdAt:
           DateTime.parse(map['createdAt'] ?? DateTime.now().toIso8601String()),
     );
