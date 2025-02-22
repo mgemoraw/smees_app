@@ -49,10 +49,13 @@ class AuthService {
     try {
       await _auth.signOut();
       print("email: $email, password: $password");
-      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+      UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
+      // force token refresh
+      await userCredential.user?.getIdToken(true);
+
       User? user = userCredential.user;
       print(user!.email);
       if (user != null) {

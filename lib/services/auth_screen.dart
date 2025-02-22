@@ -35,6 +35,19 @@ class _AuthScreenState extends State<AuthScreen> {
   bool _isObscure = true;
   final AuthService authService = AuthService();
 
+  @override
+  void dispose(){
+    fnameController.dispose();
+    mnameController.dispose();
+    lnameController.dispose();
+    usernameController.dispose();
+    emailController.dispose();
+    password1Controller.dispose();
+    password2Controller.dispose();
+    departmentController.dispose();
+    universityController.dispose();
+    super.dispose();
+  }
   List<DropdownMenuItem<String>> getDepartments() {
     //
     List<DropdownMenuItem<String>> departments = [];
@@ -44,15 +57,18 @@ class _AuthScreenState extends State<AuthScreen> {
     }
     return departments;
   }
-  Future<void> handleAuth() async {
+  void handleAuth() async {
     String email = emailController.text.trim();
     String password1 = password1Controller.text.trim();
     String username = usernameController.text.trim();
     String department = departmentController.text.trim();
-
+    String university = universityController.text.trim();
+    String fname = fnameController.text.trim();
+    String mname = mnameController.text.trim();
+    String lname = lnameController.text.trim();
 
     if (isLogin){
-      if (username.isEmpty||password1.isEmpty){
+      if (email.isEmpty||password1.isEmpty){
         setState(() {
           emptyError = "This field is required";
         });
@@ -64,7 +80,7 @@ class _AuthScreenState extends State<AuthScreen> {
       });
       // Login
       try {
-        var user = await authService.login(username, password1);
+        var user = await authService.login(email, password1);
         if (user != null && user.role == 'student') {
           
           setState(() {
@@ -72,13 +88,13 @@ class _AuthScreenState extends State<AuthScreen> {
             _user = User.fromMap(user.toMap());
           });
           // Navigator.pushReplacementNamed(context, "/");
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
-          // );
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
+          );
         } else {
           ScaffoldMessenger.of(context)
-              .showSnackBar(SnackBar(content: Text("Access denied"),backgroundColor: Colors.redAccent,));
+              .showSnackBar(SnackBar(content: Text("Login Error: Access denied "),backgroundColor: Colors.redAccent,));
         }
       } catch(err){
         ScaffoldMessenger.of(context)
@@ -147,7 +163,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         style: TextStyle(fontSize:15),
                       ),
                       TextField(
-                        controller: emailController,
+                        controller: usernameController,
                         decoration: InputDecoration(labelText: "Student ID"),
                         style: TextStyle(fontSize:15),
 
@@ -168,10 +184,10 @@ class _AuthScreenState extends State<AuthScreen> {
                 Column(
                   children: [
                     TextField(
-                      controller: usernameController,
+                      controller: emailController,
                       decoration: InputDecoration(
-                          labelText: "Your University ID",
-                        error: usernameController.text.isEmpty ? Text
+                          labelText: "Your Email",
+                        error: emailController.text.isEmpty ? Text
                           ("Required") : null,
                       ),
                       style: TextStyle(fontSize:15),
@@ -228,20 +244,21 @@ class _AuthScreenState extends State<AuthScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: ()  async {
-                      await handleAuth();
-                      if (_user.username != null && _user.department != null) {
-                        print(_user!.department);
-                        setState(() {
-                          userProvider.setUser(newUser: _user);
-                        });
-                        // Navigator.pushNamed(context, "/");
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
-                        );
-                      }
-                    },
+                    onPressed: handleAuth,
+                    // onPressed: ()  async {
+                    //   handleAuth();
+                    //   if (_user.username != null && _user.department != null) {
+                    //     print(_user!.department);
+                    //     setState(() {
+                    //       userProvider.setUser(newUser: _user);
+                    //     });
+                    //     // Navigator.pushNamed(context, "/");
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
+                    //     );
+                    //   }
+                    // },
                     child: Text(isLogin ? "Login" : "Register", style:
                     TextStyle(fontSize: 15)),
                   ),
