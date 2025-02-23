@@ -50,7 +50,7 @@ class TestHome extends StatefulWidget {
 }
 
 class _TestHomeState extends State<TestHome> {
-  var department;
+  // var department;
   String? departmentName;
   int departmentId = 0;
   List _data = [];
@@ -236,7 +236,7 @@ class _TestHomeState extends State<TestHome> {
                 onChanged: (value) {
                   setState(() {
                     //
-                    department = user.department;
+                    String? department = user.department;
                     if (department != null) {
                       if (useModeProvider.offlineMode) {
                         // fetch offline data when offline

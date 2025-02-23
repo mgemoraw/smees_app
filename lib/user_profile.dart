@@ -102,82 +102,85 @@ class _UserProfileState extends State<UserProfile> {
       builder: (context) {
         return AlertDialog(
           title: Text("Change Password"),
-          content: Column(children: [
-            TextField(
-              controller: oldPasswordController,
-              autocorrect: true,
-              obscureText: true,
-              decoration: InputDecoration(hintText: "Old Password", errorText: 'Required'),
-              ),
-            TextField(
-              controller: password1Controller,
-              autocorrect: true,
-              obscureText: true,
-              decoration: InputDecoration(hintText: "New Password", errorText: 'Required'),
-            ),
-            TextField(
-              controller: password2Controller,
-              autocorrect: true,
-              obscureText: true,
-              decoration: InputDecoration(hintText: "Repeat Password", errorText: "Required"),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+          content: SingleChildScrollView(
+            child: Column(
               children: [
-                TextButton(
-                  onPressed: () async {
-                    // update 
-                    String oldPassword = oldPasswordController.text;
-                    String password1 = password1Controller.text;
-                    String password2 = password2Controller.text;
-
-                    if (oldPassword.isEmpty || password1.isEmpty || password2.isEmpty){
-                      setState(() {
-                        _message = "All Fields Required";
+              TextField(
+                controller: oldPasswordController,
+                autocorrect: true,
+                obscureText: true,
+                decoration: InputDecoration(hintText: "Old Password", errorText: 'Required'),
+                ),
+              TextField(
+                controller: password1Controller,
+                autocorrect: true,
+                obscureText: true,
+                decoration: InputDecoration(hintText: "New Password", errorText: 'Required'),
+              ),
+              TextField(
+                controller: password2Controller,
+                autocorrect: true,
+                obscureText: true,
+                decoration: InputDecoration(hintText: "Repeat Password", errorText: "Required"),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  TextButton(
+                    onPressed: () async {
+                      // update 
+                      String oldPassword = oldPasswordController.text;
+                      String password1 = password1Controller.text;
+                      String password2 = password2Controller.text;
+            
+                      if (oldPassword.isEmpty || password1.isEmpty || password2.isEmpty){
+                        setState(() {
+                          _message = "All Fields Required";
+                        });
+                      } else if(password1!= password2 ){
+                        setState(() {
+                          _message = "Passwords Do not match";
+                        });
+                      } else {
+                       
+                        // send password change
+                        await _updatePassword({'old_password': oldPassword, 'new_password': password2});
+            
+                        // exit the popoup window
+                        setState(() {
+                          oldPasswordController.text = "";
+                          password1Controller.text = "";
+                          password2Controller.text = '';
                       });
-                    } else if(password1!= password2 ){
-                      setState(() {
-                        _message = "Passwords Do not match";
-                      });
-                    } else {
-                     
-                      // send password change
-                      await _updatePassword({'old_password': oldPassword, 'new_password': password2});
-
-                      // exit the popoup window
+                        Navigator.of(context).pop();
+            
+                        (_message == "success")
+                        ? ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Password Updated"), backgroundColor: Colors.green,),
+                        )
+                        : ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("$_message"), backgroundColor: Colors.deepOrange,),
+                        );
+                      }
+                      
+                    }, child: isLoading? CircularProgressIndicator(color: Colors.blue) : Text("Update"),
+                  ),
+                  TextButton(
+                    onPressed: (){
+                      //
                       setState(() {
                         oldPasswordController.text = "";
                         password1Controller.text = "";
                         password2Controller.text = '';
-                    });
-                      Navigator.of(context).pop();
-
-                      (_message == "success")
-                      ? ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("Password Updated"), backgroundColor: Colors.green,),
-                      )
-                      : ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("$_message"), backgroundColor: Colors.deepOrange,),
-                      );
-                    }
-                    
-                  }, child: isLoading? CircularProgressIndicator(color: Colors.blue) : Text("Update"),
-                ),
-                TextButton(
-                  onPressed: (){
-                    //
-                    setState(() {
-                      oldPasswordController.text = "";
-                      password1Controller.text = "";
-                      password2Controller.text = '';
-                    });
-                    
-                  }, child: Text("Clear"),
-                ),
-              ],
-            ),
-            Text("$_message"),
-          ],),
+                      });
+                      
+                    }, child: Text("Clear"),
+                  ),
+                ],
+              ),
+              Text("$_message"),
+            ],),
+          ),
           actions: [
             TextButton(
               onPressed: (){

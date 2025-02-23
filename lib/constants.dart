@@ -27,7 +27,7 @@ class DepartmentOptions extends StatefulWidget {
 
 class _DepartmentOptionsState extends State<DepartmentOptions> {
   var items = [
-    'None',
+    'none',
     'Civil Engineering',
     'Water Resources and Irrigation Engineering',
     'Hydraulic and Water Resources Engineering',

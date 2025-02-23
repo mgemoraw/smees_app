@@ -6,6 +6,7 @@ class User {
   String? fname;
   String? mname;
   String? lname;
+  String? sex;
   String? email;
   String? university;
   String? department;
@@ -17,6 +18,7 @@ class User {
     this.mname,
     this.lname,
     this.email,
+    this.sex,
     this.university,
     this.department,
     this.createdAt,
@@ -30,9 +32,11 @@ class User {
       'fname': fname,
       'mname': mname,
       'lname': lname,
+      'sex': sex,
       'email': email,
       'university': university,
       'department': department,
+      'createdAt': createdAt!.toIso8601String(),
     };
   }
 

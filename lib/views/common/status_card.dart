@@ -72,7 +72,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
         ),
       ),
       title: Text(
-        "Welcome ${user!.username}",
+        "Welcome ${userProvider.user!.username}",
         style: const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,

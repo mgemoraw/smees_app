@@ -20,11 +20,13 @@ class UserProvider extends ChangeNotifier {
   User _user = User(
     username: null,
     email: null,
+    sex: null,
     password: null,
     fname: null,
     mname: null,
     lname: null,
     department: null,
+    university: null,
     createdAt: null,
   );
 
