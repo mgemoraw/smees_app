@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter_markdown/flutter_markdown.dart";
 import "package:provider/provider.dart";
 import "package:shared_preferences/shared_preferences.dart";
 import "package:smees/security/logout.dart";
@@ -50,106 +51,106 @@ class _LeftNavigationState extends State<LeftNavigation> {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final useModeProvider = Provider.of<UseModeProvider>(context);
 
-    return Container(
-      child: Drawer(
-        shadowColor: bgColor,
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Column(
-                children: [
-                  Image.asset('assets/images/profile.png', height: 100),
-                  Text("SMEES-App- $SMEES_APP_VERSION"),
-                ],
-              ),
+    return Drawer(
+      shadowColor: bgColor,
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          DrawerHeader(
+            decoration: const BoxDecoration(
+              color: Colors.white,
             ),
-            ExpansionTile(
-              leading: Icon(Icons.settings),
-              title: Text("Settings"),
+            child: Column(
               children: [
-                ListTile(
-                  leading: !useModeProvider.offlineMode
-                      ? const Icon(Icons.online_prediction)
-                      : const Icon(Icons.network_locked),
-                  title: const Text('Network Mode'),
-                  onTap: () {
-                    // Navigator.pushNamed(context, "/settings");
-                  },
-                  trailing: Switch(
-                      value: !useModeProvider.offlineMode,
-                      onChanged: (value) {
-                        setState(() {
-                          // change offlineMode state
-                          context.read<UseModeProvider>().changeUseMode();
-                        });
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          backgroundColor: Colors.blue,
-                          content: useModeProvider.offlineMode
-                              ? Text("Offline Mode")
-                              : Text("Online Mode"),
-                        ));
-                      }),
-                  subtitle:
-                      Text(useModeProvider.offlineMode ? "Offline" : "Online"),
-                ),
-                ListTile(
-                  leading: themeProvider.isDark
-                      ? const Icon(Icons.dark_mode)
-                      : const Icon(Icons.light_mode),
-                  title: const Text("Theme"),
-                  trailing: Switch(
-                      value: themeProvider.isDark,
-                      onChanged: (value) {
-                        setState(() {
-                          themeProvider.changeTheme();
-                        });
-                      }),
-                  subtitle: Text(themeProvider.isDark ? "Dark" : "Light"),
-                ),
+                Image.asset('assets/images/profile.png', height: 100),
+                Text("SMEES-App- $SMEES_APP_VERSION"),
               ],
             ),
-            ExpansionTile(
-                title: Text("About App"),
-                leading: Icon(Icons.info),
-                children: [
-                  ListTile(
-                    // leading: Icon(Icons.info),
+          ),
+          ExpansionTile(
+            leading: Icon(Icons.settings),
+            title: Text("Settings"),
+            children: [
+              ListTile(
+                leading: !useModeProvider.offlineMode
+                    ? const Icon(Icons.online_prediction)
+                    : const Icon(Icons.network_locked),
+                title: const Text('Network Mode'),
+                onTap: () {
+                  // Navigator.pushNamed(context, "/settings");
+                },
+                trailing: Switch(
+                    value: !useModeProvider.offlineMode,
+                    onChanged: (value) {
+                      setState(() {
+                        // change offlineMode state
+                        context.read<UseModeProvider>().changeUseMode();
+                      });
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        backgroundColor: Colors.blue,
+                        content: useModeProvider.offlineMode
+                            ? Text("Offline Mode")
+                            : Text("Online Mode"),
+                      ));
+                    }),
+                subtitle:
+                    Text(useModeProvider.offlineMode ? "Offline" : "Online"),
+              ),
+              ListTile(
+                leading: themeProvider.isDark
+                    ? const Icon(Icons.dark_mode)
+                    : const Icon(Icons.light_mode),
+                title: const Text("Theme"),
+                trailing: Switch(
+                    value: themeProvider.isDark,
+                    onChanged: (value) {
+                      setState(() {
+                        themeProvider.changeTheme();
+                      });
+                    }),
+                subtitle: Text(themeProvider.isDark ? "Dark" : "Light"),
+              ),
+            ],
+          ),
+          ExpansionTile(
+              title: Text("About App"),
+              leading: Icon(Icons.info),
+              children: [
+                ListTile(
+                  // leading: Icon(Icons.info),
 
-                    onTap: () {},
-                    title: Column(
-                      children: [
-                        ListTile(
-                          title: RichText(
-                            softWrap: true,
-                            text: const TextSpan(
-                              text:
-                                  "This app is developed by Mengistu Getie & Tadele Yigrem in Collaboration with Bahir Dar Institute of Technology as TT project to support BiT Students practice and gain knowledge from model exam questions. Mr. Tadele Yigrem has a great contribution starting from initiating the project up to data collection and processing. Bahir Dar Institute of Technology, BiT has given its ultimate support and finance which helped us in covering data collection, testing and deployment related costs. please contact us for support and feedbacks",
-                              style: TextStyle(color: Colors.blue),
-                            ),
+                  onTap: () {},
+                  title: Column(
+                    children: [
+                      ListTile(
+                        title: RichText(
+                          softWrap: true,
+                          text: const TextSpan(
+                            text:
+                                "This app is developed by Mengistu Getie & Tadele Yigrem in Collaboration with Bahir Dar Institute of Technology as TT project to support BiT Students practice and gain knowledge from model exam questions. Mr. Tadele Yigrem has a great contribution starting from initiating the project up to data collection and processing. Bahir Dar Institute of Technology, BiT has given its ultimate support and finance which helped us in covering data collection, testing and deployment related costs. please contact us for support and feedbacks",
+                            style: TextStyle(color: Colors.blue),
                           ),
-                          subtitle: TextButton(
-                              onPressed: () {
-                                // contact mail
-                                print("contact mail send");
-                              },
-                              child: Text("Contact Us")),
                         ),
-                      ],
-                    ),
+
+                        subtitle: Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Contact us on: smees.dev@gmail.com"),
+                          ),
+                        )),
+                    ],
                   ),
-                  ListTile(
-                    leading: Icon(Icons.feedback),
-                    title: const Text('Send Us feedback'),
-                    onTap: () {},
-                  ),
-                ]),
-            const LoginLogout(),
-          ],
-        ),
+                ),
+                ListTile(
+                  leading: Icon(Icons.feedback),
+                  title: const Text('Send Us feedback'),
+                  onTap: () {
+                    Navigator.pushReplacementNamed(context, "/feedback");
+                  },
+                ),
+              ]),
+          const LoginLogout(),
+        ],
       ),
     );
   }

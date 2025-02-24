@@ -4105,7 +4105,7 @@
         "department_name": "Chemical Engineering",
         "course_name": "",
         "content": "Find the x & y co-ordinate in the figure below at steady state. Here, the gas phase and liquid phase mole fraction representation is given below.",
-        "image": "assets/ChemicalEngineering/img101.png",
+        "image": "che-img101.png",
         "options": [
             {
                 "label": "A",
@@ -4146,7 +4146,7 @@
         "department_name": "Chemical Engineering",
         "course_name": "",
         "content": "Find the point P in this enriching section. Where, Xd- concentration of distillate and R- reflux ratio",
-        "image": "assets/ChemicalEngineering/img102.png",
+        "image": "che-img102.png",
         "options": [
             {
                 "label": "A",
@@ -4187,7 +4187,7 @@
         "department_name": "Chemical Engineering",
         "course_name": "",
         "content": "Find the relative volatility, if x, y are the concentrations in mole fraction.",
-        "image": "assets/ChemicalEngineering/img103.png",
+        "image": "che-img103.png",
         "options": [
             {
                 "label": "A",

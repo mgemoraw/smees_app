@@ -226,7 +226,7 @@ class _LoginState extends State<Login> {
                       SizedBox(height: 16.0),
                       ListTile(
                         onTap: () {
-                          Navigator.pushNamed(context, "/reset");
+                          Navigator.pushReplacementNamed(context, "/reset");
                         },
                         title: const Text('Forgot Password?',
                           style: TextStyle(color: Colors.black, fontSize: 18),
@@ -234,7 +234,7 @@ class _LoginState extends State<Login> {
                       ),
                       ListTile(
                       onTap: () {
-                        Navigator.pushNamed(context, "/register");
+                        Navigator.pushReplacementNamed(context, "/register");
                       },
                       title: Text("Don't have student account? Register", 
                       style: TextStyle(color: Colors.black, fontSize: 18),),
@@ -293,6 +293,7 @@ class _LoginState extends State<Login> {
         final storage = FlutterSecureStorage();
         await storage.write(key:"smees_token", value: token);
 
+        Provider.of<UserProvider>(context, listen: false).setUser(newUser: User.fromJson(smeesUser));
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('smees-user', smeesUser);
 

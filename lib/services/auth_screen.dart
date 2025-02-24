@@ -88,18 +88,20 @@ class _AuthScreenState extends State<AuthScreen> {
           isLoading = true;
         });
         var user = await authService.login(email, password1);
-        if (user != null){ // && user.role == 'student') {
 
+        // avoids unsafe usage of BuildContext after await operation
+        if (!mounted) return; // checks if the widget is still in the tree
+
+        if (user != null){ // && user.role == 'student') {
+          // final userProvider = Provider.of<UserProvider>(context, listen: false);
           setState(() {
             // set global user state
             _user = User.fromMap(user.toMap());
-
+            Provider.of<UserProvider>(context, listen: false).setUser(newUser: _user);
           });
+
           Navigator.pushReplacementNamed(context, "/");
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
-          // );
+
         } else {
 
           ScaffoldMessenger.of(context)
@@ -164,7 +166,7 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     final userProvider = Provider.of<UserProvider>(context);
-    
+
     return PopScope(
         canPop: false,
         child: Scaffold(
@@ -188,41 +190,35 @@ class _AuthScreenState extends State<AuthScreen> {
                   SizedBox(height: 16.0),
                   if (!isLogin) Column(
                     children: [
-                      Row(
-                        children: [
-                          TextField(
-                            controller: fnameController,
-                            decoration: InputDecoration(
-                                labelText: "First Name",
-                                error: fnameController.text.isEmpty ? Text("Required") : null,
-                            ),
-
-                          ),
-                          TextField(
-                            controller: mnameController,
-                            decoration: InputDecoration(
-                                labelText: "Father Name",
-                              error: mnameController.text.isEmpty ? Text("Required") : null,
-                            ),
-                            style: TextStyle(fontSize:15),
-                          ),
-                          TextField(
-                            controller: lnameController,
-                            decoration: InputDecoration(
-                              labelText: "G.F Name",
-                              error: lnameController.text.isEmpty ? Text("Required") : null,
-                            ),
-                            style: TextStyle(fontSize:15),
-                          ),
-                        ],
-                      ),
-
+                      // TextField(
+                      //   controller: fnameController,
+                      //   decoration: InputDecoration(
+                      //       labelText: "First Name",
+                      //       error: fnameController.text.isEmpty ? Text("Required") : null,
+                      //   ),
+                      //
+                      // ),
+                      // TextField(
+                      //   controller: mnameController,
+                      //   decoration: InputDecoration(
+                      //       labelText: "Father Name",
+                      //     error: mnameController.text.isEmpty ? Text("Required") : null,
+                      //   ),
+                      //   style: TextStyle(fontSize:15),
+                      // ),
+                      // TextField(
+                      //   controller: lnameController,
+                      //   decoration: InputDecoration(
+                      //     labelText: "G.F Name",
+                      //     error: lnameController.text.isEmpty ? Text("Required") : null,
+                      //   ),
+                      //   style: TextStyle(fontSize:15),
+                      // ),
                       TextField(
                         controller: usernameController,
                         decoration: InputDecoration(
                             labelText: "Student ID",
                           error: usernameController.text.isEmpty ? Text("Required") : null,
-                          prefixIcon: Icon(Icons.person),
                         ),
                         style: TextStyle(fontSize:15),
 
@@ -234,7 +230,6 @@ class _AuthScreenState extends State<AuthScreen> {
                           labelText: "University",
                           error: universityController.text.isEmpty ? Text
                             ("Required") : null,
-                          prefixIcon: Icon(Icons.school),
                         ),
                         style: TextStyle(fontSize:15),
                       ),
@@ -245,7 +240,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           hint: Text("Choose you field of study"),
                             padding: EdgeInsets.all(16.0),
                             items: getDepartments(),
-                            value: department!='null'? department : "Choose Field of Study",
+                            value: department,
                             onChanged: (value){
                               setState(() {
                                 department = value!;
@@ -267,7 +262,6 @@ class _AuthScreenState extends State<AuthScreen> {
                           labelText: "Your Email",
                         error: emailController.text.isEmpty ? Text
                           ("Required") : null,
-                        prefixIcon: Icon(Icons.email),
                       ),
                       style: TextStyle(fontSize:15),
                     ),

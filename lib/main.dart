@@ -93,13 +93,13 @@ class SmeesApp extends StatelessWidget {
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       //   useMaterial3: true,
       // ),
-      // onGenerateRoute: ,
       // home: AuthWrapper(),
 
       initialRoute: "/login",
       routes: {
-        // '/login': (context) => const Login(),
-        '/login': (context) => AuthScreen(),
+
+        '/login': (context) => const Login(),
+        // '/login': (context) => AuthScreen(),
         '/': (context) => const Home(title: "SMEES", department: ""),
         '/quiz': (context) => const TestHome(department: ""),
         "/exam": (context) => const ExamHome(department: ""),
@@ -111,6 +111,9 @@ class SmeesApp extends StatelessWidget {
         "/reset": (context) => const AccountReset(),
         "/register": (context) => const AccountCreate(),
       },
+      // onUnknownRoute: (settings) {
+      //   return MaterialPageRoute(builder: (context) => NotFoundPage());
+      // },
     );
   }
 }

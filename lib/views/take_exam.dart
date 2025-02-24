@@ -189,7 +189,7 @@ class _TakeExamState extends State<TakeExam> {
         child: Column(children: [
           // Question index tracker
           Container(
-            height: 40,
+            height: 60,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: widget.items.length,
@@ -206,10 +206,12 @@ class _TakeExamState extends State<TakeExam> {
                       },
                       style: TextButton.styleFrom(
                         backgroundColor:
-                            userAnswers[index] == null ? null : Colors.green,
+                            userAnswers[index] == null ? null : Colors.blue,
                       ),
                       child: Text(
                         "${index + 1}",
+                        style: TextStyle(fontSize: 15, fontWeight: FontWeight
+                            .bold),
                       ),
                     ),
                   );

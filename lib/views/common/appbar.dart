@@ -20,7 +20,7 @@ class SmeesAppbar extends StatefulWidget implements PreferredSizeWidget {
 }
 
 class _SmeesAppbarState extends State<SmeesAppbar> {
-  bool isLoggedIn = false;
+
   User? user;
   @override
   void initState() {
@@ -28,6 +28,13 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
     _checkUserAuthentication();
   }
 
+  bool isLoggedIn() {
+    final user = Provider.of<UserProvider>(context, listen: false).user;
+    if (user.username != null){
+      return true;
+    }
+    return false;
+  }
   Future<void> _checkUserAuthentication() async {
     final prefs = await SharedPreferences.getInstance();
     final token = prefs.getString("smees-token");
@@ -36,7 +43,7 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
 
     setState(() {
       if (token != null) {
-        isLoggedIn = !isLoggedIn;
+        // isLoggedIn = !isLoggedIn;
         user = User(
           username: username,
           university: null,
@@ -56,20 +63,22 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
       ),
       actions: [
         PopupMenuButton(
-            itemBuilder: (context) => isLoggedIn
-                ? [
+            itemBuilder: (context) =>
+                [
                     PopupMenuItem(
                       child: TextButton(
                         child: Text("About Us"),
                         onPressed: () {},
                       ),
                     ),
-                    PopupMenuItem(
-                      child: IconButton(
-                        icon: const Icon(Icons.settings),
-                        onPressed: () {},
-                      ),
+                  PopupMenuItem(
+                    child: IconButton(
+                      icon: const Icon(Icons.settings),
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/settings");
+                      },
                     ),
+                  ),
                     PopupMenuItem(
                       child: IconButton(
                         icon: const Icon(Icons.login),
@@ -77,41 +86,36 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
                           setState(() {
                             // logout();
                             Navigator.pop(context);
-                            Navigator.pushNamed(context, "/login");
+                            Navigator.pushReplacementNamed(context, "/login");
                           });
                         },
                       ),
                     )
                   ]
-                : [
-                    PopupMenuItem(
-                      child: TextButton(
-                        child: Text("About Us"),
-                        onPressed: () {},
-                      ),
-                    ),
-                    PopupMenuItem(
-                      child: IconButton(
-                        icon: const Icon(Icons.settings),
-                        onPressed: () {
-                          Navigator.pushNamed(context, "/settings");
-                        },
-                      ),
-                    ),
-                    PopupMenuItem(
-                      child: IconButton(
-                        onPressed: () {
-                          logout();
-                          Navigator.pushNamed(context, "/");
-                          // Navigator.of(context).pushAndRemoveUntil(
-                          //   MaterialPageRoute(builder: (context) => Login()),
-                          //   (Route<dynamic>route=>false),
-                          // );
-                        },
-                        icon: Icon(Icons.logout),
-                      ),
-                    ),
-                  ]),
+                 // [
+                 //    PopupMenuItem(
+                 //      child: TextButton(
+                 //        child: Text("About Us"),
+                 //        onPressed: () {},
+                 //      ),
+                 //    ),
+
+                 //    PopupMenuItem(
+                 //      child: IconButton(
+                 //        onPressed: () {
+                 //          logout();
+                 //          Navigator.pushNamed(context, "/");
+                 //          // Navigator.of(context).pushAndRemoveUntil(
+                 //          //   MaterialPageRoute(builder: (context) => Login()),
+                 //          //   (Route<dynamic>route=>false),
+                 //          // );
+                 //        },
+                 //        icon: Icon(Icons.logout),
+                 //      ),
+                 //    ),
+                 //  ],
+            ),
+
       ],
     );
   }

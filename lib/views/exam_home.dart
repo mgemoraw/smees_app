@@ -16,6 +16,7 @@ import 'package:smees/student_statistics.dart';
 import 'package:smees/views/answer_option.dart';
 import 'package:smees/views/common/appbar.dart';
 import 'package:smees/views/common/drawer.dart';
+import 'package:smees/views/common/status_card.dart';
 import 'package:smees/views/learn_zone.dart';
 import 'package:smees/views/take_exam.dart';
 import 'package:smees/views/user_provider.dart';
@@ -170,42 +171,7 @@ class _ExamHomeState extends State<ExamHome> {
         scrollDirection: Axis.vertical,
         child: Column(children: [
           // user profile card
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                children: [
-                  ClipOval(
-                    child: Image.asset(
-                      'assets/images/user-1.png',
-                      fit: BoxFit.contain,
-                      width: 120,
-                      height: 120,
-                    ),
-                  ),
-                  const Text(
-                    'Test User',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              const Column(
-                children: [
-                  Text(
-                    "Hello User",
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text("Latest Score: 0.0"),
-                ],
-              ),
-            ],
-          ),
+          const UserStatusCard(),
 
           // Choose your field of study section
           const Divider(height: 3, color: Colors.blue),
