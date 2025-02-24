@@ -54,64 +54,65 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
   }
   @override
   Widget build(BuildContext context) {
-    return  _isReady ? PDFView(
-        filePath: _filePath,
-        autoSpacing: true,
-        enableSwipe: true,
-        // pageSnap: true,
-
-        swipeHorizontal: true,
-        fitEachPage: true,
-        onRender: (pages) {
-          // print("PDF rendered with $pages pages");
-          if (mounted){
-            setState(() {
-              _totalPages = pages ?? 0;
-              _isReady = true;
-            });
-          }
-        },
-        onError: (error) {
-          // print("Error loading PDF: $error");
-          if (mounted){
-            setState(() {
-              _errorMessage = error.toString();
-            });
-          }
-
-        },
-        onPageError: (page, error){
-          // print("Error on page $page: $error");
-          if (mounted) {
-            setState(() {
-              _errorMessage = '$page: ${error.toString()}';
-            });
-          }
-        },
-        onViewCreated: (PDFViewController pdfViewController) {
-          print("PDF view created");
-          pdfViewController.getPageCount().then((count) {
-            if (mounted) {
+    return  Expanded(
+      child: _isReady ? PDFView(
+          filePath: _filePath,
+          autoSpacing: true,
+          enableSwipe: true,
+          // pageSnap: true,
+          swipeHorizontal: false, // Vertical scrolling enabled here
+          // fitEachPage: true,
+          onRender: (pages) {
+            // print("PDF rendered with $pages pages");
+            if (mounted){
               setState(() {
-                _totalPages = count!;
+                _totalPages = pages ?? 0;
+                _isReady = true;
+              });
+            }
+          },
+          onError: (error) {
+            // print("Error loading PDF: $error");
+            if (mounted){
+              setState(() {
+                _errorMessage = error.toString();
               });
             }
 
-          });
-        },
+          },
+          onPageError: (page, error){
+            // print("Error on page $page: $error");
+            if (mounted) {
+              setState(() {
+                _errorMessage = '$page: ${error.toString()}';
+              });
+            }
+          },
+          onViewCreated: (PDFViewController pdfViewController) {
+            print("PDF view created");
+            pdfViewController.getPageCount().then((count) {
+              if (mounted) {
+                setState(() {
+                  _totalPages = count!;
+                });
+              }
 
-        onPageChanged: (int? page, int? total){
-          if (mounted) {
-            setState(() {
-              _currentPage = page ?? 0;
-              _totalPages = total ?? 0;
             });
-          }
-        },
+          },
 
-    ) : _errorMessage.isEmpty
-      ? Center(child: CircularProgressIndicator())
-        : Center(child: Text(_errorMessage));
+          onPageChanged: (int? page, int? total){
+            if (mounted) {
+              setState(() {
+                _currentPage = page ?? 0;
+                _totalPages = total ?? 0;
+              });
+            }
+          },
+
+      ) : _errorMessage.isEmpty
+        ? Center(child: CircularProgressIndicator())
+          : Center(child: Text(_errorMessage)),
+    );
   }
 
 }
