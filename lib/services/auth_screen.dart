@@ -95,11 +95,11 @@ class _AuthScreenState extends State<AuthScreen> {
             _user = User.fromMap(user.toMap());
 
           });
-          // Navigator.pushReplacementNamed(context, "/");
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
-          );
+          Navigator.pushReplacementNamed(context, "/");
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(builder: (context) => Home(title: "SMEES", department: ""))
+          // );
         } else {
 
           ScaffoldMessenger.of(context)
@@ -188,35 +188,41 @@ class _AuthScreenState extends State<AuthScreen> {
                   SizedBox(height: 16.0),
                   if (!isLogin) Column(
                     children: [
-                      // TextField(
-                      //   controller: fnameController,
-                      //   decoration: InputDecoration(
-                      //       labelText: "First Name",
-                      //       error: fnameController.text.isEmpty ? Text("Required") : null,
-                      //   ),
-                      //
-                      // ),
-                      // TextField(
-                      //   controller: mnameController,
-                      //   decoration: InputDecoration(
-                      //       labelText: "Father Name",
-                      //     error: mnameController.text.isEmpty ? Text("Required") : null,
-                      //   ),
-                      //   style: TextStyle(fontSize:15),
-                      // ),
-                      // TextField(
-                      //   controller: lnameController,
-                      //   decoration: InputDecoration(
-                      //     labelText: "G.F Name",
-                      //     error: lnameController.text.isEmpty ? Text("Required") : null,
-                      //   ),
-                      //   style: TextStyle(fontSize:15),
-                      // ),
+                      Row(
+                        children: [
+                          TextField(
+                            controller: fnameController,
+                            decoration: InputDecoration(
+                                labelText: "First Name",
+                                error: fnameController.text.isEmpty ? Text("Required") : null,
+                            ),
+
+                          ),
+                          TextField(
+                            controller: mnameController,
+                            decoration: InputDecoration(
+                                labelText: "Father Name",
+                              error: mnameController.text.isEmpty ? Text("Required") : null,
+                            ),
+                            style: TextStyle(fontSize:15),
+                          ),
+                          TextField(
+                            controller: lnameController,
+                            decoration: InputDecoration(
+                              labelText: "G.F Name",
+                              error: lnameController.text.isEmpty ? Text("Required") : null,
+                            ),
+                            style: TextStyle(fontSize:15),
+                          ),
+                        ],
+                      ),
+
                       TextField(
                         controller: usernameController,
                         decoration: InputDecoration(
                             labelText: "Student ID",
                           error: usernameController.text.isEmpty ? Text("Required") : null,
+                          prefixIcon: Icon(Icons.person),
                         ),
                         style: TextStyle(fontSize:15),
 
@@ -228,6 +234,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           labelText: "University",
                           error: universityController.text.isEmpty ? Text
                             ("Required") : null,
+                          prefixIcon: Icon(Icons.school),
                         ),
                         style: TextStyle(fontSize:15),
                       ),
@@ -260,6 +267,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           labelText: "Your Email",
                         error: emailController.text.isEmpty ? Text
                           ("Required") : null,
+                        prefixIcon: Icon(Icons.email),
                       ),
                       style: TextStyle(fontSize:15),
                     ),
