@@ -21,6 +21,8 @@ import 'package:smees/services/working_directories.dart';
 import 'package:smees/services/storage_permission.dart';
 import 'package:smees/views/accounts/account_reset.dart';
 import 'package:smees/views/accounts/account_create.dart';
+import 'package:smees/views/smees_webview.dart';
+import 'package:smees/views/gemini_page.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'home_page.dart';
@@ -98,8 +100,8 @@ class SmeesApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
 
-        '/login': (context) => const Login(),
-        // '/login': (context) => AuthScreen(),
+        // '/login': (context) => const Login(),
+        '/login': (context) => AuthScreen(),
         '/': (context) => const Home(title: "SMEES", department: ""),
         '/quiz': (context) => const TestHome(department: ""),
         "/exam": (context) => const ExamHome(department: ""),
@@ -110,6 +112,8 @@ class SmeesApp extends StatelessWidget {
         "/feedback": (context) => const SmeesFeedback(),
         "/reset": (context) => const AccountReset(),
         "/register": (context) => const AccountCreate(),
+        "/webview" : (context) => const SmeesWebView(),
+        "/gemini" : (context) => const GeminiAIPage(),
       },
       // onUnknownRoute: (settings) {
       //   return MaterialPageRoute(builder: (context) => NotFoundPage());

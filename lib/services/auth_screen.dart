@@ -28,7 +28,9 @@ class _AuthScreenState extends State<AuthScreen> {
   final TextEditingController idController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController departmentController = TextEditingController();
-  String department = "null";
+  final TextEditingController sexController = TextEditingController();
+
+  var department;
   User _user = User();
   String emptyError = "";
   bool isLogin = true;
@@ -67,6 +69,7 @@ class _AuthScreenState extends State<AuthScreen> {
     String fname = fnameController.text.trim();
     String mname = mnameController.text.trim();
     String lname = lnameController.text.trim();
+    String sex = sexController.text.trim();
     String password = "";
     UserModel? data;
 
@@ -96,8 +99,20 @@ class _AuthScreenState extends State<AuthScreen> {
           // final userProvider = Provider.of<UserProvider>(context, listen: false);
           setState(() {
             // set global user state
-            _user = User.fromMap(user.toMap());
-            Provider.of<UserProvider>(context, listen: false).setUser(newUser: _user);
+            User newUser = User(
+              fname: user.fname,
+              mname: user.mname,
+              lname: user.lname,
+              sex: user.sex,
+              username: user.username,
+              email: user.email,
+              department: user.department,
+              university: user.university,
+              createdAt: user.createdAt,
+            );
+            _user =newUser;
+
+            Provider.of<UserProvider>(context, listen: false).setUser(newUser: newUser);
           });
 
           Navigator.pushReplacementNamed(context, "/");
@@ -131,9 +146,13 @@ class _AuthScreenState extends State<AuthScreen> {
 
         data = UserModel(
           uid: "",
+          fname: fname,
+          mname: mname,
+          lname:lname,
+          sex: sex,
           username: username,
           email: email,
-          department: department,
+          department: department!,
           createdAt: DateTime.now(),
           role: 'student',
         );
@@ -243,7 +262,7 @@ class _AuthScreenState extends State<AuthScreen> {
                             value: department,
                             onChanged: (value){
                               setState(() {
-                                department = value!;
+                                department = value;
                               });
                             },
                         ),

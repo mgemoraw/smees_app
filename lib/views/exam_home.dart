@@ -214,7 +214,9 @@ class _ExamHomeState extends State<ExamHome> {
                   isLoading = true;
                 });
                 if (useModeProvider.offlineMode) {
-                  await readJson(user.department!);
+                  if (user.department != null){
+                    await readJson(user.department!);
+                  }
                 } else if(!useModeProvider.offlineMode) {
                   await _downloadQuestions();
                 }

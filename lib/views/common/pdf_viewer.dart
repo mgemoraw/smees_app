@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:smees/views/common/appbar.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'dart:io';
 
 
@@ -54,65 +56,98 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
   }
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
-      child: _isReady ? PDFView(
-          filePath: _filePath,
-          autoSpacing: true,
-          enableSwipe: true,
-          // pageSnap: true,
-          swipeHorizontal: false, // Vertical scrolling enabled here
-          // fitEachPage: true,
-          onRender: (pages) {
-            // print("PDF rendered with $pages pages");
-            if (mounted){
-              setState(() {
-                _totalPages = pages ?? 0;
-                _isReady = true;
-              });
-            }
-          },
-          onError: (error) {
-            // print("Error loading PDF: $error");
-            if (mounted){
-              setState(() {
-                _errorMessage = error.toString();
-              });
-            }
-
-          },
-          onPageError: (page, error){
-            // print("Error on page $page: $error");
-            if (mounted) {
-              setState(() {
-                _errorMessage = '$page: ${error.toString()}';
-              });
-            }
-          },
-          onViewCreated: (PDFViewController pdfViewController) {
-            print("PDF view created");
-            pdfViewController.getPageCount().then((count) {
-              if (mounted) {
-                setState(() {
-                  _totalPages = count!;
-                });
-              }
-
+    return  _isReady ? PDFView(
+        filePath: _filePath,
+        autoSpacing: true,
+        enableSwipe: true,
+        // pageSnap: true,
+        swipeHorizontal: false, // Vertical scrolling enabled here
+        // fitEachPage: true,
+        onRender: (pages) {
+          // print("PDF rendered with $pages pages");
+          if (mounted){
+            setState(() {
+              _totalPages = pages ?? 0;
+              _isReady = true;
             });
-          },
+          }
+        },
+        onError: (error) {
+          // print("Error loading PDF: $error");
+          if (mounted){
+            setState(() {
+              _errorMessage = error.toString();
+            });
+          }
 
-          onPageChanged: (int? page, int? total){
+        },
+        onPageError: (page, error){
+          // print("Error on page $page: $error");
+          if (mounted) {
+            setState(() {
+              _errorMessage = '$page: ${error.toString()}';
+            });
+          }
+        },
+        onViewCreated: (PDFViewController pdfViewController) {
+          print("PDF view created");
+          pdfViewController.getPageCount().then((count) {
             if (mounted) {
               setState(() {
-                _currentPage = page ?? 0;
-                _totalPages = total ?? 0;
+                _totalPages = count!;
               });
             }
-          },
 
-      ) : _errorMessage.isEmpty
-        ? Center(child: CircularProgressIndicator())
-          : Center(child: Text(_errorMessage)),
-    );
+          });
+        },
+
+        onPageChanged: (int? page, int? total){
+          if (mounted) {
+            setState(() {
+              _currentPage = page ?? 0;
+              _totalPages = total ?? 0;
+            });
+          }
+        },
+
+    ) : _errorMessage.isEmpty
+      ? Center(child: CircularProgressIndicator())
+        : Center(child: Text(_errorMessage));
   }
 
 }
+
+
+class PDFViewScreen extends StatefulWidget {
+  final filePath;
+  const PDFViewScreen({super.key, required this.filePath});
+
+  @override
+  State<PDFViewScreen> createState() => _PDFViewScreenState();
+}
+
+class _PDFViewScreenState extends State<PDFViewScreen> {
+  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      // appBar: AppBar(
+      //     title: Text("Blue Print"),
+      //   actions: [
+      //     IconButton(
+      //       icon: Icon(Icons.bookmark),
+      //       onPressed: (){
+      //         _pdfViewerKey.currentState?.openBookmarkView();
+      //       },
+      //     ),
+      //   ]
+      // ),
+      child: SfPdfViewer.asset(
+          widget.filePath,
+          key: _pdfViewerKey,
+      ),
+
+    );
+  }
+}
+

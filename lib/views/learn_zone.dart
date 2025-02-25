@@ -4,10 +4,13 @@ import "dart:io";
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
 import "package:path_provider/path_provider.dart";
+import "package:provider/provider.dart";
 import "package:shared_preferences/shared_preferences.dart";
+import "package:smees/models/user.dart";
 import "package:smees/views/common/appbar.dart";
 import "package:smees/views/common/navigation.dart";
 import "package:smees/views/common/pdf_viewer.dart";
+import "package:smees/views/user_provider.dart";
 
 
 
@@ -54,43 +57,78 @@ class _LearnZoneState extends State<LearnZone> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    UserProvider userProvider = Provider.of<UserProvider>(context);
+    User user = userProvider.user;
 
-      body: SingleChildScrollView(
-        child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-          Text("Read blue print below",
-          style: TextStyle
-            (fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),),
-          SizedBox(height: 15.0,),
-          SizedBox(
-            width: double.infinity,
-            child: MaterialButton(
-              color: Colors.grey,
-              child: Text("Read blue print", style: TextStyle(fontSize: 18,
-                  color: Colors.blue[900])),
-              onPressed: () async {
-        
-                  // await _loadPDF();
-                  setState(() {
-                    isReady = true;
-                  });
-              },
-            ),
-          ),
-        
-           !isReady ? Center(child: Text("Click 'Read blue print' to load "))
-           : SizedBox(
-             height: 1000,
-            child: PDFViewerPage(
-                path: pdfPath),
-          ),
-          ],
+    return ListView(
+      // crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+      Center(
+        child: Text("${user.department} Contents ",
+        style: TextStyle
+          (fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),),
+      ),
+      SizedBox(height: 15.0,),
+
+        // open webview page
+      SizedBox(
+        width: double.infinity,
+        child: MaterialButton(
+          color: Colors.blue,
+          child: Text("Open Search Engine", style: TextStyle(fontSize: 18,
+              color: Colors.white)),
+          onPressed: ()  {
+            //
+            Navigator.pushNamed(context, '/webview');
+          },
         ),
       ),
+        // open Gemini page
+        SizedBox(
+          width: double.infinity,
+          child: MaterialButton(
+            color: Colors.blue,
+            child: Text("Open Gemini AI", style: TextStyle(fontSize: 18,
+                color: Colors.white)),
+            onPressed: ()  {
+              //
+              Navigator.pushNamed(context, '/gemini');
+            },
+          ),
+        ),
+      SizedBox(
+        width: double.infinity,
+        child: MaterialButton(
+          color: Colors.blue,
+          child: Text(isReady ? "Close blue print" : "Open Exit Exam blue print", style: TextStyle(fontSize: 18,
+              color: Colors.white)),
+          onPressed: () async {
+
+              // await _loadPDF();
+              setState(() {
+                isReady = !isReady;
+              });
+
+          },
+        ),
+      ),
+
+       !isReady ? Center(child: Text("Click 'Read blue print' to load "))
+       : SizedBox(
+         height: MediaQuery.of(context).size.height,
+        child: PDFViewScreen(filePath: pdfPath,)
+      ),
+
+        // list of courses
+        ExpansionTile(
+            title: Text("${user.department} Courses"),
+            children: [
+              Text("Contents Empty"),
+            ],
+        )
+      ],
     );
   }
 }

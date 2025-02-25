@@ -25,6 +25,10 @@ class AuthService {
       if (user != null) {
         UserModel newUser = UserModel(
           uid: user.uid,
+          fname: data.fname,
+          mname: data.mname,
+          lname: data.lname,
+          sex: data.sex,
           username: data.username,
           email: email,
           department: data.department,
@@ -58,8 +62,7 @@ class AuthService {
       User? user = userCredential.user;
 
       if (user != null) {
-        print("############ user data #################");
-
+        // print("############ user data #################");
 
         // Fetch user details from firstore
         DocumentSnapshot userDoc =
@@ -130,6 +133,10 @@ class AuthService {
       DateTime createdAt = createdAtTimestamp.toDate();
       UserModel user = UserModel(
         uid: query.docs.first.id,
+        fname: query.docs.first['fname'],
+        mname: query.docs.first['mname'],
+        lname: query.docs.first['lname'],
+        sex: query.docs.first['sex'],
         username: query.docs.first['username'],
         email: query.docs.first['email'],
         role: query.docs.first['role'],
