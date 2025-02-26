@@ -6,8 +6,10 @@ import "package:flutter/services.dart";
 import "package:path_provider/path_provider.dart";
 import "package:provider/provider.dart";
 import "package:shared_preferences/shared_preferences.dart";
+import "package:smees/api/end_points.dart";
 import "package:smees/models/user.dart";
 import "package:smees/views/common/appbar.dart";
+import "package:smees/views/common/course_list.dart";
 import "package:smees/views/common/navigation.dart";
 import "package:smees/views/common/pdf_viewer.dart";
 import "package:smees/views/user_provider.dart";
@@ -38,7 +40,6 @@ class _LearnZoneState extends State<LearnZone> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     final userString = prefs.getString("smees-user");
 
-
     if (userString != null) {
       Map<String, dynamic> userData = jsonDecode(userString);
       String departmentName = userData['department'];
@@ -56,7 +57,7 @@ class _LearnZoneState extends State<LearnZone> {
     }
   }
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)  {
     UserProvider userProvider = Provider.of<UserProvider>(context);
     User user = userProvider.user;
 
@@ -76,8 +77,9 @@ class _LearnZoneState extends State<LearnZone> {
       SizedBox(
         width: double.infinity,
         child: MaterialButton(
-          color: Colors.blue,
-          child: Text("Open Search Engine", style: TextStyle(fontSize: 18,
+          color: Colors.blueGrey,
+          child: Text("Open Google Search Engine", style: TextStyle(fontSize:
+          18,
               color: Colors.white)),
           onPressed: ()  {
             //
@@ -89,7 +91,7 @@ class _LearnZoneState extends State<LearnZone> {
         SizedBox(
           width: double.infinity,
           child: MaterialButton(
-            color: Colors.blue,
+            color: Colors.blueGrey,
             child: Text("Open Gemini AI", style: TextStyle(fontSize: 18,
                 color: Colors.white)),
             onPressed: ()  {
@@ -101,34 +103,63 @@ class _LearnZoneState extends State<LearnZone> {
       SizedBox(
         width: double.infinity,
         child: MaterialButton(
-          color: Colors.blue,
-          child: Text(isReady ? "Close blue print" : "Open Exit Exam blue print", style: TextStyle(fontSize: 18,
+          color: Colors.blueGrey,
+          child: Text("Open Exit Exam blue print", style: TextStyle(fontSize: 18,
               color: Colors.white)),
-          onPressed: () async {
+          onPressed: ()  {
 
-              // await _loadPDF();
-              setState(() {
-                isReady = !isReady;
-              });
-
+            Navigator.pushNamed(context, "/blueprint");
+              // setState(() {
+              //   isReady = !isReady;
+              // });
           },
         ),
       ),
 
-       !isReady ? Center(child: Text("Click 'Read blue print' to load "))
-       : SizedBox(
-         height: MediaQuery.of(context).size.height,
-        child: PDFViewScreen(filePath: pdfPath,)
-      ),
+
+      //  !isReady ? Center(child: Text("Click 'Read blue print' to load "))
+      //  : SizedBox(
+      //    height: MediaQuery.of(context).size.height,
+      //   child: PDFViewScreen(filePath: pdfPath,)
+      // ),
+
 
         // list of courses
         ExpansionTile(
-            title: Text("${user.department} Courses"),
+          leading: Icon(Icons.menu_book),
+            title: Text("${user.department} Courses", style: TextStyle
+              (fontSize: 18, fontWeight: FontWeight.bold),),
             children: [
-              Text("Contents Empty"),
+              FutureBuilder<List<Map<String,dynamic>>>(
+                future: getCoursesList(), // Fetch the items from the API
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    return Center(child: Text('Error: ${snapshot.error}'));
+                  } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                    return Center(child: Text('No items available.'));
+                  } else {
+                    // If data is loaded, display the list
+                    List<Map<String, dynamic>> items = snapshot.data!;
+                    return ListView.builder(
+                      itemCount: items.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(items[index]['name']),
+                          subtitle: Text("Course Code: ${items[index]['code']}"),
+                        );
+                      },
+                    );
+                  }
+                },
+              ),
             ],
-        )
+        ),
+
+
       ],
+
     );
   }
 }

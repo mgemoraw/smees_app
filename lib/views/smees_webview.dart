@@ -16,9 +16,34 @@ class _SmeesWebViewState extends State<SmeesWebView> {
   @override
   void initState() {
     super.initState();
+
+
+
+    // controller = WebViewController()
+    // ..setJavaScriptMode(JavaScriptMode.unrestricted)
+    // ..loadRequest(Uri.parse("https://www.google.com"));
+
     controller = WebViewController()
-    ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..loadRequest(Uri.parse("https://www.google.com"));
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onProgress: (int progress) {
+            // Update loading bar.
+          },
+          onPageStarted: (String url) {},
+          onPageFinished: (String url) {},
+          onHttpError: (HttpResponseError error) {},
+          onWebResourceError: (WebResourceError error) {},
+          onNavigationRequest: (NavigationRequest request) {
+            if (request.url.startsWith('https://www.youtube.com/')) {
+              return NavigationDecision.prevent;
+            }
+            return NavigationDecision.navigate;
+          },
+        ),
+      )
+      ..loadRequest(Uri.parse('https://www.google.com'));
+
   }
   @override
   Widget build(BuildContext context) {

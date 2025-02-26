@@ -209,34 +209,35 @@ class _AuthScreenState extends State<AuthScreen> {
                   SizedBox(height: 16.0),
                   if (!isLogin) Column(
                     children: [
-                      // TextField(
-                      //   controller: fnameController,
-                      //   decoration: InputDecoration(
-                      //       labelText: "First Name",
-                      //       error: fnameController.text.isEmpty ? Text("Required") : null,
-                      //   ),
-                      //
-                      // ),
-                      // TextField(
-                      //   controller: mnameController,
-                      //   decoration: InputDecoration(
-                      //       labelText: "Father Name",
-                      //     error: mnameController.text.isEmpty ? Text("Required") : null,
-                      //   ),
-                      //   style: TextStyle(fontSize:15),
-                      // ),
-                      // TextField(
-                      //   controller: lnameController,
-                      //   decoration: InputDecoration(
-                      //     labelText: "G.F Name",
-                      //     error: lnameController.text.isEmpty ? Text("Required") : null,
-                      //   ),
-                      //   style: TextStyle(fontSize:15),
-                      // ),
+                      TextField(
+                        controller: fnameController,
+                        decoration: InputDecoration(
+                          labelText: "First Name",
+                          error: fnameController.text.isEmpty ? Text("Required") : null,
+                        ),
+
+                      ),
+                      TextField(
+                        controller: mnameController,
+                        decoration: InputDecoration(
+                          labelText: "Father Name",
+                          error: mnameController.text.isEmpty ? Text("Required") : null,
+                        ),
+                        style: TextStyle(fontSize:15),
+                      ),
+                      TextField(
+                        controller: lnameController,
+                        decoration: InputDecoration(
+                          labelText: "G.F Name",
+                          error: lnameController.text.isEmpty ? Text("Required") : null,
+                        ),
+                        style: TextStyle(fontSize:15),
+                      ),
                       TextField(
                         controller: usernameController,
                         decoration: InputDecoration(
-                            labelText: "Student ID",
+                          labelText: "Student ID",
+                          prefixIcon: Icon(Icons.group),
                           error: usernameController.text.isEmpty ? Text("Required") : null,
                         ),
                         style: TextStyle(fontSize:15),
@@ -247,6 +248,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         controller: universityController,
                         decoration: InputDecoration(
                           labelText: "University",
+                          prefixIcon: Icon(Icons.account_balance),
                           error: universityController.text.isEmpty ? Text
                             ("Required") : null,
                         ),
@@ -258,6 +260,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         child: DropdownButton(
                           hint: Text("Choose you field of study"),
                             padding: EdgeInsets.all(16.0),
+                            icon: Icon(Icons.school),
                             items: getDepartments(),
                             value: department,
                             onChanged: (value){
@@ -267,8 +270,6 @@ class _AuthScreenState extends State<AuthScreen> {
                             },
                         ),
                       ),
-
-
                     ],
                   ),
 
@@ -279,6 +280,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       controller: emailController,
                       decoration: InputDecoration(
                           labelText: "Your Email",
+                        prefixIcon: Icon(Icons.email),
                         error: emailController.text.isEmpty ? Text
                           ("Required") : null,
                       ),
@@ -292,7 +294,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       decoration: InputDecoration(
                           error: password1Controller.text.isEmpty ? Text
                             ("Required") : null,
-                          // prefixIcon: Icon(Icons.password),
+                          prefixIcon: Icon(Icons.password),
                           hintText: 'Password',
                           suffixIcon: IconButton(
                               onPressed: () {

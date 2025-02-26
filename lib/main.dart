@@ -10,6 +10,7 @@ import 'package:smees/security/auth.dart';
 import 'package:smees/security/logout.dart';
 import 'package:smees/services/auth_screen.dart';
 import 'package:smees/student_statistics.dart';
+import 'package:smees/views/blueprint.dart';
 import 'package:smees/views/common/smees_feedback.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
@@ -114,6 +115,8 @@ class SmeesApp extends StatelessWidget {
         "/register": (context) => const AccountCreate(),
         "/webview" : (context) => const SmeesWebView(),
         "/gemini" : (context) => const GeminiAIPage(),
+        "/blueprint": (context) => const Blueprint(),
+
       },
       // onUnknownRoute: (settings) {
       //   return MaterialPageRoute(builder: (context) => NotFoundPage());
@@ -172,4 +175,5 @@ Future<void> safeInitialize() async {
 //         : Login();
 //   }
 // }
- 
+// app icon
+// android/app/src/main/res

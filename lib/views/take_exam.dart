@@ -3,6 +3,7 @@ import "dart:convert";
 
 import "package:flutter/material.dart";
 import "package:flutter_secure_storage/flutter_secure_storage.dart";
+import "package:smees/models/user.dart";
 import "package:smees/views/answer_option.dart";
 import "package:smees/views/result_page.dart";
 
@@ -25,6 +26,10 @@ class TakeExam extends StatefulWidget {
 
 class _TakeExamState extends State<TakeExam> {
   // varaibles
+  User? user;
+  DateTime? testStarted;
+  DateTime? testEnded;
+
   String bottomContainerText = "";
   Map userAnswers = {};
   int _qno = 0;
@@ -175,7 +180,7 @@ class _TakeExamState extends State<TakeExam> {
           // forward button
           ElevatedButton(
               onPressed: () {
-                // _previous question
+                // next question
                 _nextQuestion();
               },
               child: const Row(children: [
@@ -330,11 +335,18 @@ class _TakeExamState extends State<TakeExam> {
 
 //
       } else {
+        final result = {
+          'userId': user!.username,
+          'testStarted': testStarted!.toIso8601String(),
+          'testEnded': DateTime.now().toIso8601String(),
+          'questions': widget.items.length,
+          'score': _totalScore,
+        };
         Navigator.pop(context);
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => ResultPage(score: _totalScore)));
+                builder: (context) => ResultPage(resultData: result)));
       }
     });
   }

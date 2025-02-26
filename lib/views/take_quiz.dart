@@ -139,15 +139,15 @@ class _TakeQuizState extends State<TakeQuiz> {
               ])),
 
           // restart button
-          (_qno >= widget.items.length - 1)
-              ? ElevatedButton(
-                  onPressed: () {
-                    // _previous question
-                    _restartQuiz();
-                  },
-                  child: Text("Restart"),
-                )
-              : Text(""),
+          // (_qno >= widget.items.length - 1)
+          //     ? ElevatedButton(
+          //         onPressed: () {
+          //           // _previous question
+          //           _restartQuiz();
+          //         },
+          //         child: Text("Restart"),
+          //       )
+          //     : Text(""),
           // forward button
           (_qno >= widget.items.length - 1)
               ? ElevatedButton(
@@ -161,7 +161,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                     // write score to database
                     final resultData = {
                       'userId': user.username,
-                      'testStarted': testStarted.toIso8601String(),
+                      'testStarted': DateTime.now().toIso8601String(),
                       'testEnded': DateTime.now().toIso8601String(),
                       'questions': widget.items.length,
                       'score': _totalScore,
@@ -179,7 +179,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                ResultPage(score: _totalScore)));
+                                ResultPage(resultData: resultData)));
                   },
                   child: Text("Result"))
               : ElevatedButton(
@@ -369,8 +369,8 @@ class _TakeQuizState extends State<TakeQuiz> {
 
   void _restartQuiz() {
     setState(() {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, "/quiz");
+      // Navigator.pop(context);
+      Navigator.pushReplacementNamed(context, "/quiz");
     });
   }
 

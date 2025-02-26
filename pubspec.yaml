@@ -83,6 +83,9 @@ flutter_icons:
   android: true
   ios: true
   image_path: "assets/icon.png"
+  android_icon: "assets/icons/icon.png"  # (Optional) Custom icon for Android
+  ios_icon: "assets/icons/icon.png"  # (Optional) Custom icon for iOS
+
   adaptive_icon_background: ""
   adaptive_icon_foreground: ""
 

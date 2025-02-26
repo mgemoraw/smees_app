@@ -20,3 +20,4 @@ const testsGetAllApi = "tests/index";
 const testStartApi = "tests/start-test";
 const testSubmitApi = "tests/submit-test";
 const studentAnswersApi = "tests/student-response";
+const getAllCourses = "departments/courses";

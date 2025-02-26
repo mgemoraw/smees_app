@@ -130,21 +130,13 @@ class _PDFViewScreenState extends State<PDFViewScreen> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // appBar: AppBar(
-      //     title: Text("Blue Print"),
-      //   actions: [
-      //     IconButton(
-      //       icon: Icon(Icons.bookmark),
-      //       onPressed: (){
-      //         _pdfViewerKey.currentState?.openBookmarkView();
-      //       },
-      //     ),
-      //   ]
-      // ),
+    return SizedBox(
+      height: MediaQuery.of(context).size.height,
+
       child: SfPdfViewer.asset(
           widget.filePath,
           key: _pdfViewerKey,
+        scrollDirection: PdfScrollDirection.vertical,
       ),
 
     );
