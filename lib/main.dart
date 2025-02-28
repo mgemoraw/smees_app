@@ -101,8 +101,8 @@ class SmeesApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
 
-        // '/login': (context) => const Login(),
-        '/login': (context) => AuthScreen(),
+        '/login': (context) => const Login(),
+        // '/login': (context) => AuthScreen(),
         '/': (context) => const Home(title: "SMEES", department: ""),
         '/quiz': (context) => const TestHome(department: ""),
         "/exam": (context) => const ExamHome(department: ""),
