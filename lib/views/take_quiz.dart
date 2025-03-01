@@ -222,7 +222,7 @@ class _TakeQuizState extends State<TakeQuiz> {
                   value: options[index]['label'],
                   answerText: options[index]['content'],
                   answerColor: (_chosenAnswer == options[index]['label'])
-                      ? _selectedColor!
+                      ? _selectedColor
                       : null,
                   answerTap: () {
                     //
@@ -336,7 +336,7 @@ class _TakeQuizState extends State<TakeQuiz> {
           _checkPreviousAnswer();
         } else {
           answerWasSelected = false;
-          _selectedColor = Colors.white;
+          _selectedColor = null;
           bottomContainerText = "";
         }
         
@@ -351,9 +351,9 @@ class _TakeQuizState extends State<TakeQuiz> {
         if (_previousAnswer()) {
           _checkPreviousAnswer();
         } else {
-          // _selectedColor = Colors.white;
+
           answerWasSelected = false;
-          _selectedColor = Colors.white;
+          _selectedColor = null;
           bottomContainerText = "";
         }
       }

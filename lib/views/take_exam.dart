@@ -44,10 +44,19 @@ class _TakeExamState extends State<TakeExam> {
   Timer? _timer;
   Duration _remainingTime = Duration(hours: 0, minutes: 0, seconds: 0);
 
+  int selectedIndex = 0;
+  final ScrollController _scrollController = ScrollController();
+  final TextEditingController _qnoController = TextEditingController();
+
   @override
   void initState() {
     super.initState();
     _setExamTime();
+  }
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
   }
 
   void _setExamTime() {
@@ -72,11 +81,7 @@ class _TakeExamState extends State<TakeExam> {
     });
   }
 
-  @override
-  void dispose() {
-    _timer?.cancel();
-    super.dispose();
-  }
+
 
   String _formatTime(Duration duration) {
     int hours = duration.inHours;
@@ -92,6 +97,14 @@ class _TakeExamState extends State<TakeExam> {
       return '$n';
     }
     return '0$n';
+  }
+
+  void scrollToIndex() {
+    _scrollController.animateTo(
+      _qno * 60.0,
+      duration: Duration(milliseconds:300),
+      curve: Curves.easeInOut,
+    );
   }
 
   @override
@@ -191,102 +204,127 @@ class _TakeExamState extends State<TakeExam> {
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Column(children: [
-          // Question index tracker
-          Container(
-            height: 60,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: widget.items.length,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextButton(
-                      onPressed: () {
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(children: [
+            TextField(
+              controller: _qnoController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                helperText: 'Search by Question No',
+                hintText: "Search by Question No"
+              ),
+              onChanged: (value) {
+                if (value.isNotEmpty){
+                  int num = int.parse(value);
+                  if (num >0 && num < widget.items.length){
+                    setState(() {
+                      _qno = num - 1;
+                    });
+                  }
+                }
+              },
+            ),
+            // Question index tracker
+            Container(
+              height: 60.0,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  controller: _scrollController,
+                  itemCount: widget.items.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextButton(
+                        onPressed: () {
+
+                          setState(() {
+                            // go to question number index+1
+                            _qno = index;
+                            _chosenAnswer = userAnswers[index];
+                            // scroll to index
+                            scrollToIndex();
+                          });
+                        },
+                        style: TextButton.styleFrom(
+                          backgroundColor:
+                              userAnswers[index] == null ? null : Colors.grey[500],
+                        ),
+                        child: Text(
+                          "${index + 1}",
+                          style: TextStyle(fontSize: (_qno == index ? 22 : 15), fontWeight: FontWeight
+                              .bold, color:  (_qno == index ? Colors.green[900] : null)),
+                        ),
+                      ),
+                    );
+                  }),
+            ),
+
+            Container(
+              alignment: Alignment.topLeft,
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                "${_qno + 1}. ${widget.items[_qno]['content']}",
+                style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+              ),
+            ),
+
+            // answer options
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: widget.items[_qno]['options'].length,
+              itemBuilder: (context, index) {
+                String? option = widget.items[_qno]['options'][index]['content'];
+                if (option != null) {
+                  return Container(
+                    padding: const EdgeInsets.all(5.0),
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 5.0, horizontal: 10.0),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: _chosenAnswer ==
+                              widget.items[_qno]['options'][index]['label']
+                          ? _selectedColor
+                          : _bgColor,
+                    ),
+                    child: ListTile(
+                      onTap: () {
                         setState(() {
-                          // go to question number index+1
-                          _qno = index;
-                          _chosenAnswer = userAnswers[index];
+                          _selectedColor = selectedColor;
+                          _chosenAnswer =
+                              widget.items[_qno]['options'][index]['label'];
+                          _writeAnswer(_chosenAnswer!);
                         });
                       },
-                      style: TextButton.styleFrom(
-                        backgroundColor:
-                            userAnswers[index] == null ? null : Colors.blue,
+                      leading: Text(
+                        widget.items[_qno]['options'][index]['label'],
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 15),
                       ),
-                      child: Text(
-                        "${index + 1}",
-                        style: TextStyle(fontSize: 15, fontWeight: FontWeight
-                            .bold),
-                      ),
+                      title: Text(widget.items[_qno]['options'][index]['content'],
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15)),
+                      selectedTileColor: _selectedColor,
+                      //textColor: Colors.blue,
+                      enabled: !answerWasSelected,
                     ),
                   );
-                }),
-          ),
-
-          Container(
-            alignment: Alignment.topLeft,
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              "${_qno + 1}. ${widget.items[_qno]['content']}",
-              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+                }
+              },
             ),
-          ),
 
-          // answer options
-          ListView.builder(
-            shrinkWrap: true,
-            itemCount: widget.items[_qno]['options'].length,
-            itemBuilder: (context, index) {
-              String? option = widget.items[_qno]['options'][index]['content'];
-              if (option != null) {
-                return Container(
-                  padding: const EdgeInsets.all(5.0),
-                  margin: const EdgeInsets.symmetric(
-                      vertical: 5.0, horizontal: 10.0),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: _chosenAnswer ==
-                            widget.items[_qno]['options'][index]['label']
-                        ? _selectedColor
-                        : _bgColor,
-                  ),
-                  child: ListTile(
-                    onTap: () {
-                      setState(() {
-                        _selectedColor = selectedColor;
-                        _chosenAnswer =
-                            widget.items[_qno]['options'][index]['label'];
-                        _writeAnswer(_chosenAnswer!);
-                      });
-                    },
-                    leading: Text(
-                      widget.items[_qno]['options'][index]['label'],
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 15),
-                    ),
-                    title: Text(widget.items[_qno]['options'][index]['content'],
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 15)),
-                    selectedTileColor: _selectedColor,
-                    //textColor: Colors.blue,
-                    enabled: !answerWasSelected,
-                  ),
-                );
-              }
-            },
-          ),
-
-          // Answer Notification container
-          Container(
-            color: Colors.white,
-            child: Text(
-              bottomContainerText,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+            // Answer Notification container
+            Container(
+              color: Colors.white,
+              child: Text(
+                bottomContainerText,
+                style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+              ),
+              //"YOur answer progress"),
             ),
-            //"YOur answer progress"),
-          ),
-        ]),
+          ]),
+        ),
       ),
     );
   }
@@ -329,11 +367,11 @@ class _TakeExamState extends State<TakeExam> {
           _checkPreviousAnswer();
         } else {
           answerWasSelected = false;
-          _selectedColor = Colors.white;
+          _selectedColor = null;
           bottomContainerText = "";
         }
-
-//
+        // scroll to index
+        scrollToIndex();
       } else {
         final result = {
           'userId': user!.username,
@@ -361,6 +399,8 @@ class _TakeExamState extends State<TakeExam> {
         } else {
           _selectedColor = _bgColor;
         }
+        // scroll to index
+        scrollToIndex();
       }
     });
   }
