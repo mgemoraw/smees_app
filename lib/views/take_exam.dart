@@ -1,11 +1,15 @@
 import "dart:async";
 import "dart:convert";
-
+import 'package:http/http.dart' as http;
 import "package:flutter/material.dart";
 import "package:flutter_secure_storage/flutter_secure_storage.dart";
+import "package:provider/provider.dart";
+import "package:smees/models/database.dart";
+import "package:smees/models/test_model.dart";
 import "package:smees/models/user.dart";
 import "package:smees/views/answer_option.dart";
 import "package:smees/views/result_page.dart";
+import "package:smees/views/user_provider.dart";
 
 import "../api/end_points.dart";
 
@@ -26,9 +30,12 @@ class TakeExam extends StatefulWidget {
 
 class _TakeExamState extends State<TakeExam> {
   // varaibles
-  User? user;
+  // User? user;
+  late UserProvider userProvider;
   DateTime? testStarted;
   DateTime? testEnded;
+  late String _message = '';
+  bool isLoading = false;
 
   String bottomContainerText = "";
   Map userAnswers = {};
@@ -39,7 +46,7 @@ class _TakeExamState extends State<TakeExam> {
   bool correctAnswerSelected = false;
   String? _chosenAnswer;
   Color? _selectedColor;
-  Color? selectedColor = Colors.blue;
+  Color? selectedColor = Colors.grey[500];
   final Color? _bgColor = null;
   Timer? _timer;
   Duration _remainingTime = Duration(hours: 0, minutes: 0, seconds: 0);
@@ -52,6 +59,7 @@ class _TakeExamState extends State<TakeExam> {
   void initState() {
     super.initState();
     _setExamTime();
+    _loadUserData();
   }
   @override
   void dispose() {
@@ -59,6 +67,13 @@ class _TakeExamState extends State<TakeExam> {
     super.dispose();
   }
 
+  void _loadUserData() {
+    final userProv = Provider.of<UserProvider>(context, listen:false);
+    setState(() {
+      userProvider = userProv;
+    });
+
+  }
   void _setExamTime() {
     setState(() {
       _remainingTime = Duration(seconds: widget.items.length * 60);
@@ -109,6 +124,9 @@ class _TakeExamState extends State<TakeExam> {
 
   @override
   Widget build(BuildContext context) {
+    final useModeProvider = Provider.of<UseModeProvider>(context);
+    final user = Provider.of<UserProvider>(context).user;
+
     return Scaffold(
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -183,11 +201,25 @@ class _TakeExamState extends State<TakeExam> {
           // restart button
           (_qno >= widget.items.length - 1)
               ? ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async{
                     // _previous question
-                    _restartQuiz();
+                    // _restartQuiz();
+
+                    final result = {
+                      'userId': userProvider.user.username,
+                      'examStarted': DateTime.now().toIso8601String(),
+                      'examEnded': DateTime.now().toIso8601String(),
+                      'questions': widget.items.length,
+                      'score': _totalScore,
+                    };
+                    await _writeResults(result);
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ResultPage(resultData: result)));
                   },
-                  child: const Text("Restart"),
+                  child: const Text("Submit Result"),
                 )
               : const Text(""),
           // forward button
@@ -373,18 +405,18 @@ class _TakeExamState extends State<TakeExam> {
         // scroll to index
         scrollToIndex();
       } else {
-        final result = {
-          'userId': user!.username,
-          'testStarted': testStarted!.toIso8601String(),
-          'testEnded': DateTime.now().toIso8601String(),
-          'questions': widget.items.length,
-          'score': _totalScore,
-        };
-        Navigator.pop(context);
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => ResultPage(resultData: result)));
+        // final result = {
+        //   'userId': userProvider.user.username,
+        //   'examStarted': DateTime.now().toIso8601String(),
+        //   'examEnded': DateTime.now().toIso8601String(),
+        //   'questions': widget.items.length,
+        //   'score': _totalScore,
+        // };
+        // Navigator.pop(context);
+        // Navigator.push(
+        //     context,
+        //     MaterialPageRoute(
+        //         builder: (context) => ResultPage(resultData: result)));
       }
     });
   }
@@ -431,27 +463,52 @@ class _TakeExamState extends State<TakeExam> {
   }
 
 
-  Future <void> writeAnswerToDatabase(String answerLabel, qid) async {
-    
-  late String? message = "";
-  final url = Uri.parse('$API_BASE_URL/$testSubmitApi');
-
-  final storage = FlutterSecureStorage();
-  final token = await storage.read(key:"smees_token");
-
-
-  final headers = {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Authentication': 'Bearer $token'
-    };
-  // final headers = {"Content-Type": "application/json"};
-
-  final body = {
-    'username': "",
-    'password': "",
-  };
-
+  Future<void> _writeResults(Map<String, dynamic> data) async {
+    try {
+      await SmeesHelper().addExam(data);
+    } catch (err) {
+      // print("Writing data failed $err");
+      setState((){
+        _message = "Error: Something went wrong!";
+      });
+    }
   }
 
-  
+  Future<void> _sendResults(Exam exam) async {
+    final url = Uri.parse('$API_BASE_URL/$testSubmitApi');
+    const storage = FlutterSecureStorage();
+    final token = storage.read(key: "smees-token");
+    final headers = {
+      'Authentication': "Bearer $token",
+      'ContentType': 'application/json',
+    };
+    final body = exam.toMap();
+
+    try {
+      //
+      final response = await http.post(
+        url,
+        body: body,
+        headers: headers,
+      );
+
+      if (response.statusCode == 200) {
+        setState(() {
+          _message = "success";
+        });
+      }
+    } catch (err) {
+      //
+      print("Sending data failed $err");
+      setState(() {
+        _message = "$err";
+      });
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
 }
+
+

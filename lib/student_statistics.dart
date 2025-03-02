@@ -67,6 +67,7 @@ class _UserStatisticsState extends State<UserStatistics> {
     final data = helper.getTests();
     setState(() {
       _testsFuture = data;
+      _examsFuture = helper.getExams();
     });
   }
 
@@ -159,6 +160,50 @@ class _UserStatisticsState extends State<UserStatistics> {
                 "Description text",
               ),
             ),
+            FutureBuilder<List<Map<String, dynamic>>>(
+                future: _examsFuture,
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    return Center(child: Text("Errror: ${snapshot.error}"));
+                  } else {
+                    final data = snapshot.data!;
+                    return SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: DataTable(
+                        columns: const [
+                          DataColumn(label: Text("No")),
+                          DataColumn(label: Text("User")),
+                          DataColumn(label: Text("Test Date")),
+                          DataColumn(label: Text("Started")),
+                          DataColumn(label: Text("Ended")),
+                          DataColumn(label: Text("Questions")),
+                          DataColumn(label: Text("Score")),
+                        ],
+                        rows: data.map((row) {
+                          final exam = Exam.fromMap(row);
+                          return DataRow(cells: [
+                            DataCell(Text(exam.id.toString())),
+                            DataCell(Text(exam.userId.toString())),
+                            DataCell(Text(
+                                "${exam.examStarted!.day}-${exam.examStarted!
+                                    .month}-${exam.examStarted!.year} ")), //
+                            DataCell(Text(
+                                "${exam.examStarted!.hour}:${exam
+                                    .examStarted!.minute}:${exam.examStarted!
+                                    .second}")), //
+                            DataCell(Text(
+                                "${exam.examEnded!.hour}:${exam.examEnded!
+                                    .minute}:${exam.examEnded!.second}")), //
+                            DataCell(Text(exam.questions.toString())),
+                            DataCell(Text(exam.score.toString())),
+                          ]);
+                        }).toList(),
+                      ),
+                    );
+                  }
+                }),
             ListView.builder(
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
