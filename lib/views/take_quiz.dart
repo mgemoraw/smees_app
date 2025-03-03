@@ -179,7 +179,8 @@ class _TakeQuizState extends State<TakeQuiz> {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                ResultPage(resultData: resultData)));
+                                ResultPage(resultData: resultData,
+                                    backRoute:"/quiz")));
                   },
                   child: Text("Result"))
               : ElevatedButton(

@@ -156,7 +156,7 @@ class SmeesHelper {
   Future <void> addExam(Map<String, dynamic> exam) async {
     final db = await database;
     await db.insert(
-      'tests', 
+      'exams',
       exam, 
       conflictAlgorithm: ConflictAlgorithm.replace,
     );

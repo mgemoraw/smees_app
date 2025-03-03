@@ -16,8 +16,8 @@ const usersGetAllApi = "users/index";
 const changePasswordApi = "/auth/password/update";
 
 // take test and exam api
-const testsGetAllApi = "tests/index";
-const testStartApi = "tests/start-test";
-const testSubmitApi = "tests/submit-test";
-const studentAnswersApi = "tests/student-response";
-const getAllCourses = "departments/courses";
+const testsGetAllApi = "/tests/index";
+const testStartApi = "/tests/start-test";
+const testSubmitApi = "/tests/submit-test";
+const studentAnswersApi = "/tests/student-response";
+const getAllCourses = "/courses/index";

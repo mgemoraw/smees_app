@@ -64,7 +64,7 @@ class _UserStatusCardState extends State<UserStatusCard> {
         padding: const EdgeInsets.all(8.0),
         child: ClipOval(
           child: Image.asset(
-            'assets/images/user-2.png',
+            'assets/images/test.png',
             fit: BoxFit.contain,
             // width: 120,
             // height: 120,

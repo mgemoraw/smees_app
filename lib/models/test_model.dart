@@ -85,8 +85,8 @@ class Exam {
     return Exam(
       id: map['id'], 
       userId: map['userId'],
-      examStarted: map['examStarted'],
-      examEnded: map['examEnded'],
+      examStarted: DateTime.parse(map['examStarted']),
+      examEnded: DateTime.parse(map['examEnded']),
       questions: map['questions'],
       score: map['score'],
     );

@@ -322,15 +322,16 @@ class _TestHomeState extends State<TestHome> {
                   setState(() {
                     pageIndex = 0;
                     pageKey = 'home';
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Home(
-                          title: "SMEES-App",
-                          department: "",
-                        ),
-                      ),
-                    );
+                    Navigator.pushReplacementNamed(context, "/");
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const Home(
+                    //       title: "SMEES-App",
+                    //       department: "",
+                    //     ),
+                    //   ),
+                    // );
                   });
                 },
                 icon: const Icon(
@@ -339,22 +340,22 @@ class _TestHomeState extends State<TestHome> {
                   size: 35,
                 ),
               ),
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    // Navigator.pushNamed(context, "/stats");
-                  });
-                },
-                icon: const Icon(Icons.bar_chart),
-              ),
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    // Navigator.pushNamed(context, "/profile");
-                  });
-                },
-                icon: const Icon(Icons.group),
-              ),
+              // IconButton(
+              //   onPressed: () {
+              //     setState(() {
+              //       // Navigator.pushReplacementNamed(context, "/stats");
+              //     });
+              //   },
+              //   icon: const Icon(Icons.bar_chart),
+              // ),
+              // IconButton(
+              //   onPressed: () {
+              //     setState(() {
+              //       // Navigator.pushNamed(context, "/profile");
+              //     });
+              //   },
+              //   icon: const Icon(Icons.group),
+              // ),
             ],
           )),
     );

@@ -64,9 +64,10 @@ class _UserStatisticsState extends State<UserStatistics> {
 
   Future<void> _fetchTests() async {
     final helper = SmeesHelper();
-    final data = helper.getTests();
+    // final data = helper.getTests();
+    // final examData = helper.getExams();
     setState(() {
-      _testsFuture = data;
+      _testsFuture = helper.getTests();
       _examsFuture = helper.getExams();
     });
   }
@@ -96,9 +97,9 @@ class _UserStatisticsState extends State<UserStatistics> {
                           DataColumn(label: Text("No")),
                           DataColumn(label: Text("User")),
                           DataColumn(label: Text("Test Date")),
-                          DataColumn(label: Text("Started")),
-                          DataColumn(label: Text("Ended")),
-                          DataColumn(label: Text("Questions")),
+                          // DataColumn(label: Text("Started")),
+                          // DataColumn(label: Text("Ended")),
+                          // DataColumn(label: Text("Questions")),
                           DataColumn(label: Text("Score")),
                         ],
                         rows: data.map((row) {
@@ -108,12 +109,13 @@ class _UserStatisticsState extends State<UserStatistics> {
                             DataCell(Text(test.userId.toString())),
                             DataCell(Text(
                                 "${test.testStarted!.day}-${test.testStarted!.month}-${test.testStarted!.year} ")), //
-                            DataCell(Text(
-                                "${test.testStarted!.hour}:${test.testStarted!.minute}:${test.testStarted!.second}")), //
-                            DataCell(Text(
-                                "${test.testEnded!.hour}:${test.testEnded!.minute}:${test.testEnded!.second}")), //
-                            DataCell(Text(test.questions.toString())),
-                            DataCell(Text(test.score.toString())),
+                            // DataCell(Text(
+                            //     "${test.testStarted!.hour}:${test.testStarted!.minute}:${test.testStarted!.second}")), //
+                            // DataCell(Text(
+                            //     "${test.testEnded!.hour}:${test.testEnded!.minute}:${test.testEnded!.second}")), //
+                            // DataCell(Text(test.questions.toString())),
+                            DataCell(Text("${test.score.toString()} / ${test
+                                .questions.toString()}")),
                           ]);
                         }).toList(),
                       ),
@@ -143,30 +145,30 @@ class _UserStatisticsState extends State<UserStatistics> {
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
           children: [
-            const ListTile(
-              leading: Text(
-                "No.",
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-              ),
-              title: Text(
-                "Date Taken \t Time Elapsed",
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-              ),
-              trailing: Text(
-                "Score",
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text(
-                "Description text",
-              ),
-            ),
+            // const ListTile(
+            //   leading: Text(
+            //     "No.",
+            //     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            //   ),
+            //   title: Text(
+            //     "Date Taken \t Time Elapsed",
+            //     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            //   ),
+            //   trailing: Text(
+            //     "Score",
+            //     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            //   ),
+            //   subtitle: Text(
+            //     "Description text",
+            //   ),
+            // ),
             FutureBuilder<List<Map<String, dynamic>>>(
                 future: _examsFuture,
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return Center(child: CircularProgressIndicator());
                   } else if (snapshot.hasError) {
-                    return Center(child: Text("Errror: ${snapshot.error}"));
+                    return Center(child: Text("Error: ${snapshot.error}"));
                   } else {
                     final data = snapshot.data!;
                     return SingleChildScrollView(
@@ -176,51 +178,53 @@ class _UserStatisticsState extends State<UserStatistics> {
                           DataColumn(label: Text("No")),
                           DataColumn(label: Text("User")),
                           DataColumn(label: Text("Test Date")),
-                          DataColumn(label: Text("Started")),
-                          DataColumn(label: Text("Ended")),
-                          DataColumn(label: Text("Questions")),
+                          //DataColumn(label: Text("Started")),
+                          //DataColumn(label: Text("Ended")),
+                          //DataColumn(label: Text("Questions")),
                           DataColumn(label: Text("Score")),
                         ],
                         rows: data.map((row) {
                           final exam = Exam.fromMap(row);
+
                           return DataRow(cells: [
                             DataCell(Text(exam.id.toString())),
                             DataCell(Text(exam.userId.toString())),
-                            DataCell(Text(
-                                "${exam.examStarted!.day}-${exam.examStarted!
-                                    .month}-${exam.examStarted!.year} ")), //
-                            DataCell(Text(
-                                "${exam.examStarted!.hour}:${exam
-                                    .examStarted!.minute}:${exam.examStarted!
-                                    .second}")), //
+                            // DataCell(Text(
+                            //     "${exam.examStarted!.day}-${exam.examStarted!
+                            //         .month}-${exam.examStarted!.year} ")), //
+                            // DataCell(Text(
+                            //     "${exam.examStarted!.hour}:${exam
+                            //         .examStarted!.minute}:${exam.examStarted!
+                            //         .second}")), //
                             DataCell(Text(
                                 "${exam.examEnded!.hour}:${exam.examEnded!
-                                    .minute}:${exam.examEnded!.second}")), //
-                            DataCell(Text(exam.questions.toString())),
-                            DataCell(Text(exam.score.toString())),
+                                    .minute}:${exam.examEnded!.second}")),
+                            // DataCell(Text(exam.questions.toString())),
+                            DataCell(Text("${exam.score.toString()} / ${exam
+                                .questions.toString()}")),
                           ]);
                         }).toList(),
                       ),
                     );
                   }
                 }),
-            ListView.builder(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: Text("${index + 1}"),
-                  title: Text("08-04-2024 \t 1:30:45"),
-                  trailing: Text("80%"),
-                  subtitle: Text("1:30:45"),
-                  hoverColor: Colors.blue,
-                );
-              },
-            ),
+            // ListView.builder(
+            //   scrollDirection: Axis.vertical,
+            //   shrinkWrap: true,
+            //   itemCount: 5,
+            //   itemBuilder: (context, index) {
+            //     return ListTile(
+            //       leading: Text("${index + 1}"),
+            //       title: Text("08-04-2024 \t 1:30:45"),
+            //       trailing: Text("80%"),
+            //       subtitle: Text("1:30:45"),
+            //       hoverColor: Colors.blue,
+            //     );
+            //   },
+            // ),
           ],
         ),
-        LineChartWidget(),
+        // LineChartWidget(),
       ],
     );
   }

@@ -217,7 +217,8 @@ class _TakeExamState extends State<TakeExam> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ResultPage(resultData: result)));
+                            builder: (context) => ResultPage(resultData:
+                            result, backRoute: "/exam")));
                   },
                   child: const Text("Submit Result"),
                 )
@@ -466,11 +467,17 @@ class _TakeExamState extends State<TakeExam> {
   Future<void> _writeResults(Map<String, dynamic> data) async {
     try {
       await SmeesHelper().addExam(data);
+      setState(() {
+        _message = "success";
+      });
     } catch (err) {
       // print("Writing data failed $err");
       setState((){
         _message = "Error: Something went wrong!";
       });
+      print("Error: $err");
+    } finally {
+      print(_message);
     }
   }
 

@@ -5,7 +5,9 @@ import "package:smees/questions.dart";
 
 class ResultPage extends StatelessWidget  {
   final Map resultData;
-  const ResultPage({super.key, required this.resultData});
+  final String backRoute;
+  const ResultPage({super.key, required this.resultData, required this
+      .backRoute});
 
   @override
   Widget build(BuildContext context ) {
@@ -38,13 +40,13 @@ class ResultPage extends StatelessWidget  {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: (){
-                      Navigator.pushReplacementNamed(context, '/quiz');
+                      Navigator.pushReplacementNamed(context, backRoute);
                     },
                       style: ButtonStyle(
                         backgroundColor: WidgetStateProperty.all(Colors
                             .white12),
                       ),
-                        child: Text("Retak another quiz", style: TextStyle
+                        child: Text("Retake another test", style: TextStyle
                           (fontSize: 18, fontWeight: FontWeight.bold)),
                     ),
                   )
