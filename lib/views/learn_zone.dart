@@ -87,19 +87,20 @@ class _LearnZoneState extends State<LearnZone> {
           },
         ),
       ),
+
         // open Gemini page
-        SizedBox(
-          width: double.infinity,
-          child: MaterialButton(
-            color: Colors.blueGrey,
-            child: Text("Open Gemini AI", style: TextStyle(fontSize: 18,
-                color: Colors.white)),
-            onPressed: ()  {
-              //
-              Navigator.pushNamed(context, '/gemini');
-            },
-          ),
-        ),
+        // SizedBox(
+        //   width: double.infinity,
+        //   child: MaterialButton(
+        //     color: Colors.blueGrey,
+        //     child: Text("Open Gemini AI", style: TextStyle(fontSize: 18,
+        //         color: Colors.white)),
+        //     onPressed: ()  {
+        //       //
+        //       Navigator.pushNamed(context, '/gemini');
+        //     },
+        //   ),
+        // ),
       SizedBox(
         width: double.infinity,
         child: MaterialButton(

@@ -100,6 +100,7 @@ class _ExamHomeState extends State<ExamHome> {
     final userData =  preferences.getString('smeesUser');
     int departmentId = jsonDecode(userData!)['departmentId'];
 
+
     // final year = year;
     final url = Uri.parse("$API_BASE_URL/${testStartApi}/${departmentId}");
 

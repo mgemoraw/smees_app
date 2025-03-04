@@ -262,6 +262,27 @@ class SQLHelper {
           )
           '''
         );
+
+        // create faculties table
+        await db.execute(
+            '''
+          CREATE TABLE schools(
+            id, INTEGER PRIMARY KEY AUTOINCREMENT, 
+            name VARCHAR(100), 
+            slug VARCHAR(30),
+          )
+          '''
+        );
+        //  create departments table
+        // create faculties table
+        await db.execute(
+            '''
+          CREATE TABLE departments(
+            id, INTEGER PRIMARY KEY AUTOINCREMENT, 
+            name VARCHAR(100), 
+          )
+          '''
+        );
       }
     );
   }

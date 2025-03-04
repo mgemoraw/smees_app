@@ -116,7 +116,7 @@ class _TakeExamState extends State<TakeExam> {
 
   void scrollToIndex() {
     _scrollController.animateTo(
-      _qno * 60.0,
+      _qno * 100.0,
       duration: Duration(milliseconds:300),
       curve: Curves.easeInOut,
     );
@@ -263,7 +263,7 @@ class _TakeExamState extends State<TakeExam> {
               height: 60.0,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  controller: _scrollController,
+                  // controller: _scrollController,
                   itemCount: widget.items.length,
                   itemBuilder: (context, index) {
                     return Padding(
@@ -447,7 +447,7 @@ class _TakeExamState extends State<TakeExam> {
     // logic here
     setState(() {
       _chosenAnswer = userAnswers[_qno];
-      _selectedColor = Colors.blue;
+      _selectedColor = Colors.grey[500];
     });
   }
 

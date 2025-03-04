@@ -226,18 +226,19 @@ class _LoginState extends State<Login> {
                       SizedBox(height: 16.0),
                       ListTile(
                         onTap: () {
-                          Navigator.pushReplacementNamed(context, "/reset");
+                          Navigator.pushNamed(context, "/reset");
                         },
                         title: const Text('Forgot Password?',
                           style: TextStyle(color: Colors.black, fontSize: 18),
                         ),
                       ),
+
                       ListTile(
-                      onTap: () {
-                        Navigator.pushReplacementNamed(context, "/register");
-                      },
-                      title: Text("Don't have student account? Register", 
-                      style: TextStyle(color: Colors.black, fontSize: 18),),
+                        onTap: () {
+                          Navigator.pushNamed(context, "/register");
+                        },
+                        title: Text("Don't have account? Register",
+                          style: TextStyle(color: Colors.black, fontSize: 18),),
                       ),
                     ],
                   ),

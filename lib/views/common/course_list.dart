@@ -15,7 +15,7 @@ Future <List<Map<String, dynamic>>> getCoursesList() async {
   String? userString = prefs.getString('smees-user');
   final userData = jsonDecode(userString!);
   User user = User.fromMap(userData);
-  String token = userData['token'];
+  String? token = userData['token'];
 
   final headers = {
     'Authentication': 'Bearer $token',

@@ -244,7 +244,7 @@ class _TestHomeState extends State<TestHome> {
                       } else {
                         // download data when online
                         _downloadData(departmentId, 2022);
-                        print(_items);
+                        print("departmentId: $departmentId items: $_items");
                       }
                     } else {
                       print("Department: $department");
