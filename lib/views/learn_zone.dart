@@ -65,7 +65,7 @@ class _LearnZoneState extends State<LearnZone> {
       // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
       Center(
-        child: Text("${user.department} Contents ",
+        child: Text("Read ${user.department} Courses ",
         style: TextStyle
           (fontSize: 18,
           fontWeight: FontWeight.bold,
@@ -77,10 +77,10 @@ class _LearnZoneState extends State<LearnZone> {
       SizedBox(
         width: double.infinity,
         child: MaterialButton(
-          color: Colors.blueGrey,
+          color: Colors.white12,
           child: Text("Open Google Search Engine", style: TextStyle(fontSize:
-          18,
-              color: Colors.white)),
+          18, fontWeight: FontWeight.bold,
+              color: Colors.blue[900])),
           onPressed: ()  {
             //
             Navigator.pushNamed(context, '/webview');
@@ -104,9 +104,9 @@ class _LearnZoneState extends State<LearnZone> {
       SizedBox(
         width: double.infinity,
         child: MaterialButton(
-          color: Colors.blueGrey,
+          color: Colors.white12,
           child: Text("Open Exit Exam blue print", style: TextStyle(fontSize: 18,
-              color: Colors.white)),
+              color: Colors.blue[900], fontWeight: FontWeight.bold)),
           onPressed: ()  {
 
             Navigator.pushNamed(context, "/blueprint");
@@ -128,7 +128,7 @@ class _LearnZoneState extends State<LearnZone> {
         // list of courses
         ExpansionTile(
           leading: Icon(Icons.menu_book),
-            title: Text("${user.department} Courses", style: TextStyle
+            title: Text("Read ${user.department} Courses", style: TextStyle
               (fontSize: 18, fontWeight: FontWeight.bold),),
             children: [
               FutureBuilder<List<Map<String,dynamic>>>(

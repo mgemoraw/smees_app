@@ -1,0 +1,4061 @@
+[
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Fluid Mechanics",
+        "content": "Which of the following is the basic principle of fluid mechanics?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Momentum principle"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Energy equation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Continuity equation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above mentioned"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Fluid Mechanics",
+        "content": "Which of the following fluid properties is independent of the sample size?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Extensive property"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Intensive property"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Chemical property"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Physical property"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Fluid Mechanics",
+        "content": "Which one of the following is the Newtonian fluid?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Water"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Human blood"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Butter"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Printers ink"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "ANSWER: D",
+        "content": "From the following, one is not the function of Surface tension",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It enables a drop of water to be held in suspension at a tap."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It enables Birds to drink water from ponds."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "It enables Capillary rise and depression in thin-bored tubes."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "ANSWER: D",
+        "content": "From the following one is not true about capillarity.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "There is capillary rise for wetting liquid"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "There is capillary fall  for non-wetting liquid"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Capillary rise is happen if adhesion force is smaller than cohesion force"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Capillary fall  is happen if cohesion force is greater than adhesion force"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "ANSWER: D",
+        "content": "One is true regarding to hydrostatic pressure distribution in a stationary fluid.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "pressure increases linearly with decreasing elevation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The pressure in a homogeneous, incompressible fluid at rest depends on the shape of container in which the fluid is held."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The pressure at a point is not the same in all directions, i.e. it is dependent of its orientation."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "There is no relationship between pressure and depth"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "ANSWER: D",
+        "content": "Which of the following cannot be the value of absolute pressure of a fluid at any point?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "0"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "1.013 bar"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "\u2013 1 bar"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "100 bar"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulics",
+        "content": "Which of the following is not true about an open channel flow?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "It is a fluid flow through some confined section with a free surface in contact with the atmosphere."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It is a flow where the surface will have constant atmospheric pressure everywhere."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "It is a flow of water in a channel with freely flowing open ends."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "It is a flow mainly driven by the force balance between gravity and friction forces."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulics",
+        "content": "Pressurized flow or conduit flow is a common contrast to open channel flow. Which of the following best explains the main difference between the two flow types?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Pressurized flow happens in a circular pipe while open channel flow occurs in rectangular or trapezoidal-shaped conduits."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The dynamic viscosity of water in a pressurized flow is much lower than in an open channel flow."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The slope of the Energy Grade Line (EGL) in an open channel flow is always steeper than that of the hydraulic grade line in a pressurized flow."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "In pressurized flow the fluid is in contact with a solid boundary, but in an open channel flow, the surface of the fluid is open to the atmosphere."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulics",
+        "content": "Specific energy in a free surface (open channel) flow is:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The energy head measured with respect to the channel bottom at a section."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Velocity head plus pressure head plus elevation head above a reference datum."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The total energy of a flowing fluid at a specific location."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All except A"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulics",
+        "content": "The critical energy at a given discharge in a given open channel section is:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The minimum specific energy required to maintain the given flow rate (\ud835\udc44)."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The total energy at the narrowest cross-section of the channel."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The energy that can cause critical damage to hydraulic structures unless it is properly dissipated."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "The energy required to supply water during the driest month of the year."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulics",
+        "content": "Which one of the following is among the three conservation laws which are common in hydraulics?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Conservation of mass"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Conservation of momentum"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Conservation of energy"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulics",
+        "content": "What is the difference between a dimension and a unit?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "They are the same thing."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "A dimension refers to the number of quantities but a unit refers to only one of them."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "A dimension is a measure of a physical quantity, and a unit is a way to assign a number to that dimension."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Dimension can be used to quantify or measure only physical quantities, but a unit can be used to measure both physical and non-physical quantities."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulics",
+        "content": "Several methods have been developed to generate nondimensional parameters, and one of the following is among the most popular (and simplest) methods:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The Hardy Cross method"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The Newton-Raphson method"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The method of repeating variables"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "The principle of dimensional homogeneity"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Open Channel",
+        "content": "In open channel, flow will take place between two sections in which one at the upstream and the other downstream. Which one of the following is not correct about an open channel flow to take place between these sections?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The upstream depth must be larger than the downstream depth"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The upstream momentum must be larger than the downstream momentum"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The total energy at the upstream end must be larger than the total energy at the downstream section"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "A&B"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Open Channel",
+        "content": "Which one of the following is not true about uniform open channel flow?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The total energy remains constant along the channel"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The specific energy decreases along the channel"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The line represents the total energy is parallel to the bed of the channel."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "A&B"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Open Channel",
+        "content": "The difference between total energy line and piezometric head line represents",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The velocity heads"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The pressure heads"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The elevation of the bed of the channel"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "The depth of flow"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Open Channel",
+        "content": "The flow in a rectangular channel is subcritical. If the width is contracted at a certain section, the water surface",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "At the downstream section will drop"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "At the downstream section will rise"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "At the upstream section will drop"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "At the upstream section will rise"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Open Channel",
+        "content": "Gradually varied flow has about twelve profile curves. From this curves M1 profile is indicated by one of the following in equality between various depths",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "yo >yc >y"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "y>yo>yc"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "yo>y >yc"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "none"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Open Channel",
+        "content": "A hydraulic jump occurs when there is a break in grade from a",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Mild slope to steep slope"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Steep slope to mild slope"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Steep slope to steeper slope"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Milder slope to mild slope"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Open Channel",
+        "content": "Among the following sentences chose the correct one.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Sometimes the value of energy and momentum coefficients \u03b1 and \u03b2 will be between 0 and 1."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Critical flow is always attained at maximum specific energy."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "For a given energy the super critical flow has larger depth than subcritical flow."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "For a given energy maximum discharge is attained at critical flow."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures I",
+        "content": "What is a general characteristic of an arch dam?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "High construction cost"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Suitable for narrow canyons"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Requires large land area"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Simple design"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures I",
+        "content": "The minimum water level in a reservoir below which water withdrawal becomes difficult is called the:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Full Supply Level (FSL)"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Minimum Operating Level (MOL)"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Dead storage level"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Spillway design flood level"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures I",
+        "content": "Arch dams are thin, curved structures that transfer water pressure to the abutments. They are suitable for:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Wide river valleys"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Narrow, strong rock canyons"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Deep alluvial plains"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Unstable foundations"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures I",
+        "content": "A key advantage of embankment dams is:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "High strength and water tightness"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Flexibility and ability to withstand settlements"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Short construction time"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Low maintenance requirements"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures I",
+        "content": "Seepage through an embankment dam can be controlled by incorporating:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Wider spillway design"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Impervious core made of clay or compacted soil"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Increasing the dam height"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Using larger rocks in the construction"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures I",
+        "content": "Piping failure in an embankment dam occurs when:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The dam foundation cannot support its weight"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Water erodes soil particles through internal channels"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The dam crest is overtopped by floodwater"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "The spillway capacity is inadequate"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures I",
+        "content": "Filters are used in earth dam design to:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Increase water flow through the dam"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Strengthen the core of the dam"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Prevent erosion of fine soil particles"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Reduce the weight of the embankment"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures II",
+        "content": "Dam spillways can be classified based on their purpose such as main spillway, auxiliary spillway and emergency spillway. An emergency spillway will be functional for emergency cases only. Which one of the following can\u2019t be the possible cases/reasons/ for emergency?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "when the actual flood exceeds the design flood"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "when there is malfunctioning of the main dam outlets"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "when the gates of spillway are not working"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "when the actual flood does not exceed the design flood"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures II",
+        "content": "If low height Arch dam with d/s face of nearly vertical is proposed to be constructed on river X with narrow gorge and steeply rises abutment, which type of spillway will be the most appropriate?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Over flow spillway"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Free overfall spillway"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Chute spillway"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Side channel spillway"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures II",
+        "content": "Which one of the following types of spillways is not usually recommended for high dams due to the structure\u2019s instability problem?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Ogee spillway"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Open channel spillway"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Straight drop spillway"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Cascade spillway"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures II",
+        "content": "Different energy dissipator measures that can be adopted at the toe of the spillway depends upon the relative positions of jump height curve (JHC) and tail water rating curve (TWRC). In the plotting of JHC and TWRC, if the values of tail water depths in the river downstream of a spillway toe are less than the values of the corresponding sequent depths for all discharges, which one of the following is not the possible measure that can be provided at the toe of the spillway for dissipation of excess energy?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "providing ski-jump bucket"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "providing secondary dam (weir) d/s of the toe of the spillway"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "providing sloping apron above the river bed"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "providing sloping apron below the river bed"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures II",
+        "content": "Which one of the following is not correctly matched?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Canal head regulator- used to separate floor levels of the under sluices and the main weir section"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Divide wall- constructed at the head of a canal taking off"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Fish ladder - constructed on the bed of the river, upstream of the head regulator"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures II",
+        "content": "Which type of spillway is ideally suited for a very high dams in which the energy can\u2019t be dissipated by a hydraulic jump or bucket?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Shaft/ Moring glory/ spillway"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Open channel spillway"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Conduit/ Tunnel spillway"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Cascade spillway"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydraulic Structures II",
+        "content": "Which type of spillway component is used to dissipate energy at the toe of the spillway?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Terminal structure"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Entrance channel"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Exit channel"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What is the largest hydropower project in Ethiopia?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Grand Ethiopian Renaissance Dam (GERD)"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Gilgel Gibe III Dam"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Tekeze Dam"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Tana Beles Dam"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "Which country has the largest installed hydropower capacity in the world?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "China"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Brazil"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "United States"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Canada"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What are the challenges facing hydropower development in developing countries?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Lack of financing"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Environmental concerns"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Social and political issues"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What is the purpose of a run-of-the-river hydropower plant?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "To generate electricity from the natural flow of a river"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "To store water in a reservoir and release it during peak demand periods"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "To pump water from a lower reservoir to a higher reservoir during off-peak periods and release it through a turbine during peak demand periods"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What is the purpose of hydrological analysis for hydropower development?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "To determine the availability of water for power generation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "To design the dam or diversion structure"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "To design the reservoir or intake structure"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What is the formula for estimating the water power potential of a river?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "P = \u03c1gQh"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "P = \u03c1vQh"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "P = \u03c1ghQ"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "P = \u03c1Qgh"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What is firm power?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Power that is available all the time"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Power that is available only during peak demand periods"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Power that is generated by a pumped-storage hydropower plant"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What is the purpose of load prediction and demand assessment for hydropower development?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "To determine the amount of power that will be needed in the future"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "To design the hydropower plant to meet the future demand"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "To operate the hydropower plant efficiently"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What is a run-of-the-river hydropower development?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "A hydropower development that uses the natural flow of a river to generate electricity"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "A hydropower development that stores water in a reservoir and releases it during peak demand periods"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "A hydropower development that pumps water from a lower reservoir to a higher reservoir during off-peak periods and releases it through a turbine during peak demand periods"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydropower Engineering I",
+        "content": "What is a base-load hydropower development?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "A hydropower development that is used to meet the minimum continuous demand for electricity"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "A hydropower development that is used to meet the peak demand for electricity"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "A hydropower development that is used to meet the demand for electricity during off-peak periods"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "River Engineering and Sediment Transport",
+        "content": "One of the following will not be recommended for permanent river training works",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Embankments"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Groynes"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Bundles and panels"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Guide banks"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "River Engineering and Sediment Transport",
+        "content": "Which one of the following is not correct about bed form of river channel",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Plane:-mostly formed on larger grain size and lesser depth of flow."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Bars:-having lengths less than channel width and heights less than mean depth of the generating flow."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Ripples:- formed at relatively weak flow with size of ripples Hr=100d50 and Lr=1000d50"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Standing waves: - created when Froude number exceeds unity with parallel water surface to bed."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "River Engineering and Sediment Transport",
+        "content": "Which one of the following type of flow do not transport bed load of the sediment",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Sliding"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Rolling"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Saltation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Movement in suspension"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "River Engineering and Sediment Transport",
+        "content": "Which one of the following do not represent individual properties of sediment",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Size,"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Shape,"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Porosity,"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Specific unit weight"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "River Engineering and Sediment Transport",
+        "content": "Why we analyses bridge back water curve?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "To provide sufficient clearance between bridge bottom slab and maximum flood level under the bridge"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "To permit overflowing of water over river bank, bridge, diversion structures, aqueduct"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "To allow scouring of  bridge foundation and river bank"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "To facilitate  flooding of upstream properties"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "River Engineering and Sediment Transport",
+        "content": "Where do you get hydrological data for any hydrological analysis during the study of river morphology?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Metrological agency"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Site investigations and field surveys,"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Minister of water and energy,"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "All"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "River Engineering and Sediment Transport",
+        "content": "For d = 4m, n = 0.035, k=0.6, g=9.81 m/s2, spacing of grones",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "158.5"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "165.5,"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "151.5"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "55.5"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "Which one of the following is not an engineering application of Hydrology?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Generating hydroelectric power"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Planning recreational uses of rivers, lakes, and other waters"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Water resource development and estimation of water resources"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of them"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "A simplified representation of the physical processes, obtained by lumping spatial and/or temporal variations, is described in either ordinary differential or algebraic equations.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Deterministic"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Probabilistic"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Conceptual"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Parametric"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "What is the unit of discharge in hydrology?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Liters per minute (L/min)"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Cubic meters per second (m\u00b3/s)"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Gallons per hour (GPH)"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Milliliters per second (mL/s)"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "The hydrologic cycle describes:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The process of water purification"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The movement and distribution of water on Earth"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The chemical composition of water"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "The formation of clouds"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "What is the term for rainfall that reaches the ground and flows over the surface?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Precipitation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Evaporation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Runoff"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Transpiration"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "In hydrometry, what instrument is used to measure the flow velocity of a stream?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Anemometer"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Hydrometer"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Flowmeter"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Current meter"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "The term 'aquifer' refers to:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "A body of rock that can contain or transmit groundwater"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "A type of precipitation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "An artificial reservoir"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "A river basin"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "What is the main factor that affects the rate of evaporation?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Temperature"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Soil type"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Vegetation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Rock type"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "What does the term 'hydraulic conductivity' refer to?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The ease with which water can move through pore spaces or fractures"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The speed of water in a river"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The amount of water vapor in the air"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "The pressure exerted by water"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Hydrology and Hydrometry",
+        "content": "Which process in the hydrologic cycle involves the transformation of water vapor into liquid water?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Evaporation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Condensation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Transpiration"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Sublimation"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Groundwater Hydrology",
+        "content": "The specific storage is",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "specific coefficient/aquifer depth"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "specific yield per unit area"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "specific capacity per unit dept of aquifer"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "porosity/specific retention"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Groundwater Hydrology",
+        "content": "The specific capacity of a well is",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Volume of water that can be extracted by the force of gravity from unit volume of aquifer"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Discharge per unit drawdown at the well"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Drawdown per unit discharge at the well"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Rate of flow through unit width and entire thickness of the aquifer"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Groundwater Hydrology",
+        "content": "The discharge per unit drawdown at a well is known as",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "specific yield"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "specific storage"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "safe yield"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "specific capacity"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Groundwater Hydrology",
+        "content": "The specific capacity of a well in confined aquifer under equilibrium condition and within the working limits of drawdown",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Can be taken as constant"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Decreases as the drawdown increases"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Increases as the drawdown increases"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Increases or decreases depending on the size of the well"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Groundwater Hydrology",
+        "content": "A sand sample was found to have a porosity of 40%. For an aquifer of this material, the specific yield is",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Equal to 40%"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Greater than 40%"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Less than 40%"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Dependent on clay fraction"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Groundwater Hydrology",
+        "content": "The dimensions of the aquifer transmissibility T are",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "L2/T"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "L3T2"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "L/T2"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Dimensionless"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Resources Planning & Management",
+        "content": "Which of the following statement is correct about global water over view?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Half of the globe is covered with water and about 50% is contained in the five oceans."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Global ground water is distributed equally."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "From the global fresh water, about 70% is locked in the polar icecaps and glaciers."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "On a global basis, fresh water is not scarce resource and the distribution is sufficient."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Resources Planning & Management",
+        "content": "Freshwater resources are under increasing pressure. Which human activities does not have potential negative impacts on fresh water?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Population and consumption growth"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Increased competition for, and conflicts over, the limited freshwater resource."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Increased economic activity (industry & energy) improved standard of living"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None of the above"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Resources Planning & Management",
+        "content": "Which statement is correct about the global water stress?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Based global water scarcity index, Ethiopia has no water scarcity physically and economically."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "If the annual per capital water use of a region is 900m3, then it is not in water scarcity."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "The amazon basin is under physical water scarcity."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Ethiopia is under economic water scarcity region."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Resources Planning & Management",
+        "content": "Based the fundamental principles of water resources management policy of Ethiopia.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Even though conditions permit, every Ethiopian citizen shall not have equal access to sufficient water."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "In order to significantly contribute to development, water shall be recognized as only social good."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Management of water resources shall ensure social equity economic efficiently, systems reliability and sustainability norms."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Water resources development shall be fortified on urban-centered, centralized management, non-participatory approach."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Resources Planning & Management",
+        "content": "Which one is incorrect about Ethiopian water resources management policy?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Promote the establishment of an integrated framework which can encourage to use transboundary waters for the country itself only as long as the water is originated in the country."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "The policy support and enhance traditional irrigation schemes by improving water abstraction, transport systems and water use efficiency."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "It encourages involvement of the private sector in the development of hydropower."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "It enhances the well-being and productivity of the people by creating conducive environment for the promotion of appropriate sanitation services."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Resources Planning & Management",
+        "content": "Which one of the following does not best express \u201cwater resource planning\u201d?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Planning aims at optimal use of available resources and it is a process, a systematic way of investigating a problem."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "It is a systematic way of establishing long-range national objectives and devising long-term strategies and short-term action programs to achieve those objectives."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Water resource planning involves estimation of short term and long term needs and ways to meet these needs."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "It is the application of legal rules and regulations."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Irrigation Engineering",
+        "content": "Which surface irrigation management strategy is a system in which excess surface runoff is collected and pumped?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Cut back"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Fixed flows"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Tail water reuse"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "None"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Irrigation Engineering",
+        "content": "The devices that allow water to flow through, u-shaped hose that causes water to flow uphill without a pump.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Flumes"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Siphons"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Hydro flumes"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Culvert"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Irrigation Engineering",
+        "content": "Which one of the following irrigation methods more susceptible to Leaf -diseases or leaf-burns.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Furrow irrigation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Drip irrigation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Sprinkler irrigation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Border irrigation"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Irrigation Engineering",
+        "content": "______ is a valve that normally allows fluid to flow through it in only one direction.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Ball valve"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Gate valve"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Check valve"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Plug valve"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Irrigation Engineering",
+        "content": "If a pressurized irrigation system operates at a pressure of 200kPa and a flow rate of 0.5 liters per second, what is the power consumption of the pump?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "0.1Kw"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "0.5 Kw"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "1 Kw"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "2 Kw"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Irrigation Engineering",
+        "content": "Which surface irrigation method involves flooding the entire field with water?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Furrow irrigation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Drip irrigation"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Basin irrigation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Sprinkler irrigation"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Irrigation Engineering",
+        "content": "In surface irrigation, what is the main factor that determines the uniformity of water distribution?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Soil texture"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Field slope"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Plant type"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Water temperature"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Supply & Treatment",
+        "content": "The chlorine dose at the water treatment plant should always be:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "1 mg/L"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "< 0.2 mg/L"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "5 mg/L"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Sufficient to ensure effective disinfection and a chlorine concentration \u2265 0.2 mg/L to the point of consumer delivery"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Supply & Treatment",
+        "content": "Which one of the following is the purpose of providing a surge tank in a pipeline carrying water?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "To store water"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "To increase the pressure throughout the pipeline"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "To store overflowing water from service reservoir"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "To protect the pipeline against water hammer"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Supply & Treatment",
+        "content": "The pipe mains carrying water from the source to the reservoir are designed for",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Maximum daily draft"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Maximum hourly draft of the maximum day"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Average daily draft"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Maximum weekly draft"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Supply & Treatment",
+        "content": "When identical centrifugal pumps are operating in series on a common rising main, then",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Pressure in the rising main will be nearly doubled while the discharge will remain the same"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Discharge will be nearly double while the pressure remains the same"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Discharge as well as pressure in the rising main will be doubled"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Discharge as well as the pressure in the rising main will increase but not become double"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Supply & Treatment",
+        "content": "If the velocity of flow as well as the diameter of the flowing pipe are doubled through a pipe system in use since long, the head loss will thereafter be:",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Half"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Double"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Increased 4 times"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "No change"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Water Supply & Treatment",
+        "content": "Which of the following is correct about sedimentation basins?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "The velocity in the sludge zone should be high to improve basin\u2019s efficiency"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Settling zone distributes the water and controls the incoming flow\u2019s velocity"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Outlet zones are designed to foster short-circuiting so as to enhance sedimentation"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Addition of Settling tray will double the removal ratio while having depth do not have any impact on removal ratio"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Materials and Equipment",
+        "content": "The concrete mix which causes difficulty in obtaining a smooth finish possess",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Segregation"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Internal friction"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Bleeding"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Harshness"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Materials and Equipment",
+        "content": "Setting time of cement increases by adding",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Gypsum"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Hydrogen peroxide"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Calcium chloride"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Sodium oxide"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Materials and Equipment",
+        "content": "Strength of concrete with passage of time",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Increases"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Decreases"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Fluctuates"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Remains constant"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Materials and Equipment",
+        "content": "Ordinary Portland cement is manufactured from",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Lime stone and pozzolana"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Gypsum and lime"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Gypsum and pozzolana"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Lime only"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Materials and Equipment",
+        "content": "Concrete gains its strength due to",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Chemical reaction of cement with sand and course aggregate B."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Evaporation of water from concrete"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Hydration of cement"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Increasing temperature"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Materials and Equipment",
+        "content": "Workability of concrete mix with low water cement ratio is determined by",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Tensile strength test"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Slump test"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Compaction factor test"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Flexural strength test"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Planning and Management",
+        "content": "In a normal condition _________ is the preferred method of procurement of goods, works, and services by PPA.",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Direct procurement"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Restricted Bidding"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Open Bidding"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Request for Quotations"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Planning and Management",
+        "content": "Which one of the following is an incorrect statement?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "PERT is used where times cannot be estimated with confidence."
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "CPM is used where times can be estimated with confidence."
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "PERT is Event oriented, but CPM is activity oriented."
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "In PERT and CPM calculation there always be one critical path."
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Planning and Management",
+        "content": "Which type of organizational structure is effective for companies producing one or two product lines in mass production?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Traditional"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Geographical"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Product"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Matrix"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Planning and Management",
+        "content": "How much time in an hour does it take to plaster a 200 m2 wall using 4 masons and assuming each mason can do 10 m2 in an hour?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "10"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "40"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "5"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "20"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Planning and Management",
+        "content": "Which one of the following is the correct bidding procedure for design works of public projects?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Bidding Period and Receipt of Proposals - Selection of Bidders - Preparation and Issue of RFP Documents - Proposal Opening - Proposal Evaluation - Proposal Acceptance, Contract Award, and Placement"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Selection of Bidders - Preparation and Issue of RFP Documents - Bidding Period and Receipt of Proposals - Proposal Opening - Proposal Evaluation - Proposal Acceptance, Contract Award, and Placement"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Proposal Opening - Proposal Evaluation - Bidding Period and Receipt of Proposals - Selection of Bidders - Preparation and Issue of RFP Documents - Proposal Acceptance, Contract Award, and Placement"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Preparation and Issue of RFP Documents - Selection of Bidders - Bidding Period and Receipt of Proposals - Proposal Opening - Proposal Evaluation - Proposal Acceptance, Contract Award, and Placement"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "department_id": 2,
+        "course_code": null,
+        "department_name": "Hydraulic and Water Resources Engineering",
+        "course_name": "Construction Planning and Management",
+        "content": "Which party is the most active from inception to completion a construction project?",
+        "image": "",
+        "options": [
+            {
+                "label": "A",
+                "image": null,
+                "content": "Contractor"
+            },
+            {
+                "label": "B",
+                "image": null,
+                "content": "Consultant"
+            },
+            {
+                "label": "C",
+                "image": null,
+                "content": "Client"
+            },
+            {
+                "label": "D",
+                "image": null,
+                "content": "Regulatory body"
+            },
+            {
+                "label": "E",
+                "image": null,
+                "content": null
+            },
+            {
+                "label": "F",
+                "image": null,
+                "content": null
+            }
+        ],
+        "answer": "C"
+    }
+]

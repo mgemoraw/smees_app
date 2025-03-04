@@ -74,6 +74,22 @@ class _TakeQuizState extends State<TakeQuiz> {
     });
   }
 
+  String _formatTime(Duration duration) {
+    int hours = duration.inHours;
+    int minutes = duration.inMinutes % 60;
+    int seconds = duration.inSeconds % 60;
+
+    // Return time in hh:mm:ss format
+    return '${_twoDigits(hours)}:${_twoDigits(minutes)}:${_twoDigits(seconds)}';
+  }
+
+  String _twoDigits(int n) {
+    if (n >= 10) {
+      return '$n';
+    }
+    return '0$n';
+  }
+
   @override
   void dispose() {
     _timer?.cancel();
@@ -89,7 +105,10 @@ class _TakeQuizState extends State<TakeQuiz> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColorDark,
         // backgroundColor: Color.fromRGBO(33, 150, 243, 1),
-        title: Text("Quiz - ${widget.department} Time: $_start seconds"),
+        title: Text(
+          "Exam Time - ${_formatTime(_remainingTime)}",
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
         actions: [
           // working on search bar
           PopupMenuButton(itemBuilder: (context) {

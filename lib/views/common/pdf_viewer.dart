@@ -133,13 +133,41 @@ class _PDFViewScreenState extends State<PDFViewScreen> {
     return SizedBox(
       height: MediaQuery.of(context).size.height,
 
-      child: SfPdfViewer.asset(
-          widget.filePath,
-          key: _pdfViewerKey,
-        scrollDirection: PdfScrollDirection.vertical,
+      child: FutureBuilder(
+        future: _loadPdf(widget.filePath),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasError) {
+            return Center(child: Text("Error: ${snapshot.error}"));
+          } else if (snapshot.hasData) {
+            return SfPdfViewer.asset(
+              widget.filePath,
+              key: _pdfViewerKey,
+              scrollDirection: PdfScrollDirection.vertical,
+            );
+          } else {
+            return Center(child: Text("No Blue Print file uploaded yet!"));
+          }
+
+        }
       ),
 
     );
+  }
+
+  Future<File> _loadPdf(String path) async {
+    try {
+      // check if the file exists
+      final file = File(path);
+      if (await file.exists()){
+        return file;
+      } else {
+        throw Exception("File not found!");
+      }
+    } catch(e) {
+      throw Exception("Error loading PDF file: $e");
+    }
   }
 }
 

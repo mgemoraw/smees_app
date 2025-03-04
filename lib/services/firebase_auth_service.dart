@@ -43,6 +43,7 @@ class AuthService {
       }
     } catch (err) {
       print("Error: $err");
+      rethrow;
     }
     return null;
   }
@@ -87,6 +88,7 @@ class AuthService {
       }
     } catch (err) {
       print("Login Error: $err");
+      // raise error;
     }
     return null;
   }

@@ -54,7 +54,7 @@ class _AuthScreenState extends State<AuthScreen> {
     //
     List<DropdownMenuItem<String>> departments = [];
     for (String key in files.keys) {
-      var menuItem = DropdownMenuItem(value: files[key], child: Text(key));
+      var menuItem = DropdownMenuItem(value: key, child: Text(key));
       departments.add(menuItem);
     }
     return departments;
@@ -167,11 +167,20 @@ class _AuthScreenState extends State<AuthScreen> {
         await authService.register(email, password, data!);
         if (user != null) {
           ScaffoldMessenger.of(context)
-              .showSnackBar(SnackBar(content: Text("Register Sucess")));
+              .showSnackBar(SnackBar(content: Text("Register Sucess"),
+            backgroundColor: Colors.green,));
         }
-        return;
+        // return;
       }catch (err){
         //
+        ScaffoldMessenger.of(context)
+            .showSnackBar(
+            SnackBar(
+              content: Text("Register Failed: Please "
+            "use valid email and user id", style:TextStyle
+                (color: Colors
+                  .blue[900])),
+              backgroundColor: Colors.red[300],));
       } finally {
         setState(() {
           isLoading = false;

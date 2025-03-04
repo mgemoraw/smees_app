@@ -117,6 +117,11 @@ flutter:
       - assets/ComputerEngineering/
       - assets/ComputerScience/
       - assets/SoftwareEngineering/
+      - assets/fc/
+      - assets/fcwre/
+      - assets/fmie/
+      - assets/fece/
+      - assets/fcfe/
       - .env
   # assets:
   #   - images/a_dot_burr.jpeg

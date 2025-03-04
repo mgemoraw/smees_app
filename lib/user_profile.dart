@@ -224,11 +224,13 @@ class _UserProfileState extends State<UserProfile> {
               ListTile(
                 title: Text("Username: ${user!.username}"),
                 subtitle: Text("Department: ${user!.department}"),
-                trailing: TextButton(child: Text("Edit Info"), onPressed: (){},),
+                // trailing: TextButton(child: Text("Edit Info"), onPressed: (){},),
               ),
               ListTile(
                 title: Text("Email: ${user!.email}"),
-                subtitle: TextButton(child: Text("Change Password"), onPressed: (){
+                subtitle: TextButton(child: Text("Change Password", style:
+                TextStyle(fontSize: 15)),
+                  onPressed: (){
                   _updatePasswordDialog(context);
                 },),
               ),
