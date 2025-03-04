@@ -131,14 +131,38 @@ class _TakeExamState extends State<TakeExam> {
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(8.0),
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () async{
+            // check answer
+            // _calculateScore();
+            if (widget.items.length == userAnswers.length) {
+              _calculateScore();
+              final result = {
+                'userId': userProvider.user.username,
+                'examStarted': DateTime.now().toIso8601String(),
+                'examEnded': DateTime.now().toIso8601String(),
+                'questions': widget.items.length,
+                'score': _totalScore,
+              };
+              await _writeResults(result);
+              // Navigator.pop(context);
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ResultPage(resultData:
+                      result, backRoute: "/exam")));
+            } else {
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(
+                  SnackBar(
+                    content: Text("Please Complete all Questions", style: TextStyle(fontSize: 15, color: Colors.blue[900])),
+                    backgroundColor: Colors.red[300],
+              ));
+            }
+            // print("Hello: $_totalScore");
+          },
           isExtended: true,
-          child: const Text(
-            "Submit", // Display the formatted time
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-            ),
+          child: const Icon(
+            Icons.send,
           ), //Icons.plus),
         ),
       ),
@@ -203,7 +227,9 @@ class _TakeExamState extends State<TakeExam> {
               ? ElevatedButton(
                   onPressed: () async{
                     // _previous question
-                    // _restartQuiz();
+
+                    // calculate score
+                    _calculateScore();
 
                     final result = {
                       'userId': userProvider.user.username,
@@ -259,7 +285,7 @@ class _TakeExamState extends State<TakeExam> {
               },
             ),
             // Question index tracker
-            Container(
+            SizedBox(
               height: 60.0,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -343,6 +369,8 @@ class _TakeExamState extends State<TakeExam> {
                       enabled: !answerWasSelected,
                     ),
                   );
+                } else {
+                  return null;
                 }
               },
             ),
@@ -439,8 +467,8 @@ class _TakeExamState extends State<TakeExam> {
   }
 
   void _writeAnswer(String value) {
+    // write answer
     userAnswers[_qno] = value;
-
   }
 
   void _checkPreviousAnswer() {
@@ -461,6 +489,21 @@ class _TakeExamState extends State<TakeExam> {
       return true;
     }
     return false;
+  }
+
+  void _calculateScore(){
+    int score = 0;
+    for (int i = 0; i < userAnswers.length; i++) {
+      if (userAnswers[i] == widget.items[i]['answer']) {
+        score++;
+        print("Answer $i: ${widget.items[i]['answer']} user Answer $i: ${userAnswers[i]}");
+        print("Score: $score");
+      }
+    }
+
+    setState(() {
+      _totalScore = score;
+    });
   }
 
 

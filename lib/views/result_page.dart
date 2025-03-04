@@ -27,11 +27,10 @@ class ResultPage extends StatelessWidget  {
                   Container(height: 24),
                   Text("Total Questions: ${resultData['questions']}"),
                   Text("Your Score: ${resultData['score']}", style:
-                  TextStyle
-                    (fontSize:
-                  18),),
-                  Text("Quize Started: ${resultData['testStarted']}"),
-                  Text("Quiz Ended: ${resultData['testEnded']}"),
+                  TextStyle(fontSize: 18)),
+
+                  // Text("Test Started: ${resultData['testStarted']}"),
+                  // Text("Quiz Ended: ${resultData['testEnded']}"),
                   SizedBox(
                     height: 30,
                   ),
