@@ -120,7 +120,6 @@ flutter:
       - assets/fc/
       - assets/fcwre/
       - assets/fmie/
-      - assets/fece/
       - assets/fcfe/
       - .env
   # assets:
