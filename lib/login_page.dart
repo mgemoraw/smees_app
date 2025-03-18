@@ -292,7 +292,7 @@ class _LoginState extends State<Login> {
 
         // Save token to local storage
         final storage = FlutterSecureStorage();
-        await storage.write(key:"smees_token", value: token);
+        await storage.write(key:"smees-token", value: token);
 
         Provider.of<UserProvider>(context, listen: false).setUser(newUser: User.fromJson(smeesUser));
         final prefs = await SharedPreferences.getInstance();

@@ -16,9 +16,10 @@ class Course {
 
 class DepartmentModel {
   String? name;
+  String? faculty;
   String? description;
 
-  DepartmentModel({this.name, this.description});
+  DepartmentModel({this.name, this.faculty, this.description});
 }
 
 class Question {

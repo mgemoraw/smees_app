@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "department": "Civil Engineering",
+    "name": "Construction Engineering and Management",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "department": "Civil Engineering",
+    "name": "Structural Engineering",
+    "description": ""
+  },
+  {
+    "id": 3,
+    "department": "Civil Engineering",
+    "name": "Geotechnical Engineering",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "department": "Civil Engineering",
+    "name": "Road and Transport Engineering",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "department": "Civil Engineering",
+    "name": "Hydraulic Engineering",
+    "description": ""
+  }
+
+]

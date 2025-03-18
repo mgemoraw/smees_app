@@ -9,6 +9,8 @@ const loginApi = "auth/users/login";
 const userUpdateApi = "auth/users/update";
 const tokenApi = "auth/token";
 const questionsApi = "questions/index";
+// const questionsByDeptNameApi = "questions/index"
+
 const getDepartmentsApi = "departments/index";
 const usersGetAllApi = "users/index";
 

@@ -77,6 +77,35 @@ class SmeesHelper {
           )
           '''
         );
+
+
+        // create exam modules table
+        await db.execute(
+            '''
+          CREATE TABLE exam_modules(
+            id INTEGER PRIMARY KEY AUTOINCREMENT, 
+            name VARCHAR(100),
+            department VARCHAR(100),
+            description VARCHAR(255)
+          )
+          '''
+        );
+
+        // create exam COURSES table
+        await db.execute(
+            '''
+          CREATE TABLE courses(
+            id INTEGER PRIMARY KEY AUTOINCREMENT, 
+            name VARCHAR(100),
+            department VARCHAR(100),
+            examModule VARCHAR(100),
+            description VARCHAR(255),
+            moduleId INTEGER,
+            FOREIGN KEY (moduleId) REFERENCES exam_modules (id) ON DELETE 
+            CASCADE
+          )
+          '''
+        );
       }
     );
   }
@@ -204,6 +233,35 @@ class SmeesHelper {
     return 0.0;
   }
 
+  Future <List<Map<String, dynamic>>> getAllModules() async {
+    // returns all modules of exit exam
+    final db = await database;
+
+    try {
+      List<Map<String, dynamic>>  result = await  db.query(
+        'exam_modules',
+      );
+      return result;
+
+    } catch (err) {
+      return [];
+    }
+  }
+
+  Future <List<Map<String, dynamic>>> getAllCourses() async {
+    // returns all courses
+    final db = await database;
+
+    try {
+      List<Map<String, dynamic>>  result = await  db.query(
+        'courses',
+      );
+      return result;
+
+    } catch (err) {
+      return [];
+    }
+  }
 }
 
 

@@ -115,11 +115,11 @@ class _TakeExamState extends State<TakeExam> {
   }
 
   void scrollToIndex() {
-    _scrollController.animateTo(
-      _qno * 100.0,
-      duration: Duration(milliseconds:300),
-      curve: Curves.easeInOut,
-    );
+    // _scrollController.animateTo(
+    //   _qno * 100.0,
+    //   duration: Duration(milliseconds:300),
+    //   curve: Curves.easeInOut,
+    // );
   }
 
   @override

@@ -4,6 +4,7 @@
         "course_code": null,
         "department_name": "Civil Engineering",
         "course_name": "",
+        "exam_module": "Construction Engineering and Management",
         "content": "Which gradation of aggregate is desirable for making concrete, as the space between larger particles is effectively filled by smaller particles to produce a well-packed structure?",
         "image": "",
         "options": [
@@ -44,6 +45,7 @@
         "department_id": 1,
         "course_code": null,
         "department_name": "Civil Engineering",
+        "exam_module": "Construction Engineering and Management",
         "course_name": "",
         "content": "Which type of slump indicate even dropping and a well-proportioned concrete:",
         "image": "",
@@ -86,6 +88,7 @@
         "course_code": null,
         "department_name": "Civil Engineering",
         "course_name": "",
+        "exam_module": "Construction Engineering and Management",
         "content": "What is a type of admixture used to delay the rate of strength development in concrete?",
         "image": "",
         "options": [

@@ -23,6 +23,7 @@ import 'package:smees/views/user_provider.dart';
 
 import '../api/end_points.dart';
 import '../models/random_index.dart';
+import '../models/user.dart';
 
 var files = {
   "Automotive Engineering": "AutomotiveEngineering",
@@ -67,7 +68,35 @@ class _ExamHomeState extends State<ExamHome> {
   bool isLoading = false;
   int examId = 0;
   String message = "";
+  String? token;
 
+  late User user;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUserData();
+  }
+
+
+  Future<void> _loadUserData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? jsonString = prefs.getString("smees-user");
+    final userData = jsonDecode(jsonString!);
+
+    setState(() {
+      // departmentId = userData['departmentId'];
+      token = userData['token'];
+      user = User(
+        username: userData['username'] ,
+        password: userData['token'],
+        email: userData['email'],
+        university: userData['university'],
+        department: userData['department'],
+      );
+    });
+    ;
+  }
   // fetch content from json
   Future<void> readJson(String dep) async {
     // path = path.replaceAll(" ", "");
@@ -96,21 +125,34 @@ class _ExamHomeState extends State<ExamHome> {
   // automatically downloads exam questions when online
   Future <void> _downloadQuestions() async {
 
-    final preferences = await SharedPreferences.getInstance();
-    final userData =  preferences.getString('smeesUser');
-    int departmentId = jsonDecode(userData!)['departmentId'];
+    // final preferences = await SharedPreferences.getInstance();
+    // final userData =  preferences.getString('smeesUser');
+    // int departmentId = jsonDecode(userData!)['departmentId'];
+    // String deptName = jsonDecode(userData!)['department'].toLowerCase();
 
+
+    // load user data if not loaded
+    await _loadUserData();
+
+
+    String deptName = user.department!;
+    String deptSlug = deptName.toLowerCase().replaceAll(' ', '-');
+    debugPrint("Department-Slug: $deptSlug");
 
     // final year = year;
-    final url = Uri.parse("$API_BASE_URL/${testStartApi}/${departmentId}");
+    final url = Uri.parse("$API_BASE_URL${testStartApi}/${deptSlug}?limit=100");
 
     final storage =  FlutterSecureStorage();
     final token = await storage.read(key: 'smees-token');
 
-    final headers  = {
-      'Authentication': 'Bearer $token',
+    final headers = {
+      'Authorization': 'Bearer $token',
+      'Content-Type': 'application/x-www-form-urlencoded',
     };
-    final body = {};
+
+    // final body = {};
+
+    // debugPrint(headers.toString());
 
     try {
        final response = await http.get(
@@ -119,31 +161,44 @@ class _ExamHomeState extends State<ExamHome> {
        );
 
        if (response.statusCode == 200) {
-         final data = jsonDecode(response.body);
+         final data = json.decode(response.body);
          // final directory = await getApplicationDocumentsDirectory();
          // final file = File("${directory.path}/data_$year.json");
          // await file.writeAsString(json.encode(data));
+         
+         // final stringData = response.body;
+         // debugPrint(stringData);
+
          setState(() {
            // _progress = 1.0;
            // _items = data;
-           examId = int.parse(data['test_id']);
+
+           examId = data['test_id'];
+
            _items = data['questions'];
            message = "success";
 
+           // debugPrint(data);
            return;
          });
        } else {
-         setState(() {
-           message = "Failed to load data, please check your connection!";
-         });
+         ScaffoldMessenger.of(context).showSnackBar(
+           SnackBar(
+             content: Text("Error ${response.statusCode}: ${response.body}"),
+             backgroundColor: Colors.redAccent,
+           ),
+         );
        }
     } catch(err) {
       //
-      setState((){
-        message = "Error: ${err.toString()}";
-      });
+      debugPrint(err.toString());
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Error: ${err.toString()}"),
+          backgroundColor: Colors.redAccent,
+        ),
+      );
 
-      print("data not found");
     } finally {
       setState(() {
         isLoading = false;
@@ -252,9 +307,13 @@ class _ExamHomeState extends State<ExamHome> {
                     ),
                   );
                 } else {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text("$_message")),
-                  );
+                  _message!.isNotEmpty ? ScaffoldMessenger.of(context)
+                      .showSnackBar(
+                    SnackBar(
+                        content: Text("Error: $_message"),
+                      backgroundColor: Colors.redAccent,
+                    ),
+                  ): null ;
                 }
               },
               child:

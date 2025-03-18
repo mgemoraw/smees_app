@@ -100,8 +100,8 @@ class SmeesApp extends StatelessWidget {
 
       initialRoute: "/login",
       routes: {
-        // '/login': (context) => const Login(),
-        '/login': (context) => AuthScreen(),
+        '/login': (context) => const Login(),
+        // '/login': (context) => AuthScreen(),
         '/': (context) => const Home(title: "SMEES", department: ""),
         '/quiz': (context) => const TestHome(department: ""),
         "/exam": (context) => const ExamHome(department: ""),
@@ -127,7 +127,7 @@ class SmeesApp extends StatelessWidget {
 Future<void> initializeDatabase() async {
   try {
     if (kIsWeb) {
-      print("running on web");
+      // print("running on web");
       await Firebase.initializeApp(
           options: FirebaseOptions(
               apiKey: "AIzaSyATx5-RdiT1Qw54-Do-pMm4I6faChgVgjw",
