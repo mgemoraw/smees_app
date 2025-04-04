@@ -163,10 +163,15 @@ class _PDFViewScreenState extends State<PDFViewScreen> {
       if (await file.exists()){
         return file;
       } else {
+
         throw Exception("File not found!");
       }
     } catch(e) {
-      throw Exception("Error loading PDF file: $e");
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        backgroundColor: Colors.blue,
+        content : Text("File Not found"),
+      ));
+      throw Exception("Error loading PDF file:");
     }
   }
 }

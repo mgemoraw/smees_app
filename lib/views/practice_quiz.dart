@@ -76,6 +76,7 @@ class _TestHomeState extends State<TestHome> {
   String pageKey = "home";
   int pageIndex = 0;
   late User user;
+  late int examYear = 0;
 
   @override
   void initState() {
@@ -130,7 +131,8 @@ class _TestHomeState extends State<TestHome> {
     try {
       if (faculty != null) {
         final String response =
-        await rootBundle.loadString("assets/$faculty/$department/questions.json");
+        await rootBundle.loadString("assets/$faculty/$department/questions"
+            ".json");
         final data = json.decode(response);
 
         setState(() {
@@ -178,6 +180,20 @@ class _TestHomeState extends State<TestHome> {
 
   }
 
+  List <dynamic> filterByYear(int year) {
+
+    if (year == 0) {
+      return _items;
+    }
+    late List<dynamic> new_items = [];
+
+    for (int i = 0; i < _items.length; i++){
+      if (_items[i]['year']==year){
+        new_items.add(_items[i]);
+      }
+    }
+    return new_items;
+  }
   List<dynamic> filterByModule(String moduleName) {
     // filters questions by Module
     late List<dynamic> filteredItems = [];
@@ -372,8 +388,31 @@ class _TestHomeState extends State<TestHome> {
                 }),
           ),
 
+        SizedBox(
+          child: DropdownButton(
+            hint: const Text("Filter by Exam Year"),
+            value: examYear,
+            items:[
+              DropdownMenuItem(child: Text('All'), value:0),
+              DropdownMenuItem(child: Text('2024'), value:2024),
+              DropdownMenuItem(child: Text('2025'), value:2025),
+            ],
+              onChanged: (value) {
+                //
+                if (value != null){
+                  setState(() {
+                    examYear = value;
+                    // _items = filterByYear(value);
+                  });
+                }else {
+                  setState(() {
+                    examYear = 0;
+                  });
+                }
+              }
+          ),
 
-
+        ),
         SizedBox(
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
@@ -438,7 +477,7 @@ class _TestHomeState extends State<TestHome> {
                 } catch (e) {
                   ScaffoldMessenger.of(context).showMaterialBanner(
                       MaterialBanner(
-                          content: Text("Error: No content found!"),
+                          content: Text("Error: No Items found!"),
                           actions: <Widget>[
                         TextButton(
                             onPressed: () {
@@ -455,7 +494,8 @@ class _TestHomeState extends State<TestHome> {
         ),
 
         const SizedBox(height: 20.0),
-        SingleChildScrollView(child: Text("Data: ${_items.length}")),
+        SingleChildScrollView(child: Text("Total Available Questions: "
+            "${_items.length}")),
       ]),
       bottomNavigationBar: Container(
           height: 60,

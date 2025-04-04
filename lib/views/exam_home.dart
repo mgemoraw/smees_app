@@ -206,7 +206,7 @@ class _ExamHomeState extends State<ExamHome> {
     }
   }
 
-  List<DropdownMenuItem<String>> getDepartents() {
+  List<DropdownMenuItem<String>> getDepartments() {
     //
     List<DropdownMenuItem<String>> departments = [];
     for (String item in files.keys) {

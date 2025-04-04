@@ -62,8 +62,14 @@ class _LeftNavigationState extends State<LeftNavigation> {
             ),
             child: Column(
               children: [
-                Image.asset('assets/images/profile.png', height: 100),
-                Text("SMEES-App- $SMEES_APP_VERSION"),
+                Image.asset('assets/images/bdu_logo.png', height: 60),
+                // Text("BiT (SEMS)-App"
+                //     "$SMEES_APP_VERSION"),
+                ListTile(
+                  title: Text("BiT SEMS App"
+                      "-App"),
+                  subtitle: Text("Release Version: $SMEES_APP_VERSION"),
+                ),
               ],
             ),
           ),
@@ -84,7 +90,12 @@ class _LeftNavigationState extends State<LeftNavigation> {
                     onChanged: (value) {
                       setState(() {
                         // change offlineMode state
-                        context.read<UseModeProvider>().changeUseMode();
+                        // context.read<UseModeProvider>().changeUseMode();
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          backgroundColor: Colors.redAccent,
+                          content: Text("This feature is not available in "
+                              "this version of the app"),
+                        ));
                       });
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         backgroundColor: Colors.blue,
@@ -127,7 +138,25 @@ class _LeftNavigationState extends State<LeftNavigation> {
                           softWrap: true,
                           text: const TextSpan(
                             text:
-                                "This app is developed by Mengistu Getie & Tadele Yigrem in Collaboration with Bahir Dar Institute of Technology as TT project to support BiT Students practice and gain knowledge from model exam questions. Mr. Tadele Yigrem has a great contribution starting from initiating the project up to data collection and processing. Bahir Dar Institute of Technology, BiT has given its ultimate support and finance which helped us in covering data collection, testing and deployment related costs. please contact us for support and feedbacks",
+                                "This Bahir Dar Institute of Technology's "
+                                    "Student Model Exist Exam Practice "
+                                    "Application is developed by Mengistu "
+                                    "Getie & Tadele Yigrem. It is submitted "
+                                    "to Bahir Dar Institute of Technology as "
+                                    "TT project to support BiT Students "
+                                    "practice and gain knowledge from model "
+                                    "exam questions. Mr. Tadele Yigrem has "
+                                    "made a great contribution starting from "
+                                    "initiating the project up to data "
+                                    "collection and processing. The "
+                                    "source code is written by "
+                                    "Mengistu Getie. Bahir Dar "
+                                    "Institute of Technology, BiT has given "
+                                    "its ultimate support and finance which "
+                                    "helped us in covering data collection, "
+                                    "testing and deployment related costs. "
+                                    "please reach us through our contact mail "
+                                    "for support and feedbacks",
                             style: TextStyle(color: Colors.blue),
                           ),
                         ),
@@ -135,7 +164,8 @@ class _LeftNavigationState extends State<LeftNavigation> {
                         subtitle: Expanded(
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Contact us on: smees.dev@gmail.com"),
+                            child: Text("Contact us on: mengist.dev@gmail"
+                                ".com"),
                           ),
                         )),
                     ],
