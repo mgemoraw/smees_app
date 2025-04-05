@@ -157,16 +157,15 @@ class _LeftNavigationState extends State<LeftNavigation> {
                                     "testing and deployment related costs. "
                                     "please reach us through our contact mail "
                                     "for support and feedbacks",
-                            style: TextStyle(color: Colors.blue),
+                            style: TextStyle(color: Colors.blue, overflow:
+                            TextOverflow.fade ),
                           ),
                         ),
 
-                        subtitle: Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("Contact us on: mengist.dev@gmail"
-                                ".com"),
-                          ),
+                        subtitle: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Contact us on: mengist.dev@gmail"
+                              ".com"),
                         )),
                     ],
                   ),

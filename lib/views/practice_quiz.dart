@@ -28,7 +28,7 @@ Map<String, List<String>> faculties = {
   'fcwre': ['civil engineering', 'hydraulic and water resources engineering',
     'irrigation and water resources engineering'],
   'fmie': ['mechanical engineering', 'industrial engineering', 'automotive '
-      'engineering'],
+      'engineering', 'material science'],
   'fc': ['computer science', 'software engineering', 'information '
       'technology', 'information science', 'cyber security'],
   'fece': ['electrical engineering', 'computer engineering'],
@@ -560,8 +560,8 @@ class _TestHomeState extends State<TestHome> {
     int qnos = 0;
     try {
       qnos = int.parse(value);
-      if (qnos > 50) {
-        return 50;
+      if (qnos > _items.length) {
+        return _items.length;
       }
     } catch (e) {
       // catch error
