@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:smees/exam_page.dart';
+
 import 'package:smees/home_page.dart';
 import 'package:smees/models/user.dart';
 import 'package:smees/student_statistics.dart';

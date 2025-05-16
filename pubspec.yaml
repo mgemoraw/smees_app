@@ -104,19 +104,6 @@ flutter:
   assets:
       - assets/
       - assets/images/
-      - assets/AutomotiveEngineering/
-      - assets/CivilEngineering/
-      - assets/wrie/
-      - assets/hwre/
-      - assets/IndustrialEngineering/
-      - assets/MechanicalEngineering/
-      - assets/ChemicalEngineering/
-      - assets/FoodEngineering/
-      - assets/HumanNutrition/
-      - assets/ElectricalEngineering/
-      - assets/ComputerEngineering/
-      - assets/ComputerScience/
-      - assets/SoftwareEngineering/
       - assets/fc/computer_science/
       - assets/fc/software_engineering/
       - assets/fc/information_technology/
@@ -132,6 +119,19 @@ flutter:
       - assets/fcfe/chemical_engineering/
       - assets/fcfe/food_engineering/
       - assets/fcfe/human_nutrition/
+      - assets/AutomotiveEngineering/
+      - assets/CivilEngineering/
+      - assets/wrie/
+      - assets/hwre/
+      - assets/IndustrialEngineering/
+      - assets/MechanicalEngineering/
+      - assets/ChemicalEngineering/
+      - assets/FoodEngineering/
+      - assets/HumanNutrition/
+      - assets/ElectricalEngineering/
+      - assets/ComputerEngineering/
+      - assets/ComputerScience/
+      - assets/SoftwareEngineering/
       - .env
   # assets:
   #   - images/a_dot_burr.jpeg

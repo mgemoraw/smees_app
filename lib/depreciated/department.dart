@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smees/exam_page.dart';
+// import 'package:smees/exam_page.dart';
 
 class Departments extends StatelessWidget {
   const Departments({super.key});
@@ -93,13 +93,13 @@ class _DepartmentState extends State<Department> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ExamPage(
-                                  title: 'Depatment',
-                                )),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (context) => const ExamPage(
+                      //             title: 'Depatment',
+                      //           )),
+                      // );
                     },
                     child: Text('Take Exam'),
                   ),

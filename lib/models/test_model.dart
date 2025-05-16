@@ -65,7 +65,8 @@ class Exam {
     this.examStarted, 
     this.examEnded,
     this.questions,
-    this.score
+    this.score,
+
   });
 
   // convert Exam objec to map object
@@ -82,6 +83,7 @@ class Exam {
 
   // convert map objec to Exam object
   factory Exam.fromMap(Map<String, dynamic> map) {
+
     return Exam(
       id: map['id'], 
       userId: map['userId'],

@@ -226,6 +226,9 @@ class _TakeQuizState extends State<TakeQuiz> {
             ),
           ),
 
+
+          // Image.asset('assets/${widget
+          //     .items[_qno]['image']}'),
           ListView.builder(
             shrinkWrap: true,
             itemCount: !useModeProvider.offlineMode
@@ -237,28 +240,34 @@ class _TakeQuizState extends State<TakeQuiz> {
                   : (widget.items[_qno]['options']);
               // if (widget.items[_qno]['options'][index]['content'] != null) {
               if (options[index]['content'] != null) {
-                return AnswerOption(
-                  enabled: !answerWasSelected,
-                  value: options[index]['label'],
-                  answerText: options[index]['content'],
-                  answerColor: (_chosenAnswer == options[index]['label'])
-                      ? _selectedColor
-                      : null,
-                  answerTap: () {
-                    //
-                    setState(() {
-                      _chosenAnswer = options[index]['label'];
-                      // _selectedColor = Colors.blue;
-                      if (_chosenAnswer == widget.items[_qno]['answer']){
-                        _selectedColor = Colors.green[400];
-                      } else {
-                        _selectedColor = Colors.red[400];
-                      }
-                      _writeAnswer(_chosenAnswer!);
-                      disableOptions();
-                      // _nextQuestion();
-                    });
-                  },
+                return Column(
+                  children: [
+                    AnswerOption(
+                      enabled: !answerWasSelected,
+                      value: options[index]['label'],
+                      answerText: options[index]['content'],
+                      answerColor: (_chosenAnswer == options[index]['label'])
+                          ? _selectedColor
+                          : null,
+                      answerTap: () {
+                        //
+                        setState(() {
+                          _chosenAnswer = options[index]['label'];
+                          // _selectedColor = Colors.blue;
+                          if (_chosenAnswer == widget.items[_qno]['answer']){
+                            _selectedColor = Colors.green[400];
+                          } else {
+                            _selectedColor = Colors.red[400];
+                          }
+                          _writeAnswer(_chosenAnswer!);
+                          disableOptions();
+                          // _nextQuestion();
+                        });
+                      },
+                    ),
+                    // options[index]['image']  ?? Image.asset
+                    //   ("assets/${options[index]['image']}"),
+                  ],
                 );
               }
             },

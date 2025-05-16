@@ -5,6 +5,7 @@ import "package:flutter/material.dart";
 import "package:flutter_secure_storage/flutter_secure_storage.dart";
 import "package:provider/provider.dart";
 import "package:smees/models/database.dart";
+import "package:smees/models/smees_test.dart";
 import "package:smees/models/test_model.dart";
 import "package:smees/models/user.dart";
 import "package:smees/views/answer_option.dart";
@@ -15,13 +16,15 @@ import "../api/end_points.dart";
 
 class TakeExam extends StatefulWidget {
   final String department;
+  final TestSchema examData;
   final List items;
-  final int examId;
+  // final int examId;
   const TakeExam({
     super.key,
     required this.department,
     required this.items,
-    required this.examId,
+    // required this.examId,
+    required this.examData,
   });
 
   @override
@@ -39,6 +42,7 @@ class _TakeExamState extends State<TakeExam> {
 
   String bottomContainerText = "";
   Map userAnswers = {};
+  Map <dynamic, dynamic> _userAnswers = {};
   int _qno = 0;
   int _totalScore = 0;
   bool answerWasSelected = false;
@@ -134,7 +138,7 @@ class _TakeExamState extends State<TakeExam> {
           onPressed: () async{
             // check answer
             // _calculateScore();
-            if (widget.items.length == userAnswers.length) {
+            if (userAnswers.length >0 ){ //== widget.items.length ) {
               _calculateScore();
               final result = {
                 'userId': userProvider.user.username,
@@ -143,13 +147,48 @@ class _TakeExamState extends State<TakeExam> {
                 'questions': widget.items.length,
                 'score': _totalScore,
               };
-              await _writeResults(result);
-              // Navigator.pop(context);
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ResultPage(resultData:
-                      result, backRoute: "/exam")));
+
+
+              if (useModeProvider.offlineMode){
+                await _writeResults(result);
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ResultPage(resultData:
+                        result, backRoute: "/exam")));
+              } else {
+
+
+                // send results to database
+                await _sendResults(Exam(
+                  id: widget.examData.id,
+                  userId: userProvider.user.username,
+                  examStarted: DateTime.now(),
+                  examEnded: DateTime.now(),
+                  questions: widget.items.length,
+                  score: _totalScore.toDouble(),
+                ));
+
+                // navigate to results page after submission
+                if (_message == "success" ){
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ResultPage(resultData:
+                          result, backRoute: "/exam")));
+                } else {
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(
+                      SnackBar(
+                        content: Text("Submit Failed with Error $_message",
+                            style:
+                            TextStyle(fontSize: 15, color: Colors.blue[900])),
+                        backgroundColor: Colors.red[300],
+                      ));
+                }
+              }
+
+
             } else {
               ScaffoldMessenger.of(context)
                   .showSnackBar(
@@ -238,7 +277,20 @@ class _TakeExamState extends State<TakeExam> {
                       'questions': widget.items.length,
                       'score': _totalScore,
                     };
+
+                    // writes data to local database
                     await _writeResults(result);
+
+                    // sends data to database
+                    await _sendResults(new Exam(
+                      id: widget.examData.id,
+                      userId: userProvider.user.username,
+                      examStarted: DateTime.now(),
+                      examEnded: DateTime.now(),
+                      questions: widget.items.length,
+                      score: _totalScore.toDouble(),
+
+                    ));
                     Navigator.pop(context);
                     Navigator.push(
                         context,
@@ -333,6 +385,7 @@ class _TakeExamState extends State<TakeExam> {
               shrinkWrap: true,
               itemCount: widget.items[_qno]['options'].length,
               itemBuilder: (context, index) {
+                try {
                 String? option = widget.items[_qno]['options'][index]['content'];
                 if (option != null) {
                   return Container(
@@ -354,6 +407,12 @@ class _TakeExamState extends State<TakeExam> {
                           _chosenAnswer =
                               widget.items[_qno]['options'][index]['label'];
                           _writeAnswer(_chosenAnswer!);
+
+                          // storing user answer to _userAnswers map
+                          _userAnswers[widget.items[_qno]['id']] =
+                          _chosenAnswer!;
+
+                          debugPrint(_userAnswers.toString());
                         });
                       },
                       leading: Text(
@@ -371,6 +430,15 @@ class _TakeExamState extends State<TakeExam> {
                   );
                 } else {
                   return null;
+                }
+                } catch(eror){
+                  //
+                  // debugPrint("Wrong options format");
+                  return Container(
+                    child:Center(
+                      child: Text("No Choices found"),
+                    ),
+                  );
                 }
               },
             ),
@@ -469,6 +537,7 @@ class _TakeExamState extends State<TakeExam> {
   void _writeAnswer(String value) {
     // write answer
     userAnswers[_qno] = value;
+
   }
 
   void _checkPreviousAnswer() {
@@ -518,38 +587,81 @@ class _TakeExamState extends State<TakeExam> {
       setState((){
         _message = "Error: Something went wrong!";
       });
-      print("Error: $err");
+      // debugPrint("Error: $err");
     } finally {
-      print(_message);
+      setState(() {
+        _message = "";
+      });
+      // debugPrint(_message);
     }
   }
 
-  Future<void> _sendResults(Exam exam) async {
-    final url = Uri.parse('$API_BASE_URL/$testSubmitApi');
+  Future<void> _sendResults(Exam exam)
+  async {
+    final url = Uri.parse('$API_BASE_URL$testSubmitApi/${exam.id}');
     const storage = FlutterSecureStorage();
-    final token = storage.read(key: "smees-token");
+    // final token = storage.read(key: "smees-token");
+    final token = userProvider.user.password;
+    debugPrint("Token: $token");
+
     final headers = {
-      'Authentication': "Bearer $token",
-      'ContentType': 'application/json',
+      'Authorization': "Bearer $token",
+      "Content-Type": "application/json",
     };
-    final body = exam.toMap();
+
+    // Convert the userAnswers Map to a serializable one
+    Map<String, dynamic> serializableUserAnswers = {};
+    _userAnswers.forEach((key, value) {
+      // Convert key to String (if it's not already a string)
+      // Convert value to JSON-serializable type
+      serializableUserAnswers[key.toString()] = value is String || value is num || value is bool
+          ? value
+          : value.toString();  // Convert non-serializable types to String (or handle them as needed)
+    });
 
     try {
+      final  testData = {
+        "id": exam.id,
+        "userId": exam.userId,
+        "examStarted": exam.examStarted!.toIso8601String(),
+        "examEnded": exam.examEnded!.toIso8601String(),
+        "questions": exam.questions,
+        "score": exam.score,
+        "userAnswers": serializableUserAnswers,
+      };
+      // final body = json.encode({
+      //   "id": testData['id'],
+      //   "userId": testData['userId'],
+      //   "examStarted": testData['examStarted'],
+      //   "examEnded": testData['examEnded'],
+      //   "questions": testData['questions'],
+      //   "score": testData['score'],
+      //   "userAnswers": testData['userAnswers'],
+      // });
+
+
+      debugPrint(testData.toString());
+
       //
       final response = await http.post(
         url,
-        body: body,
+        body: json.encode(testData),
         headers: headers,
       );
-
       if (response.statusCode == 200) {
         setState(() {
           _message = "success";
         });
-      }
+      } else {
+        setState(()  {
+          _message = jsonEncode(response.body!);
+        });
+        debugPrint(response.body);
+    }
+
     } catch (err) {
       //
-      print("Sending data failed $err");
+      debugPrint("Sending data failed $err");
       setState(() {
         _message = "$err";
       });

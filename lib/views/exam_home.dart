@@ -8,7 +8,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:smees/exam_page.dart';
+
 import 'package:smees/home.dart';
 import 'package:smees/home_page.dart';
 import 'package:smees/user_profile.dart';
@@ -22,7 +22,10 @@ import 'package:smees/views/take_exam.dart';
 import 'package:smees/views/user_provider.dart';
 
 import '../api/end_points.dart';
+import '../constants/faculties.dart';
 import '../models/random_index.dart';
+import '../models/smees_test.dart';
+import '../models/test_model.dart';
 import '../models/user.dart';
 
 var files = {
@@ -61,6 +64,7 @@ class _ExamHomeState extends State<ExamHome> {
     // 'learn': const LearnZone(),
   };
   List _items = [];
+  late List<dynamic> _modules =[];
   String? _department;
   String pageKey = "home";
   int pageIndex = 0;
@@ -69,6 +73,7 @@ class _ExamHomeState extends State<ExamHome> {
   int examId = 0;
   String message = "";
   String? token;
+  late TestSchema examData;
 
   late User user;
 
@@ -97,28 +102,143 @@ class _ExamHomeState extends State<ExamHome> {
     });
     ;
   }
+
+  String? _getFaculty(String department){
+    ///this function returns the faculty name of department
+
+    for (var entry in faculties.entries) {
+
+      ///debugPrint("deparments under this faculty");
+      /// for (var dep in entry.value){
+      /// this prints list of departments in the faculty
+      ///  print("department
+      /// }
+
+      if (entry.value.contains(department.toLowerCase())){
+        // return parent key for faculty short name
+        return entry.key;
+      }
+    }
+    return null;
+  }
   // fetch content from json
-  Future<void> readJson(String dep) async {
-    // path = path.replaceAll(" ", "");
-    String? path = files[dep];
+  Future<void> readJson(String department) async {
+    String? faculty = _getFaculty(department.toLowerCase());
+    department = department.toLowerCase().replaceAll(" ", "_");
+
     try {
-      String filePath = "assets/$path/$path.json";
+      if (faculty != null) {
+        final String response =
+        await rootBundle.loadString("assets/$faculty/$department/questions"
+            ".json");
+        final data = json.decode(response);
 
-      final String response = await rootBundle.loadString(filePath);
-      final data = await json.decode(response);
+        setState(() {
+          _items = data;
+          examData = TestSchema(
+            id: 0,
+            userId: user.username!,
+            startedAt: DateTime.now(),
+            completedAt: DateTime.now(),
+            totalQuestions: _items.length,
+            score: 0,
+            correctAnswers: 0,
+            responses: [],
+            departmentId: 0,
+          );
 
-      setState(() {
-        _items = data;
-        _message = "Data Loaded!";
-      });
-    } catch (err) {
-      setState(() {
-        _message = "Error: $err";
-      });
-    } finally {
-      setState(() {
-        isLoading = false;
-      });
+
+        });
+      } else {
+        //
+        debugPrint(faculty);
+        debugPrint("Items not found");
+      }
+    } catch(err) {
+      debugPrint("Error: ${err.toString()}");
+    }
+
+  }
+
+  // fetch content from json
+  Future <List<dynamic>> readModules() async {
+    await _loadUserData();
+    String department = user.department!;
+    String? faculty = _getFaculty(department.toLowerCase());
+    department = department.toLowerCase().replaceAll(" ", "_");
+
+    debugPrint("....loading modules");
+    try {
+      if (faculty != null) {
+        final response =
+        await rootBundle.loadString("assets/$faculty/$department/exam_modules"
+            ".json");
+        final data = json.decode(response);
+        setState(() {
+          _modules = json.decode(response);
+        });
+        return data;
+      } else {
+        //
+        // debugPrint(faculty);
+        debugPrint("Items not found");
+        return [];
+      }
+    } catch(err) {
+      debugPrint("Error: ${err.toString()}");
+      return [];
+    }
+
+  }
+
+  List <dynamic> filterByYear(int year) {
+
+    if (year == 0) {
+      return _items;
+    }
+    late List<dynamic> new_items = [];
+
+    for (int i = 0; i < _items.length; i++){
+      if (_items[i]['year']==year){
+        new_items.add(_items[i]);
+      }
+    }
+    return new_items;
+  }
+  List<dynamic> filterByModule(String moduleName) {
+    // filters questions by Module
+    late List<dynamic> filteredItems = [];
+
+    if (moduleName == 'all'){
+      debugPrint("Filter exempted! you selected $moduleName");
+      return _items;
+    }
+
+    for(var item in _items){
+      if (item['exam_module'] == null) {
+
+        debugPrint("Can't filter by module, because I found null value");
+        return _items;
+      } else if (item['exam_module'] != null && item['exam_module'] ==
+          moduleName){
+        filteredItems.add(item);
+      }
+    }
+    // return filtered questions
+    // print(filteredItems);
+
+    return filteredItems;
+  }
+
+  void filterByCourseName(String courseName){
+    // filters questions by course name/code
+    final filteredItems;
+    for(var item in _items){
+      // if (item['course_name'] != null && item['course'].toLowerCase() ==
+      //     courseName){
+      //   print('course name: ${item[course]}');
+      // }
+      print(item['course_name']);
     }
   }
 
@@ -167,18 +287,34 @@ class _ExamHomeState extends State<ExamHome> {
          // await file.writeAsString(json.encode(data));
          
          // final stringData = response.body;
-         // debugPrint(stringData);
 
          setState(() {
            // _progress = 1.0;
            // _items = data;
 
-           examId = data['test_id'];
+           // examId = data['test_id'];
+           final test = jsonEncode(data['test']);
+           debugPrint(test);
+
+
+           // debugPrint("id ${test['id']}");
+
+           // final examData = TestSchema.fromJson(jsonDecode(test));
+             examData = TestSchema(
+               id: 0,
+               userId: user.username!,
+               startedAt: DateTime.now(),
+               completedAt: DateTime.now(),
+               totalQuestions: _items.length,
+               score: 0,
+               correctAnswers: 0,
+               responses: [],
+               departmentId: 0,
+             );
 
            _items = data['questions'];
            message = "success";
 
-           // debugPrint(data);
            return;
          });
        } else {
@@ -194,7 +330,8 @@ class _ExamHomeState extends State<ExamHome> {
       debugPrint(err.toString());
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text("Error: ${err.toString()}"),
+          content: Text("Downloading Questions Failed: ${err.toString()
+          }"),
           backgroundColor: Colors.redAccent,
         ),
       );
@@ -302,7 +439,7 @@ class _ExamHomeState extends State<ExamHome> {
                       builder: (context) => TakeExam(
                         department: user.department!,
                         items: items,
-                        examId: examId,
+                        examData: examData,
                       ),
                     ),
                   );

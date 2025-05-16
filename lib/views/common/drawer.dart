@@ -7,7 +7,7 @@ import "package:smees/views/user_provider.dart";
 import 'package:smees/api/end_points.dart';
 
 // setting app version
-
+const SMEES_APP_VERSION  = "2025.04.1";
 class LeftNavigation extends StatefulWidget {
   const LeftNavigation({super.key});
 
@@ -90,12 +90,12 @@ class _LeftNavigationState extends State<LeftNavigation> {
                     onChanged: (value) {
                       setState(() {
                         // change offlineMode state
-                        // context.read<UseModeProvider>().changeUseMode();
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          backgroundColor: Colors.redAccent,
-                          content: Text("This feature is not available in "
-                              "this version of the app"),
-                        ));
+                        context.read<UseModeProvider>().changeUseMode();
+                        // ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        //   backgroundColor: Colors.redAccent,
+                        //   content: Text("This feature is not available in "
+                        //       "this version of the app"),
+                        // ));
                       });
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         backgroundColor: Colors.blue,
@@ -212,8 +212,8 @@ class _LoginLogoutState extends State<LoginLogout> {
     return Container(
       child: isLoggedIn
           ? ListTile(
-              leading: Icon(Icons.login),
-              title: const Text('Login'),
+              leading: Icon(Icons.logout),
+              title: const Text('Logout'),
               onTap: () {
                 setState(() {
                   Navigator.pushNamed(context, "/login");
@@ -221,8 +221,8 @@ class _LoginLogoutState extends State<LoginLogout> {
               },
             )
           : ListTile(
-              leading: Icon(Icons.logout),
-              title: const Text('Logout'),
+              leading: Icon(Icons.login),
+              title: const Text('Login'),
               onTap: () {
                 logout();
                 setState(() {

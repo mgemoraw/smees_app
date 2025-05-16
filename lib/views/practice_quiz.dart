@@ -257,9 +257,9 @@ class _TestHomeState extends State<TestHome> {
   }
 
 
-  Future<void> _downloadData(String deptName, int year) async {
+  Future<void> _downloadData(String depName, int year) async {
     final url =
-        Uri.parse("$API_BASE_URL/questions/index/$deptName?year=$year");
+        Uri.parse("$API_BASE_URL/questions/index/$depName?year=$year");
     try {
       final response = await http.get(url);
       if (response.statusCode == 200) {
@@ -377,10 +377,10 @@ class _TestHomeState extends State<TestHome> {
                         String deptSlug = user.department!.toLowerCase()
                             .replaceAll(' ','-');
                         _downloadData(deptSlug, 2022);
-                        print("departmentId: $departmentId items: $_items");
+                        // print("departmentId: $departmentId items: $_items");
                       }
                     } else {
-                      print("Department: $department");
+                      // print("Department: $department");
                     }
                     // _downloadData(departmentId, int.parse(yearController.text));
                     // print(_items);
@@ -438,10 +438,10 @@ class _TestHomeState extends State<TestHome> {
                             .replaceAll(' ','-');
                         _downloadData(deptSlug, 2022);
 
-                        print("departmentId: $deptSlug items: $_items");
+                        // print("departmentId: $deptSlug items: $_items");
                       }
                     } else {
-                      print("Department: $department");
+                      // print("Department: $department");
                     }
 
                   });
