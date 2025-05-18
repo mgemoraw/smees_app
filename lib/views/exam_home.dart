@@ -74,7 +74,7 @@ class _ExamHomeState extends State<ExamHome> {
   String message = "";
   String? token;
   late TestSchema examData;
-
+  late int examYear=DateTime.now().year;
   late User user;
 
   @override
@@ -371,7 +371,7 @@ class _ExamHomeState extends State<ExamHome> {
           const Padding(
             padding: EdgeInsets.all(10.0),
             child: Text(
-                "Welcome to your Model Exit Exam Page You will be given 100 questions with 1 minute for each question. You cannot exit from the model exam once started. If you stopped the exam in any case the questions you answered up to the stoppage time will be recorded. Once you completed your answers, do not forget to submit your answers to get the final score. If your exam is interrupted, the number of questions you answered will be stored for the allowed exam period only.  You can't submit incomplete questions as the submit button is disabled unless all the questions are checked. Your performance will be sent to Your University's Quality Assurance Office when You are connected to internet. Good Luck and Enjoy"),
+                "Welcome to your Model Exit Exam Page. You will be given 100 questions with 1 minute for each question. You cannot view your score of the model exam unless you complete all and submit it. If you stopped the exam in any case nothing will be recorded. Once you completed your answers, do not forget to submit your answers to get the final score and update your score status on the local and remote database. You can try model exams by year (test period). Your performance will be sent to Your University's Quality Assurance Office for follow up.  Let's Enjoy"),
           ),
 
           // dropdown option to choose and take Exam
@@ -398,6 +398,35 @@ class _ExamHomeState extends State<ExamHome> {
               ),
             ),
           ),
+
+          Text("Select Model Exam Year"),
+          SizedBox(height: 10,),
+          SizedBox(
+            child: DropdownButton(
+                hint: const Text("Select Exam Year Year"),
+                value: examYear,
+                items:[
+                  DropdownMenuItem(child: Text('All'), value:0),
+                  DropdownMenuItem(child: Text('2024'), value:2024),
+                  DropdownMenuItem(child: Text('2025'), value:2025),
+                ],
+                onChanged: (value) {
+                  //
+                  if (value != null){
+                    setState(() {
+                      examYear = value;
+                      // _items = filterByYear(value);
+                    });
+                  }else {
+                    setState(() {
+                      examYear = 0;
+                    });
+                  }
+                }
+            ),
+
+          ),
+          SizedBox(height: 10,),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(

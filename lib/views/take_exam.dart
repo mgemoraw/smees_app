@@ -11,6 +11,7 @@ import "package:smees/models/user.dart";
 import "package:smees/views/answer_option.dart";
 import "package:smees/views/result_page.dart";
 import "package:smees/views/user_provider.dart";
+import "package:smees/views/utils.dart";
 
 import "../api/end_points.dart";
 
@@ -138,7 +139,7 @@ class _TakeExamState extends State<TakeExam> {
           onPressed: () async{
             // check answer
             // _calculateScore();
-            if (userAnswers.length >0 ){ //== widget.items.length ) {
+            if (userAnswers.length >0 ) { //== widget.items.length ) {
               _calculateScore();
               final result = {
                 'userId': userProvider.user.username,
@@ -147,7 +148,6 @@ class _TakeExamState extends State<TakeExam> {
                 'questions': widget.items.length,
                 'score': _totalScore,
               };
-
 
               if (useModeProvider.offlineMode){
                 await _writeResults(result);
@@ -187,8 +187,6 @@ class _TakeExamState extends State<TakeExam> {
                       ));
                 }
               }
-
-
             } else {
               ScaffoldMessenger.of(context)
                   .showSnackBar(
@@ -278,20 +276,24 @@ class _TakeExamState extends State<TakeExam> {
                       'score': _totalScore,
                     };
 
+
                     // writes data to local database
                     await _writeResults(result);
 
-                    // sends data to database
-                    await _sendResults(new Exam(
-                      id: widget.examData.id,
-                      userId: userProvider.user.username,
-                      examStarted: DateTime.now(),
-                      examEnded: DateTime.now(),
-                      questions: widget.items.length,
-                      score: _totalScore.toDouble(),
+                    if (!useModeProvider.offlineMode){
+                      await _sendResults(new Exam(
+                        id: widget.examData.id,
+                        userId: userProvider.user.username,
+                        examStarted: DateTime.now(),
+                        examEnded: DateTime.now(),
+                        questions: widget.items.length,
+                        score: _totalScore.toDouble(),
 
-                    ));
-                    Navigator.pop(context);
+                      ));
+                    }
+                    // sends data to database
+
+                    // Navigator.pop(context);
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -379,6 +381,19 @@ class _TakeExamState extends State<TakeExam> {
                 style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
             ),
+
+            // adding image when there exists
+
+            (widget.items[_qno]['image'] != null && widget
+                .items[_qno]['image'] != "") ?
+            useModeProvider.offlineMode ?
+              Image.asset(getImagePath(widget.department, widget
+                  .items[_qno]['image'])!)
+
+                    : Image.network
+              ("http://localhost:8000/static/images/${widget
+                .items[_qno]['image']}")
+            : SizedBox(height: 1,),
 
             // answer options
             ListView.builder(

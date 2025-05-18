@@ -56,7 +56,20 @@ String? _getFaculty(String department){
   return null;
 }
 
+String? getImagePath(String? department, String? imageUrl){
+  final faculty = _getFaculty(department!);
 
+
+  if (imageUrl == null || imageUrl.isEmpty) {
+    return null;
+  }
+  if (faculty != null) {
+    department = department.replaceAll(" ", "_");
+    return "assets/$faculty/$department/$imageUrl";
+  }
+
+  return null;
+}
 // fetch content from json
 Future<List?> readJson(String department) async {
   String? faculty = _getFaculty(department.toLowerCase());
