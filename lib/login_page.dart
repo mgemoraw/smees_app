@@ -199,7 +199,8 @@ class _LoginState extends State<Login> {
 
                             // navigate to home page
                             if (_token != null && _role != 'null') {
-                              print("user role: $_role \ntoken: $_token");
+                              // debugPrint("user role: $_role \ntoken:
+                              // $_token");
                               Navigator.pushNamed(context, "/");
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -224,21 +225,24 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                       SizedBox(height: 16.0),
-                      ListTile(
-                        onTap: () {
-                          Navigator.pushNamed(context, "/reset");
-                        },
-                        title: const Text('Forgot Password?',
-                          style: TextStyle(color: Colors.black, fontSize: 18),
-                        ),
-                      ),
+                      // ListTile(
+                      //   onTap: () {
+                      //     Navigator.pushNamed(context, "/reset");
+                      //   },
+                      //   title: const Text('Forgot Password?',
+                      //     style: TextStyle(color: Colors.black, fontSize: 18),
+                      //   ),
+                      // ),
 
                       ListTile(
                         onTap: () {
                           Navigator.pushNamed(context, "/register");
                         },
-                        title: Text("Don't have account? Register",
-                          style: TextStyle(color: Colors.black, fontSize: 18),),
+                        title: Text("Don't have account?",
+                          style: TextStyle(color: Colors.blue, fontSize: 18),),
+                        subtitle: Text("Sign Up", style: TextStyle(color:
+                        Colors.blueAccent, fontSize: 18, fontWeight:
+                        FontWeight.bold)),
                       ),
                     ],
                   ),

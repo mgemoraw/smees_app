@@ -1,1191 +1,4961 @@
 [
     {
-        "department_id": 0,
+        "qid": 1,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The weak entity relationship set is represented in E-R diagram as ?",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "____________is/are general methods for passing parameters to the operating system.",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Double diamonds"
+                "content": "Pass parameters in registers",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Double rectangle"
+                "content": "Registers pass starting addresses of blocks of parameters",
+                "image": null
             },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Dashed lines"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Diamond"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "In the __________ normal form, a composite attribute is converted to individual attributes?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "First"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Second"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Third"
+                "content": "Parameters can be placed, or pushed, onto the stack by the program, and popped off the stack by the operating system.",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Fourth"
+                "content": "All the above",
+                "image": null
             },
             {
                 "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Is an attribute which can be further to be divide?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Composite"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Null"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Derived"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Multiple value"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "A functional dependency is a relationship between or among?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Tables"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Rows"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Relations"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Attributes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "None of the above",
+                "image": null
             }
         ],
         "answer": "D"
     },
     {
-        "department_id": 0,
+        "qid": 2,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The entity set person is classified as student and employee",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A class is a JavaBeans component if ____________________.",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Generalization"
+                "content": "It is a public class",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Specialization"
+                "content": "It has a public constructor with no arguments",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "Inheritance"
+                "label": "A",
+                "content": "It is serializable.",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Constraint generalization"
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 3,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A developmental psychology instructor wants to estimate the level of moral development of his students. She gave them ethical dilemmas and then categorized their responses to one of the six Kohlberg stages of moral development. What is the reliability estimate proper for her ratings?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Test re-tests reliability",
+                "image": null
             },
             {
-                "label": "E",
-                "image": null,
-                "content": null
+                "label": "B",
+                "content": "Equivalence or alternative form",
+                "image": null
             },
             {
-                "label": "F",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "Split half measure of reliability",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Inter-rater reliability measure",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 4,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A linear list in which the last node points to the first node is ........?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Singly linked list",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Doubly linked list",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Circular linked list",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Tree",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 5,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A mathematics teacher discussed\u00a0learning mathematics with his classroom students. Student Abebe argued that mathematics is an importantsubjectand the teacher has to help them understand the subject well. \u00a0Which level of the affective domain does Abebe demonstrate?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Characterizing",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Organizing",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Valuing",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Responding",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 6,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A process which is copied from main memory to secondary memory on the basis ofrequirement is known as?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Demand Paging",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Paging",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Threads",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Segmentation",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 7,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A servlet is an instance of __________.",
+        "options": [
+            {
+                "label": "A",
+                "content": "the Object class",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "the Applet class",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "the HttpServlet class",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "the HttpServletRequest class",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 8,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A__________ is a type of RAM that must be continually refreshed several hundred times per second to maintain the data.",
+        "options": [
+            {
+                "label": "A",
+                "content": "SRAM",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Cache Memory",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "DRAM",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Hard Disk",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 9,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A__________ stores the operating system, software applications, and data that are currently in use by the user.",
+        "options": [
+            {
+                "label": "A",
+                "content": "RAM",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Memory",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Read only Memory",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 10,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A___________ is a type of compact disk in which you can write / erase data as many times as you want.",
+        "options": [
+            {
+                "label": "A",
+                "content": "CD-R",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "CD-RW",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "CD-ROM",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 11,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "All except one typify the Psychological Environment. Which one is the exception?",
+        "options": [
+            {
+                "label": "A",
+                "content": "The emotional tone of the classroom.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "The comfort level students feel with the teacher.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The comfort level of their classroom.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "The learning task",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 12,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "All layout classes are the subclasses of",
+        "options": [
+            {
+                "label": "A",
+                "content": "android.widget",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "android.view.view",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "android.view.ViewGroup",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 13,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Among the following test formats, one is the most adaptable type and is used to measure various levels of the cognitive domain. Which one is it?",
+        "options": [
+            {
+                "label": "A",
+                "content": "True-false item",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Matching exercise",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Multiple choice items",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Interpretive exercise",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 14,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Among the models of curriculum development, identify the one that doesn\u2019t anticipate the behaviors of students in developing curriculum.",
+        "options": [
+            {
+                "label": "A",
+                "content": "The Objectives Model,",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "The Process Model, and",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The Situational Analysis Model",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 15,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Android is based on which Kernal?",
+        "options": [
+            {
+                "label": "A",
+                "content": "MAC",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Windows",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Linux",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Redhat",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 16,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Assume that the school teacher administered personality inventory tests\u00a0and aptitude tests for the sake of helping the student\u2019s social adjustment. This purpose of assessment is linked to ________?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Instructional",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Administrative",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Counseling",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Placement",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 17,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Assume you have an algorithm which has time function t(n)= 2n+3n 2 + log n +nlog n +n! , then complexity order of your algorithm is ?",
+        "options": [
+            {
+                "label": "A",
+                "content": "O(n!)",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "O(n 2 )",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "O(log n )",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "O(nlog n )",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 18,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Awgchew is convinced that the model examination of psychology and school psychology programs is focused too much on knowledge at the expense of higher- order objectives that should have been included in the test. The validity evidence that Awgchew is looking for is _____________________?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Content",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Criterion",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Construct",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Face",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 19,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Clicking a JComboBox object generates __________ event/s.",
+        "options": [
+            {
+                "label": "A",
+                "content": "ActionEvent",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "ItemEvent",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "ComponentEvent",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "ContainerEvent",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "A and B",
+                "image": null
+            }
+        ],
+        "answer": "E"
+    },
+    {
+        "qid": 20,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Clock Speed of a CPU is?",
+        "options": [
+            {
+                "label": "A",
+                "content": "is mostly expressed using MHz",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "is a measure of how much data a CPU can store",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "is a measure of how many computations a a processor can do in a second",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "computers with a low clock speed are extremely fast",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 21,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Compared to RISC processors, CISC processors contain _________.",
+        "options": [
+            {
+                "label": "A",
+                "content": "More registers and smaller instruction set",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Larger instruction set and fewer registers",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Fewer registers and smaller instruction set",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "More transistor elements",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 22,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Concurrency problem that occurs when one transaction is allowed to see the intermediate results of another transaction before it has committed, which will be failed for some reason is called _____?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Incorrect summery Problem",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Lost update problem",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Dirty Read Problem",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None.",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 23,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Databases threats that are related to unauthorized disclosure are called__________?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Loss of integrity",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Loss of availability",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Loss of confidentiality",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None.",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 24,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
         "content": "Describes no attribute of a primary key can be null?",
-        "image": "",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Domain Integrity"
+                "content": "Domain Integrity",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Entity Integrity"
+                "content": "Entity Integrity",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "Referential Integrity"
+                "label": "A",
+                "content": "Referential Integrity",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Enterprise Integrity"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Enterprise Integrity.",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 25,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which  of the following is not a Structural thing?",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "DMA interface unit eliminates the need to use CPU registers to transfers data from?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Classes   interfaces"
+                "content": "MAR to MBR",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "collaborations"
+                "content": "MBR to MAR",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "activity"
+                "label": "A",
+                "content": "I/O units to memory",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "nodes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Memory to I/O units",
+                "image": null
             }
         ],
-        "answer": "c"
+        "answer": "D"
     },
     {
-        "department_id": 0,
+        "qid": 26,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Software is defined as ___________",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Formative evaluation in the teaching-learning process.",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "set of programs, documentation & configuration of data"
+                "content": "Encourage teaching to the test as they involve frequent testing",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "set of programs"
+                "content": "Focus on the examination technique rather than the outcomes",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "documentation and configuration of data"
+                "label": "A",
+                "content": "Offer less control to the students over what will be assessed",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "None of the mentioned"
+                "content": "Improve teaching by providing constructive feedback",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 27,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "From the following which can be fully describe about Run time polymorphism.",
+        "options": [
+            {
+                "label": "A",
+                "content": "It provides fast execution because the method that needs to be executed is at the compile time.",
+                "image": null
             },
             {
-                "label": "E",
-                "image": null,
-                "content": null
+                "label": "B",
+                "content": "It is less flexible as all things execute at compile time.",
+                "image": null
             },
             {
-                "label": "F",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "It can have more than one methods share the same name with different parameters or signature and different return type.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It can achieved by virtual functions and pointers.",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 28,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "functional dependency is a relationship between or among?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Tables.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Rows.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Relations.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Attributes.",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 29,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "How did different scholars define the term action research differently?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Based on the process it involves",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Based on the purpose",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Based on the nature of participants",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 30,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "How many different types of constructors there are?",
+        "options": [
+            {
+                "label": "A",
+                "content": "2",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "1",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "4",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "3",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 31,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "How you could obtain a statistical profile of the amount of time spent by a program executing different sections of its code",
+        "options": [
+            {
+                "label": "A",
+                "content": "By issuing periodic timer interrupts monitor what instructions are currently executing when the interrupts are delivered.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "By issuing traps and monitoring what sections of code are currently executing.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Using system call interface for manipulating processes and their execution time.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "By using Application Program Interface(API)",
+                "image": null
             }
         ],
         "answer": "A"
     },
     {
-        "department_id": 0,
+        "qid": 32,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "At Conceptual level Class diagrams should include",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "If the scientific explanation of research is based on the evidence of the sense, which characteristic is more appropriate?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "operations only"
+                "content": "Rational",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "attributes only"
+                "content": "Empirical",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "both operations and attributes"
+                "label": "A",
+                "content": "Testable",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "none of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "General",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 33,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Constraints can be represented in UML by",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In a relational database, what does a column represent?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "{text}"
+                "content": "A record",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "[text]"
+                "content": "A field",
+                "image": null
             },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Constraint"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "None of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is an object?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "An object is an instance of a class"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "An object includes encapsulation of data"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "An object is not an instance of a class"
+                "content": "A table",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "All of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following statement(s",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Interaction diagrams are at their best when they deal with one main design flow and not multiple variants that can happen"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Interaction diagrams are good at designing part or all of one use case\u2019s functionality across multiple objects"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Interaction diagrams allow the analyst to show iteration and conditional execution for messaging between objects"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "UML interfaces are used to:",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "specify required services for types of objects"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "program in Java, but not in C++ or Smalltalk"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "define executable logic to reuse across classes"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "define an API for all classes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a project management goal?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Avoiding customer complaints"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Keeping overall costs within budget"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Delivering the software to the customer at the agreed time"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Maintaining a happy and well-functioning development team"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is the first step in project planning?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Determine the budget"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Determine project constraints"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Inspect the deliverables"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Establish the objectives and scope"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "A project is anything which is",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Not implicitly expressed"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Not a physical objective"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Implicitly expressed"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Social acceptability"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "C"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Process framework activities are populated with",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Milestones"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "QA Points"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Work Products"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not an effective software project management focus?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "People"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Popularity"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Product"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Process"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "A key",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 34,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The reason for software bugs and failures is due to",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In a relational database, what does a row represent?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Software developers"
+                "content": "A field",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Software companies"
+                "content": "A table",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "Both (A"
+                "label": "A",
+                "content": "A record",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "None of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "A key",
+                "image": null
             }
         ],
         "answer": "C"
     },
     {
-        "department_id": 0,
+        "qid": 35,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "According to the Project Management Institute (PMI",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In an absolute loading scheme which loader function is accomplished by assembler?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Skills, Tools"
+                "content": "Re-allocation",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Skills, Analysis"
+                "content": "Allocation",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "Tools, Analysis"
+                "label": "A",
+                "content": "Linking",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Analysis, Theories"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Loading",
+                "image": null
             }
         ],
         "answer": "A"
     },
     {
-        "department_id": 0,
+        "qid": 36,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "During project estimation, project manager estimates following",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In the __________ normal form a composite attribute is converted to individual attributes?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Project duration"
+                "content": "First",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Project effort"
+                "content": "Second",
+                "image": null
             },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Project cost"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is system analysis?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Collecting facts and information"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Interpreting facts"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Identifying the problems"
+                "content": "Third",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "System study involves",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "study of an existing system"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "documenting the existing system"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "identifying current deficiencies and establishing new goals"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "In top-down analysis and design",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "each succeeding phase is more detailed than the phase before it"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "each succeeding phase is as detailed as the phase before it"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "each succeeding phase is less detailed than the phase before it"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Fourth.",
+                "image": null
             }
         ],
         "answer": "A"
     },
     {
-        "department_id": 0,
+        "qid": 37,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The _____ symbol is used in a flowchart to represent a calculation task",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In the short term and the long term scheduler the primary distinction between is_____ .",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Input"
+                "content": "The frequency of their execution",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Output"
+                "content": "The length of their queues",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "Process"
+                "label": "A",
+                "content": "The type of processes they schedule",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Start"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "None of the mentioned",
+                "image": null
             }
         ],
-        "answer": "C"
+        "answer": "A"
     },
     {
-        "department_id": 0,
+        "qid": 38,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "System prototyping helps the designer in",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In the spiral nature of action research, what comes second in the process of conducting it?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Making the programmers understand how the system will function"
+                "content": "Reflecting",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Communicating to the user, quickly, how the system, when developed, will look like and get a feedback"
+                "content": "Planning",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "Giving a demo of the software, to the system manager to whom he reports"
+                "label": "A",
+                "content": "Observing",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "A and B"
+                "content": "Acting",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 39,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In which directory XML layout files are stored?",
+        "options": [
+            {
+                "label": "A",
+                "content": "/assets",
+                "image": null
             },
             {
-                "label": "E",
-                "image": null,
-                "content": null
+                "label": "B",
+                "content": "/src",
+                "image": null
             },
             {
-                "label": "F",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "/res/values",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "/res/layout",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 40,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In which of the following is the intellectual skills reflected?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Cognitive Domain",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "affective domain",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Psychomotor",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 41,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Is an attribute which can be further to be divide?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Composite",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Null",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Derived",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Multiple value.",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 42,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Of the following one cannot be describe about the difference between Abstract class and Interface in java?",
+        "options": [
+            {
+                "label": "A",
+                "content": "in Interface, a class can implement multiple interfaces, whereas the class can inherit only One Abstract Class.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "in Interface does not have access modifiers. Everything defined inside the Interface is assumed to have a public modifier, whereas Abstract Class can have an access modifier.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The Interface cannot contain data fields, whereas the abstract class can have data fields.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Interfaces help define the identity of a class, whereas an abstract class defines a class\u2019s peripheral abilities.",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 43,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Of the following one is NOT a factor to be considered in the planning stage of test preparation?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Defining the purpose",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Writing the test items",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Developing table of specification",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Selecting an appropriate test format",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 44,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The conditions immediately outside a system is called",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "on which part of the hard drive part will data be stored?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "The boundary"
+                "content": "Spindle Motor",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "The interface"
+                "content": "Read / Write Head",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "The environment"
+                "label": "A",
+                "content": "Cables and Connectors",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "The protocols"
+                "content": "On the surface of Platter in Sectors and Tracks",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 45,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "One of the following is not a type of Physical Memory Packaging?",
+        "options": [
+            {
+                "label": "A",
+                "content": "SIMM",
+                "image": null
             },
             {
-                "label": "E",
-                "image": null,
-                "content": null
+                "label": "B",
+                "content": "DIMM",
+                "image": null
             },
             {
-                "label": "F",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "RIMM",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "QIMM",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 46,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "One of the following is the psychological environment that has been consistently linked with students\u2019 learning.",
+        "options": [
+            {
+                "label": "A",
+                "content": "organization",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "discomfort",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Classroom emotional affect",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All but B",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 47,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Parser with the valid prefix property is advantageous because it __________?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Detects errors",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "None of the mentioned",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Errors are passed to the text phase",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the mentioned",
+                "image": null
             }
         ],
         "answer": "C"
     },
     {
-        "department_id": 0,
+        "qid": 48,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a characteristic of a system",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Relocating bits used by relocating loader are specified by __________?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "operates for some purpose"
+                "content": "Relocating loader itself",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "has homogeneous components"
+                "content": "Linker",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "has interacting components"
+                "label": "A",
+                "content": "Assembler",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "operates within a boundary"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Macro Processor",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 49,
+        "department_id": null,
+        "department_name": "Information Technology",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a factor in the failure of a systems development project?",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Running time of a program depends on __________?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "inadequate user involvement"
+                "content": "Addressing mode",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "failure of systems integration"
+                "content": "Order of computations",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "size of company"
+                "label": "A",
+                "content": "The usage of machine idioms",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "continuation of a project that should have been cancelled"
+                "content": "All of the mentioned",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 50,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Suppose you want to have multiple volumes / logical drives on your computers hard drive. What term would best describe this process of creating logical drives.",
+        "options": [
+            {
+                "label": "A",
+                "content": "Partitioning",
+                "image": null
             },
             {
-                "label": "E",
-                "image": null,
-                "content": null
+                "label": "B",
+                "content": "Formatting",
+                "image": null
             },
             {
-                "label": "F",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "Reseting",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 51,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The action of parsing the source program into proper syntactic classes is called __________?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Syntax Analysis",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Lexical Analysis",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Interpretation analysis",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "General Syntax Analysis",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 52,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The amount of time required to read a block of data from a disk in to memory is composed of seek time, rotational latency, and transfer time. Rotational latency refers to?",
+        "options": [
+            {
+                "label": "A",
+                "content": "The time it takes for the platter to make a full rotation",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "The time it takes for the read-write head to move into position over the appropriate track",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The time it takes for the platter to rotate the correct sector under the head",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 53,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The approximate number of questions to be prepared from a chapter has to be higher in all conditions but one. Which one? When:",
+        "options": [
+            {
+                "label": "A",
+                "content": "the age of students are younger",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "too much time is spent on treating it",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "it is pre-requisite to other courses/content",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "it is core of the course",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 54,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The circuite used to store one bit of data is known as?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Register",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Encoder",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Flip Flop",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Decoder",
+                "image": null
             }
         ],
         "answer": "C"
+    },
+    {
+        "qid": 55,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The data structure required to evaluate a postfix expression is",
+        "options": [
+            {
+                "label": "A",
+                "content": "Queue",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Stack",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Linked-list",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Array",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 56,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The entity set person is classified as student and employee this process is called?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Generalization",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Specialization",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Inheritance",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Constraint generalization.",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 57,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The grammar A \u2192 AA | (A) | e is not suitable for predictive-parsing because the grammar is?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Ambiguous",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Left recursive",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Right recursive",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "An operator grammar",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 58,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The ideal domain of the action research method is characterized by;-",
+        "options": [
+            {
+                "label": "A",
+                "content": "Typically cyclical",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "The researcher is actively involved",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The knowledge obtained is immediately applied",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "D. All of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 59,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The lowest in level but the most common in the cognitive domain is ______.",
+        "options": [
+            {
+                "label": "A",
+                "content": "synthesis",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Application",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Knowledge",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Analysis",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 60,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The main circuit board in a computer is called ________.",
+        "options": [
+            {
+                "label": "A",
+                "content": "Mother Board",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Power Supply Unit",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "RAM",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Hard Disk",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 61,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The most popular Operating System for Personal Computer\u2019s is _______.",
+        "options": [
+            {
+                "label": "A",
+                "content": "Linux",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Windows",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Mac OS X",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Kali Linux",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 62,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The purpose of database recovery is________?",
+        "options": [
+            {
+                "label": "A",
+                "content": "To bring the database into the last consistent state.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "To preserve consistency of transactions.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "To preserve durability property of transactions.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 63,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The purpose of using a table of specification/test blueprint while preparing tests/examination items is to.",
+        "options": [
+            {
+                "label": "A",
+                "content": "determine the purpose of the test",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "use time wisely while developing items",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "reduce the occurrence of linguistic errors in the test",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Prepare a balanced set of items from all content areas",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 64,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "the resource management can be done by operating system via_______.",
+        "options": [
+            {
+                "label": "A",
+                "content": "both time and space division multiplexing",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "space division multiplexing",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "time-division multiplexing",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "none of the mentioned",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 65,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The two steps the operating system takes to use a disk to hold its files are ____and_______.",
+        "options": [
+            {
+                "label": "A",
+                "content": "caching &amp;amp; logical formatting",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "logical formatting &amp;amp; swap space creation",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "swap space creation &amp;amp; caching",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "partitioning &amp;amp; logical formatting",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 66,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The weak entity relationship set is represented in E-R diagram as?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Double diamonds",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Double rectangle",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Dashed lines",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Diamond.",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 67,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "To create an InputStream on a socket s, you use __________.",
+        "options": [
+            {
+                "label": "A",
+                "content": "InputStream in = new InputStream(s);",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "InputStream in = s.getInputStream();",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "InputStream in = s.obtainInputStream();",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "InputStream in = s.getStream();",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 68,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What advantage does action research have for the classroom teacher?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It makes him/her both teacher and the researcher",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It resolves theory practice dilemma",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It integrates educational research with curriculum development",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 69,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What are the major activities of an operating system in regard to file management?",
+        "options": [
+            {
+                "label": "A",
+                "content": "The creation and deletion of files and directrories.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "The support of primitives for manipulating files and directories",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The mapping of files onto secondary storage",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "The backup of files on stable (nonvolatile) storage media",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "All of the above.",
+                "image": null
+            }
+        ],
+        "answer": "E"
+    },
+    {
+        "qid": 70,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What are the two models of interprocess communication?",
+        "options": [
+            {
+                "label": "A",
+                "content": "direct and indirect communication",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Semaphore and socket programming",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Shared memory and message passing",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 71,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What does ACID stand for in database transactions?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Atomicity, Consistency, Isolation, Durability",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Accuracy, Consistency, Isolation, Durability",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Atomicity, Consistency, Integration, Durability",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Accuracy, Consistency, Integration, Durability",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 72,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What does DML stand for?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Data Manipulation Language",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Data Management Language",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Data Model Language",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Data Mining Language",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 73,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What does SQL stand for?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Structured Query Language",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Structured Question Language",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Simple Query Language",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Standard Query Language",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 74,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is a database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "A collection of information organized in such a way that a computer program can quickly select desired pieces of data",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "A collection of unorganized data",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "A collection of documents",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 75,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is a foreign key?",
+        "options": [
+            {
+                "label": "A",
+                "content": "A unique identifier for a table&amp;#39;s records",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "A field that links to the primary key of another table",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "A field that can be left empty",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "A primary key in a foreign country",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 76,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is a primary key?",
+        "options": [
+            {
+                "label": "A",
+                "content": "A unique identifier for a table&amp;#39;s records",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "A field that can be left empty",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "A key that refers to the primary user",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 77,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is a stored procedure?",
+        "options": [
+            {
+                "label": "A",
+                "content": "A SQL query stored in the database",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "A function in a programming language",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "A part of the operating system",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 78,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is a system call?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Is a way program requests a service from the kernel of the operating system.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It is an interface to an operating system that havea direct access to the operating system Kernel.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It is a way of a user/ user-mode interactto the kernel mode.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "A&amp;C",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 79,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is a view in a database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "A physical copy of data",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "A virtual table based on the result-set of an SQL query",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "A graphical representation of data",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "A stored procedure",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 80,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is Manifest.xml in android?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It has information about layout in an application",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It has all the information about an application",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It has the information about activities in an application",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 81,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is normalization in a database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Organizing data to reduce redundancy",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Making data normal",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Backing up data",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Encrypting data",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 82,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the algorithm complexity of Binary search algorithm?",
+        "options": [
+            {
+                "label": "A",
+                "content": "O(n)",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "O(n!)",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "O(Logn)",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "O(n2)",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 83,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the life cycle of services in android?",
+        "options": [
+            {
+                "label": "A",
+                "content": "onCreate()\u2212&amp;gt;onStartCommand()\u2212&amp;gt;onDestory()",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "onRecieve()",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "final()",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Service life cycle is same as activity life cycle.",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 84,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the maximum number of children that a node can have in a binary tree whose height is h?",
+        "options": [
+            {
+                "label": "A",
+                "content": "2 h+1 -1",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "2 h",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "2",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "4",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 85,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the name of the abstract base class for streams dealing with non-character input?",
+        "options": [
+            {
+                "label": "A",
+                "content": "InputStream",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "OutputStream",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Reader",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Writer",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 86,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the purpose of the GROUP BY clause?",
+        "options": [
+            {
+                "label": "A",
+                "content": "To arrange data in groups",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "To sort data",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "To filter data",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "To join data",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 87,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is/are the consequence/s of inheritance?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Changes to one object do not affect other objects in the aggregate.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Changes to the superclass can have far-reaching effects on the subclasses.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Easy to add or remove objects from the supper class.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "The relationship between objects is clear and well-defined.",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 88,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What management structure does action research follow?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Bottom up",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Top down",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Centralized",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "A and C",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 89,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What would be the Algorithm complexity to add a node at the end of singly linked list, if the pointer is initially pointing to the head of the list?",
+        "options": [
+            {
+                "label": "A",
+                "content": "O(1)",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "O(n)",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "\u03b8(n)",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "\u03b8(1)",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 90,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which Algorithm cannot use Divide and Conquer Principle?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Merge Sort",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Binary search",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Bubble Sort",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 91,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which C++ operator allocate memory dynamically ?",
+        "options": [
+            {
+                "label": "A",
+                "content": "delete",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "new",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "create",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "struct",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 92,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which can be the disadvantage of Aggregation?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Looser coupling between classes, allows for more flexible changes.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Tight coupling between superclass and subclasses.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Improve code reuse.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Better representation of real world relationships between objects.",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 93,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which can be the incorrect characteristics or features of constructor in Java?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Constructor\u2019s name must be exactly the same as the class name in which it is defined. It must end with a pair of simple braces.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Java constructor may or may not contain parameters. Parameters are local variables to receive value (data) from outside into a constructor.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The constructor should have any return type even void also because if there is a no return type then JVM would consider as a method, not a constructor.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It is always called and executed only once per object. This means that when an object of a class is created, constructor is called. When we create second object, the constructor is again called during the second time.",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 94,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which clause is used to specify the condition for an aggregate function?",
+        "options": [
+            {
+                "label": "A",
+                "content": "WHERE",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "GROUP BY",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "HAVING",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "ORDER BY",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 95,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which command is used to modify existing data in a database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "ADD",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "INSERT",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "UPDATE",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "MODIFY",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 96,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which command is used to remove a table from a database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "DELETE TABLE",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "DROP TABLE",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "REMOVE TABLE",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "ERASE TABLE",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 97,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which data structure is more appropriate to implement recursive algorithms?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Tree",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Linked list",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Queue",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Stack",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 98,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which data structure is suitable to represent hierarchical relationship between elements?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Graph",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Tree",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Dequeue",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Priority",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 99,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which describe/s the cost of aggregation?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Inflexibility to change the superclass without affecting the subclasses.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Potential for unintendedconsequences of subclass behavior.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Subclasses may have to implement methods they do not need.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Difficult to identify and maintain relationships between objects.",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 100,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which is the correct Runtime exception?",
+        "options": [
+            {
+                "label": "A",
+                "content": "AWTException",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "LinkageError",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "IllegalArgumentException",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "IOException",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 101,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which is unique from the following given options?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Late binding",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Static binding",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Early binding",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Overloading",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 102,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which keyword is used to delete a record from a table?",
+        "options": [
+            {
+                "label": "A",
+                "content": "REMOVE",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "DELETE",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "ERASE",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "DROP",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 103,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which language is used to query databases?",
+        "options": [
+            {
+                "label": "A",
+                "content": "C++",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Python",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "SQL",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Java",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 104,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following cannot be a historical research by its method of classification?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Pure research",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Quantitative research",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Qualitative research",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Descriptive research",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 105,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following characteristics of action research has to depend on validity and reliability of data?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Data-driven action taking",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Data Analysis",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Systematic data collection",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Reflection",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 106,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following commands is used to remove all rows from a table without deleting the table itself?",
+        "options": [
+            {
+                "label": "A",
+                "content": "DELETE",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "TRUNCATE",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "DROP",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "REMOVE",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 107,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following domains emphasizes on attitudes, values, morals and their applications?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Psychomotor",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Cognitive",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Affective",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 108,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following helps to identify the primary problems that causes the teachers desire to change?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Action planning",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Diagnosing",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Action Taking",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Evaluating",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 109,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is a characteristic of teacher-centered instruction approach?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Learning organized around teacher posed questions.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Involving students in the learning process by doing things.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Small group instruction.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Use of classroom arrangement that minimizes drill and practice.",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 110,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is a type of join in SQL?",
+        "options": [
+            {
+                "label": "A",
+                "content": "INNER JOIN",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "OUTER JOIN",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "LEFT JOIN",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 111,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is a valid SQL data type?",
+        "options": [
+            {
+                "label": "A",
+                "content": "INTEGER",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "NUMERIC",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "VARCHAR",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 112,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is correct?",
+        "options": [
+            {
+                "label": "A",
+                "content": "public class Test implements Thread{}",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "class Test implements Runnable{}",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "public class Test extends Runnable{}",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "public Test class extends Thread{}",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 113,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is not a SQL aggregate function?",
+        "options": [
+            {
+                "label": "A",
+                "content": "SUM",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "AVG",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "COUNT",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "SELECT",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 114,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is not a SQL constraint?",
+        "options": [
+            {
+                "label": "A",
+                "content": "PRIMARY KEY",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "FOREIGN KEY",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "INDEX",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "UNIQUE",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 115,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is not a type of database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Relational",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Network",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Hierarchical",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "File system",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 116,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is not true about the pragmatists view?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Knowledge is socially constructed",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Knowledge is experienced",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Knowledge can be imposed on the learner",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Knowledge is personal activity",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 117,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is used to call stored procedure?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Statement",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "PreparedStatement",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "CallableStatment",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "ProcedureStatement",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 118,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which\u00a0of the following is/are an example of a norm-referenced assessment?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Professional competency tests of a certain profession",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Comparing a single student\u2019s performance with a cohort group",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Fixed grading assessment approaches at the university",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Ethiopian university general exit exams nationally",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 119,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following method is used to handle what happens after clicking a button?",
+        "options": [
+            {
+                "label": "A",
+                "content": "onClick",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "onCreate",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "onSelect",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 120,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following method is used to perform DDL statements in JDBC?",
+        "options": [
+            {
+                "label": "A",
+                "content": "executeResult()",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "executeQuery()",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "executeUpdate()",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "execute()",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 121,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following operation is mainly performed by RAM?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Read only",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Read and write",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Write only",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Depends on the system",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 122,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following port / cable cannot used to connect to a monitor?",
+        "options": [
+            {
+                "label": "A",
+                "content": "DVI cable",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "USB \u2013 C",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "HDMI",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "VGA",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "E"
+    },
+    {
+        "qid": 123,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following SQL commands is used to retrieve data?",
+        "options": [
+            {
+                "label": "A",
+                "content": "INSERT",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "UPDATE",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "DELETE",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "SELECT",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 124,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following statement is false?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Text I/O involves encoding and decoding.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Binary I/O does not require conversions.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Text I/O is more efficient than Binary I/O",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Binary files are independent of the encoding scheme on the host machine and thus are portable.",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 125,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following statement is not true?",
+        "options": [
+            {
+                "label": "A",
+                "content": "The larger the lock granularity used; the more concurrency is reduced.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Row-level locking maximizes concurrency.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "System overhead is increased in row-level locking.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Degree of concurrency is low for fine granularity and high for coarse granularity.",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 126,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of these statements about recoverable schedules is true?",
+        "options": [
+            {
+                "label": "A",
+                "content": "In a recoverable schedule, if a transaction T commits, then any other transaction that Tread from must also have committed.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Every recoverable schedule is serializable.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "In a recoverable schedule, no transaction will ever be aborted because a transactionthat it read from has aborted.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above.",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 127,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of these statements about serializable schedules is true?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Every serializable schedule contains no conflicting actions.",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Every serializable schedule is recoverable.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Every 2PL schedule is serializable.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above.",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 128,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one is not true about command interpreter?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It reads commands from the user or from a file of commands and executes them,",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "The part of an Operating System that interprets commands and carries them out.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It is system software that understands and executes commands that are entered by a human or a program.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It is an interface between the program and kernel.",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 129,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one is the application of queue?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Simulation of recursions",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Simulation of arbitrary linked list",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Simulation of limited resource allocation",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Simulating of random accessing",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 130,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one notation used to represent algorithm complexity in the worst case?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Big O notation",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Big Omega Notation",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Theta notation",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 131,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following cultural elements emerge as innovation or borrowed from others\u2019 culture and having varying capacities for cultural disruption?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Alternatives",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Universals",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Specialties",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 132,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following is false about ADT (Abstract Data Type)?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It specifies what data is stored",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It specifies what operations can be performed on the data",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It specifies how to store data",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 133,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following is Operation of a stack?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Insert",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Push",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Add",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Enqueue",
+                "image": null
+            },
+            {
+                "label": "E",
+                "content": "None",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 134,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following is the best of all methods of instruction?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Independent method",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Discovering learning",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Cooperative learning",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "None of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 135,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following is true about challenges of using the process model as a guide?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It is sensitive to differences in subject matter",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "The difficulty associated with assessing a pupils\u2019 work",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The problem of teacher competence",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 136,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following is true about essay items?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Suitable when we have plenty of time for scoring",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Suitable when we have a large number of students in the class",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Suitable for measuring learning outcomes from simple to complex",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Suitable when we have sufficient physical facilities",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 137,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following is true about the situational analysis model of curriculum development?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It examines the context for which a curriculum is to be developed",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Situational analysis is a cultural analysis",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It involves the planner in reviewing \u201cexternal\u201d and \u201cinternal\u201d factors to an educational institution.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All of the above",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 138,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following is used to judge the value or the worthiness of performance among students known as ______________?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Test",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Assessment",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Measurement",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Evaluation",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 139,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following would be used in synthesis questions?",
+        "options": [
+            {
+                "label": "A",
+                "content": "List",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Predict",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Justify",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Use",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 140,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which SQL clause is used to filter the results returned by a query?",
+        "options": [
+            {
+                "label": "A",
+                "content": "WHERE",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "GROUP BY",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "ORDER BY",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "HAVING",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 141,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which SQL clause is used to restrict the rows returned by a query?",
+        "options": [
+            {
+                "label": "A",
+                "content": "WHERE",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "LIMIT",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "FILTER",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "CONSTRAIN",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 142,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which SQL command is used to add new data into a database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "ADD",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "INSERT INTO",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "UPDATE",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "ADD INTO",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 143,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which SQL function is used to count the number of rows in a table?",
+        "options": [
+            {
+                "label": "A",
+                "content": "COUNT()",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "NUMBER()",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "SUM()",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "TOTAL()",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 144,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which SQL keyword is used to sort the result-set?",
+        "options": [
+            {
+                "label": "A",
+                "content": "SORT BY",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "ORDER",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "ORDER BY",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "SORT",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 145,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which statement is used to create a new table in a database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "CREATE DATABASE",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "CREATE TABLE",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "NEW TABLE",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "ADD TABLE",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 146,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which traversal of a binary search tree display elements in ascending order?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Inorder traversal",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Preorder traversal",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Postorder traversal",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 147,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which type of button is a toggle button that belongs to a group such that only one button in the group may be selected at one time?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Radio button",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Checkbox",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Menu item",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Panel",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 148,
+        "department_id": null,
+        "department_name": "Information Technology",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which type of research specifically indicates \u201cthe study of the effect of coffee drinking on the study time\u201d?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Descriptive research",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Applied research",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Historical research",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Basic research",
+                "image": null
+            }
+        ],
+        "answer": "A"
     }
 ]

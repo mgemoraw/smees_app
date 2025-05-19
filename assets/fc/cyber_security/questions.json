@@ -1,1191 +1,3302 @@
 [
     {
-        "department_id": 0,
+        "qid": 1,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The weak entity relationship set is represented in E-R diagram as ?",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "If the Address column in the Customer table consists of Street, City, State, and Zip Code, how should it be classified?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Double diamonds"
+                "content": "Derived Attribute",
+                "image": null
             },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Double rectangle"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Dashed lines"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Diamond"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "In the __________ normal form, a composite attribute is converted to individual attributes?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "First"
+                "content": "B.Multi-Valued Attribute",
+                "image": null
             },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Second"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Third"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Fourth"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Is an attribute which can be further to be divide?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Composite"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Null"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Derived"
+                "content": "Simple Attribute",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Multiple value"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "A functional dependency is a relationship between or among?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Tables"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Rows"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Relations"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Attributes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Composite Attribute",
+                "image": null
             }
         ],
         "answer": "D"
     },
     {
-        "department_id": 0,
+        "qid": 2,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The entity set person is classified as student and employee",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the role of access control in database security?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Generalization"
+                "content": "It ensures data is encrypted before transmission",
+                "image": null
             },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Specialization"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Inheritance"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Constraint generalization"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "B"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Describes no attribute of a primary key can be null?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Domain Integrity"
+                "content": "B.It provides a backup of all database transactions",
+                "image": null
             },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Entity Integrity"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Referential Integrity"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Enterprise Integrity"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "B"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which  of the following is not a Structural thing?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Classes   interfaces"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "collaborations"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "activity"
+                "content": "It prevents unauthorized users from accessing the database system",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "nodes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "c"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Software is defined as ___________",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "set of programs, documentation & configuration of data"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "set of programs"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "documentation and configuration of data"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "None of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "At Conceptual level Class diagrams should include",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "operations only"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "attributes only"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "both operations and attributes"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "none of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "B"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Constraints can be represented in UML by",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "{text}"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "[text]"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Constraint"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "None of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is an object?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "An object is an instance of a class"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "An object includes encapsulation of data"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "An object is not an instance of a class"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following statement(s",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Interaction diagrams are at their best when they deal with one main design flow and not multiple variants that can happen"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Interaction diagrams are good at designing part or all of one use case\u2019s functionality across multiple objects"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Interaction diagrams allow the analyst to show iteration and conditional execution for messaging between objects"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "UML interfaces are used to:",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "specify required services for types of objects"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "program in Java, but not in C++ or Smalltalk"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "define executable logic to reuse across classes"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "define an API for all classes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a project management goal?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Avoiding customer complaints"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Keeping overall costs within budget"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Delivering the software to the customer at the agreed time"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Maintaining a happy and well-functioning development team"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is the first step in project planning?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Determine the budget"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Determine project constraints"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Inspect the deliverables"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Establish the objectives and scope"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "A project is anything which is",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Not implicitly expressed"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Not a physical objective"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Implicitly expressed"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Social acceptability"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "It prevents statistical analysis of stored data",
+                "image": null
             }
         ],
         "answer": "C"
     },
     {
-        "department_id": 0,
+        "qid": 3,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Process framework activities are populated with",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Who is responsible for managing database security and granting privileges?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Milestones"
+                "content": "System Administrator",
+                "image": null
             },
-            {
-                "label": "B",
-                "image": null,
-                "content": "QA Points"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Work Products"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not an effective software project management focus?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "People"
+                "content": "B.Database Administrator (DBA)",
+                "image": null
             },
             {
-                "label": "B",
-                "image": null,
-                "content": "Popularity"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Product"
+                "label": "A",
+                "content": "Network Administrator",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Process"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Application Developer",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 4,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The reason for software bugs and failures is due to",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following SQL commands is NOT part of DDL?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Software developers"
+                "content": "CREATE",
+                "image": null
             },
             {
-                "label": "B",
-                "image": null,
-                "content": "Software companies"
+                "label": "A",
+                "content": "B.DROP",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "Both (A"
+                "label": "A",
+                "content": "ALTER",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "None of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "UPDATE",
+                "image": null
             }
         ],
-        "answer": "C"
+        "answer": "D"
     },
     {
-        "department_id": 0,
+        "qid": 5,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "According to the Project Management Institute (PMI",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the purpose of database auditing?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Skills, Tools"
+                "content": "To increase database performance",
+                "image": null
             },
             {
-                "label": "B",
-                "image": null,
-                "content": "Skills, Analysis"
+                "label": "A",
+                "content": "B.To track and review all database access and changes",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "Tools, Analysis"
+                "label": "A",
+                "content": "To encrypt data stored in the database",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Analysis, Theories"
+                "content": "To allow users to bypass access controls",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 6,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "How are composite attributes handled when converting an ER model to relational tables?",
+        "options": [
+            {
+                "label": "A",
+                "content": "The parent attribute is ignored, and child attributes become columns",
+                "image": null
             },
             {
-                "label": "E",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "B.The parent attribute is stored as a single column",
+                "image": null
             },
             {
-                "label": "F",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "Composite attributes are removed from the database",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "They are stored as a single entity",
+                "image": null
             }
         ],
         "answer": "A"
     },
     {
-        "department_id": 0,
+        "qid": 7,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "During project estimation, project manager estimates following",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the primary objective of the normalization process?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Project duration"
+                "content": "To minimize redundancy and eliminate anomalies",
+                "image": null
             },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Project effort"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Project cost"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is system analysis?",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Collecting facts and information"
+                "content": "B.To enhance query performance through indexing",
+                "image": null
             },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Interpreting facts"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Identifying the problems"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "System study involves",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "study of an existing system"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "documenting the existing system"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "identifying current deficiencies and establishing new goals"
+                "content": "To expand the database size for scalability",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "In top-down analysis and design",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "each succeeding phase is more detailed than the phase before it"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "each succeeding phase is as detailed as the phase before it"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "each succeeding phase is less detailed than the phase before it"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "To facilitate denormalized data storage",
+                "image": null
             }
         ],
         "answer": "A"
     },
     {
-        "department_id": 0,
+        "qid": 8,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The _____ symbol is used in a flowchart to represent a calculation task",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "When we convert ER to relation, one of the following is right?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Input"
+                "content": "In many-to-many relationship, post the primary key of the many side table to many side of another table as foreign key.",
+                "image": null
             },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Output"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Process"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Start"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "C"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "System prototyping helps the designer in",
-        "image": "",
-        "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Making the programmers understand how the system will function"
+                "content": "B.In one-to-one relationship, post the primary key of the partial participant table as a foreign key into the total participant table.",
+                "image": null
             },
             {
-                "label": "B",
-                "image": null,
-                "content": "Communicating to the user, quickly, how the system, when developed, will look like and get a feedback"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Giving a demo of the software, to the system manager to whom he reports"
+                "label": "A",
+                "content": "In one-to-many relationship, post the primary key of the many side table to one side table as foreign key.",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "A and B"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "In many-to-many relationship, create a single table with all attributes from both entities.",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 9,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The conditions immediately outside a system is called",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "If a department has many employees, but each employee belongs to only a department, what is the cardinality of this relationship?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "The boundary"
+                "content": "One-to-One",
+                "image": null
             },
             {
-                "label": "B",
-                "image": null,
-                "content": "The interface"
+                "label": "A",
+                "content": "B.Many-to-Many",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "The environment"
+                "label": "A",
+                "content": "One-to-Many",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "The protocols"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Many-to-One",
+                "image": null
             }
         ],
         "answer": "C"
     },
     {
-        "department_id": 0,
+        "qid": 10,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a characteristic of a system",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "The Enrollment table contains Student_ID and Course_ID as foreign keys. What constraint must be applied to ensure that every Student_ID in the Enrollment table exists in the Student table?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "operates for some purpose"
+                "content": "Entity Integrity",
+                "image": null
             },
             {
-                "label": "B",
-                "image": null,
-                "content": "has homogeneous components"
+                "label": "A",
+                "content": "B.Referential Integrity",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "has interacting components"
+                "label": "A",
+                "content": "Domain Integrity",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "operates within a boundary"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Key Constraint",
+                "image": null
             }
         ],
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qid": 11,
+        "department_id": null,
+        "department_name": "Cyber Security",
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a factor in the failure of a systems development project?",
-        "image": "",
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is Not True?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "inadequate user involvement"
+                "content": "In parallel data transmission data can be sent much faster than using serial transmission methods",
+                "image": null
             },
             {
-                "label": "B",
-                "image": null,
-                "content": "failure of systems integration"
+                "label": "A",
+                "content": "B.Parallel data transmission is  reliable data transmission method",
+                "image": null
             },
             {
-                "label": "C",
-                "image": null,
-                "content": "size of company"
+                "label": "A",
+                "content": "Proximity to the data source will be the factor for the order in which a bit string is received",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "continuation of a project that should have been cancelled"
+                "content": "Parallel transmission requires multiple channels",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 12,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "_____is a network Device to amplifies the signal over the same network before the signal becomes too weak or corrupted?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Switch",
+                "image": null
             },
             {
-                "label": "E",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "B.Repeater",
+                "image": null
             },
             {
-                "label": "F",
-                "image": null,
-                "content": null
+                "label": "A",
+                "content": "NIC",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Bridge",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 13,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is Not a  pro of unshielded twisted pair cables?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Cheap",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Easy to build",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "More exposed to electrical noise",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Not Required Grounding",
+                "image": null
             }
         ],
         "answer": "C"
+    },
+    {
+        "qid": 14,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "",
+        "options": [
+            {
+                "label": "A",
+                "content": "1 , 3",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.2 , 2",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "3 , 1",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "4 , 0",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 15,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "",
+        "options": [
+            {
+                "label": "A",
+                "content": "HTTP",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.TELNET",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "FTP",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "DHCP",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 16,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "At which layer Routers function?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Network layer",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Physical layer",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Data link  layer",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Application",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 17,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which CSS property controls the spacing between elements?",
+        "options": [
+            {
+                "label": "A",
+                "content": "padding",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.margin",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "spacing",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "border-spacing",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 18,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is NOT a JavaScript data type?",
+        "options": [
+            {
+                "label": "A",
+                "content": "String",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Boolean",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Float",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Number",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 19,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "How do you define a function in JavaScript?",
+        "options": [
+            {
+                "label": "A",
+                "content": "function myFunction() {}",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.def myFunction() {}",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "func myFunction() {}",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "function:myFunction() {}",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 20,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is the correct way to start a PHP script?",
+        "options": [
+            {
+                "label": "A",
+                "content": "<?php ?>",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.<php></php>",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "<script></script>",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "<??>",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 21,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which symbol is used to concatenate strings in PHP?",
+        "options": [
+            {
+                "label": "A",
+                "content": "+",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B..",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "&",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "-",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 22,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which PHP function is used to connect to a MySQL database?",
+        "options": [
+            {
+                "label": "A",
+                "content": "mysql_connect()",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.mysqli_connect()",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "connect_mysql()",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "db_connect()",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 23,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the correct HTML tag to insert a line break?",
+        "options": [
+            {
+                "label": "A",
+                "content": "<lb>",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.<break>",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "<hr>",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "<br>",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 24,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which CSS selector is used to select an element with the id \"header\"?",
+        "options": [
+            {
+                "label": "A",
+                "content": ".header",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.header",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "#header",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "*header",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 25,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is correct syntax for declaring a JavaScript variable?",
+        "options": [
+            {
+                "label": "A",
+                "content": "variable x = 10;",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.var x = 10;",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "int x = 10;",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "x := 10;",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 26,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is the correct way to apply an external CSS file?",
+        "options": [
+            {
+                "label": "A",
+                "content": "<style src=\"styles.css\">",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.<css src=\"styles.css\">",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "<link rel=\"stylesheet\" href=\"styles.css\">",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "<stylesheet>styles.css</stylesheet>",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 27,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which tool is commonly used for intercepting HTTP requests in web penetration testing?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Wireshark",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Nmap",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "John the Ripper",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Burp Suite",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 28,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which command is used to list available Metasploit modules?",
+        "options": [
+            {
+                "label": "A",
+                "content": "show modules",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.modules -l",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "show exploits",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "list all",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 29,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which command is used to start the Metasploit console?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Msfconsole",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Msfstart",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Metasploit",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Msfbegin",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 30,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the purpose of msfvenom in Metasploit?",
+        "options": [
+            {
+                "label": "A",
+                "content": "To create and encode payloads",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.To scan for vulnerabilities",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "To exploit a target system",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "To start a Metasploit console",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 31,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which is a website to get information about malware?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Threat Genius",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Cyber Threat Command",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Sonar",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "VirusTotal",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 32,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which is a secondary technique ransomware operators use to get payment?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Easy Bitcoin processing",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Ransom negotiators",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Double extortion",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Sample files",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 33,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which phase of the incident response process involves isolating affected systems and removing the root cause of the incident?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Eradication",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Preparation",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Containment",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Recovery",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 34,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which HTTP method is vulnerable to file upload exploits?",
+        "options": [
+            {
+                "label": "A",
+                "content": "GET",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.POST",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "DELETE",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "OPTIONS",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 35,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which type of phishing attack targets a specific individual or organization?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Spear Phishing",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Whaling",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Tailgate",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Dumpster",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 36,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is NOT a factor in multi-factor authentication?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Something you know",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Something you have",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Something you think",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Something you are",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 37,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the main purpose of authorization?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Verifying a user\u2019s identity",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Controlling user access to resources",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Encrypting authentication credentials",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Resetting user passwords",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 38,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is an example of deprovisioning?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Creating a new user account",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Assigning a new role to a user",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Disabling an employee\u2019s account after termination",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Changing a user\u2019s password",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 39,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which compliance framework is specifically designed to ensure security in cloud environments?",
+        "options": [
+            {
+                "label": "A",
+                "content": "HIPAA",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.ISO 27018",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "FISMA",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "SOX",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 40,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the difference between identity and authentication?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Identity verifies a user\u2019s credentials, while authentication confirms user rights",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tIdentity is about who you are, while authentication is about proving who you are",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Authentication stores credentials, while identity provides access",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Identity and authentication mean the same thing",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 41,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Suppose a software company wants to enforce a strict password policy but does not want to hardcode it into the login system.so, which of the following is the preferred approach to implement this?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Modify the login executable every time the policy changes",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tStore the policy in a config file separate from the authentication mechanism",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Enforce no password rules for flexibility",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Rely solely on biometric authentication",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 42,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Suppose your computer which contains sensitive file is stolen but your data or information remains secure.  Among the following, which security measure protected your data or information?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Role-Based Access Control",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tA strong BIOS password",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Network intrusion detection",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Full disk encryption",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 43,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A military database allows low level analysts to read non-classified files but prevents them from accessing top-secret documents. Which security model enforces this rule?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Bell-LaPadula Model",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tBiba Model",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Clark-Wilson Model",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Brewer-Nash Model",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 44,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A hospital is replacing its legacy patient record system with a new OS designed for high-security environments. The new OS enforces mandatory access control, minimal default services, and formal verification of critical components. What key characteristic distinguishes this OS as a secure operating system compared to general-purpose OS?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It supports more third-party applications.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tIt prioritizes least privilege and minimal attack surface by design",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It allows users to install unauthorized software for flexibility",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It disables all encryption to maximize performance",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 45,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A bank's new OS checks every file access request against a central security policy before granting permission, even for system administrators. What core security concept does this represent?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Reference Monitor",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tBuffer overflow prevention.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Role-Based Access Control",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Disk encryption",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 46,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A military drone's OS prioritizes ensuring continuous operation even if under attack, even if some sensor data is delayed. Which security goal is being prioritized, and which threat does this mitigate?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Confidentiality",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tIntegrity",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Availability",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Authentication",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 47,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A military OS logs every access attempt to classified files even by system administrators and blocks requests that violate security policies Which component enforces this?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Windows Defender",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tSecurity Kernel",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "/etc/passwd file",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "BIOS firmware",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 48,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is non-preemptive CPU scheduling algorithm that leads starvation for low priority process?",
+        "options": [
+            {
+                "label": "A",
+                "content": "First come first served   CPU scheduling algorithm",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tShort job first CPU scheduling algorithm",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Priority CPU scheduling algorithm",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Round robin   CPU scheduling algorithm",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 49,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which type of operating system is specifically designed to handle dedicated applications where strict timing constraints must be met?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Time-Sharing Operating System",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tNetwork Operating System",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Batch Operating System",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Real-Time Operating System",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 50,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What happens when a process requests a resource that another process is holding in a deadlock situation?",
+        "options": [
+            {
+                "label": "A",
+                "content": "The process is blocked and waits for the resource",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tThe request is granted immediately",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The system automatically terminates the process requesting the resource",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "The system forces the other process to release the resource",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 51,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "All 2nd year CS students are invited to comparing two sorting algorithms. Algorithm A has a time complexity of O(n2), and Algorithm B has a time complexity of O(nlogn)). For large input sizes, Algorithm B consistently runs faster than Algorithm A. why?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Algorithm A has a higher constant factor",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\t O(n2), grows faster than O (nlogn) as n increases",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Algorithm B uses less memory than Algorithm A",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 52,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "",
+        "options": [
+            {
+                "label": "A",
+                "content": "Continue searching the right half",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\t Continue searching the left half",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Stop the search and conclude that the target is not in the array",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Return the last checked element",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 53,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Sort the Given array [8, 3, 7, 4, 6, 2, 5], using selection sort and selecting the first element as the  a smallest, what is the resulting array after the third iteration (pass)?",
+        "options": [
+            {
+                "label": "A",
+                "content": "[2, 3, 7, 4, 6, 8, 5]",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\t[3, 2, 4, 5, 6, 7, 8]",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "[2, 3, 4, 5, 6, 8, 7]",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "[2, 3, 4, 7, 6, 8, 5]",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 54,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Given an array of identical elements, such as [7, 7, 7, 7, 7], and using Quick Sort with the first element as the pivot, what will happen during the partitioning step?",
+        "options": [
+            {
+                "label": "A",
+                "content": "The entire array will be partitioned into one side, and the other side will be empty, causing unbalanced recursion",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.The algorithm will partition the array into multiple subarrays with distinct elements, resulting in a balanced recursion.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The pivot element will be moved to the correct position, and the algorithm will recurse on the two non-empty subarrays.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "The algorithm will swap the identical elements, but they will not be separated into subarrays, leading to infinite recursion.",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 55,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "How does Selection Sort behave when the array is already partially sorted?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It performs fewer comparisons and finishes faster.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tIt still performs O(n2) comparisons because it does not take advantage of any existing order.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It requires additional memory to maintain the sorted portion.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It adjusts its strategy to avoid making swaps.",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 56,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "A one-way function converts data into a string of characters. It is not possible to convert this string of characters back to the original state. What type of function is this?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Symmetric encryption",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tAsymmetric encryption",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Steganography",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Hashing",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 57,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following best describes the Diffie-Hellman protocol?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It is a key exchange protocol for asymmetric encryption.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tIt is a symmetric encryption algorithm.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It is a key exchange protocol for symmetric encryption.",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It is a hashing algorithm",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 58,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Alex wants to send a secure email to Meku and encrypts it. Alex wants to ensure that Meku can verify that he sent it. Which of the following does Meku need to meet this requirement?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Alex's public key",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tAlex's private key",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Meku's public key",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Meku's private key",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 59,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following entities can help distribute the workload of the CA by performing identification and authentication of individual certificate requestors?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Subordinate CA",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tRoot CA server",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Authentication authority",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Registration authority",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 60,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which term describes multiple inputs resulting in the same hash value?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Collision",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tConfusion",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Obfuscation",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Diffusion",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 61,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Of the following choices, what can you use to verify data integrity?",
+        "options": [
+            {
+                "label": "A",
+                "content": "AES",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tDES",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "RC4",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "SHA",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 62,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Sami wants to use digital signatures for his emails and realizes he needs a certificate. Which of the following will issue Sami a certificate?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Certificate Revocation List",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tCertificate Authority",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Online Certificate Status Protocol",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Certificate recover agent",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 63,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following public key distribution techniques is not vulnerable to forgery and tampering?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Public announcement",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B. Public key directory",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Public key certificate",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Pubic authority",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 64,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following principles is violated if the computer system is not accessible?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Availability",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tConfidentiality",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Access Control",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Authentication",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 65,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": null,
+        "options": [
+            {
+                "label": "A",
+                "content": "Reliability",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tConsistency",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Performance",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Fault tolerance",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 66,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following logical layer of Name space distribution in distributed systems refers nodes representing hosts of a LAN, shared files such as libraries or binaries?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Global",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tAdministrational",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "User",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Managerial",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 67,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What do we call the disagreement in the reading of two clocks in distributed systems?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Drift",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tClock Drift rate",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Skew",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Delay",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 68,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following are  a   reason for having replication in distributed systems?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Performance and Reliability",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tPerformance and Consistency",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Consistency and Fault tolerance",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Reliability and Consistency",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 69,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following type of path name indicates the first node in the naming graph is root node?",
+        "options": [
+            {
+                "label": "A",
+                "content": "True",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tRelative",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "URI",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Absolute",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 70,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Consider the make program on a UNIX machine; it compiles only source files for which the time of their last update was later than the existing object file, this refers______.",
+        "options": [
+            {
+                "label": "A",
+                "content": "Consistency",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tSynchronization",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Replication",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Fault tolerance",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 71,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What tool is commonly used for security monitoring and incident response?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Project management software",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tCustomer relationship management (CRM) tools",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Security Information and Event Management (SIEM) systems",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Data visualization software",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 72,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is a common component of the KYC process?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Collecting customer identification documents",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tOffering personalized product recommendations",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Analyzing competitor pricing",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Conducting employee training",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 73,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Who is typically responsible for determining access rights and permissions in an organization?",
+        "options": [
+            {
+                "label": "A",
+                "content": "System administrator",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tEnd user",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Information Owner",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Network engineer",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 74,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which access control model requires that access permissions be determined by a central authority based on predefined policies?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Discretionary Access Control",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tMandatory Access Control",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Access Control Lists",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Role-Based Access Control",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 75,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is one key component of the NIST Cybersecurity Framework?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Identify, Protect, Detect, Respond, Recover",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tFinancial management",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "User experience design",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Marketing analysis",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 76,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "the primary goal of a risk assessment in system security",
+        "options": [
+            {
+                "label": "A",
+                "content": "Eliminate all risks",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tIdentify and prioritize risks for mitigation.",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Ignore low-priority risks",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Increase system complexity",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 77,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following tools is commonly used to discover coding problems in web applications?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Load balancer",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tStatic code analysis tool",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Firewall",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Content Delivery Network (CDN",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 78,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following is a limitation of a firewall?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It cannot inspect encrypted traffic",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tIt cannot block malicious websites",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "It cannot detect malware on endpoints",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It cannot prevent phishing attacks",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 79,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is a common server configuration error that can lead to security vulnerabilities?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Using strong passwords",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tEnabling HTTPS",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Default credentials",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Regular software updates",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 80,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which tool is most associated with accessing the Dark Web?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Tor Browser",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tGoogle Search",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Microsoft Edge",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "MetaMask",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 81,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the primary goal of security testing in web applications?",
+        "options": [
+            {
+                "label": "A",
+                "content": "To improve application speed",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tTo identify vulnerabilities and weaknesses",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "To enhance user experience",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "To ensure compliance with coding standards",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 82,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the primary purpose of a honeytoken in cybersecurity?",
+        "options": [
+            {
+                "label": "A",
+                "content": "To increase system performance",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tTo enhance user authentication",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "To store sensitive information securely",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "To deceive attackers and detect unauthorized access",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 83,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which one of the following is the best authentication mechanism used by mobile phone?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Using pattern",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tUsing passwords",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Using biometrics",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Face recognition system",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 84,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Assume you are able to connect your mobile phone with different network infrastructures, which feature of mobile phones ensures this phenomenon?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Wireless communication",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tMobility and portability",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Connectivity and integration",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Convergence of functions",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 85,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "",
+        "options": [
+            {
+                "label": "A",
+                "content": "Data breaches",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tPhishing",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Data diddling",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Salami slicing",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 86,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Assume someone emails you about winning one-million-birr lottery, what will immediately come to your mind?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Packet sniffing",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tSpoofing",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Information stealing",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Phishing",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 87,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What is the limitation of infrastructure mode of IEEE 802.11?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Less secured",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tNot scalable",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Performance issue",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Cost",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 88,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "How spoofing works?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Sending unsolicited messages and trying to trick people",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.Creating false login page and pretending legal person",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Obtaining credentials online and using them to gain unauthorized access",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Intercepting communication in the middle",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 89,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which protection mechanism protects our mobile phone from being intercepted by network-based attack while we are connected to the internet?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Encryption",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tVPN",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Anti-malwares",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Secured authentication",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 90,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which file format should an investigator look for when recovering deleted email files from a disk image?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Xml",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tEmlx",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Xmls",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Exlm",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 91,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which forensic method is used to extract data from damaged storage devices?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Live forensics",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tMemory analysis",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "File carving",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Disk imaging",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 92,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "What types of cybercrime involves copying or imitating an item without authorization?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Blackmail",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tBank Frauds",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Counterfeiting",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Embezzlement",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 93,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "___involves the preservation, identification, extraction and documentation of computer evidence stored as data or magnetically encoded information?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Digital Forensics",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tLive Data Collection",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Incident Response Methodology",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Forensic Duplication",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 94,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "",
+        "options": [
+            {
+                "label": "A",
+                "content": "for(int i = 0; i < 100; i+3) {}",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tfor(int i = 3; i > 100; i--) {}",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "for(int i = 100; i < 3; i++) {}",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "for(int i = 100; i > 3; i--) {",
+                "image": null
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "qid": 95,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "",
+        "options": [
+            {
+                "label": "A",
+                "content": "In switch statement, the default is executed even though the test case is evaluated to true",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B.\tIn a for loop, Initialization is executed first and only once",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "The loop terminates immediately the condition becomes true",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 96,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which of the following best describes a race condition vulnerability in system security?",
+        "options": [
+            {
+                "label": "A",
+                "content": "A security flaw that arises when multiple processes attempt to access the same resource concurrently",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B. A vulnerability where an attacker modifies code during execution",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "A weakness that allows unauthorized remote access to a system",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "A type of cryptographic attack used to break encryption keys",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 97,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which cybersecurity framework is widely used for managing security controls in an organization?",
+        "options": [
+            {
+                "label": "A",
+                "content": "ISO 8601",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B. NIST Cybersecurity Framework",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "OWASP Secure Coding Guidelines",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "IEEE 802.11",
+                "image": null
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "qid": 98,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In a web application, which attack exploits XML parsers by injecting external entity references?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Cross-Site Scripting (XSS)",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B. SQL Injection",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "XML External Entity (XXE) Attack",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Server-Side Request Forgery (SSRF)",
+                "image": null
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "qid": 99,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "Which type of malware exploits a system\u2019s boot process to maintain persistence?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Rootkitb",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B. Ransomware",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "Adware",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Trojan Horse",
+                "image": null
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "qid": 100,
+        "department_id": null,
+        "department_name": "Cyber Security",
+        "course_code": null,
+        "module_id": null,
+        "year": 2025,
+        "image": null,
+        "content": "In a Content Security Policy (CSP), which directive controls the sources from which JavaScript can be loaded?",
+        "options": [
+            {
+                "label": "A",
+                "content": "connect-src",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "B. style-src",
+                "image": null
+            },
+            {
+                "label": "A",
+                "content": "frame-src",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "script-src",
+                "image": null
+            }
+        ],
+        "answer": "D"
     }
 ]

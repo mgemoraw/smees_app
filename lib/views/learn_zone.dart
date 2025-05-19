@@ -64,29 +64,30 @@ class _LearnZoneState extends State<LearnZone> {
     return ListView(
       // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-      Center(
-        child: Text("Read ${user.department} Courses ",
+      Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text("Study All ${user.department} Courses Here",
         style: TextStyle
-          (fontSize: 18,
+          (fontSize: 16,
           fontWeight: FontWeight.bold,
         ),),
       ),
       SizedBox(height: 15.0,),
 
         // open webview page
-      SizedBox(
-        width: double.infinity,
-        child: MaterialButton(
-          color: Colors.white12,
-          child: Text("Open Google Search Engine", style: TextStyle(fontSize:
-          18, fontWeight: FontWeight.bold,
-              color: Colors.blue[900])),
-          onPressed: ()  {
-            //
-            Navigator.pushNamed(context, '/webview');
-          },
-        ),
-      ),
+      // SizedBox(
+      //   width: double.infinity,
+      //   child: MaterialButton(
+      //     color: Colors.white12,
+      //     child: Text("Open Google Search Engine", style: TextStyle(fontSize:
+      //     18, fontWeight: FontWeight.bold,
+      //         color: Colors.blue[900])),
+      //     onPressed: ()  {
+      //       //
+      //       Navigator.pushNamed(context, '/webview');
+      //     },
+      //   ),
+      // ),
 
         // open Gemini page
         // SizedBox(
@@ -101,21 +102,21 @@ class _LearnZoneState extends State<LearnZone> {
         //     },
         //   ),
         // ),
-      SizedBox(
-        width: double.infinity,
-        child: MaterialButton(
-          color: Colors.white12,
-          child: Text("Open Exit Exam blue print", style: TextStyle(fontSize: 18,
-              color: Colors.blue[900], fontWeight: FontWeight.bold)),
-          onPressed: ()  {
-
-            Navigator.pushNamed(context, "/blueprint");
-              // setState(() {
-              //   isReady = !isReady;
-              // });
-          },
-        ),
-      ),
+      // SizedBox(
+      //   width: double.infinity,
+      //   child: MaterialButton(
+      //     color: Colors.white12,
+      //     child: Text("Open Exit Exam blue print", style: TextStyle(fontSize: 18,
+      //         color: Colors.blue[900], fontWeight: FontWeight.bold)),
+      //     onPressed: ()  {
+      //
+      //       Navigator.pushNamed(context, "/blueprint");
+      //         // setState(() {
+      //         //   isReady = !isReady;
+      //         // });
+      //     },
+      //   ),
+      // ),
 
 
       //  !isReady ? Center(child: Text("Click 'Read blue print' to load "))
@@ -128,7 +129,8 @@ class _LearnZoneState extends State<LearnZone> {
         // list of courses
         ExpansionTile(
           leading: Icon(Icons.menu_book),
-            title: Text("Read ${user.department} Courses", style: TextStyle
+            title: Text("Learning Contents", style:
+            TextStyle
               (fontSize: 18, fontWeight: FontWeight.bold),),
             children: [
               FutureBuilder<List<Map<String,dynamic>>>(
@@ -139,7 +141,7 @@ class _LearnZoneState extends State<LearnZone> {
                   } else if (snapshot.hasError) {
                     return Center(child: Text('Error: ${snapshot.error}'));
                   } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                    return Center(child: Text('No items available.'));
+                    return Center(child: Text('No Contents.'));
                   } else {
                     // If data is loaded, display the list
                     List<Map<String, dynamic>> items = snapshot.data!;

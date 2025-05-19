@@ -7,7 +7,7 @@ import "package:smees/views/user_provider.dart";
 import 'package:smees/api/end_points.dart';
 
 // setting app version
-const SMEES_APP_VERSION  = "2025.04.1";
+const SMEES_APP_VERSION  = "2025.05.1";
 class LeftNavigation extends StatefulWidget {
   const LeftNavigation({super.key});
 
@@ -61,12 +61,13 @@ class _LeftNavigationState extends State<LeftNavigation> {
               color: Colors.white,
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset('assets/images/bdu_logo.png', height: 60),
-                // Text("BiT (SEMS)-App"
+                Image.asset('assets/icons/splash.png', height: 60),
+                // Text("BiT (SMEES)-App"
                 //     "$SMEES_APP_VERSION"),
                 ListTile(
-                  title: Text("BiT SEMS App"
+                  title: Text("BiT SMEES"
                       "-App"),
                   subtitle: Text("Release Version: $SMEES_APP_VERSION"),
                 ),
@@ -91,11 +92,7 @@ class _LeftNavigationState extends State<LeftNavigation> {
                       setState(() {
                         // change offlineMode state
                         context.read<UseModeProvider>().changeUseMode();
-                        // ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        //   backgroundColor: Colors.redAccent,
-                        //   content: Text("This feature is not available in "
-                        //       "this version of the app"),
-                        // ));
+
                       });
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         backgroundColor: Colors.blue,
@@ -170,13 +167,13 @@ class _LeftNavigationState extends State<LeftNavigation> {
                     ],
                   ),
                 ),
-                ListTile(
-                  leading: Icon(Icons.feedback),
-                  title: const Text('Send Us feedback'),
-                  onTap: () {
-                    Navigator.pushReplacementNamed(context, "/feedback");
-                  },
-                ),
+                // ListTile(
+                //   leading: Icon(Icons.feedback),
+                //   title: const Text('Send Us feedback'),
+                //   onTap: () {
+                //     Navigator.pushReplacementNamed(context, "/feedback");
+                //   },
+                // ),
               ]),
           const LoginLogout(),
         ],
@@ -223,11 +220,13 @@ class _LoginLogoutState extends State<LoginLogout> {
           : ListTile(
               leading: Icon(Icons.login),
               title: const Text('Login'),
-              onTap: () {
-                logout();
-                setState(() {
-                  Navigator.pushNamed(context, "/login");
-                });
+              onTap: () async{
+
+                await LogoutService.logout(context);
+                // logout();
+                // setState(() {
+                  Navigator.pushReplacementNamed(context, "/login");
+                // });
               },
             ),
     );

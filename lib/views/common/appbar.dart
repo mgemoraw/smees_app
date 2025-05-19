@@ -6,6 +6,8 @@ import "package:smees/models/user.dart";
 import "package:smees/security/logout.dart";
 import "package:smees/views/user_provider.dart";
 
+
+
 class SmeesAppbar extends StatefulWidget implements PreferredSizeWidget {
   final String title;
   final List<Widget>? actions;
@@ -55,6 +57,7 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
 
   @override
   Widget build(BuildContext context) {
+    final useModeProvider = Provider.of<UseModeProvider>(context);
     return AppBar(
       backgroundColor: Colors.blue,
       title: Text(
@@ -65,31 +68,30 @@ class _SmeesAppbarState extends State<SmeesAppbar> {
         PopupMenuButton(
             itemBuilder: (context) =>
                 [
+                    // PopupMenuItem(
+                    //   child: TextButton(
+                    //     child: Text("About Us"),
+                    //     onPressed: () {},
+                    //   ),
+                    // ),
+                  // PopupMenuItem(
+                  //   child: IconButton(
+                  //     icon: const Icon(Icons.settings),
+                  //     onPressed: () {
+                  //       Navigator.pushNamed(context, "/settings");
+                  //     },
+                  //   ),
+                  // ),
                     PopupMenuItem(
-                      child: TextButton(
-                        child: Text("About Us"),
-                        onPressed: () {},
-                      ),
-                    ),
-                  PopupMenuItem(
-                    child: IconButton(
-                      icon: const Icon(Icons.settings),
-                      onPressed: () {
-                        Navigator.pushNamed(context, "/settings");
+
+                      child: const Icon(Icons.logout, color: Colors.blueAccent),
+                      onTap: () async {
+                        // calling logout service here
+                        await LogoutService.logout(context);
+
+                        Navigator.pop(context);
+                        Navigator.pushReplacementNamed(context, "/login");
                       },
-                    ),
-                  ),
-                    PopupMenuItem(
-                      child: IconButton(
-                        icon: const Icon(Icons.login),
-                        onPressed: () {
-                          setState(() {
-                            // logout();
-                            Navigator.pop(context);
-                            Navigator.pushReplacementNamed(context, "/login");
-                          });
-                        },
-                      ),
                     )
                   ]
                  // [

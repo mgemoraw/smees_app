@@ -42,6 +42,11 @@ class UserProvider extends ChangeNotifier {
     _user = newUser;
     notifyListeners();
   }
+  void clearUser() {
+    _user = User();
+    notifyListeners();
+  }
+
 }
 
 class UseModeProvider extends ChangeNotifier {

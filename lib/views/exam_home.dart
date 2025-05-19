@@ -191,9 +191,9 @@ class _ExamHomeState extends State<ExamHome> {
 
   }
 
-  List <dynamic> filterByYear(int year) {
+  List <dynamic> filterByYear(int? year) {
 
-    if (year == 0) {
+    if (year == null || year == 0) {
       return _items;
     }
     late List<dynamic> new_items = [];
@@ -257,10 +257,11 @@ class _ExamHomeState extends State<ExamHome> {
 
     String deptName = user.department!;
     String deptSlug = deptName.toLowerCase().replaceAll(' ', '-');
-    debugPrint("Department-Slug: $deptSlug");
+    // debugPrint("Department-Slug: $deptSlug");
 
     // final year = year;
-    final url = Uri.parse("$API_BASE_URL${testStartApi}/${deptSlug}?limit=100");
+    final url = Uri.parse("$API_BASE_URL${testStartApi}/${deptSlug}?limit=100"
+        "&year=$examYear");
 
     final storage =  FlutterSecureStorage();
     final token = await storage.read(key: 'smees-token');
@@ -294,7 +295,7 @@ class _ExamHomeState extends State<ExamHome> {
 
            // examId = data['test_id'];
            final test = jsonEncode(data['test']);
-           debugPrint(test);
+           // debugPrint(test);
 
 
            // debugPrint("id ${test['id']}");
@@ -330,8 +331,8 @@ class _ExamHomeState extends State<ExamHome> {
       debugPrint(err.toString());
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text("Downloading Questions Failed: ${err.toString()
-          }"),
+          content: Text("Downloading Questions Failed: Please Check your "
+              "internet connection"),
           backgroundColor: Colors.redAccent,
         ),
       );
@@ -362,131 +363,141 @@ class _ExamHomeState extends State<ExamHome> {
       appBar: SmeesAppbar(title: "SMEES"),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Column(children: [
-          // user profile card
-          const UserStatusCard(),
+        child: Padding(
+          padding: const EdgeInsets.all(25.0),
+          child: Column(
+            spacing: 10,
+              children: [
+            // user profile card
+            const UserStatusCard(),
 
-          // Choose your field of study section
-          const Divider(height: 3, color: Colors.blue),
-          const Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Text(
+            // Choose your field of study section
+            const Divider(height: 3, color: Colors.blue),
+            Text(
                 "Welcome to your Model Exit Exam Page. You will be given 100 questions with 1 minute for each question. You cannot view your score of the model exam unless you complete all and submit it. If you stopped the exam in any case nothing will be recorded. Once you completed your answers, do not forget to submit your answers to get the final score and update your score status on the local and remote database. You can try model exams by year (test period). Your performance will be sent to Your University's Quality Assurance Office for follow up.  Let's Enjoy"),
-          ),
 
-          // dropdown option to choose and take Exam
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // DropdownButton(
-                  //   value: department,
-                  //   hint: const Text("Selct your Field of Study Here"),
-                  //   items: getDepartents(),
-                  //   onChanged: (value) {
-                  //     //
-                  //     setState(() {
-                  //       department = value;
-                  //       readJson(department);
-                  //     });
-                  //   },
-                  // ),
-                ],
-              ),
-            ),
-          ),
 
-          Text("Select Model Exam Year"),
-          SizedBox(height: 10,),
-          SizedBox(
-            child: DropdownButton(
-                hint: const Text("Select Exam Year Year"),
-                value: examYear,
-                items:[
-                  DropdownMenuItem(child: Text('All'), value:0),
-                  DropdownMenuItem(child: Text('2024'), value:2024),
-                  DropdownMenuItem(child: Text('2025'), value:2025),
-                ],
-                onChanged: (value) {
-                  //
-                  if (value != null){
-                    setState(() {
-                      examYear = value;
-                      // _items = filterByYear(value);
-                    });
-                  }else {
-                    setState(() {
-                      examYear = 0;
-                    });
-                  }
-                }
-            ),
-
-          ),
-          SizedBox(height: 10,),
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () async {
-                // set loading
-                setState(() {
-                  isLoading = true;
-                });
-                if (useModeProvider.offlineMode) {
-                  if (user.department != null){
-                    await readJson(user.department!);
-                  }
-                } else if(!useModeProvider.offlineMode) {
-                  await _downloadQuestions();
-                }
-
-                int qnos = (_items.length >= 100) ? 100 : _items.length;
-
-                List<int> indexes = [];
-                var items = [];
-
-                if (_items.length > 100) {
-                  indexes = generateIndexes(_items, qnos);
-                  for (int i in indexes) {
-                    items.add(_items[i]);
-                  }
-                } else {
-                  items = _items;
-                }
-
-                if (qnos > 0 && _items.isNotEmpty) {
-                  // start quiz
-
-                  // Navigator.pushNamed(context, "/exam");
-                  Navigator.pop(context); // pop the exam page first
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => TakeExam(
-                        department: user.department!,
-                        items: items,
-                        examData: examData,
-                      ),
-                    ),
-                  );
-                } else {
-                  _message!.isNotEmpty ? ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                    SnackBar(
-                        content: Text("Error: $_message"),
-                      backgroundColor: Colors.redAccent,
-                    ),
-                  ): null ;
+            // Text("Select Model Exam Year"),
+            SizedBox(height: 10,),
+            DropdownButtonFormField(
+              hint: Text("Select Year", style:TextStyle
+                (color: Colors.blueAccent)),
+              value: examYear,
+              items: [
+                DropdownMenuItem(value: 0, child: Text('All')),
+                DropdownMenuItem(value:2024, child: Text('2024')),
+                DropdownMenuItem( value:2025, child: Text('2025')),
+              ],
+              onChanged: (value){
+                // filterByYear(value);
+                if (value != null){
+                  setState(() {
+                    examYear = value;
+                    // _items = filterByYear(value);
+                  });
+                }else {
+                  setState(() {
+                    examYear = 0;
+                  });
                 }
               },
-              child:
-                  isLoading ? CircularProgressIndicator() : Text("Start Exam"),
+              decoration: InputDecoration(
+                labelText: "Select Model Exam Year",
+                fillColor: Colors.white12,
+                filled: true,
+
+                hintStyle: TextStyle(color: Colors.blueAccent),
+                // labelStyle: TextStyle(color: Colors.blueAccent),
+              ),
+              style: TextStyle(color:Colors.blueAccent),
             ),
-          ),
-        ]),
+
+            // SizedBox(
+            //   child: DropdownButton(
+            //       hint: const Text("Select Exam Year Year"),
+            //       value: examYear,
+            //       items:[
+            //         DropdownMenuItem(child: Text('All'), value:0),
+            //         DropdownMenuItem(child: Text('2024'), value:2024),
+            //         DropdownMenuItem(child: Text('2025'), value:2025),
+            //       ],
+            //       onChanged: (value) {
+            //         //
+            //         if (value != null){
+            //           setState(() {
+            //             examYear = value;
+            //             // _items = filterByYear(value);
+            //           });
+            //         }else {
+            //           setState(() {
+            //             examYear = 0;
+            //           });
+            //         }
+            //       }
+            //   ),
+            // ),
+            SizedBox(height: 16,),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () async {
+                  // set loading
+                  setState(() {
+                    isLoading = true;
+                  });
+                  if (useModeProvider.offlineMode) {
+                    if (user.department != null){
+                      await readJson(user.department!);
+                    }
+                  } else if(!useModeProvider.offlineMode) {
+                    await _downloadQuestions();
+                  }
+
+                  int qnos = (_items.length >= 100) ? 100 : _items.length;
+
+                  List<int> indexes = [];
+                  var items = [];
+
+                  if (_items.length > 100) {
+                    indexes = generateIndexes(_items, qnos);
+                    for (int i in indexes) {
+                      items.add(_items[i]);
+                    }
+                  } else {
+                    items = _items;
+                  }
+
+                  if (qnos > 0 && _items.isNotEmpty) {
+                    // start quiz
+
+                    // Navigator.pushNamed(context, "/exam");
+                    Navigator.pop(context); // pop the exam page first
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TakeExam(
+                          department: user.department!,
+                          items: items,
+                          examData: examData,
+                        ),
+                      ),
+                    );
+                  } else {
+                    _message!.isNotEmpty ? ScaffoldMessenger.of(context)
+                        .showSnackBar(
+                      SnackBar(
+                          content: Text("Error: $_message"),
+                        backgroundColor: Colors.redAccent,
+                      ),
+                    ): null ;
+                  }
+                },
+                child:
+                    isLoading ? CircularProgressIndicator() : Text("Start Exam"),
+              ),
+            ),
+          ]),
+        ),
       ),
       bottomNavigationBar: Container(
           height: 60,

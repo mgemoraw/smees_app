@@ -13,6 +13,7 @@ import 'package:smees/views/answer_option.dart';
 
 import 'package:smees/views/result_page.dart';
 import 'package:smees/views/user_provider.dart';
+import 'package:smees/views/utils.dart';
 
 class TakeQuiz extends StatefulWidget {
   final String department;
@@ -140,7 +141,7 @@ class _TakeQuizState extends State<TakeQuiz> {
       bottomNavigationBar: Container(
         height: 60,
         decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
+          color: Theme.of(context).secondaryHeaderColor,
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -226,6 +227,16 @@ class _TakeQuizState extends State<TakeQuiz> {
             ),
           ),
 
+          // adding image when there exists
+          (widget.items[_qno]['image'] != null && widget
+              .items[_qno]['image'] != "") ?
+          useModeProvider.offlineMode ?
+          Image.asset(getImagePath(widget.department, widget
+              .items[_qno]['image'])!)
+              : Image.network
+            ("http://localhost:8000/static/images/${widget
+              .items[_qno]['image']}")
+              : SizedBox(height: 1,),
 
           // Image.asset('assets/${widget
           //     .items[_qno]['image']}'),
@@ -239,37 +250,44 @@ class _TakeQuizState extends State<TakeQuiz> {
                   ? jsonDecode(widget.items[_qno]['options'])
                   : (widget.items[_qno]['options']);
               // if (widget.items[_qno]['options'][index]['content'] != null) {
-              if (options[index]['content'] != null) {
-                return Column(
-                  children: [
-                    AnswerOption(
-                      enabled: !answerWasSelected,
-                      value: options[index]['label'],
-                      answerText: options[index]['content'],
-                      answerColor: (_chosenAnswer == options[index]['label'])
-                          ? _selectedColor
-                          : null,
-                      answerTap: () {
-                        //
-                        setState(() {
-                          _chosenAnswer = options[index]['label'];
-                          // _selectedColor = Colors.blue;
-                          if (_chosenAnswer == widget.items[_qno]['answer']){
-                            _selectedColor = Colors.green[400];
-                          } else {
-                            _selectedColor = Colors.red[400];
-                          }
-                          _writeAnswer(_chosenAnswer!);
-                          disableOptions();
-                          // _nextQuestion();
-                        });
-                      },
-                    ),
-                    // options[index]['image']  ?? Image.asset
-                    //   ("assets/${options[index]['image']}"),
-                  ],
-                );
+
+              try {
+                if (options[index]['content'] != null) {
+                  return Column(
+                    children: [
+                      AnswerOption(
+                        enabled: !answerWasSelected,
+                        value: options[index]['label'],
+                        answerText: options[index]['content'],
+                        answerColor: (_chosenAnswer == options[index]['label'])
+                            ? _selectedColor
+                            : null,
+                        answerTap: () {
+                          //
+                          setState(() {
+                            _chosenAnswer = options[index]['label'];
+                            // _selectedColor = Colors.blue;
+                            if (_chosenAnswer == widget.items[_qno]['answer']){
+                              _selectedColor = Colors.green[400];
+                            } else {
+                              _selectedColor = Colors.red[400];
+                            }
+                            _writeAnswer(_chosenAnswer!);
+                            disableOptions();
+                            // _nextQuestion();
+                          });
+                        },
+                      ),
+                      // options[index]['image']  ?? Image.asset
+                      //   ("assets/${options[index]['image']}"),
+                    ],
+                  );
+                }
+              }catch(err) {
+                //
+                return Text("No Choice Option");
               }
+
             },
           ),
 

@@ -104,6 +104,8 @@ flutter:
   assets:
       - assets/
       - assets/images/
+      - assets/images/
+      - assets/icons/
       - assets/fc/computer_science/
       - assets/fc/software_engineering/
       - assets/fc/information_technology/

@@ -198,7 +198,7 @@ class _TakeExamState extends State<TakeExam> {
             // print("Hello: $_totalScore");
           },
           isExtended: true,
-          child: const Icon(
+          child: isLoading? CircularProgressIndicator() : Icon(
             Icons.send,
           ), //Icons.plus),
         ),
@@ -207,7 +207,7 @@ class _TakeExamState extends State<TakeExam> {
         backgroundColor: Theme.of(context).primaryColorDark,
         // backgroundColor: Color.fromRGBO(33, 150, 243, 1),
         title: Text(
-          "Exam Time - ${_formatTime(_remainingTime)} - ${widget.department} ",
+          "Exam Time - ${_formatTime(_remainingTime)}  ",
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -300,7 +300,8 @@ class _TakeExamState extends State<TakeExam> {
                             builder: (context) => ResultPage(resultData:
                             result, backRoute: "/exam")));
                   },
-                  child: const Text("Submit Result"),
+                  child: isLoading ? CircularProgressIndicator(): Text
+                    ("Submit Result"),
                 )
               : const Text(""),
           // forward button
@@ -383,7 +384,6 @@ class _TakeExamState extends State<TakeExam> {
             ),
 
             // adding image when there exists
-
             (widget.items[_qno]['image'] != null && widget
                 .items[_qno]['image'] != "") ?
             useModeProvider.offlineMode ?
