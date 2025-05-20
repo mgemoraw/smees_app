@@ -159,8 +159,10 @@ class _TestHomeState extends State<TestHome> {
         setState(() {
           _items = data;
           _error = "";
-          _progress = 1.0;
-          isLoaded = true;
+          if (_items.length > 0){
+            _progress = 1.0;
+            isLoaded = true;
+          }
         });
       } else {
         //
@@ -336,13 +338,16 @@ class _TestHomeState extends State<TestHome> {
         // final file = File("${directory.path}/data_$year.json");
         // await file.writeAsString(json.encode(data));
         setState(() {
-          _progress = 1.0;
+
           _data = data;
           _items = data;
           message = "data saved to ";
-          isLoaded = true;
+
           return;
-        });
+        });if (_items.length > 0){
+          _progress = 1.0;
+          isLoaded = true;
+        }
       } else {
         setState(() {
           message = "Error: ${response.body}";
@@ -620,7 +625,7 @@ class _TestHomeState extends State<TestHome> {
           // display error message
           (_error == null || _error == '') ?
           _items.length > 0 ? Text("Available Questions: "
-              "${_items.length}") : Text("")
+              "${_items.length}") : Text("No Contents Found")
               :
               Text("$_error"),
         ]),

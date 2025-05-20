@@ -139,7 +139,7 @@ class _TakeExamState extends State<TakeExam> {
           onPressed: () async{
             // check answer
             // _calculateScore();
-            if (userAnswers.length >0 ) { //== widget.items.length ) {
+            if (userAnswers.length == widget.items.length ) {
               _calculateScore();
               final result = {
                 'userId': userProvider.user.username,
