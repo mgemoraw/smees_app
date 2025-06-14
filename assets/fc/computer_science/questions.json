@@ -1,1191 +1,3139 @@
 [
     {
-        "department_id": 0,
+        "qno": 1,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The weak entity relationship set is represented in E-R diagram as ?",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which algorithm is appropriate to reduce the size of large files?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Double diamonds"
+                "content": "Merge sort algorithm",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Double rectangle"
+                "content": "Huffman encoding algorithm",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "Dashed lines"
+                "content": "Heap sort algorithm",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Diamond"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Prim's algorithm",
+                "image": null
             }
         ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "In the __________ normal form, a composite attribute is converted to individual attributes?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "First"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Second"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Third"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Fourth"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Is an attribute which can be further to be divide?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Composite"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Null"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Derived"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Multiple value"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "A functional dependency is a relationship between or among?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Tables"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Rows"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Relations"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Attributes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The entity set person is classified as student and employee",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Generalization"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Specialization"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Inheritance"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Constraint generalization"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
+        "image": null,
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qno": 2,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Describes no attribute of a primary key can be null?",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " A process is terminated by the operating system due to a reference to non-existing memory. Which one of the following best explains the process termination?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Domain Integrity"
+                "content": "Blocking send",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Entity Integrity"
+                "content": "Blocking receive",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "Referential Integrity"
+                "content": "Direct message",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Enterprise Integrity"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Non-block receive",
+                "image": null
             }
         ],
-        "answer": "B"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which  of the following is not a Structural thing?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Classes   interfaces"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "collaborations"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "activity"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "nodes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "c"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Software is defined as ___________",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "set of programs, documentation & configuration of data"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "set of programs"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "documentation and configuration of data"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "None of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
+        "image": null,
         "answer": "A"
     },
     {
-        "department_id": 0,
+        "qno": 3,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "At Conceptual level Class diagrams should include",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is asynchronous in message communication?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "operations only"
+                "content": "Blocking send",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "attributes only"
+                "content": "Blocking receive",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "both operations and attributes"
+                "content": "Direct message",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "none of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Non-block receive",
+                "image": null
             }
         ],
-        "answer": "B"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Constraints can be represented in UML by",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "{text}"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "[text]"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Constraint"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "None of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is an object?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "An object is an instance of a class"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "An object includes encapsulation of data"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "An object is not an instance of a class"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following statement(s",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Interaction diagrams are at their best when they deal with one main design flow and not multiple variants that can happen"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Interaction diagrams are good at designing part or all of one use case\u2019s functionality across multiple objects"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Interaction diagrams allow the analyst to show iteration and conditional execution for messaging between objects"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "All of the mentioned"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
+        "image": null,
         "answer": "D"
     },
     {
-        "department_id": 0,
+        "qno": 4,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "UML interfaces are used to:",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " For codes like the following one, which technique of code optimization is appropriate?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "specify required services for types of objects"
+                "content": "Arithmetic simplification",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "program in Java, but not in C++ or Smalltalk"
+                "content": "Compile time evaluation",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "define executable logic to reuse across classes"
+                "content": "Code motion",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "define an API for all classes"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Dead code elimination",
+                "image": null
             }
         ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a project management goal?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Avoiding customer complaints"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Keeping overall costs within budget"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Delivering the software to the customer at the agreed time"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Maintaining a happy and well-functioning development team"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "A"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is the first step in project planning?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Determine the budget"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Determine project constraints"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Inspect the deliverables"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Establish the objectives and scope"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "A project is anything which is",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Not implicitly expressed"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Not a physical objective"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Implicitly expressed"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Social acceptability"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
+        "image": null,
         "answer": "C"
     },
     {
-        "department_id": 0,
+        "qno": 5,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Process framework activities are populated with",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is true about functions in JavaScript?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Milestones"
+                "content": "Function names can begin with digits",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "QA Points"
+                "content": "There is no limit to the number of function parameters that a function may contain",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "Work Products"
+                "content": "Function names can contain spaces",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "All of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Function names are not case-sensitive",
+                "image": null
             }
         ],
-        "answer": "D"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not an effective software project management focus?",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "People"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Popularity"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Product"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "Process"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
+        "image": null,
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qno": 6,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The reason for software bugs and failures is due to",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which statement is true about pop operation of Stack data structures?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Software developers"
+                "content": "pop inserts new element at the middle of the stack",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Software companies"
+                "content": "pop returns the end/top element but it doesn’t delete that element",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "Both (A"
+                "content": "pop removes the end/top element from stack",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "None of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "pop inserts new element at the beginning/bottom of stack",
+                "image": null
             }
         ],
+        "image": null,
         "answer": "C"
     },
     {
-        "department_id": 0,
+        "qno": 7,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "According to the Project Management Institute (PMI",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " In a tree data structure, if a node has no parent node, then the node is:",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Skills, Tools"
+                "content": "External node",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Skills, Analysis"
+                "content": "Root node",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "Tools, Analysis"
+                "content": "Internal node",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Analysis, Theories"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Parent node",
+                "image": null
             }
         ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 8,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Suppose you have received a message from your friend but the message is scrambled for the sake of security. Your friend has used a program to encode messages into scrambled text. In order to read the message, which program would you use?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Secret key",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Hash function",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Encryption",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Decryption",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 9,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which asymptotic notation describes average case analysis?",
+        "options": [
+            {
+                "label": "A",
+                "content": "f(n) = Big-Oh",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "f(n) = Big Omega",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "f(n) = little-omega",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "f(n) = Theta",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 10,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not correct about transaction failure?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Concurrency control enforcement avoids transaction failure",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Transactions fail if logical errors are detected",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Transactions fail if disk blocks lose their data",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Catastrophes can be the cause of transaction failure",
+                "image": null
+            }
+        ],
+        "image": null,
         "answer": "A"
     },
     {
-        "department_id": 0,
+        "qno": 11,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "During project estimation, project manager estimates following",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Given the schemas: BOOK(Book_id, Title, Publisher_name), BOOK_AUTHOR(Book_id, Author_name), PUBLISHER(Name, Address, Phone). Which one of the following SQL is correct to delete the publisher named as 'xwz' from the PUBLISHER table?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Project duration"
+                "content": "DELETE FROM PUBLISHER WHERE Address = 'xwz'",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Project effort"
+                "content": "DELETE FROM PUBLISHER WHERE Name = 'xwz'",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "Project cost"
+                "content": "DELETE FROM BOOK_AUTHOR WHERE Address = 'xwz'",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "All of the above"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "DELETE FROM BOOK WHERE Name = 'xwz'",
+                "image": null
             }
         ],
-        "answer": "D"
+        "image": null,
+        "answer": "B"
     },
     {
-        "department_id": 0,
+        "qno": 12,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "What is system analysis?",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not an example of scripting languages?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Collecting facts and information"
+                "content": "Python",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Interpreting facts"
+                "content": "Perl",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "Identifying the problems"
+                "content": "C++",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "PHP",
+                "image": null
             }
         ],
-        "answer": "D"
+        "image": null,
+        "answer": "C"
     },
     {
-        "department_id": 0,
+        "qno": 13,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "System study involves",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is different from the other based on its role in computer networks?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "study of an existing system"
+                "content": "Routers",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "documenting the existing system"
+                "content": "Network printer",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "identifying current deficiencies and establishing new goals"
+                "content": "Hubs",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Wireless access point",
+                "image": null
             }
         ],
-        "answer": "D"
+        "image": null,
+        "answer": "B"
     },
     {
-        "department_id": 0,
+        "qno": 14,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "In top-down analysis and design",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is false about project planning stage?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "each succeeding phase is more detailed than the phase before it"
+                "content": "Project planning is a one-time task in the software development life cycle",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "each succeeding phase is as detailed as the phase before it"
+                "content": "Risk analysis is done during project planning",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "each succeeding phase is less detailed than the phase before it"
+                "content": "Cost estimation is done during project planning",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "All"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Preparing a time schedule is done during project planning",
+                "image": null
             }
         ],
+        "image": null,
         "answer": "A"
     },
     {
-        "department_id": 0,
+        "qno": 15,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The _____ symbol is used in a flowchart to represent a calculation task",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What will be the output of the following JavaScript statement? Math.sqrt(36)",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "Input"
+                "content": "1",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "Output"
+                "content": "6",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "Process"
+                "content": "36",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "Start"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "30",
+                "image": null
             }
         ],
-        "answer": "C"
-    },
-    {
-        "department_id": 0,
-        "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "System prototyping helps the designer in",
-        "image": "",
-        "options": [
-            {
-                "label": "A",
-                "image": null,
-                "content": "Making the programmers understand how the system will function"
-            },
-            {
-                "label": "B",
-                "image": null,
-                "content": "Communicating to the user, quickly, how the system, when developed, will look like and get a feedback"
-            },
-            {
-                "label": "C",
-                "image": null,
-                "content": "Giving a demo of the software, to the system manager to whom he reports"
-            },
-            {
-                "label": "D",
-                "image": null,
-                "content": "A and B"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
-            }
-        ],
+        "image": null,
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qno": 16,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "The conditions immediately outside a system is called",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following network architecture characteristics states that a network can expand quickly to address needs of new users and applications without having impact on the services delivered to existing users?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "The boundary"
+                "content": "Scalability",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "The interface"
+                "content": "Fault tolerance",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "The environment"
+                "content": "Security",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "The protocols"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Quality of service",
+                "image": null
             }
         ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 17,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Advancement of operating systems is closely tied to computer architectures, therefore, has passed through different generations. Which one of the following generation and advancement is wrongly coupled?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Fourth generation -> real-time systems",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Third generation -> batch system",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "First generation -> single user",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Second generation -> multiprogramming",
+                "image": null
+            }
+        ],
+        "image": null,
         "answer": "C"
     },
     {
-        "department_id": 0,
+        "qno": 18,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a characteristic of a system",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a set of attributes that can be seen by a program and can have a direct impact on the logical execution of a program?",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "operates for some purpose"
+                "content": "Arrangement",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "has homogeneous components"
+                "content": "Architecture",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "has interacting components"
+                "content": "Organization",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "operates within a boundary"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "Flow control",
+                "image": null
             }
         ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 19,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following algorithms can be used to extract Minimum Spanning Tree from an input graph?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Dijkstra’s algorithm",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Merge sort algorithm",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Huffman encoding algorithm",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Prim's algorithm",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 20,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Given input Alphabet E = {a, b, c, d} and empty string ε. Then, which one of the following is equivalent to E?*",
+        "options": [
+            {
+                "label": "A",
+                "content": "E",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "E'",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "{ε}",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "E0",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 21,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which quantifier can be used for some portion of the universe?",
+        "options": [
+            {
+                "label": "A",
+                "content": "∃",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "∀",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "V",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "\"",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 22,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not true about fan trap in Entity Relationship Diagram?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It can be resolved by readjusting the model so that no one-to-many relationships fanning out from an entity",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It occurs when there is no pathway between related entities",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "When there is ambiguous pathway between some entity occurrences in related entity types",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Highly likely exists when more than two one-to-many relationships fan out from an entity",
+                "image": null
+            }
+        ],
+        "image": null,
         "answer": "B"
     },
     {
-        "department_id": 0,
+        "qno": 23,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
         "course_code": null,
-        "department_name": "Software Engineering",
-        "course_name": "",
-        "content": "Which of the following is not a factor in the failure of a systems development project?",
-        "image": "",
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What is the output of the following C++ fragment code?\n```cpp\nint a = 6, b = 8;\nint x = 2, y = 4;\nint c = (x > y ? (a--, x) : (b--, y));\ncout << \"a=\" << a << \" b=\" << b << \" c=\" << c;\n```",
         "options": [
             {
                 "label": "A",
-                "image": null,
-                "content": "inadequate user involvement"
+                "content": "a=6, b=7, c=4",
+                "image": null
             },
             {
                 "label": "B",
-                "image": null,
-                "content": "failure of systems integration"
+                "content": "a=5, b=7, c=2",
+                "image": null
             },
             {
                 "label": "C",
-                "image": null,
-                "content": "size of company"
+                "content": "a=5, b=8, c=4",
+                "image": null
             },
             {
                 "label": "D",
-                "image": null,
-                "content": "continuation of a project that should have been cancelled"
-            },
-            {
-                "label": "E",
-                "image": null,
-                "content": null
-            },
-            {
-                "label": "F",
-                "image": null,
-                "content": null
+                "content": "a=6, b=8, c=4",
+                "image": null
             }
         ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 24,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a two-level cache having an internal and external caches?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Multilevel cache",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Single level cache",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Split cache",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Unified cache",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 25,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is false statement regarding Direct Address table and Hash Table data structures?",
+        "options": [
+            {
+                "label": "A",
+                "content": "If universe U is very large, Hash table is better than Direct Address table",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Hash table allocates one separate memory slot for each key in the universe U",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "There is one to one correspondence between keys in the universe U and memory slots in the Direct Address table",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Direct Address table doesn’t use a hash function to map keys",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 26,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " For an input graph, Depth First Traversal algorithm uses which data structure to traverse?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Tree",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Stack",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Priority queue",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Queue",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 27,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is true about arrays in C++?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Size of an array should be constant at the time of array declaration",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "We use [] square brackets at the time of array declaration",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "We can access elements of arrays without using index number",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "An array is a collection of similar data objects",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 28,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is correct for the statement below? When two transactions that access the same database items have their operations interleaved in a way that makes the value of some database item incorrect?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It is an incorrect summary problem",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It is a dirty read problem",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "It is a lost update problem",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It is a temporary read problem",
+                "image": null
+            }
+        ],
+        "image": null,
         "answer": "C"
-    }
+    },
+    {
+        "qno": 29,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a measure taken to ensure information and information systems' availability, integrity, authentication, and confidentiality?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Wiretapping",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Interception",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Information security",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Information assurance",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 30,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a method used to obtain the meaning of encrypted information without access to secret key?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Encryption",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Decryption",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Crypto-analysis",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Cryptography",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 31,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is evaluating the degrees of success of an agent?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Performance measure",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Action",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Perception",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Knowledge",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 32,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following lists of environments is the hardest for an agent?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Deterministic, fully observable, static",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Partially observable, static, continuous",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Sequential, non-deterministic, dynamic",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Fully observable, sequential, deterministic",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 33,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following registers holds the address of the next pair of instructions to be fetched from memory?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Program counter",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Memory address register",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Memory buffer register",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Instruction register",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 34,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a correct way to create a String object?",
+        "options": [
+            {
+                "label": "A",
+                "content": "String m = new String(\"Exit Exam\");",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "String m = \"computer Science\";",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "String m = new String[Technology];",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "String m = 'H', 'e', 'l', 'l', 'o';",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 35,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is false about String in Java?",
+        "options": [
+            {
+                "label": "A",
+                "content": "We can create a String object using an array of characters",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "In Java, a string is treated as an object",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "The content of a string can be changed once the string is created",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "We can create a String object using String literal",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 36,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which asymptotic notation describes worst case analysis?",
+        "options": [
+            {
+                "label": "A",
+                "content": "f(n) = Θ",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "f(n) = little-ω",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "f(n) = O(Ω)",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "f(n) = little-o",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 37,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What is the time complexity order of Quick sort algorithm?",
+        "options": [
+            {
+                "label": "A",
+                "content": "O(n log n)",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "O(2^n)",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "O(n^2)",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "O(n)",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 38,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not a delimiter of PHP code?",
+        "options": [
+            {
+                "label": "A",
+                "content": "<? ?>",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "<?php ?>",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "<script language=\"PHP\"> </script>",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "<aiption> </caption>",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 39,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " In which situation does using a database management system (DBMS) become costly and not recommended?",
+        "options": [
+            {
+                "label": "A",
+                "content": "In embedded systems having too small storage space",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "In situations where more than one user should access the database",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "To control redundancy",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "To deny access to unauthorized users",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 40,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What is the output of the following Java fragment code?\n```java\nint n = 6, m = 15, p = 3;\nn -= 111;\nn *= p;\nSystem.out.print(n);\n```",
+        "options": [
+            {
+                "label": "A",
+                "content": "3",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "-27",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "24",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "27",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 41,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is true about frames in HTML?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Frames are not difficult to handle for search engines",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Load on the server is not affected if there are a large number of frames in a page",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Frames allow parts of the page to remain stationary while other parts scroll",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All browsers support frames",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 42,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " A database management system (DBMS) has to control locks. Which component is responsible for this?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Query optimizer",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Lock manager",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Lock table",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Query processor",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 43,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not correct for the figure shown in Question 27?",
+        "options": [
+            {
+                "label": "A",
+                "content": "P2 cannot be executed until P1 finishes",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "P1 is waiting for a resource held by P2",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "P0 is waiting for a resource held by P1",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "P3 cannot be executed until P4 finishes",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 44,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " A university owns a number of private local area and wide area networks, which are designed for access by its academic staff, students, and administrative workers. Which term best describes the University's network?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Local Area Network",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Metropolitan Area Network",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "The Internet",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Wide Area Network",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 45,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What is the purpose of an opcode as indicated in the figure below?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It determines the operation to be done",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It holds the destination address of an operand",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "It holds the next instruction reference",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It holds the source address of an operand",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 46,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is correct about the human role in system administration?",
+        "options": [
+            {
+                "label": "A",
+                "content": "System administrator is not expected to have skills and confidence",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It doesn't need organizational skills",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "It requires patience, understanding, and knowledge",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Ethics is not a requirement to manage computers",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 47,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Among the following, which one best describes a database management system (DBMS)?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It can help users to manage computer's activity",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It is responsible for creating and maintaining a database",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "It can assist in processing images",
+                "image": "C. "
+            },
+            {
+                "label": "D",
+                "content": "It can assist you to process documents",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 48,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What will be the output of the following JavaScript statement? Math.floor(5.9)",
+        "options": [
+            {
+                "label": "A",
+                "content": "11.8",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "5",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "9",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "6",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 49,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is responsible for separating some machines from the rest to shield them from possible attacks?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Firewall",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Router",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Network operating system",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Switch",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 50,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not correct about packet and circuit switching?",
+        "options": [
+            {
+                "label": "A",
+                "content": "In packet switching, messages are sent in small blocks",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Packet switching is more efficient than circuit switching",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "In packet switching, an end-to-end connection has to be established",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "In circuit switching, a channel is dedicatedly used",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 51,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Linked list data structure is a type of:",
+        "options": [
+            {
+                "label": "A",
+                "content": "Non-linear data structure",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Dynamic data structure",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Fixed size data structure",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Static data structure",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 52,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which deadlock prevention mechanisms don't require a timestamp?",
+        "options": [
+            {
+                "label": "A",
+                "content": "No-wait",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Wound-wait",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Wait-wait",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Wait-die",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 53,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is valid statement regarding PHP variables?",
+        "options": [
+            {
+                "label": "A",
+                "content": "$test = 'computer';",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "test = 5;",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "$test = \"This is computer science\";",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "$test = 9.5",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 54,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a security service enforced to protect disclosure of information, which can be stored in a file or being transmitted from unauthorized entities?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Authentication",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Integrity",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Availability",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Confidentiality",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 55,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following computers can be most secured compared to the rest?",
+        "options": [
+            {
+                "label": "A",
+                "content": "A computer connected to the Internet and the latest anti-virus installed on it",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "A computer connected to the Internet with the latest firewall system",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "A computer connected to the Internet having strong intrusion detection",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "A computer that is not connected to the Internet",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 56,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Given input Alphabet E = {a, b, c, d} and empty string ε, then which one of the following is true about E?*",
+        "options": [
+            {
+                "label": "A",
+                "content": "E* = E+ U {ε}",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "E* = E1 U E2 U E3 U E4",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "E* = {ε}",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 57,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Assume you make modifications to your software. Then you want to make sure that the modification has not introduced new errors. Which software testing level is required?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Static testing",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Beta testing",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Regression testing",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Dynamic testing",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 58,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which type of variable can be accessed throughout our C++ program scope?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Global",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Static",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Automatic",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Local",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 59,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not correct about computer architecture and organization?",
+        "options": [
+            {
+                "label": "A",
+                "content": "An architecture can be used for a long time encompassing different computer models",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Manufacturers offer computers with the same architecture but different organization",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "An organization can last for a long time as an architecture does",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 60,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is correct for the statement below? A problem that occurs when one transaction updates a database item and then the transaction fails for some reason and the updated item is accessed by another transaction before it is changed back to its original value?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It is a lost update problem",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It is an incorrect summary problem",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "It is a temporary read problem",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It is dirty read",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 61,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Among the phases of the compiling process, in which phase is a sequence of characters converted into tokens?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Code optimization",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Syntax analysis",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Semantic analysis",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Lexical analysis",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 62,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " If you want to allow subclasses to access data fields or methods defined in the super-class, but not to allow non-subclasses to access these data fields and methods, which access modifier is appropriate?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Protected",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Default",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Public",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Private",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 63,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What is the time complexity order of binary searching algorithm?",
+        "options": [
+            {
+                "label": "A",
+                "content": "O(log₂ n)",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "O(n)",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "O(1)",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "O(n³)",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 64,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a method used to obtain the meaning of encrypted information without access to a secret key?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Encryption",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Decryption",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Crypto-analysis",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Cryptography",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 65,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following lists of environments is the hardest for an agent?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Deterministic, fully observable, static",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Partially observable, static, continuous",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Sequential, non-deterministic, dynamic",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Fully observable, sequential, deterministic",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 66,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following registers holds the address of the next pair of instructions to be fetched from memory?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Program counter",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Memory address register",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Memory buffer register",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Instruction register",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 67,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a correct way to create a String object?",
+        "options": [
+            {
+                "label": "A",
+                "content": "String m = new String(\"Exit Exam\");",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "String m = \"computer Science\";",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "String m = new String[Technology];",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "String m = 'H', 'e', 'l', 'l', 'o';",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 68,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is false about String in Java?",
+        "options": [
+            {
+                "label": "A",
+                "content": "We can create a String object using an array of characters",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "In Java, a string is treated as an object",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "The content of a string can be changed once the string is created",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "We can create a String object using String literal",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 69,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which asymptotic notation describes worst case analysis?",
+        "options": [
+            {
+                "label": "A",
+                "content": "f(n) = Θ",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "f(n) = little-ω",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "f(n) = O(Ω)",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "f(n) = little-o",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 70,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What is the time complexity order of Quick sort algorithm?",
+        "options": [
+            {
+                "label": "A",
+                "content": "O(n log n)",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "O(2^n)",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "O(n^2)",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "O(n)",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 71,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not a delimiter of PHP code?",
+        "options": [
+            {
+                "label": "A",
+                "content": "<? ?>",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "<?php ?>",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "<script language=\"PHP\"> </script>",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "<aiption> </caption>",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 72,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " In which situation does using a database management system (DBMS) become costly and not recommended?",
+        "options": [
+            {
+                "label": "A",
+                "content": "In embedded systems having too small storage space",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "In situations where more than one user should access the database",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "To control redundancy",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "To deny access to unauthorized users",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 73,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What is the output of the following Java fragment code?\n```java\nint n = 6, m = 15, p = 3;\nn -= 111;\nn *= p;\nSystem.out.print(n);\n```",
+        "options": [
+            {
+                "label": "A",
+                "content": "3",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "-27",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "24",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "27",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 74,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is true about frames in HTML?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Frames are not difficult to handle for search engines",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Load on the server is not affected if there are a large number of frames in a page",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Frames allow parts of the page to remain stationary while other parts scroll",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "All browsers support frames",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 75,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " A database management system (DBMS) has to control locks. Which component is responsible for this?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Query optimizer",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Lock manager",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Lock table",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Query processor",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 76,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not correct for the figure shown in Question 27?",
+        "options": [
+            {
+                "label": "A",
+                "content": "P2 cannot be executed until P1 finishes",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "P1 is waiting for a resource held by P2",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "P0 is waiting for a resource held by P1",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "P3 cannot be executed until P4 finishes",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 77,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " A university owns a number of private local area and wide area networks, which are designed for access by its academic staff, students, and administrative workers. Which term best describes the University's network?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Local Area Network",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Metropolitan Area Network",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "The Internet",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Wide Area Network",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 78,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What is the purpose of an opcode as indicated in the figure below?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It determines the operation to be done",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It holds the destination address of an operand",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "It holds the next instruction reference",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "It holds the source address of an operand",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 79,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is correct about the human role in system administration?",
+        "options": [
+            {
+                "label": "A",
+                "content": "System administrator is not expected to have skills and confidence",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It doesn't need organizational skills",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "It requires patience, understanding, and knowledge",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Ethics is not a requirement to manage computers",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 80,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Among the following, which one best describes a database management system (DBMS)?",
+        "options": [
+            {
+                "label": "A",
+                "content": "It can help users to manage computer's activity",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "It is responsible for creating and maintaining a database",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "It can assist in processing images",
+                "image": "C. "
+            },
+            {
+                "label": "D",
+                "content": "It can assist you to process documents",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 81,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " What will be the output of the following JavaScript statement? Math.floor(5.9)",
+        "options": [
+            {
+                "label": "A",
+                "content": "11.8",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "5",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "9",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "6",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 82,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is responsible for separating some machines from the rest to shield them from possible attacks?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Firewall",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Router",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Network operating system",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Switch",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 83,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is not correct about packet and circuit switching?",
+        "options": [
+            {
+                "label": "A",
+                "content": "In packet switching, messages are sent in small blocks",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Packet switching is more efficient than circuit switching",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "In packet switching, an end-to-end connection has to be established",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "In circuit switching, a channel is dedicatedly used",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {
+        "qno": 84,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Linked list data structure is a type of:",
+        "options": [
+            {
+                "label": "A",
+                "content": "Non-linear data structure",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Dynamic data structure",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Fixed size data structure",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Static data structure",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "B"
+    },
+    {
+        "qno": 85,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which deadlock prevention mechanisms don't require a timestamp?",
+        "options": [
+            {
+                "label": "A",
+                "content": "No-wait",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Wound-wait",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Wait-wait",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Wait-die",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 86,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is valid statement regarding PHP variables?",
+        "options": [
+            {
+                "label": "A",
+                "content": "$test = 'computer';",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "test = 5;",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "$test = \"This is computer science\";",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "$test = 9.5",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 87,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following is a security service enforced to protect disclosure of information, which can be stored in a file or being transmitted from unauthorized entities?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Authentication",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Integrity",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Availability",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Confidentiality",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 88,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Which one of the following computers can be most secured compared to the rest?",
+        "options": [
+            {
+                "label": "A",
+                "content": "A computer connected to the Internet and the latest anti-virus installed on it",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "A computer connected to the Internet with the latest firewall system",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "A computer connected to the Internet having strong intrusion detection",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "A computer that is not connected to the Internet",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "D"
+    },
+    {
+        "qno": 89,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Given input Alphabet E = {a, b, c, d} and empty string ε, then which one of the following is true about E?*",
+        "options": [
+            {
+                "label": "A",
+                "content": "E* = E+ U {ε}",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "E* = E1 U E2 U E3 U E4",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "E* = {ε}",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "A"
+    },
+    {
+        "qno": 90,
+        "department_name": "Computer Science",
+        "module": null,
+        "course": null,
+        "course_code": null,
+        "faculty": "Faculty of Computing",
+        "university": "Bahir Dar University",
+        "year": "2023",
+        "content": " Assume you make modifications to your software. Then you want to make sure that the modification has not introduced new errors. Which software testing level is required?",
+        "options": [
+            {
+                "label": "A",
+                "content": "Static testing",
+                "image": null
+            },
+            {
+                "label": "B",
+                "content": "Beta testing",
+                "image": null
+            },
+            {
+                "label": "C",
+                "content": "Regression testing",
+                "image": null
+            },
+            {
+                "label": "D",
+                "content": "Dynamic testing",
+                "image": null
+            }
+        ],
+        "image": null,
+        "answer": "C"
+    },
+    {"qno": 1, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is not an I/O command?**", "options": [{"label": "A", "content": "Status command", "image": null}, {"label": "B", "content": "Output data command", "image": null}, {"label": "C", "content": "Control command", "image": null}, {"label": "D", "content": "Issue command", "image": null}], "image": null, "answer": "D"}, {"qno": 2, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following form attributes is used to assign the server-side script file that processes the form data?**", "options": [{"label": "A", "content": "Action", "image": null}, {"label": "B", "content": "Autocomplete", "image": null}, {"label": "C", "content": "Method", "image": null}, {"label": "D", "content": "Target", "image": null}], "image": null, "answer": "A"}, {"qno": 3, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **When to use the Spiral Model?**", "options": [{"label": "A", "content": "Where business modeling is clearly understood and in use.", "image": null}, {"label": "B", "content": "When it is too risky to develop the overall system as one block.", "image": null}, {"label": "C", "content": "When requirements are understood in the early stages but can change during the project\u2019s life cycle.", "image": null}, {"label": "D", "content": "When requirements are unstable and constantly changing.", "image": null}], "image": null, "answer": "D"}, {"qno": 4, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In C++, what does the `cout` object typically represent?**", "options": [{"label": "A", "content": "Standard input stream", "image": null}, {"label": "B", "content": "Keyboard input buffer", "image": null}, {"label": "C", "content": "Error output stream", "image": null}, {"label": "D", "content": "Standard output stream", "image": null}], "image": null, "answer": "D"}, {"qno": 5, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In a columnar database, data is stored:**", "options": [{"label": "A", "content": "Row-wise", "image": null}, {"label": "B", "content": "In a hierarchical structure", "image": null}, {"label": "C", "content": "Column-wise", "image": null}, {"label": "D", "content": "In a network model", "image": null}], "image": null, "answer": "C"}, {"qno": 6, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In a Turing Machine, the state transition `a \u2192 b, L` means:**", "options": [{"label": "A", "content": "Read `a`, write `b`, and move left", "image": null}, {"label": "B", "content": "Delete `a`, read `b`, and move left", "image": null}, {"label": "C", "content": "Write `a`, read `b`, and move left", "image": null}, {"label": "D", "content": "Replace `b` by `a` and move left", "image": null}], "image": null, "answer": "A"}, {"qno": 7, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What is a characteristic feature of round-robin scheduling in both preemptive and non-preemptive forms?**", "options": [{"label": "A", "content": "It assigns priorities to tasks based on their relative importance.", "image": null}, {"label": "B", "content": "It always selects the task with the shortest remaining time.", "image": null}, {"label": "C", "content": "It favors short tasks over long tasks.", "image": null}, {"label": "D", "content": "It guarantees fairness by providing each task with an equal time slice.", "image": null}], "image": null, "answer": "D"}, {"qno": 8, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Indexes in database tables speed up the ______ operations.**", "options": [{"label": "A", "content": "Read operations", "image": null}, {"label": "B", "content": "Delete operations", "image": null}, {"label": "C", "content": "Update operations", "image": null}, {"label": "D", "content": "Write operations", "image": null}], "image": null, "answer": "A"}, {"qno": 9, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What is the term for a named block of code that performs a specific task?**", "options": [{"label": "A", "content": "Condition", "image": null}, {"label": "B", "content": "Variable", "image": null}, {"label": "C", "content": "Function", "image": null}, {"label": "D", "content": "Loop", "image": null}], "image": null, "answer": "C"}, {"qno": 10, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What would be the asymptotic time complexity to add a node at the end of a singly linked list, if the pointer is initially pointing to the head of the list?**", "options": [{"label": "A", "content": "O(n)", "image": null}, {"label": "B", "content": "\u03b8(1)", "image": null}, {"label": "C", "content": "\u03b8(n)", "image": null}, {"label": "D", "content": "O(1)", "image": null}], "image": null, "answer": "A"}, {"qno": 11, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which learning technique in AI involves the use of labeled examples to train a model to make predictions or decisions?**", "options": [{"label": "A", "content": "Semi-supervised learning", "image": null}, {"label": "B", "content": "Unsupervised learning", "image": null}, {"label": "C", "content": "Supervised learning", "image": null}, {"label": "D", "content": "Reinforcement learning", "image": null}], "image": null, "answer": "C"}, {"qno": 12, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **A PC obtains its IP address from a DHCP server. If the PC is taken off the network for repair, what happens to the IP address configuration?**", "options": [{"label": "A", "content": "The address is returned to the pool for reuse when the lease expires.", "image": null}, {"label": "B", "content": "The address lease is automatically renewed until the PC is returned.", "image": null}, {"label": "C", "content": "The configuration is held by the server to be reissued when the PC is returned.", "image": null}, {"label": "D", "content": "The configuration is permanent and nothing changes.", "image": null}], "image": null, "answer": "A"}, {"qno": 13, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **The elements must be in sorted order in case of:**", "options": [{"label": "A", "content": "Quick search", "image": null}, {"label": "B", "content": "Selection search", "image": null}, {"label": "C", "content": "Binary search", "image": null}, {"label": "D", "content": "Linear search", "image": null}], "image": null, "answer": "C"}, {"qno": 14, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which analysis case calculates the upper bound on the running time of an algorithm?**", "options": [{"label": "A", "content": "Optimal case", "image": null}, {"label": "B", "content": "Best case", "image": null}, {"label": "C", "content": "Average case", "image": null}, {"label": "D", "content": "Worst case", "image": null}], "image": null, "answer": "D"}, {"qno": 15, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **How are the objects organized in the HTML DOM?**", "options": [{"label": "A", "content": "Hierarchy", "image": null}, {"label": "B", "content": "Queue", "image": null}, {"label": "C", "content": "Stack", "image": null}, {"label": "D", "content": "Class-wise", "image": null}], "image": null, "answer": "A"}, {"qno": 16, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is the output of the syntax analysis phase?**", "options": [{"label": "A", "content": "Syntax tree", "image": null}, {"label": "B", "content": "Annotated parse tree", "image": null}, {"label": "C", "content": "Abstract syntax tree", "image": null}, {"label": "D", "content": "Pattern", "image": null}], "image": null, "answer": "A"}, {"qno": 17, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What does the `if-else` statement allow you to do in C++?**", "options": [{"label": "A", "content": "Declare and define functions", "image": null}, {"label": "B", "content": "Allocate memory dynamically", "image": null}, {"label": "C", "content": "Execute a block of code only if a condition is true, otherwise execute another block of code", "image": null}, {"label": "D", "content": "Repeat a block of code multiple times", "image": null}], "image": null, "answer": "C"}, {"qno": 18, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **One of the following is not true about inheritance:**", "options": [{"label": "A", "content": "The subclass can add variables, but cannot redefine them.", "image": null}, {"label": "B", "content": "The derived class (subclass) is allowed to add methods or redefine them.", "image": null}, {"label": "C", "content": "A feature that allows us to derive a class from another class.", "image": null}, {"label": "D", "content": "Allows programmers to customize without actually modifying the original class (the superclass).", "image": null}], "image": null, "answer": "A"}, {"qno": 19, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is an efficient top-down parser?**", "options": [{"label": "A", "content": "Recursive-descent parser", "image": null}, {"label": "B", "content": "Shift-reduce parser", "image": null}, {"label": "C", "content": "Non-recursive predictive parser", "image": null}, {"label": "D", "content": "LR parser", "image": null}], "image": null, "answer": "C"}, {"qno": 20, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which objective of modern operating systems involves providing a consistent and convenient environment for running applications?**", "options": [{"label": "A", "content": "Maximizing hardware utilization", "image": null}, {"label": "B", "content": "Ensuring fault tolerance", "image": null}, {"label": "C", "content": "Providing security and protection", "image": null}, {"label": "D", "content": "Providing a user-friendly interface", "image": null}], "image": null, "answer": "D"}, {"qno": 21, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is not the concern of availability?**", "options": [{"label": "A", "content": "Fault tolerance", "image": null}, {"label": "B", "content": "Alteration of resources", "image": null}, {"label": "C", "content": "Usefulness of resources", "image": null}, {"label": "D", "content": "Fair allocation of resources", "image": null}], "image": null, "answer": "B"}, {"qno": 22, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **The simple strategy in which the root node is expanded first, then all the successors of the root node are expanded next, then their successors, and so on, refers to:**", "options": [{"label": "A", "content": "Greedy best-first search", "image": null}, {"label": "B", "content": "Depth-first search (DFS)", "image": null}, {"label": "C", "content": "Depth-limited search (DLS)", "image": null}, {"label": "D", "content": "Breadth-first search (BFS)", "image": null}], "image": null, "answer": "D"}, {"qno": 23, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Person A sends a message to person B. While the message is transmitted, person C gains access to the message. Which category of attack is performed by person C?**", "options": [{"label": "A", "content": "Modification", "image": null}, {"label": "B", "content": "Interception", "image": null}, {"label": "C", "content": "Interruption", "image": null}, {"label": "D", "content": "Fabrication", "image": null}], "image": null, "answer": "B"}, {"qno": 24, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which data structure is used to store information about the source program constructs?**", "options": [{"label": "A", "content": "2D-array", "image": null}, {"label": "B", "content": "Stack", "image": null}, {"label": "C", "content": "Tree", "image": null}, {"label": "D", "content": "Queue", "image": null}], "image": null, "answer": "C"}, {"qno": 25, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In which network topology consists of a single line cable\u2014called a backbone\u2014connecting all nodes on a network without intervening connected devices?**", "options": [{"label": "A", "content": "Bus", "image": null}, {"label": "B", "content": "Ring", "image": null}, {"label": "C", "content": "Star", "image": null}, {"label": "D", "content": "Mesh", "image": null}], "image": null, "answer": "A"}, {"qno": 26, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which database design concept is commonly used in e-commerce platforms to efficiently store and retrieve customer order information?**", "options": [{"label": "A", "content": "Normalization", "image": null}, {"label": "B", "content": "Denormalization", "image": null}, {"label": "C", "content": "Partitioning", "image": null}, {"label": "D", "content": "Indexing", "image": null}], "image": null, "answer": "A"}, {"qno": 27, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following terms refers to the techniques used for deciphering a ciphertext without any knowledge of the enciphering mechanism involved?**", "options": [{"label": "A", "content": "Cryptography", "image": null}, {"label": "B", "content": "Cryptology", "image": null}, {"label": "C", "content": "Cryptanalysis", "image": null}, {"label": "D", "content": "Decryption", "image": null}], "image": null, "answer": "C"}, {"qno": 28, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **All of the following are scheduling criteria except:**", "options": [{"label": "A", "content": "CPU utilization", "image": null}, {"label": "B", "content": "Min turnaround time", "image": null}, {"label": "C", "content": "Max throughput", "image": null}, {"label": "D", "content": "Max response time", "image": null}], "image": null, "answer": "D"}, {"qno": 29, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Given a binary search tree, which traversal type would print the values in the nodes in sorted order?**", "options": [{"label": "A", "content": "Pre-order", "image": null}, {"label": "B", "content": "Pre-order and Post-order", "image": null}, {"label": "C", "content": "In-order", "image": null}, {"label": "D", "content": "Post-order", "image": null}], "image": null, "answer": "C"}, {"qno": 30, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **The user who programs a computer in machine or assembly language must be aware of the following except:**", "options": [{"label": "A", "content": "The register set", "image": null}, {"label": "B", "content": "The type of data supported by the instructions", "image": null}, {"label": "C", "content": "The analysis model", "image": null}, {"label": "D", "content": "The memory structure", "image": null}], "image": null, "answer": "C"}, {"qno": 31, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In computer programming, what is the purpose of control structures such as loops and conditional statements?**", "options": [{"label": "A", "content": "To control the flow of program execution", "image": null}, {"label": "B", "content": "To perform mathematical operations", "image": null}, {"label": "C", "content": "To define the data types used in a program", "image": null}, {"label": "D", "content": "To allocate memory for variables", "image": null}], "image": null, "answer": "A"}, {"qno": 32, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which of the following methods can be used to refresh a webpage?**", "options": [{"label": "A", "content": "Location.relocate", "image": null}, {"label": "B", "content": "Window.Relocate", "image": null}, {"label": "C", "content": "Window.resefresh", "image": null}, {"label": "D", "content": "Location.Reload", "image": null}], "image": null, "answer": "D"}, {"qno": 33, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In computer networking, _____ refers to how various nodes, devices, and connections on your network are physically or logically arranged in relation to each other.**", "options": [{"label": "A", "content": "Network layer", "image": null}, {"label": "B", "content": "Network installation", "image": null}, {"label": "C", "content": "Network protocol", "image": null}, {"label": "D", "content": "Network topology", "image": null}], "image": null, "answer": "D"}, {"qno": 34, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which of the following is not a component of a Turing Machine?**", "options": [{"label": "A", "content": "Read-write head", "image": null}, {"label": "B", "content": "Control unit", "image": null}, {"label": "C", "content": "Stack", "image": null}, {"label": "D", "content": "Tape", "image": null}], "image": null, "answer": "C"}, {"qno": 35, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **A module is said to have logical cohesion if:**", "options": [{"label": "A", "content": "All the functions of the module are executed within the same time span.", "image": null}, {"label": "B", "content": "All elements of the module depend on their interface complexity.", "image": null}, {"label": "C", "content": "It performs a set of tasks that relate to each other very loosely.", "image": null}, {"label": "D", "content": "All elements of the module perform similar operations.", "image": null}], "image": null, "answer": "D"}, {"qno": 36, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **When encountering a syntax error in code, what is the first step you should take to resolve it?**", "options": [{"label": "A", "content": "Rewrite the entire code", "image": null}, {"label": "B", "content": "Ignore the error and continue execution", "image": null}, {"label": "C", "content": "Use a debugger tool", "image": null}, {"label": "D", "content": "Check the code for typos or incorrect syntax", "image": null}], "image": null, "answer": "D"}, {"qno": 37, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which OOP concept allows objects of different classes to be treated as objects of a common superclass?**", "options": [{"label": "A", "content": "Polymorphism", "image": null}, {"label": "B", "content": "Inheritance", "image": null}, {"label": "C", "content": "Abstraction", "image": null}, {"label": "D", "content": "Encapsulation", "image": null}], "image": null, "answer": "A"}, {"qno": 38, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In which phase of the compilation process does the source program get broken into its constituent parts?**", "options": [{"label": "A", "content": "Semantic analysis", "image": null}, {"label": "B", "content": "Syntax analysis", "image": null}, {"label": "C", "content": "Synthesis", "image": null}, {"label": "D", "content": "Lexical analysis", "image": null}], "image": null, "answer": "D"}, {"qno": 39, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which part of the computer system is responsible for converting machine-processed data to different formats that are understandable by the user?**", "options": [{"label": "A", "content": "Communication components", "image": null}, {"label": "B", "content": "Output unit", "image": null}, {"label": "C", "content": "Storage unit", "image": null}, {"label": "D", "content": "Input unit", "image": null}], "image": null, "answer": "B"}, {"qno": 40, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **If a sequence of operations\u2014push(1), push(2), pop, push(1), push(2), pop, pop, pop, push(2), pop\u2014are performed on a stack, the sequence of popped-out values is:**", "options": [{"label": "A", "content": "2, 1, 2, 2, 1", "image": null}, {"label": "B", "content": "2, 2, 1, 1, 2", "image": null}, {"label": "C", "content": "2, 1, 2, 2, 2", "image": null}, {"label": "D", "content": "2, 2, 1, 2, 2", "image": null}], "image": null, "answer": "A"}, {"qno": 41, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which function of modern operating systems involves managing hardware resources such as CPU, memory, and I/O devices?**", "options": [{"label": "A", "content": "File management", "image": null}, {"label": "B", "content": "Device management", "image": null}, {"label": "C", "content": "Process management", "image": null}, {"label": "D", "content": "Security management", "image": null}], "image": null, "answer": "C"}, {"qno": 42, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following has the fastest access time and the highest cost?**", "options": [{"label": "A", "content": "Register", "image": null}, {"label": "B", "content": "Magnetic disc", "image": null}, {"label": "C", "content": "Main memory", "image": null}, {"label": "D", "content": "Cache memory", "image": null}], "image": null, "answer": "A"}, {"qno": 43, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What is the purpose of interfaces in Java?**", "options": [{"label": "A", "content": "To create multiple constructors for a class", "image": null}, {"label": "B", "content": "To define the state and behavior of an object", "image": null}, {"label": "C", "content": "To define a blueprint of a class", "image": null}, {"label": "D", "content": "To achieve multiple inheritance", "image": null}], "image": null, "answer": "D"}, {"qno": 44, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which software engineering principles are used to help reduce programming complexity?**", "options": [{"label": "A", "content": "Structured and unstructured", "image": null}, {"label": "B", "content": "Object-oriented design", "image": null}, {"label": "C", "content": "Abstraction and decomposition", "image": null}, {"label": "D", "content": "Functional and non-functional", "image": null}], "image": null, "answer": "C"}, {"qno": 45, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which OOP concept allows a class to implement multiple interfaces in Java?**", "options": [{"label": "A", "content": "Polymorphism", "image": null}, {"label": "B", "content": "Encapsulation", "image": null}, {"label": "C", "content": "Inheritance", "image": null}, {"label": "D", "content": "Interface", "image": null}], "image": null, "answer": "D"}, {"qno": 46, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In a grammar, if the production \\( S \\rightarrow \\lambda \\) where \\( S \\) is a non-terminal exists, such production is called:**", "options": [{"label": "A", "content": "Null production", "image": null}, {"label": "B", "content": "Unit production", "image": null}, {"label": "C", "content": "Secondary production", "image": null}, {"label": "D", "content": "Sigma production", "image": null}], "image": null, "answer": "B"}, {"qno": 47, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which database design concept is commonly used in online gaming platforms to handle real-time interactions between players?**", "options": [{"label": "A", "content": "Replication", "image": null}, {"label": "B", "content": "NoSQL databases", "image": null}, {"label": "C", "content": "Distributed databases", "image": null}, {"label": "D", "content": "Partitioning", "image": null}], "image": null, "answer": "C"}, {"qno": 48, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is the correct syntax for document type declaration in HTML5?**", "options": [{"label": "A", "content": "`</doctype html>`", "image": null}, {"label": "B", "content": "`<\\doctype|html>`", "image": null}, {"label": "C", "content": "`<\\doctype|html>`", "image": null}, {"label": "D", "content": "`<!doctype html>`", "image": null}], "image": null, "answer": "D"}, {"qno": 49, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **If an algorithm has a running time function of \\( 3n^2 + 7n + 12 \\), what will be the complexity class of the running time?**", "options": [{"label": "A", "content": "Linear", "image": null}, {"label": "B", "content": "Polynomial", "image": null}, {"label": "C", "content": "Constant", "image": null}, {"label": "D", "content": "Exponential", "image": null}], "image": null, "answer": "B"}, {"qno": 50, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Recursion is a method in which the solution of a problem depends on:**", "options": [{"label": "A", "content": "Larger instances of the same problem", "image": null}, {"label": "B", "content": "Smaller instances of the same problem", "image": null}, {"label": "C", "content": "Larger instances of different problems", "image": null}, {"label": "D", "content": "Smaller instances of different problems", "image": null}], "image": null, "answer": "B"}, {"qno": 51, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which SQL command is used to modify existing data in a table?**", "options": [{"label": "A", "content": "ALTER", "image": null}, {"label": "B", "content": "UPDATE", "image": null}, {"label": "C", "content": "MODIFY", "image": null}, {"label": "D", "content": "CHANGE", "image": null}], "image": null, "answer": "B"}, {"qno": 52, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which normal form ensures that there are no repeating groups in a table?**", "options": [{"label": "A", "content": "Second Normal Form (2NF)", "image": null}, {"label": "B", "content": "Third Normal Form (3NF)", "image": null}, {"label": "C", "content": "Boyce-Codd Normal Form (BCNF)", "image": null}, {"label": "D", "content": "First Normal Form (1NF)", "image": null}], "image": null, "answer": "D"}, {"qno": 53, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which of the following is not true about Reasoning?**", "options": [{"label": "A", "content": "Knowledge system to do something.", "image": null}, {"label": "B", "content": "A process of thinking, logically arguing, and drawing inference.", "image": null}, {"label": "C", "content": "Theory of blind searching.", "image": null}, {"label": "D", "content": "The act of deriving a conclusion from certain premises using a given methodology.", "image": null}], "image": null, "answer": "C"}, {"qno": 54, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What is the purpose of normalization in database design?**", "options": [{"label": "A", "content": "To reduce redundancy and improve data integrity.", "image": null}, {"label": "B", "content": "To speed up query performance.", "image": null}, {"label": "C", "content": "To create complex relationships between tables.", "image": null}, {"label": "D", "content": "To encrypt sensitive data.", "image": null}], "image": null, "answer": "A"}, {"qno": 55, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is a false statement?**", "options": [{"label": "A", "content": "A web browser is software that runs on a server.", "image": null}, {"label": "B", "content": "A website is a collection of resources in various forms.", "image": null}, {"label": "C", "content": "A web page is the basic unit of information storage on the WWW.", "image": null}, {"label": "D", "content": "A user agent renders resources for a user to view.", "image": null}], "image": null, "answer": "A"}, {"qno": 56, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which string from the following is a member of the language represented by the regular expression `a*(b+c)`?**", "options": [{"label": "A", "content": "aab", "image": null}, {"label": "B", "content": "bc", "image": null}, {"label": "C", "content": "aaa", "image": null}, {"label": "D", "content": "aaabc", "image": null}], "image": null, "answer": "A"}, {"qno": 57, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **If a problem can be solved by combining optimal solutions to non-overlapping problems, the strategy is called:**", "options": [{"label": "A", "content": "Dynamic programming", "image": null}, {"label": "B", "content": "Divide and conquer", "image": null}, {"label": "C", "content": "Recursion", "image": null}, {"label": "D", "content": "Greedy", "image": null}], "image": null, "answer": "B"}, {"qno": 58, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In asymmetric cryptography, the message is decrypted using:**", "options": [{"label": "A", "content": "Receiver\u2019s public key", "image": null}, {"label": "B", "content": "Receiver\u2019s private key", "image": null}, {"label": "C", "content": "Sender\u2019s private key", "image": null}, {"label": "D", "content": "Sender\u2019s public key", "image": null}], "image": null, "answer": "B"}, {"qno": 59, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In C++, what does the `cout` object typically represent?**", "options": [{"label": "A", "content": "Standard input stream", "image": null}, {"label": "B", "content": "Keyboard input buffer", "image": null}, {"label": "C", "content": "Error output stream", "image": null}, {"label": "D", "content": "Standard output stream", "image": null}], "image": null, "answer": "D"}, {"qno": 60, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **When can we say two grammars are equivalent?**", "options": [{"label": "A", "content": "When the language derived from one of the grammars becomes the subset of the other.", "image": null}, {"label": "B", "content": "When the alphabets of the two grammars are the same.", "image": null}, {"label": "C", "content": "When the languages represented by both grammars are the same.", "image": null}, {"label": "D", "content": "When a single string is a member of the language represented by both grammars.", "image": null}], "image": null, "answer": "C"}, {"qno": 61, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which reasoning technique in artificial intelligence is based on a set of rules and logical inference to derive conclusions?**", "options": [{"label": "A", "content": "Abductive reasoning", "image": null}, {"label": "B", "content": "Analogical reasoning", "image": null}, {"label": "C", "content": "Deductive reasoning", "image": null}, {"label": "D", "content": "Inductive reasoning", "image": null}], "image": null, "answer": "C"}, {"qno": 62, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which of the following is not a type of database management system (DBMS)?**", "options": [{"label": "A", "content": "PostgreSQL", "image": null}, {"label": "B", "content": "MongoDB", "image": null}, {"label": "C", "content": "Java", "image": null}, {"label": "D", "content": "MySQL", "image": null}], "image": null, "answer": "C"}, {"qno": 63, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In computers, subtraction is carried out generally by:**", "options": [{"label": "A", "content": "1's complement method", "image": null}, {"label": "B", "content": "2's complement method", "image": null}, {"label": "C", "content": "Signed magnitude method", "image": null}, {"label": "D", "content": "BCD subtraction method", "image": null}], "image": null, "answer": "B"}, {"qno": 64, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is not a component of communication?**", "options": [{"label": "A", "content": "Distance", "image": null}, {"label": "B", "content": "Source", "image": null}, {"label": "C", "content": "Destination", "image": null}, {"label": "D", "content": "Medium", "image": null}], "image": null, "answer": "A"}, {"qno": 65, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is not a static check?**", "options": [{"label": "A", "content": "Type checking for compatibility", "image": null}, {"label": "B", "content": "Uniqueness checks like redefined variables", "image": null}, {"label": "C", "content": "A break instruction that is not in an enclosing statement", "image": null}, {"label": "D", "content": "Memory access errors", "image": null}], "image": null, "answer": "D"}, {"qno": 66, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **______ is a system that monitors traffic into and out of a network and automatically alerts personnel when suspicious traffic patterns occur, indicating a possible unauthorized intrusion attempt.**", "options": [{"label": "A", "content": "Anti-Virus Software", "image": null}, {"label": "B", "content": "IDS", "image": null}, {"label": "C", "content": "Firewall", "image": null}, {"label": "D", "content": "Router", "image": null}], "image": null, "answer": "B"}, {"qno": 67, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following terms refers to the machine on which the requested resource is stored?**", "options": [{"label": "A", "content": "Port", "image": null}, {"label": "B", "content": "Query", "image": null}, {"label": "C", "content": "Host", "image": null}, {"label": "D", "content": "Protocol", "image": null}], "image": null, "answer": "C"}, {"qno": 68, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which scheduling algorithm is commonly associated with the concept of aging, where the priority of a task increases the longer it waits in the ready queue?**", "options": [{"label": "A", "content": "Round Robin (RR)", "image": null}, {"label": "B", "content": "Shortest Job Next (SJN)", "image": null}, {"label": "C", "content": "Priority Scheduling", "image": null}, {"label": "D", "content": "Shortest Remaining Time First (SRTF)", "image": null}], "image": null, "answer": "C"}, {"qno": 69, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Why use the heuristic (A*) search method?**", "options": [{"label": "A", "content": "To speed up search and edge lengths to compute optimal paths.", "image": null}, {"label": "B", "content": "To find the path with the maximum distance from the start node to the goal node.", "image": null}, {"label": "C", "content": "To find the path with non-optimal searches from node to the goal node.", "image": null}, {"label": "D", "content": "To find the path with the maximum cost from the start node to the goal node.", "image": null}], "image": null, "answer": "A"}, {"qno": 70, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **When is the appropriate time to shut down a system?**", "options": [{"label": "A", "content": "Using regular schedules", "image": null}, {"label": "B", "content": "For maintenance and upgrade", "image": null}, {"label": "C", "content": "To check for security alerts", "image": null}, {"label": "D", "content": "When there is a failure", "image": null}], "image": null, "answer": "B"}, {"qno": 71, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Out of the following life cycle models, which one can be considered the most general model, and the others as specializations of it?**", "options": [{"label": "A", "content": "Spiral Model", "image": null}, {"label": "B", "content": "Prototyping Model", "image": null}, {"label": "C", "content": "Classical Waterfall Model", "image": null}, {"label": "D", "content": "Iterative Waterfall Model", "image": null}], "image": null, "answer": "A"}, {"qno": 72, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following cryptography systems uses the same key for encryption and decryption?**", "options": [{"label": "A", "content": "Public key cryptography", "image": null}, {"label": "B", "content": "Parallel cryptography", "image": null}, {"label": "C", "content": "Asymmetric cryptography", "image": null}, {"label": "D", "content": "Symmetric cryptography", "image": null}], "image": null, "answer": "D"}, {"qno": 73, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **The E-R data model is based on a perception of the real world that consists of a set of basic objects called:**", "options": [{"label": "A", "content": "Objects", "image": null}, {"label": "B", "content": "Classes", "image": null}, {"label": "C", "content": "Entities", "image": null}, {"label": "D", "content": "Attributes", "image": null}], "image": null, "answer": "C"}, {"qno": 74, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In which network topology should every computer have N-1 I/O ports when there are N number of computers in the network?**", "options": [{"label": "A", "content": "Star", "image": null}, {"label": "B", "content": "Mesh", "image": null}, {"label": "C", "content": "Bus", "image": null}, {"label": "D", "content": "Ring", "image": null}], "image": null, "answer": "B"}, {"qno": 75, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What is the primary key in a relational database?**", "options": [{"label": "A", "content": "A unique identifier for each row in a table.", "image": null}, {"label": "B", "content": "A foreign key from another table.", "image": null}, {"label": "C", "content": "A key used for encryption.", "image": null}, {"label": "D", "content": "An index on a non-unique column.", "image": null}], "image": null, "answer": "A"}, {"qno": 76, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which C++ statement is used to terminate a loop prematurely and transfer control to the next iteration of the loop?**", "options": [{"label": "A", "content": "break;", "image": null}, {"label": "B", "content": "exit;", "image": null}, {"label": "C", "content": "return;", "image": null}, {"label": "D", "content": "continue;", "image": null}], "image": null, "answer": "D"}, {"qno": 77, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following disk interfaces is used as a standard interface for PCs?**", "options": [{"label": "A", "content": "SCSI", "image": null}, {"label": "B", "content": "iSCSI", "image": null}, {"label": "C", "content": "IDE", "image": null}, {"label": "D", "content": "USB", "image": null}], "image": null, "answer": "C"}, {"qno": 78, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In a system susceptible to deadlock, what does the \"no preemption\" condition imply?**", "options": [{"label": "A", "content": "Resources can be preempted and assigned to other processes.", "image": null}, {"label": "B", "content": "Processes cannot request additional resources while holding others.", "image": null}, {"label": "C", "content": "Resources cannot be preempted while they are in use.", "image": null}, {"label": "D", "content": "Processes must release all resources when blocked.", "image": null}], "image": null, "answer": "C"}, {"qno": 79, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which of the following is false in Data structures and Algorithms?**", "options": [{"label": "A", "content": "A tree contains a cycle.", "image": null}, {"label": "B", "content": "Tree is a non-linear data structure.", "image": null}, {"label": "C", "content": "A tree is a connected graph.", "image": null}, {"label": "D", "content": "A tree with n nodes contains (n-1) edges.", "image": null}], "image": null, "answer": "A"}, {"qno": 80, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What is the role of a database administrator (DBA)?**", "options": [{"label": "A", "content": "Designing user interfaces for database applications.", "image": null}, {"label": "B", "content": "Developing front-end applications.", "image": null}, {"label": "C", "content": "Writing complex SQL queries.", "image": null}, {"label": "D", "content": "Managing and maintaining databases.", "image": null}], "image": null, "answer": "D"}, {"qno": 81, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which attribute of the `<img>` tag is used when we want to display text in place of an image when, due to any reason, the image is not displayed?**", "options": [{"label": "A", "content": "rep", "image": null}, {"label": "B", "content": "pla", "image": null}, {"label": "C", "content": "alt", "image": null}, {"label": "D", "content": "im", "image": null}], "image": null, "answer": "C"}, {"qno": 82, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **If a queue is implemented using arrays, what would be the worst-case runtime complexity of enqueue and dequeue operations?**", "options": [{"label": "A", "content": "O(n), O(1)", "image": null}, {"label": "B", "content": "O(1), O(n)", "image": null}, {"label": "C", "content": "O(1), O(1)", "image": null}, {"label": "D", "content": "O(n), O(n)", "image": null}], "image": null, "answer": "A"}, {"qno": 83, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which of the following concepts in OOP allows a class to inherit attributes and methods from another class?**", "options": [{"label": "A", "content": "Inheritance", "image": null}, {"label": "B", "content": "Abstraction", "image": null}, {"label": "C", "content": "Encapsulation", "image": null}, {"label": "D", "content": "Polymorphism", "image": null}], "image": null, "answer": "A"}, {"qno": 84, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which of the following is the top-level object?**", "options": [{"label": "A", "content": "Root object", "image": null}, {"label": "B", "content": "Document Object", "image": null}, {"label": "C", "content": "JavaScript Object", "image": null}, {"label": "D", "content": "Window Object", "image": null}], "image": null, "answer": "D"}, {"qno": 85, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which tool is used to collect codes separately compiled or assembled in different object files into a file that is directly executable?**", "options": [{"label": "A", "content": "Linker", "image": null}, {"label": "B", "content": "Loader", "image": null}, {"label": "C", "content": "Assembler", "image": null}, {"label": "D", "content": "Resolver", "image": null}], "image": null, "answer": "A"}, {"qno": 86, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Among the following, which kind of algorithm is used in the Game tree to make decisions of Win/Lose?**", "options": [{"label": "A", "content": "Heuristic Search Algorithm", "image": null}, {"label": "B", "content": "Min/Max Algorithm", "image": null}, {"label": "C", "content": "Depth First Search algorithm", "image": null}, {"label": "D", "content": "Greedy Search Algorithm", "image": null}], "image": null, "answer": "B"}, {"qno": 87, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is not a reason for the need of backups?**", "options": [{"label": "A", "content": "Security incidents", "image": null}, {"label": "B", "content": "Upgrades and migrations", "image": null}, {"label": "C", "content": "Hardware failures", "image": null}, {"label": "D", "content": "Authorization", "image": null}], "image": null, "answer": "D"}, {"qno": 88, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is not a characteristic of an algorithm?**", "options": [{"label": "A", "content": "Definiteness", "image": null}, {"label": "B", "content": "Output", "image": null}, {"label": "C", "content": "Finiteness", "image": null}, {"label": "D", "content": "Efficiency", "image": null}], "image": null, "answer": "D"}, {"qno": 89, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which command in Microsoft Windows will allow you to verify your IP address, subnet mask, default gateway, and MAC address?**", "options": [{"label": "A", "content": "C:\\>ipconfig /all", "image": null}, {"label": "B", "content": "C:\\>ping", "image": null}, {"label": "C", "content": "C:\\>ipconfig", "image": null}, {"label": "D", "content": "C:\\>ipstatus", "image": null}], "image": null, "answer": "A"}, {"qno": 90, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **One of the following is not a characteristic of Java:**", "options": [{"label": "A", "content": "Java is Object-Oriented", "image": null}, {"label": "B", "content": "Java is Platform Independent", "image": null}, {"label": "C", "content": "Java is difficult to Learn", "image": null}, {"label": "D", "content": "Java is architecture neutral.", "image": null}], "image": null, "answer": "C"}, {"qno": 91, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In data communication, data rate refers to how fast we can send data and is measured in bits per second. Which one of the following is not a factor for data rate?**", "options": [{"label": "A", "content": "Travel distance", "image": null}, {"label": "B", "content": "Bandwidth available", "image": null}, {"label": "C", "content": "Level of noise", "image": null}, {"label": "D", "content": "Levels of the signals", "image": null}], "image": null, "answer": "A"}, {"qno": 92, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which layer of the OSI model ensures that the whole message (group of packets) arrives at the destination intact and in order?**", "options": [{"label": "A", "content": "Session layer", "image": null}, {"label": "B", "content": "Transport layer", "image": null}, {"label": "C", "content": "Data link layer", "image": null}, {"label": "D", "content": "Network layer", "image": null}], "image": null, "answer": "B"}, {"qno": 93, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which System Requirement Specification includes human-computer interface issues from the system?**", "options": [{"label": "A", "content": "Functional requirements of the system", "image": null}, {"label": "B", "content": "Non-functional requirements of the system", "image": null}, {"label": "C", "content": "Goals of implementation", "image": null}, {"label": "D", "content": "System Testing", "image": null}], "image": null, "answer": "B"}, {"qno": 94, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In a classical waterfall model, which phase precedes the design phase?**", "options": [{"label": "A", "content": "Requirements analysis and specification", "image": null}, {"label": "B", "content": "Maintenance", "image": null}, {"label": "C", "content": "Feasibility study", "image": null}, {"label": "D", "content": "Coding and unit testing", "image": null}], "image": null, "answer": "A"}, {"qno": 95, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which bus is bidirectional?**", "options": [{"label": "A", "content": "Control bus", "image": null}, {"label": "B", "content": "Data bus", "image": null}, {"label": "C", "content": "Uni-bus", "image": null}, {"label": "D", "content": "Address bus", "image": null}], "image": null, "answer": "B"}, {"qno": 96, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following is not an I/O command?**", "options": [{"label": "A", "content": "Status command", "image": null}, {"label": "B", "content": "Output data command", "image": null}, {"label": "C", "content": "Control command", "image": null}, {"label": "D", "content": "Issue command", "image": null}], "image": null, "answer": "D"}, {"qno": 97, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which one of the following form attributes is used to assign the server-side script file that processes the form data?**", "options": [{"label": "A", "content": "Action", "image": null}, {"label": "B", "content": "Autocomplete", "image": null}, {"label": "C", "content": "Method", "image": null}, {"label": "D", "content": "Target", "image": null}], "image": null, "answer": "A"}, {"qno": 98, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **In MySQL architecture, the function of the ______ is to keep copies of data for retrieval later, in case of a loss of data.**", "options": [{"label": "A", "content": "Buffer Manager", "image": null}, {"label": "B", "content": "Transaction Manager", "image": null}, {"label": "C", "content": "Query Engine", "image": null}, {"label": "D", "content": "Recovery Manager", "image": null}], "image": null, "answer": "D"}, {"qno": 99, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **What role does machine learning play in understanding human perception?**", "options": [{"label": "A", "content": "Machine learning helps in simulating human perception through neural networks.", "image": null}, {"label": "B", "content": "Machine learning has no relevance to understanding human perception.", "image": null}, {"label": "C", "content": "Machine learning is not capable of analyzing perceptual data.", "image": null}, {"label": "D", "content": "Machine learning only focuses on logical reasoning and decision-making.", "image": null}], "image": null, "answer": "A"}, {"qno": 100, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **When to use the Spiral Model?**", "options": [{"label": "A", "content": "Where business modeling is clearly understood and in use.", "image": null}, {"label": "B", "content": "When it is too risky to develop the overall system as one block.", "image": null}, {"label": "C", "content": "When requirements are understood in the early stages but can change during the project\u2019s life cycle.", "image": null}, {"label": "D", "content": "When requirements are unstable and constantly changing.", "image": null}], "image": null, "answer": "B"}, {"qno": 101, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **The first step in access control is:**", "options": [{"label": "A", "content": "Audit", "image": null}, {"label": "B", "content": "Authorization", "image": null}, {"label": "C", "content": "Accreditation", "image": null}, {"label": "D", "content": "Authentication", "image": null}], "image": null, "answer": "D"}, {"qno": 102, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **The amount of memory needed to run to completion is known as:**", "options": [{"label": "A", "content": "Space complexity", "image": null}, {"label": "B", "content": "Time complexity", "image": null}, {"label": "C", "content": "Worst case", "image": null}, {"label": "D", "content": "Best case", "image": null}], "image": null, "answer": "A"}, {"qno": 103, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which class of languages is most suited to be represented by pushdown automata?**", "options": [{"label": "A", "content": "Context-free language", "image": null}, {"label": "B", "content": "Regular language", "image": null}, {"label": "C", "content": "Recursively enumerable language", "image": null}, {"label": "D", "content": "Unrestricted language", "image": null}], "image": null, "answer": "A"}, {"qno": 104, "department_name": "Computer Science", "module": null, "course": null, "course_code": null, "faculty": "Faculty of Computing", "university": "Bahir Dar University", "year": "2024", "content": " **Which of the following is not a type of database model?**", "options": [{"label": "A", "content": "Linear", "image": null}, {"label": "B", "content": "Object-Oriented", "image": null}, {"label": "C", "content": "Hierarchical", "image": null}, {"label": "D", "content": "Relational", "image": null}], "image": null, "answer": "A"}
+
 ]
