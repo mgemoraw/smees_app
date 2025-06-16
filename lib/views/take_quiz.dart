@@ -107,7 +107,7 @@ class _TakeQuizState extends State<TakeQuiz> {
         backgroundColor: Theme.of(context).primaryColorDark,
         // backgroundColor: Color.fromRGBO(33, 150, 243, 1),
         title: Text(
-          "Exam Time - ${_formatTime(_remainingTime)}",
+          "Exam Time - ${_formatTime(_remainingTime)} --- Score: ${_calculateScore()}",
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         actions: [

@@ -91,7 +91,7 @@ class _BlueprintState extends State<Blueprint> {
     }
   }
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     UserProvider userProvider = Provider.of<UserProvider>(context);
     User user = userProvider.user;
 
