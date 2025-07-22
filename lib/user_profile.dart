@@ -178,7 +178,7 @@ class _UserProfileState extends State<UserProfile> {
                   ),
                 ],
               ),
-              Text("$_message"),
+              _message != null ? Text("$_message", style: TextStyle(color: Colors.red),) : Text(""),
             ],),
           ),
           actions: [
@@ -223,17 +223,31 @@ class _UserProfileState extends State<UserProfile> {
               
               ListTile(
                 title: Text("Username: ${user!.username}"),
-                subtitle: Text("Department: ${user!.department}"),
                 // trailing: TextButton(child: Text("Edit Info"), onPressed: (){},),
               ),
               ListTile(
-                title: Text("Email: ${user!.email}"),
-                // subtitle: TextButton(child: Text("Change Password", style:
-                // TextStyle(fontSize: 15)),
-                //   onPressed: (){
-                //   _updatePasswordDialog(context);
-                // },),
+                title: Text("Full Name: ${user!.fname} ${user!.mname} ${user!.lname}"),
+                // trailing: TextButton(child: Text("Edit"), onPressed: (){},),
               ),
+
+              ListTile(
+                title: Text("University: ${user!.university != null ? user!.university : ""}"),
+                // trailing: TextButton(child: Text("Edit Info"), onPressed: (){},),
+              ),
+
+              ListTile(
+                title: Text("Department: ${user!.department}"),
+              ),
+
+              ListTile(
+                title: Text("Email: ${user!.email}"),
+                // trailing: TextButton(child: Text("Edit Info"), onPressed: (){},),
+              ),
+              ListTile(
+                title: Text("Password: **********"),
+                trailing: TextButton(child: Text("Change Password"), onPressed: (){
+                  _updatePasswordDialog(context);
+                },),),
             ],
           )
           

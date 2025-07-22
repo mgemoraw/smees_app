@@ -118,11 +118,17 @@ class _AccountCreateState extends State<AccountCreate> {
                         const SizedBox(height: 12),
 
                         DropdownButtonFormField(
+                          isExpanded: true,
                           value: selectedDepartmentId,
                           items: departments.map<DropdownMenuItem<int>>(
                                   (item)=>
                               DropdownMenuItem<int>(
-                              value: item['id'], child: Text(item['name']),
+                              value: item['id'],
+                                child: Text(
+                                  item['name'],
+                                  overflow: TextOverflow.ellipsis,
+                                  softWrap: true,
+                                ),
                               ))
                               .toList(),
                           onChanged: (int? value) {
@@ -139,10 +145,16 @@ class _AccountCreateState extends State<AccountCreate> {
                         const SizedBox(height: 12),
 
                         DropdownButtonFormField(
+                          isExpanded: true,
                           value: selectedUniversityId,
                           items: universities.map((item)=> DropdownMenuItem
-                          <int>(value: item['id'], child: Text(item['name'])))
-                              .toList(),
+                          <int>(value: item['id'],
+                              child: Text(
+                                  item['name'],
+                                  overflow: TextOverflow.ellipsis,
+                                  softWrap: true,
+                              ),
+                          )).toList(),
                           onChanged: (int? value) {
                             setState(() {
                               selectedUniversityId = value;
@@ -192,6 +204,7 @@ class _AccountCreateState extends State<AccountCreate> {
                         SizedBox(height: 16.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
                           children: [
                           TextButton(
                           onPressed: () async {

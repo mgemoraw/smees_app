@@ -9,6 +9,7 @@ import 'package:smees/models/database.dart';
 import 'package:smees/security/auth.dart';
 import 'package:smees/security/logout.dart';
 import 'package:smees/services/auth_screen.dart';
+import 'package:smees/services/check_for_update.dart';
 import 'package:smees/student_statistics.dart';
 import 'package:smees/views/blueprint.dart';
 import 'package:smees/views/common/smees_feedback.dart';
@@ -33,6 +34,7 @@ Future<void> main() async {
 
   await requestStoragePermission(); // Ask for storage permission
   await safeInitialize();
+  await checkForAppUpdate();
 
   runApp(
     MultiProvider(

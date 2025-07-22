@@ -292,6 +292,7 @@ class _LoginState extends State<Login> {
           'role': role,
           'departmentId': departmentId,
           'department': department,
+          'email': data['email'],
         });
 
         // Save token to local storage

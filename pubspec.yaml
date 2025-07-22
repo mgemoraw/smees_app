@@ -62,6 +62,10 @@ dependencies:
   flutter_pdfview: ^1.4.0
   syncfusion_flutter_pdfviewer: ^28.2.7
   webview_flutter: ^4.10.0
+  package_info_plus: ^8.3.0
+  new_version_plus: ^0.1.0
+  in_app_update: ^4.2.3
+  version: ^3.0.2
 
 
 dev_dependencies:
