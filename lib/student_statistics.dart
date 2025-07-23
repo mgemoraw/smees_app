@@ -224,7 +224,9 @@ class _UserStatisticsState extends State<UserStatistics> {
             // ),
           ],
         ),
-        // LineChartWidget(),
+
+        // stats chart
+        LineChartWidget(),
       ],
     );
   }

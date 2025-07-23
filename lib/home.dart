@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/home_page.dart';
 import 'package:smees/models/user.dart';
 import 'package:smees/student_statistics.dart';
+import 'package:smees/views/common/add_mob.dart';
 import 'package:smees/views/common/status_card.dart';
 import 'package:smees/views/exam_home.dart';
 import 'package:smees/views/practice_quiz.dart';
@@ -197,6 +198,12 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                 ),
+                // add google add here
+                // Container(
+                //   height: 400,
+                //   width: 400,
+                //   child: BannerExample(),
+                // )
               ],
             )),
       ),

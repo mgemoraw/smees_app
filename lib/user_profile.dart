@@ -11,7 +11,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smees/api/end_points.dart';
 import 'package:smees/models/user.dart';
 import 'package:smees/views/common/status_card.dart';
+import 'package:smees/views/statistics/student_stats_chart.dart';
 import 'package:smees/views/user_provider.dart';
+import 'package:fl_chart/fl_chart.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 
 class UserProfile extends StatefulWidget {
@@ -249,10 +252,43 @@ class _UserProfileState extends State<UserProfile> {
                   _updatePasswordDialog(context);
                 },),),
             ],
-          )
-          
+          ),
+          LineChartWidget(),
+          Container(
+            child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
+              //chart title
+                title: ChartTitle(text: "Half yearly sales analysis"),
+              // tooltipBehavior: _tooltipBehavior,
+              series: <LineSeries<SalesData, String>>[
+                LineSeries<SalesData, String>(
+                  dataSource: <SalesData>[
+                    SalesData('Jan', 35),
+                    SalesData('Feb', 28),
+                    SalesData('Mar', 34),
+                    SalesData('Apr', 32),
+                    SalesData('May', 40),
+              ],
+                  xValueMapper: (SalesData sales, _) => sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales,
+
+                  // enable data label
+                  dataLabelSettings: DataLabelSettings(isVisible: true),
+            ),
+            ]
+          ),
+          ),
+
         ],
       ),
     );
   }
+}
+
+
+class SalesData {
+  SalesData(this.year, this.sales);
+  final String year;
+  final double sales;
+
 }
